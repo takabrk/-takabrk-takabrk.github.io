@@ -1,0 +1,15 @@
+data/vivid3/brk20060823g.jpg
+data/vivid3/brk20051216.jpg
+data/vivid3/brk20061016a.jpg
+data/vivid3/kyoto_station2005.jpg
+data/vivid3/love_pain.jpg
+data/vivid3/lunar.jpg
+data/vivid3/moon.jpg
+data/vivid3/parts20051021.jpg
+data/vivid3/parts20051021b.jpg
+data/vivid3/parts_mirror.jpg
+data/vivid3/parts_sea_a.jpg
+data/vivid3/sky2004.jpg
+data/vivid3/summer_sonic2004.jpg
+data/vivid3/title_shining_2004b.jpg
+data/vivid3/vivid_sonic.jpg

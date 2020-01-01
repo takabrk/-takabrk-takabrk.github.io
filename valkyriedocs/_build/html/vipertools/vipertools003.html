@@ -1,0 +1,272 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3. viper.pyをPythonファイルにモジュールとして読み込ませる &#8212; Valkyrie SRX 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. kyotei.pyのクラス生成" href="vipertools004.html" />
+    <link rel="prev" title="2. viper.pyに引数を付け加えて機能を使う" href="vipertools002.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vipertools004.html" title="6. kyotei.pyのクラス生成"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vipertools002.html" title="2. viper.pyに引数を付け加えて機能を使う"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="viper-pypython">
+<h1>3. viper.pyをPythonファイルにモジュールとして読み込ませる<a class="headerlink" href="#viper-pypython" title="Permalink to this headline">¶</a></h1>
+<p>各種メソッドは、viper.pyを該当するスクリプトにimport文を使ってインポートして使っていきます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">viper</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="viper">
+<h1>4. viperモジュールのクラス生成<a class="headerlink" href="#viper" title="Permalink to this headline">¶</a></h1>
+<p>クラスの生成は以下のように行います。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">viper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>5. viperモジュールのメソッド<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setupvalkyrie">
+<h2>5.1. setupValkyrie<a class="headerlink" href="#setupvalkyrie" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntu系LinuxディストリビューションをオリジナルOS「Valkyrie SRX」に変換します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">setupValkyrie</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installapplications">
+<h2>5.2. installApplications<a class="headerlink" href="#installapplications" title="Permalink to this headline">¶</a></h2>
+<p>オリジナルOS「Valkyrie SRX」に収録しているLinuxアプリケーションをインストールします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">installApplications</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installpythonmodules">
+<h2>5.3. installPythonModules<a class="headerlink" href="#installpythonmodules" title="Permalink to this headline">¶</a></h2>
+<p>最小限必要なPythonモジュールをインストールします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">installPythonModules</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="addppas">
+<h2>5.4. addPPAs<a class="headerlink" href="#addppas" title="Permalink to this headline">¶</a></h2>
+<p>PPAを追加します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">addPPAs</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-plymouth">
+<h2>5.5. set_plymouth<a class="headerlink" href="#set-plymouth" title="Permalink to this headline">¶</a></h2>
+<p>Linux起動時の画面においてアニメーションをさせる際のファイルをペーストします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">set_plymouth</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-sources-list">
+<h2>5.6. set_sources_list<a class="headerlink" href="#set-sources-list" title="Permalink to this headline">¶</a></h2>
+<p>PPAのリポジトリを追加します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">set_sources_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-wireless-poweroff">
+<h2>5.7. set_wireless_poweroff<a class="headerlink" href="#set-wireless-poweroff" title="Permalink to this headline">¶</a></h2>
+<p>無線LANのパワーマネージメント機能をオフにします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">wireless_poweroff</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-blacklist">
+<h2>5.8. set_blacklist<a class="headerlink" href="#set-blacklist" title="Permalink to this headline">¶</a></h2>
+<p>Linuxで認識したくないハードウェアのリストをセットします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">set_blacklist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="del-dpkg-info">
+<h2>5.9. del_dpkg_info<a class="headerlink" href="#del-dpkg-info" title="Permalink to this headline">¶</a></h2>
+<p>Linuxでアプリケーションのインストール時に一緒に設置されるファイルを削除して、apt-get upgradeなどのコマンドでエラーが出ないようにします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">del_dpkg_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-rc">
+<h2>5.10. update_rc<a class="headerlink" href="#update-rc" title="Permalink to this headline">¶</a></h2>
+<p>rc.localを更新します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">update_rc</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="off-service">
+<h2>5.11. off_service<a class="headerlink" href="#off-service" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntuで動作しているサービスをオフにします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">off_service</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="faststart">
+<h2>5.12. faststart<a class="headerlink" href="#faststart" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntuのシステム起動を高速化します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">faststart</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="talk">
+<h2>5.13. talk<a class="headerlink" href="#talk" title="Permalink to this headline">¶</a></h2>
+<p>コンピューターにテキストファイルに書いた文字列を読ませます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">talk</span><span class="p">(</span><span class="s2">&quot;xxx.txt&quot;</span><span class="p">,</span><span class="s2">&quot;mei_happy&quot;</span><span class="p">,</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ramdisk-slider">
+<h2>5.14. ramdisk_slider<a class="headerlink" href="#ramdisk-slider" title="Permalink to this headline">¶</a></h2>
+<p>tmpfsでRAMDISKを設定します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">ramdisk_slider</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-info">
+<h2>5.15. image_info<a class="headerlink" href="#image-info" title="Permalink to this headline">¶</a></h2>
+<p>画像の情報を取得します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">image_info</span><span class="p">(</span><span class="s2">&quot;xxx.jpg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-flip">
+<h2>5.16. image_flip<a class="headerlink" href="#image-flip" title="Permalink to this headline">¶</a></h2>
+<p>画像を反転させます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">左右反転</span>
+<span class="n">v</span><span class="o">.</span><span class="n">image_flip</span><span class="p">(</span><span class="s2">&quot;xxx.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;left_right&quot;</span><span class="p">)</span>
+
+<span class="n">上下反転</span>
+<span class="n">v</span><span class="o">.</span><span class="n">image_flip</span><span class="p">(</span><span class="s2">&quot;xxx.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;top_bottom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sudoku">
+<h2>5.17. sudoku<a class="headerlink" href="#sudoku" title="Permalink to this headline">¶</a></h2>
+<p>数独を解きます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">sudoku</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
+<li><a class="reference internal" href="#viper">4. viperモジュールのクラス生成</a></li>
+<li><a class="reference internal" href="#id1">5. viperモジュールのメソッド</a><ul>
+<li><a class="reference internal" href="#setupvalkyrie">5.1. setupValkyrie</a></li>
+<li><a class="reference internal" href="#installapplications">5.2. installApplications</a></li>
+<li><a class="reference internal" href="#installpythonmodules">5.3. installPythonModules</a></li>
+<li><a class="reference internal" href="#addppas">5.4. addPPAs</a></li>
+<li><a class="reference internal" href="#set-plymouth">5.5. set_plymouth</a></li>
+<li><a class="reference internal" href="#set-sources-list">5.6. set_sources_list</a></li>
+<li><a class="reference internal" href="#set-wireless-poweroff">5.7. set_wireless_poweroff</a></li>
+<li><a class="reference internal" href="#set-blacklist">5.8. set_blacklist</a></li>
+<li><a class="reference internal" href="#del-dpkg-info">5.9. del_dpkg_info</a></li>
+<li><a class="reference internal" href="#update-rc">5.10. update_rc</a></li>
+<li><a class="reference internal" href="#off-service">5.11. off_service</a></li>
+<li><a class="reference internal" href="#faststart">5.12. faststart</a></li>
+<li><a class="reference internal" href="#talk">5.13. talk</a></li>
+<li><a class="reference internal" href="#ramdisk-slider">5.14. ramdisk_slider</a></li>
+<li><a class="reference internal" href="#image-info">5.15. image_info</a></li>
+<li><a class="reference internal" href="#image-flip">5.16. image_flip</a></li>
+<li><a class="reference internal" href="#sudoku">5.17. sudoku</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="vipertools002.html"
+                        title="previous chapter">2. viper.pyに引数を付け加えて機能を使う</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vipertools004.html"
+                        title="next chapter">6. kyotei.pyのクラス生成</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/vipertools/vipertools003.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vipertools004.html" title="6. kyotei.pyのクラス生成"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vipertools002.html" title="2. viper.pyに引数を付け加えて機能を使う"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, takamitu hamada.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+	.top_baselayer{
+		height:3200px;
+	}	
+	.menu_s{
+		position:relative;
+		top:260px;
+		left:0px;
+		z-index:20;
+		background-color:#ff36f8;
+		-webkit-transform: rotate(10deg) skew(10deg, 10deg);
+    		-moz-transform: rotate(10deg) skew(10deg, 10deg);
+    	}
+	.diary{
+		position:relative;
+		top:150px;
+		left:0px;
+		z-index:20;
+		background-image:url("../BRKpics/brk20071114d.jpg");
+		background-repeat:no-repeat;
+		-webkit-transform: rotate(-10deg) skew(-10deg,-10deg);
+    		-moz-transform: rotate(-10deg) skew(-10deg,-10deg);
+	}
+	.left{
+		position:relative;
+		top:305px;
+		left:0px;
+		z-index:21;
+		-webkit-transform: rotate(10deg) skew(10deg, 10deg);
+    		-moz-transform: rotate(10deg) skew(10deg, 10deg);
+	}
+	.center{
+		position:relative;
+		top:335px;
+		left:0px;
+		z-index:21;
+	}
+	.right{
+		position:relative;
+		top:285px;
+		left:0px;
+		z-index:21;
+		-webkit-transform: rotate(-10deg) skew(-10deg,-10deg);
+    		-moz-transform: rotate(-10deg) skew(-10deg,-10deg);
+	}

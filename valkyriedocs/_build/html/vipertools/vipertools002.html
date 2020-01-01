@@ -1,0 +1,312 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. viper.pyに引数を付け加えて機能を使う &#8212; Valkyrie SRX 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. viper.pyをPythonファイルにモジュールとして読み込ませる" href="vipertools003.html" />
+    <link rel="prev" title="1. Viper Tools" href="vipertools001.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vipertools003.html" title="3. viper.pyをPythonファイルにモジュールとして読み込ませる"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vipertools001.html" title="1. Viper Tools"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="viper-py">
+<h1>2. viper.pyに引数を付け加えて機能を使う<a class="headerlink" href="#viper-py" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>2.1. 必要なライブラリのインストール<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>必要なライブラリのインストールは、端末で以下のようにして実行します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py import
+</pre></div>
+</div>
+</div>
+<div class="section" id="input-txt">
+<h2>2.2. input.txtに記載されている内容をコンピューターに喋らせる<a class="headerlink" href="#input-txt" title="Permalink to this headline">¶</a></h2>
+<p>input.txtに記載されている文字列をコンピューターに喋らせる事が可能です。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py input
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.3. viper.pyに引数を付け加えてコンピューターに喋らせる<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>viper.pyに文字列を引数として挿入する事で、コンピューターに喋らせる事が出来ます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py jsay こんにちは
+</pre></div>
+</div>
+<p>・特定のテキストファイルを読ませる:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py jsay &quot;テキストファイル名.txt&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="pngjpeg">
+<h2>2.4. PNG画像の入っているディレクトリをJPEG画像に変換する<a class="headerlink" href="#pngjpeg" title="Permalink to this headline">¶</a></h2>
+<p>PNF画像の入っているディレクトリをJPEGに変換します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>2.5. 競艇予想機能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>選手のデータはSQLiteで構築しており、viper/kyotei/kyotei.sqliteで保存されています。</p>
+<p>・コマンド入力で選手の登録番号を入力する事で予想を行います。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python kyotei.py 1111 2222 3333 4444 5555 6666
+</pre></div>
+</div>
+</div>
+<div class="section" id="svg">
+<h2>2.6. アニメーションSVG機能<a class="headerlink" href="#svg" title="Permalink to this headline">¶</a></h2>
+<p>ここでは画像フォルダを「test」とし、出力する画像サイズは640x480とします。</p>
+<p>速度を変更したい場合は、３つ目の引数でアニメーションの実行時間を変更します。</p>
+<p>ここでは5秒でアニメーションが終わるように設定しています。</p>
+<p>コマンドは以下の通りです。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py asvg test 640 480 5
+</pre></div>
+</div>
+<p>これで同じディレクトリに「test.svg」が生成されます。</p>
+</div>
+<div class="section" id="javascripthtml">
+<h2>2.7. パラパラアニメのJavaScript付きのHTMLを生成する<a class="headerlink" href="#javascripthtml" title="Permalink to this headline">¶</a></h2>
+<p>パラパラアニメを行なうJavaScript付きのHTMLを生成します。</p>
+<p>一つのHTMLと画像フォルダの組み合わせでパラパラアニメを実現することができ、アニメーションSVGよりも負荷が低くなっています。</p>
+<p>３つ目の引数は、setIntervalの時間を設定します。これを変更することでアニメーション速度を変更出来ます。</p>
+<p>ここでは50msに設定しています。</p>
+<p>コマンドは以下の通りです。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py ahtml test 640 480 50
+</pre></div>
+</div>
+<p>ディレクトリに「test.html」が生成されます。</p>
+</div>
+<div class="section" id="id4">
+<h2>2.8. PNG画像を一括でJPEGにする<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>複数のPNG画像を一括でJPEG画像に変換します。</p>
+<p>ターミナルエミュレーターで以下のコマンドを使います。</p>
+<p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
+<p>各フォルダはスクリプトと同じディレクトリに置いてください。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py png2jpg inputdir outputdir 640 480 80
+</pre></div>
+</div>
+<p>このコマンドの意味は、「inputdirに入っているPNG画像を一括で640x480の解像度・80%の圧縮率のJPEGに変換する」というものです。</p>
+</div>
+<div class="section" id="pnggif">
+<h2>2.9. PNG画像を一括でGIFにする<a class="headerlink" href="#pnggif" title="Permalink to this headline">¶</a></h2>
+<p>複数のPNG画像を一括でGIF画像に変換します。</p>
+<p>ターミナルエミュレーターで以下のコマンドを使います。</p>
+<p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
+<p>各フォルダはスクリプトと同じディレクトリに置いてください。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py png2gif inputdir outputdir 640 480 80
+</pre></div>
+</div>
+<p>このコマンドの意味は、「inputdirに入っているPNG画像を一括で640x480の解像度・80%の圧縮率のGIFに変換する」というものです。</p>
+</div>
+<div class="section" id="gifpng">
+<h2>2.10. GIF画像を一括でPNGにする<a class="headerlink" href="#gifpng" title="Permalink to this headline">¶</a></h2>
+<p>複数のGIF画像を一括でPNG画像に変換します。</p>
+<p>ターミナルエミュレーターで以下のコマンドを使います。</p>
+<p>ここでは、GIF画像をまとめたフォルダを「inputdir」、PNG画像をまとめたフォルダを「outputdir」とします。</p>
+<p>各フォルダはスクリプトと同じディレクトリに置いてください。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py gif2png inputdir outputdir 640 480 80
+</pre></div>
+</div>
+<p>このコマンドの意味は、「inputdirに入っているGIF画像を一括で640x480の解像度・80%の圧縮率のPNGに変換する」というものです。</p>
+</div>
+<div class="section" id="jpeg">
+<h2>2.11. JPEG画像を一括で回転させて保存する<a class="headerlink" href="#jpeg" title="Permalink to this headline">¶</a></h2>
+<p>一括でJPEG画像を任意の角度に回転させます。</p>
+<p>ターミナルエミュレーターで以下のコマンドを使います。</p>
+<p>ここでは、JPEG画像をまとめたフォルダを「inputdir」とします。
+各フォルダはスクリプトと同じディレクトリに置いてください。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py rotatejpg inputdir -90
+</pre></div>
+</div>
+<p>このコマンドの意味は、「inputdirに入っているJPEG画像を一括で-90度回転させて上書き保存する」というものです。</p>
+</div>
+<div class="section" id="id5">
+<h2>2.12. 音声ファイルエンコード機能<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>この機能には、「MP3→AAC,Ogg Vorbis(mp3aac,mp3ogg)」、「AAC→MP3,Ogg Vorbis(aacmp3,aacogg)」、「Ogg Vorbis→MP3(oggmp3)」の５方式の音声ファイルのフォーマットやコンテナをエンコードする事が出来ます。</p>
+<p>以下のコマンドを入力して使います。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py mp3ogg xxx 128
+$python viper.py oggmp3 xxx 128
+$python viper.py aacogg xxx 128
+$python viper.py mp3aac xxx 128
+$python viper.py aacmp3 xxx 128
+</pre></div>
+</div>
+<p>上の例は、xxx.mp3というファイルをOgg Vorbisで作成したxxx.oggというファイルにビットレート128kbpsで変換する事が出来ます。</p>
+<p>Pythonモジュールであるviper.pyの後に、モード・ファイル名（拡張子含まない）・ビットレートの順に指定していきます。</p>
+<p>ffmpegを使っていますので、Ubuntu 14.04LTSをベースにしたLinuxディストリビューションを使っている場合には、viper.pyで必要なライブラリなどをインストールする事が可能です。</p>
+<p>この機能を使うには、以下のようにします。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py import
+</pre></div>
+</div>
+</div>
+<div class="section" id="tmpfs-ramdisk-slider">
+<h2>2.13. tmpfs RAMDISK Slider<a class="headerlink" href="#tmpfs-ramdisk-slider" title="Permalink to this headline">¶</a></h2>
+<p>tmpfsを使ってtmpディレクトリにRAMDISKを作成します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py tmpfs
+</pre></div>
+</div>
+</div>
+<div class="section" id="imageinfo">
+<h2>2.14. imageinfo<a class="headerlink" href="#imageinfo" title="Permalink to this headline">¶</a></h2>
+<p>画像の情報を取得します。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py imageinfo 画像ソース名
+</pre></div>
+</div>
+</div>
+<div class="section" id="imageflip">
+<h2>2.15. imageflip<a class="headerlink" href="#imageflip" title="Permalink to this headline">¶</a></h2>
+<p>画像を反転させる:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py imageflip 画像ソース名 left_right
+$python viper.py imageflip 画像ソース名 top_bottom
+</pre></div>
+</div>
+</div>
+<div class="section" id="sudoku">
+<h2>2.16. sudoku<a class="headerlink" href="#sudoku" title="Permalink to this headline">¶</a></h2>
+<p>自動的に数独を解いてくれます。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py sudoku
+</pre></div>
+</div>
+</div>
+<div class="section" id="valkyrie">
+<h2>2.17. valkyrie<a class="headerlink" href="#valkyrie" title="Permalink to this headline">¶</a></h2>
+<p>Valkyrieデスクトップのインストールを行います。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py valkyrie
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2.18. ブラウザ機能<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>端末で以下のようにして起動:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$cd browser
+$browser.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="waifu2x-py">
+<h2>2.19. waifu2x.pyによる画像拡大<a class="headerlink" href="#waifu2x-py" title="Permalink to this headline">¶</a></h2>
+<p>端末では以下のようにして起動:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$python viper.py waifu
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. viper.pyに引数を付け加えて機能を使う</a><ul>
+<li><a class="reference internal" href="#id1">2.1. 必要なライブラリのインストール</a></li>
+<li><a class="reference internal" href="#input-txt">2.2. input.txtに記載されている内容をコンピューターに喋らせる</a></li>
+<li><a class="reference internal" href="#id2">2.3. viper.pyに引数を付け加えてコンピューターに喋らせる</a></li>
+<li><a class="reference internal" href="#pngjpeg">2.4. PNG画像の入っているディレクトリをJPEG画像に変換する</a></li>
+<li><a class="reference internal" href="#id3">2.5. 競艇予想機能</a></li>
+<li><a class="reference internal" href="#svg">2.6. アニメーションSVG機能</a></li>
+<li><a class="reference internal" href="#javascripthtml">2.7. パラパラアニメのJavaScript付きのHTMLを生成する</a></li>
+<li><a class="reference internal" href="#id4">2.8. PNG画像を一括でJPEGにする</a></li>
+<li><a class="reference internal" href="#pnggif">2.9. PNG画像を一括でGIFにする</a></li>
+<li><a class="reference internal" href="#gifpng">2.10. GIF画像を一括でPNGにする</a></li>
+<li><a class="reference internal" href="#jpeg">2.11. JPEG画像を一括で回転させて保存する</a></li>
+<li><a class="reference internal" href="#id5">2.12. 音声ファイルエンコード機能</a></li>
+<li><a class="reference internal" href="#tmpfs-ramdisk-slider">2.13. tmpfs RAMDISK Slider</a></li>
+<li><a class="reference internal" href="#imageinfo">2.14. imageinfo</a></li>
+<li><a class="reference internal" href="#imageflip">2.15. imageflip</a></li>
+<li><a class="reference internal" href="#sudoku">2.16. sudoku</a></li>
+<li><a class="reference internal" href="#valkyrie">2.17. valkyrie</a></li>
+<li><a class="reference internal" href="#id6">2.18. ブラウザ機能</a></li>
+<li><a class="reference internal" href="#waifu2x-py">2.19. waifu2x.pyによる画像拡大</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="vipertools001.html"
+                        title="previous chapter">1. Viper Tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vipertools003.html"
+                        title="next chapter">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/vipertools/vipertools002.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vipertools003.html" title="3. viper.pyをPythonファイルにモジュールとして読み込ませる"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vipertools001.html" title="1. Viper Tools"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, takamitu hamada.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <circle cx="150" cy="200" r="100" fill="#06f" id="path2987" onclick="fillRandomColor();"></circle>
+  <polygon id="myPoly" fill="#FFF000" stroke="#FF0000" points="72.278,58.394 78.338,91.04 48.74,75.993 19.565,91.844 24.729,59.045 0.639,36.196 33.428,30.972 47.715,1 62.814,30.57 95.734,34.895 "/>
+ <path id="circle_path"
+        fill="#88BB33" d="M124,89c0,27-22,49-49,49s-49-22-49-49S47,40,75,40.6S124,62,124,89z"  onclick="beginElement( );">
+        <animate attributeName="d" values="M124,89c0,27-22,49-49,49s-49-22-49-49S47,40,75,40.6S124,62,124,89z;M154,89c0,27-52,49-79,49s-49-22-49-49S47,40,75,40.6S154,62,154,89z"
+                dur="1.2s"
+                repeatCount="1"
+                begin="indefinite"
+                id="circle_animate" />
+    </path>
+  <script>
+      <![CDATA[
+          function fillRandomColor(){
+              var r = Math.floor(Math.random() * 255.0);
+              var g = Math.floor(Math.random() * 255.0);
+              var b = Math.floor(Math.random() * 255.0);
+              document.getElementById("path2987").setAttribute("fill","rgb(" + r + "," + g + "," + b + ")");
+          }
+          function transform(){
+              document.getElementById("path2987").setAttribute("transform","translate(300,200)");
+          }
+          function polytrans(){
+              document.getElementById("path2987").setAttribute("points","");
+          }
+          function beginElement(){
+              var animate = document.getElementById('circle_animate');
+              animate.beginElement();
+              var path = document.getElementById('circle_path');
+              path.setAttribute('d','M154,89c0,27-52,49-79,49s-49-22-49-49S47,40,75,40.6S154,62,154,89z');
+          }
+      ]]>
+  </script>
+</svg>
+
+

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url("../Spider/siren.css?date=20200101");
+h1{
+  height:49px;
+  background-image:url("../BRKpics/brk20121010a.png");
+  background-position:0 -90px;
+}
+header{
+  background-color:#000000;
+}
+#logo{
+  width:300px;
+}
+#bg-video{
+  display:none;
+  visibility:hidden;
+ }
+
+ a{
+   color:#1e90ff;
+ }
+.mindmap{
+  width:100%;
+}
+.item-1 > .img_left{
+  display:none;
+  visibility:hidden;
+}
+.item-2 > .img_right{
+ display:none;
+ visibility:hidden;
+}
+@media screen and (min-width: 769px) {
+body{
+   background-image:url("../BRKpics/bg/phantom20200101d.jpg");
+   background-size:100% auto;
+   background-repeat:no-repeat;
+ }
+ .item-1 > .img_left{
+   display:block;
+  visibility:visible;
+ }
+ .item-2 > .img_right{
+  display:block;
+  visibility:visible;
+ }
+.item-3{
+    color:#ffffff;
+}
+ }

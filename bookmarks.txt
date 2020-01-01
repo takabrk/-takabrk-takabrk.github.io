@@ -1,0 +1,430 @@
+<h1>Bookmarks</h1>
+<ul>
+    <li><a href="#ondemand">オンデマンドサービス</a></li>
+    <li><a href="#portal">ポータルサイト</a></li>
+    <li><a href="#tv">テレビ番組表</a></li>
+    <li><a href="#news">新聞・テレビ局</a></li>
+    <li><a href="#movie">動画共有サイト</a></li>
+    <li><a href="#takara">宝くじ</a></li>
+    <li><a href="#gambling">競馬・競艇</a></li>
+    <li><a href="#degital">デジタル系ニュース</a></li>
+    <li><a href="#pcshop">PCショップ・家電量販店</a></li>
+    <li><a href="#maker">メーカー</a></li>
+    <li><a href="#career">キャリア・プロバイダー</a></li>
+    <li><a href="#webtech">Webプログラミングテクニック</a></li>
+    <li><a href="#linux">Linux</a></li>
+    <li><a href="#livehouse">ライブハウス</a></li>
+    <li><a href="#ticket">プレイガイド・チケット予約</a></li>
+    <li><a href="#browser">ブラウザ</a></li>
+    <li><a href="#tex">Tex</a></li>
+    <li><a href="#font">フォント</a></li>
+    <li><a href="#script">汎用プログラミング言語・スクリプト言語</a></li>
+</ul>
+<h2>Chrome拡張</h2>
+<ul>
+     <li><a href="https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?hl=ja" target="_blank">Awesome Screenshot</a></li>
+     <li><a href="https://chrome.google.com/webstore/detail/douga-getter/hhbcihapcmaemjinlbgafnjjihbdmjnf?hl=ja" target="_blank">Doga getter</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj" target="_blank">Image Downloader</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/jsoff/kjhbibcocglfnpllfodaiabanmmegomm?hl=ja" target="_blank">jsoff</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/mindmap-tab/mkgjficalhplaenklhejcbmlkonbakjj" target="_blank">MindMap Tab</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=ja" target="_blank">One Tab</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/rajiko/ejcfdikabeebbgbopoagpabbdokepnff?hl=ja" target="_blank">Rajiko</a></li>
+    <li><a href="https://readcrx-2.github.io/read.crx-2/" target="_blank">read.crx-2</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/scroll-to-top/hegiignepmecppikdlbohnnbfjdoaghj?hl=ja" target="_blank">Scroll To Top</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/searchpreview/hcjdanpjacpeeppdjkppebobilhaglfo?hl=ja" target="_blank">SearchPreview</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=ja" target="_blank">User Agent Switcher</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/translate-anywhere/hhimhiimpaicidimabokfbdokhpcnmoh?hl=ja" target="_blank">どこでも翻訳</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/%E6%96%87%E5%AD%97%E6%95%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF%E3%83%BC/glilfjhglngcfhiogplalcgepclphbhd?hl=ja" target="_blank">文字数カウンター</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/caret/fljalecfjciodhpcledpamjachpmelml" target="_blank">Caret</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/web-maker/lkfkkhfhhdkiemehlpkgjeojomhpccnh" target="_blank">Web Maker</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/view-image-info-propertie/jldjjifbpipdmligefcogandjojpdagn?hl=ja" target="_blank">View Image Info</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/transfer-assistance/hgifmbhpligheheinijibplofmnlpefp?hl=ja" target="_blank">Transfer Assistance</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif" target="_blank">Proxy SwitchyOmega</a></li>
+   <li><a href="https://chrome.google.com/webstore/detail/html%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%81%E3%82%A7%E3%83%83%E3%82%AB%E3%83%BC/ohdllebchmmponnofchalfkegpjojcaf?hl=ja" target="_blank">HTMLエラーチェッカー</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg" target="_blank">ColorPick Eyedropper</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp?hl=ja" target="_blank">AutoPagerize</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=ja" target="_blank">Adblock Plus</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/gbchcmhmhahfdphkhkmpfmihenigjmpp?hl=ja" target="_blank">Chromeリモートデスクトップ</a></li>
+    <li><a href="https://www.mediafire.com/file/87b8yijjkk2o5do/Stream-Recorder.crx/file" target="_blank">Stream Recorder</a></li>
+</ul>
+<h2 id="ondemand">オンデマンドサービス</h2>
+    <ul>
+        <li><a href="http://tver.jp/" target="_blank">Tver</a></li>
+        <li><a href="https://anime.dmkt-sp.jp/animestore/tp_pc" target="_blank">dアニメ</a></li>
+        <li><a href="https://gyao.yahoo.co.jp/" target="_blank">GYAO!</a></li>
+        <li><a href="http://pc.video.dmkt-sp.jp/" target="_blank">dTV</a></li>
+        <li><a href="https://abema.tv/" target="_blank">AbemaTV</a></li>
+    </ul>
+<h2 id="portal">ポータルサイト</h2>
+    <ul>
+        <li><a href="http://www.google.co.jp/" target="_blank">Google</a></li>
+        <li><a href="http://www.livedoor.com" target="_blank">livedoor</a></li>
+        <li><a href="http://www.msn.co.jp/home.htm" target="_blank">MSN Japan</a></li>
+        <li><a href="http://www.yahoo.co.jp" target="_blank">Yahoo!Japan</a></li>
+  </ul>
+<h2 id="tv">テレビ番組表</h2>
+    <ul>
+        <li><a href="http://tv.yahoo.co.jp" target="_blank">Yahoo!テレビGガイド</a></li>
+        <li><a href="http://tv.foxjapan.com/fox/timetable/" target="_blank">FOX</a></li>
+	<li><a href="http://tv.foxjapan.com/crime/timetable/" target="_blank">FOXCRIME</a></li>
+	<li><a href="http://www.fujitv.co.jp/otn/index.html" target="_blank">フジテレビONE TWO NEXT</a></li>
+	<li><a href="http://www.superdramatv.com/program/" target="_blank">スーパードラマTV</a></li>
+	<li><a href="http://www.universalchannel.jp/schedule" target="_blank">Universal Channel</a></li>
+	<li><a href="http://www.animax.co.jp/program/" target="_blank">アニマックス</a></li>
+	<li><a href="http://www.kids-station.com/program/daily.20101108.html" target="_blank">キッズステーション</a></li>
+	<li><a href="http://www.disneychannel.jp/disneych/timetable/" target="_blank">ディズニーチャンネル</a></li>
+    </ul>
+<h2 id="news">新聞・テレビ局</h2>
+    <ul>
+        <li><a href="http://www.sankei.com/" target="_blank">産経新聞</a></li>
+        <li><a href="http://www.yomiuri.co.jp/" target="_blank">読売新聞</a></li>
+        <li><a href="http://www.nikkei.com/" target="_blank">日経新聞</a></li>
+        <li><a href="http://www.asahi.com/" target="_blank">朝日新聞</a></li>
+        <li><a href="http://mainichi.jp/" target="_blank">毎日新聞</a></li>
+        <li><a href="http://www.nhk.or.jp/" target="_blank">NHK</a></li>
+        <li><a href="http://www.tv-asahi.co.jp/" target="_blank">テレビ朝日</a></li>
+        <li><a href="http://www.tbs.co.jp/" target="_blank">TBS</a></li>
+        <li><a href="http://www.fujitv.co.jp/index.html" target="_blank">フジテレビ</a></li>
+        <li><a href="http://www.ntv.co.jp/" target="_blank">日本テレビ</a></li>
+        <li><a href="http://www.tv-tokyo.co.jp/" target="_blank">テレビ東京</a></li>
+        <li><a href="http://www.mbs.jp/" target="_blank">MBS</a></li>
+        <li><a href="http://www.asahi.co.jp/" target="_blank">テレビ朝日</a></li>
+        <li><a href="http://www.ytv.co.jp/index.html" target="_blank">よみうりテレビ</a></li>
+        <li><a href="http://www.tv-osaka.co.jp/" target="_blank">テレビ大阪</a></li>
+        <li><a href="http://www.ktv.jp/index.html" target="_blank">関西テレビ</a></li>
+        <li><a href="http://www.kbs-kyoto.co.jp/" target="_blank">京都テレビ</a></li>
+        <li><a href="http://www.sun-tv.co.jp/" target="_blank">サンテレビ</a></li>
+    </ul>
+<h2 id="movie">動画共有サイト</h2>
+    <ul>
+        <li><a href="http://www.youtube.com" target="_blank">Youtube</a></li>
+        <li><a href="http://www.nicovideo.jp/" target="_blank">ニコニコ動画</a></li>
+        <li><a href="http://www.dailymotion.com" target="_blank">DailyMotion</a></li>
+    </ul>
+<h2 id="takara">宝くじ</h2>
+    <ul>
+        <li><a href="http://www.takarakuji.mizuhobank.co.jp/" target="_blank">みずほ銀行 宝くじコーナー</a></li>
+        <li><a href="http://www.takarakujinet.co.jp/" target="_blank">宝くじネット・ドットコム</a></li>
+        <li><a href="http://e.z-z.jp/?nsj" target="_blank">ダウンジングでナンバーズ大攻略</a></li>
+    </ul>
+<h2 id="gambling">競馬・競艇</h2>
+    <ul>
+        <li><a href="http://www.jra.go.jp/" target="_blank">ＪＲＡ</a></li>
+        <li><a href="http://keiba-lv-st.jp/" target="_blank">地方競馬ライブ</a></li>
+        <li><a href="http://www.oddspark.com/keiba/yosou/spotlight/index.html" target="_blank">オッズパーク</a></li>
+        <li><a href="http://www.nankankeiba.com/index.html" target="_blank">南関東4競馬場</a></li>
+        <li><a href="http://keiba.yahoo.co.jp/" target="_blank">Yahoo!スポーツ 競馬</a></li>
+        <li><a href="http://www.netkeiba.com/" target="_blank">Netkeiba.com</a></li>
+        <li><a href="http://neon.cside4.com/hrw/jiten/tips/combination.html" target="_blank">競馬辞典 Tips 組み合わせ数計算</a></li>
+        <li><a href="http://npn.co.jp/article/category/1/" target="_blank">競馬 - リアルライブ</a></li>
+        <li><a href="http://blog.keibaoh.com/blog/" target="_blank">競馬王公式ブログ</a></li>
+        <li><a href="http://www.boatrace.jp/" target="_blank">ボートレースオフィシャルサイト</a></li>
+        <li><a href="http://www.boatrace-db.net/" target="_blank">艇国データバンク</a>
+        <li><a href="http://55.xmbs.jp/nkt-185438-ch.php?guid=on" target="_blank">よくある競艇攻略法</a></li>
+        <li><a href="http://www.damedasu.net/" target="_blank">競艇ダメダス.NET</a></li>
+        <li><a href="http://park12.wakwak.com/~zy904/boat/index.html" target="_blank">全国のボート(競艇)の予想＆結果</a></li>
+        <li><a href="http://www.orangebuoy.net/ippan/" target="_blank">競艇予想　イッパンテッパン今日の買い目</a></li>
+    </ul>
+<h2 id="degital">デジタル系ニュースサイト</h2>
+    <ul>
+        <li><a href="http://ascii.jp/" target="_blank">ASCII</a></li>
+        <li><a href="http://pc.watch.impress.co.jp/index.htm" target="_blank">PC Watch</a></li>
+        <li><a href="http://news.mynavi.jp/" target="_blank">マイナビ</a></li>
+        <li><a href="http://japanese.engadget.com/" target="_blank">Engadget</a></li>
+        <li><a href="http://www.itmedia.co.jp/enterprise/" target="_blank">ITMedia</a></li>
+        <li><a href="http://gigazine.net/" target="_blank">GIGAZINE</a></li>
+        <li><a href="http://gihyo.jp/" target="_blank">技術評論社</a></li>
+        <li><a href="http://www.4gamer.net/" target="_blank">オンラインゲーム ＆ PCゲーム 情報サイト 4Gamer.net</a></li>
+        <li><a href="http://northwood.blog60.fc2.com/" target="_blank">北森瓦版</a></li>
+        <li><a href="http://www.gdm.or.jp/" target="_blank">「hermitage akihabara[エルミタージュ秋葉原] -アキバ最新情報サイト-」</a></li>
+        <li><a href="http://www.gizmodo.jp" target="_blank">GIZMODE</a></li>
+        <li><a href="http://codezine.jp/" target="_blank">CodeZine</a></li>
+        <li><a href="http://www.anandtech.com/bench/CPU/2" target="_blank">Anandtech CPU Bench</a></li>
+    </ul>
+<h2 id="pcshop">PCショップ・家電量販店</h2>
+    <ul>
+      <li><a href="http://www.sofmap.com/shop/default.asp" target="_blank">Sofmap</a></li>
+      <li><a href="http://www.yodobashi.com/" target="_blank">ヨドバシカメラ</a></li>
+      <li><a href="http://www.biccamera.com/" target="_blank">ビックカメラ</a></li>
+      <li><a href="http://joshinweb.jp/top.html" target="_blank">ジョーシン</a></li>
+      <li><a href="http://kakaku.com/" target="_blank">価格.com</a></li>
+      <li><a href="https://www.pc-koubou.jp/" target="_blank">パソコン工房</a></li>
+      <li><a href="http://www.dospara.co.jp/" target="_blank">ドスパラ</a></li>
+      <li><a href="http://www.1-s.jp/" target="_blank">1's</a></li>
+      <li><a href="http://www.best-do.com/shopping/shop/frontpage.php" target="_blank">Best Do!</a></li>
+      <li><a href="https://iosys.co.jp/" target="_blank">イオシス</a></li>
+    </ul>
+<h2 id="maker">メーカー</h2>
+    <ul>
+      <li><a href="http://www.apple.co.jp/" target="_blank">Apple</a></li>
+      <li><a href="http://www8.hp.com/jp/ja/home.html" target="_blank">HP</a></li>
+      <li><a href="http://www.amd.com/jp-ja/" target="_blank">AMD</a></li>
+      <li><a href="http://jp.nvidia.com/" target="_blank">NVIDIA</a></li>
+      <li><a href="https://www.sonymobile.co.jp/" target="_blank">ソニーモバイル</a></li>
+    </ul>
+<h2 id="career">キャリア・プロバイダー</h2>
+    <ul>
+        <li><a href="http://www.nttdocomo.co.jp/" target="_blank">NTT DoCoMo</a></li>
+        <li><a href="https://www.au.com/" target="_blank">au</a></li>
+        <li><a href="http://www.uqwimax.jp/" target="_blank">UQ</a></li>
+        <li><a href="http://www.biglobe.ne.jp/" target="_blank">BIGLOBE</a></li>
+        <li><a href="http://www.nifty.com/" target="_blank">Nifty</a></li>
+    </ul>
+<h2 id="webtech">Webプログラミングテクニック</h2>
+    <ul>
+        <li><a href="http://www.ibm.com/developerworks/jp/" target="_blank">IBM Developer Works Japan</a></li>
+        <li><a href="http://blog.chromium.org/" target="_blank">Chromium Blog</a></li>
+        <li><a href="http://blogs.msdn.com/b/ie/" target="_blank">IE Blog</a></li>
+        <li><a href="http://www.geocities.jp/m_hiroi/light/" target="_blank">Pythonアルゴリズム</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MOZILLA DEVELOPER NETWORK</a></li>
+        <li><a href="http://phpspot.org/blog/" target="_blank">phpspot開発日誌</a></li>
+        <li><a href="http://www.sitepoint.com/" target="_blank">sitepoint</a></li>
+        <li><a href="http://mozillalabs.com/" target="_blank">Mozilla Labs</a></li>
+        <li><a href="http://blog.mozilla.com/" target="_blank">The Mozilla Blog</a></li>
+        <li><a href="http://ejohn.org/category/blog/" target="_blank">John Resig Blog</a></li>
+        <li><a href="http://jsdo.it/event/svggirl" target="_blank">SVG女子</a></li>
+        <li><a href="http://www.atmarkit.co.jp/index.html" target="_blank">@IT</a></li>
+    </ul>
+<h2 id="linux">Linux</h2>
+    <ul>
+        <li><a href="http://simosnet.com/livecdroom/" target="_blank">ライブCDの部屋</a></li>
+        <li><a href="http://www.kernel.org/" target="_blank">The Linux Kernel Archives</a></li>
+        <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 4.x source</a></li>
+        <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
+        <li><a href="https://www.kernel.org/pub/linux/kernel/projects/rt/" target="_blank">PREEMPT_RT patch</a></li>
+        <li><a href="http://cchalpha.blogspot.jp/" target="_blank">PDS</a>
+        <li><a href="http://ck-hack.blogspot.jp/" target="_blank">CK1 patch(with MuQSS,BFQ)</a></li>
+        <li><a href="http://algo.ing.unimo.it/people/paolo/disk_sched/" target="_blank">BFQ</a></li>
+        <li><a href="https://github.com/sirlucjan/kernel-patches" target="_blank">BFQ-SQ・BFQ-MQ</a></li>
+        <li><a href="https://github.com/graysky2/kernel_gcc_patch" target="_blank">graysky's GCC patch</a></li>
+        <li><a href="http://aufs.sourceforge.net/" target="_blank">Aufs</a></li>
+        <li><a href="https://github.com/dolohow/uksm" target="_blank">UKSM</a></li>
+        <li><a href="https://github.com/zen-kernel/zen-kernel" target="_blank">Zen kernel</a></li>
+        <li><a href="https://github.com/zen-kernel/zen-kernel/commit/ce3bdffce643101479fa622b976992a4484c03e6" target="_blank">ZEN: Add a CONFIG option that sets -O3</a></li>
+        <li><a href="https://pf.natalenko.name/" target="_blank">pf-kernel</a></li>
+        <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
+        <li><a href="https://xanmod.org/" target="_blank">XanMod Kernel</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B63KzJgfI7FnRVMwXy1sQXlDdUk" target="_blank">Kona Linux</a></li>
+        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" target="_blank">カーネル Arch Wiki</a></li>
+        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
+        <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
+        <li><a href="https://www.ubuntuupdates.org/ppas" target="_blank">UbuntuUpdates.org</a></li>
+        <li><a href="https://kledgeb.blogspot.jp/" target="_blank">kledgeb </a></li>
+        <li><a href="https://ubuntuapps.blog.fc2.com/" target="_blank">Ubuntuアプリのいいところ</a></li>
+        <li><a href="https://linuxfan.info/" target="_blank">Linux Fan</a></li>
+        <li><a href="https://debiandog.github.io/doglinux/" target="_blank">Dog Linux</a></li>
+        <li><a href="https://ferenos.weebly.com/" target="_blank">Feren OS</a></li>
+        <li><a href="https://ubuntuforums.org/index.php" target="_blank">Ubuntu forum</a></li>
+        <li><a href="http://gihyo.jp/admin/serial/01/ubuntu-recipe" target="_blank">Ubuntu Weekly Recipe</a></li>
+        <li><a href="https://code.google.com/archive/p/tint2/wikis/Configure.wiki" target="_blank">tint2 - Configure.wiki</a></li>
+        <li><a href="http://openbox.org/wiki/Main_Page" target="_blank">Openbox</a></li>
+        <li><a href="http://www.itmedia.co.jp/enterprise/articles/0804/01/news014.html" target="_blank">軽量なソフトウェアから高機能なデスクトップを構築する</a></li>
+        <li><a href="https://mag.osdn.jp/07/07/17/0043245" target="_blank">Linuxのパフォーマンスを改善する3つのTips</a></li>
+        <li><a href="http://www.ubuntulinux.jp/download" target="_blank">Ubuntu</a></li>
+        <li><a href="http://www.ubuntu.com/download/arm" target="_blank">ARM | Ubuntu</a></li>
+        <li><a href="https://getfedora.org/" target="_blank">Fedra</a></li>
+        <li><a href="http://www.backtrack-linux.org/" target="_blank">BackTrack</a></li>
+        <li><a href="http://openlab.jp/puppylinux/" target="_blank">Puppy Linux日本語版</a></li>
+        <li><a href="http://www.damnsmalllinux.org/" target="_blank">Damn Small Linux</a></li>
+        <li><a href="http://distro.ibiblio.org/tinycorelinux/welcome.html" target="_blank">Tiny Core Linux</a></li>
+        <li><a href="http://wiki.tinycorelinux.net/wiki:remastering" target="_blank">Remastering TC</a></li>
+        <li><a href="http://squashfs.sourceforge.net/" target="_blank">SquashFS</a></li>
+        <li><a href="http://fbpanel.sourceforge.net/docs.html#config" target="_blank">Documentation for fbpanel project</a></li>
+        <li><a href="http://www.compiz.org/" target="_blank">Compiz</a></li>
+        <li><a href="http://rosegray.sakura.ne.jp/macopix/" target="_blank">MaCoPix</a></li>
+        <li><a href="http://shellscript.sunone.me/" target="_blank">UNIX &amp; Linuxコマンド・シェルスクリプトリファレンス</a></li>
+        <li><a href="https://www6.atwiki.jp/vpvpwiki/pages/298.html" target="_blank">VPVP wiki</a></li>
+        <li><a href="http://open-jtalk.sourceforge.net/" target="_blank">Open Jtalk</a></li>
+    </ul>
+<h2 id="livehouse">ライブハウス</h2>
+    <ul>
+        <li><a href="http://www.arm-live.com/muse/osaka/" target="_blank">OSAKA MUSE</a></li>
+        <li><a href="https://sunhall.jp/" target="_blank">SUNHALL</a></li>
+        <li><a href="http://rocktown.jp/index.html" target="_blank">ROCKTOWN</a></li>
+        <li><a href="http://www.club-quattro.com/umeda/schedule/" target="_blank">CLUB QUATTRO</a></li>
+        <li><a href="http://amhall.jp/" target="_blank">amHALL</a></li>
+        <li><a href="http://clubdrop.jp/" target="_blank">DROP</a></li>
+        <li><a href="http://www.namba-hatch.com/acs.html" target="_blank">なんばHatch</a></li>
+        <li><a href="http://bigcat-live.com/schedule" target="_blank">BIGCAT</a></li>
+        <li><a href="http://umeda-trad.com/sch/" target="_blank">umedaTRAD</a></li>
+        <li><a href="http://www.knave.co.jp/" target="_blank">knave</a></li>
+        <li><a href="http://www.s-fanj.com/" target="_blank">FANJ</a></li>
+        <li><a href="http://osaka-zeela.jp/live.html" target="_blank">Zeela</a></li>
+        <li><a href="http://osaka-varon.jp/live.html" target="_blank">VARON</a></li>
+        <li><a href="http://www.waxx.jp/" target="_blank">WAXX</a></li>
+        <li><a href="http://pollux-theater.com/" target="_blank">ポルックスシアター</a></li>
+    </ul>
+<h2 id="ticket">プレイガイド・チケット予約サービス</h2>
+    <ul>
+        <li><a href="https://eplus.jp/sys/main.jsp" target="_blank">e+</a></li>
+        <li><a href="https://t.pia.jp/" target="_blank">チケットぴあ</a></li>
+        <li><a href="https://l-tike.com/" target="_blank">ローソンチケット</a></li>
+        <li><a href="https://tiget.net/" target="_blank">TIGET</a></li>
+    </ul>
+<h2 id="browser">ブラウザ</h2>
+    <ul>
+         <li><a href="https://www.mozilla.org/ja/firefox/" target="_blank">Firefox</a></li>
+         <li><a href="https://www.google.co.jp/chrome/index.html" target="_blank">Google Chrome</a></li>
+	       <li><a href="https://www.opera.com/ja" target="_blank">Opera</a></li>
+	       <li><a href="http://www.itmedia.co.jp/enterprise/articles/0704/29/news011.html" target="_blank">最速Firefoxをビルドしよう</a></li>
+  </ul>
+  <h2 id="tex">Tex</h2>
+<ul>
+	<li><a href="http://ryuiki.agbi.tsukuba.ac.jp/~nishida/lecture/TeX/index.html" target="_blank">Tex入門</a></li>
+	<li><a href="http://ja.wikibooks.org/wiki/TeX/LaTeX%E5%85%A5%E9%96%80" target="_blank">Tex/LaTex入門</a></li>
+	<li><a href="http://www.amy.hi-ho.ne.jp/kanada/latex/latexmath.html" target="_blank">LaTexにおける数式の書き方</a></li>
+  </ul>
+  <h2 id="font">フォント</h2>
+<ul>
+	<li><a href="http://www.geocities.jp/ipa_mona/" target="_blank">IPAモナーフォント</a></li>
+  </ul>
+  <h2 id="script">汎用プログラミング・スクリプト言語</h2>
+<ul>
+	<li><a href="http://www.python.org" target="_blank">Python</a></li>
+	<li><a href="http://www.jython.org/" target="_blank">Jython</a></li>
+	<li><a href="http://turbogears.org/" target="_blank">TurboGears2</a></li>
+	<li><a href="http://matplotlib.org/examples/index.html" target="_blank">Matplotlib Examples</a></li>
+	<li><a href="http://php.net/" target="_blank">PHP</a></li>
+	<li><a href="http://framework.zend.com/learn" target="_blank">Zend Frameworkリファレンス</a></li>
+	<li><a href="http://www.ruby-lang.org/ja/" target="_blank">Ruby</a></li>
+	<li><a href="http://www.perl.com/" target="_blank">Perl</a></li>
+	<li><a href="http://processing.org/" target="_blank">Processing</a></li>
+	<li><a href="http://developer.android.com/index.html" target="_blank">Android SDK</a></li>
+	<li><a href="http://www.gwtproject.org/" target="_blank">Google Web Toolkit</a></li>
+	<li><a href="http://lesscss.org/" target="_blank">LESS</a></li>
+	<li><a href="http://www.brython.info/" target="_blank">Brython</a></li>
+	<li><a href="http://phonegap.com/" target="_blank">PhoneGap</a></li>
+	<li><a href="http://groovy-lang.org/" target="_blank">Groovy</a></li>
+	<li><a href="http://jakarta.apache.org/commons/jelly/" target="_blank">Jelly</a></li>
+	<li><a href="http://www.w3.org/" target="_blank">W3C</a></li>
+	<li><a href="http://www.w3.org/TR/2003/CR-DOM-Level-3-Core-20031107/ecma-script-binding.html" target="_blank">ECMAScript</a></li>
+	<li><a href="http://labs.adobe.com/" target="_blank">Adobe labs.</a></li>
+	<li><a href="http://swfmill.org/" target="_blank">swfmill</a></li>
+	<li><a href="http://tech.motion-twin.com/mtasc.html" target="_blank">MTASC</a></li>
+	<li><a href="https://haxe.org/" target="_blank">haXe</a></li>
+	<li><a href="http://nadesi.com/" target="_blank">なでしこ</a></li>
+	<li><a href="http://spring-fragrance.mints.ne.jp/aviutl/" target="_blank">AviUtl(動画エンコード)</a></li>
+	<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+	<li><a href="http://www.kawa.net/xp/index-j.html" target="_blank">Kawa.net</a></li>
+	<li><a href="http://jsonml.org/" target="_blank">JSON ML</a></li>
+	<li><a href="http://j4p5.sourceforge.net/" target="_blank">PHP5でJavaScriptを動作させるJ4P5</a></li>
+	<li><a href="https://www.smarty.net/" target="_blank">Smarty</a></li>
+  </ul>
+  <h2>Windows API　レイヤー</h2>
+<ul>
+	<li><a href="http://www.winehq.org/" target="_blank">Wine</a></li>
+  </ul>
+  <h2>ノベルゲーム用スクリプト言語・ライブラリ</h2>
+<ul>
+  <li><a href="https://tyrano.jp/" target="_blank">ティラノスクリプト</a></li>
+	<li><a href="http://www.pygame.org/news.html" target="_blank">PyGame</a></li>
+	<li><a href="http://hsp.tv/" target="_blank">Hot Suop Processor(HSP)</a></li>
+	<li><a href="https://www.renpy.org/" target="_blank">Ren'Py</a></li>
+	<li><a href="http://www.nscripter.com/" target="_blank">NScripter</a></li>
+	<li><a href="http://onscripter.sourceforge.jp/onscripter.html" target="_blank">ONScripter</a></li>
+	<li><a href="http://krkrz.github.io/" target="_blank">吉里吉里Z</a></li>
+  </ul>
+  <h2>仮想化技術</h2>
+<ul>
+	<li><a href="http://www.vmware.com/jp/products/server/" target="_blank">VMWare Server</a></li>
+	<li><a href="https://www.virtualbox.org/" target="_blank">Virtual Box</a></li>
+  </ul>
+  <h2>画像関連</h2>
+<ul>
+	<li><a href="https://www.gimp.org/" target="_blank">GIMP</a></li>
+	<li><a href="http://thepluginsite.com/index.html" target="_blank">Herry'sFilter3</a></li>
+	<li><a href="http://www.redfieldplugins.com/Downloads.htm" target="_blank">RedfieldPlugins.exe 9 filters package</a></li>
+	<li><a href="http://www.imagemagick.org/" target="_blank">Image::Magick</a></li>
+	<li><a href="http://www.inkscape.org/" target="_blank">InkScape</a></li>
+	<li><a href="https://www.blender.org/download/" target="_blank">Blender</a></li>
+	<li><a href="http://www.adobe.co.jp/products/photoshopalbum/starter.html" target="_blank">Adobe Photoshop Album 2.0 Mini - ダウンロード</a></li>
+	<li><a href="http://cinepaint.sourceforge.net/" target="_blank">CinePaint</a></li>
+	<li><a href="http://www.gtk.org/" target="_blank">GTK+ - The GIMP Toolkit</a></li>
+	<li><a href="http://www.imagemagick.org/" target="_blank">ImageMagick - Convert, Edit, and Compose Images</a></li>
+	<li><a href="http://www.flamingpear.com/goodies.html" target="_blank">Flaming Pear:Products:Goodies</a></li>
+	<li><a href="http://www.openspc2.org/reibun/PhotoshopPlugin/" target="_blank">Adobe Phoroshop plug-in list (アドビ フォトショップ プラグイン 一覧)</a></li>
+	<li><a href="http://i-section.net/software/shukusen/" target="_blank">縮専（JPEGサイズ変更)</a></li>
+  </ul>
+  <h2>blogツール</h2>
+<ul>
+	<li><a href="http://www.movabletype.jp/?v=3.121-ja" target="_blank">MOVABLE TYPE</a></li>
+	<li><a href="http://www.hazama.nu/pukiwiki/index.php?MT4i" target="_blank">MT4i</a></li>
+  </ul>
+  <h2>Webサーバーソフト</h2>
+<ul>
+	<li><a href="http://www.apache.org/" target="_blank">Apache</a></li>
+  </ul>
+  <h2>音楽クローンゲーム</h2>
+<ul>
+	<li><a href="http://www.stepmania.com/" target="_blank">StepMania</a></li>
+	<li><a href="http://www.bmsoffighters.net/lr2/index.html" target="_blank">LunaticRave2</a></li>
+	<li><a href="http://tonkatsuxxxchitai.blog96.fc2.com/" target="_blank">太鼓さん次郎</a></li>
+	<li><a href="http://www.dtxmania.net/" target="_blank">DTXMania</a></li>
+  </ul>
+  <h2>フリーゲーム</h2>
+<ul>
+	<li><a href="http://www.2dbatlle.sakura.ne.jp/" target="_blank">マッスルファイト</a></li>
+	<li><a href="http://suge9.blog58.fc2.com/blog-entry-21.html" target="_blank">ヴァンガードプリンセス</a></li>
+	<li><a href="http://www.remakesonline.com/nemesis/index.php" target="_blank">Nemesis Online</a></li>
+	<li><a href="http://dynamic.acid-play.com/download/g-type" target="_blank">G-Type</a></li>
+	<li><a href="http://www.freem.ne.jp/win/game/2743" target="_blank">星空に馳せた想い</a></li>
+	<li><a href="http://www.bokunatu.com/" target="_blank">僕と君の夏休み</a></li>
+	<li><a href="http://www.vector.co.jp/soft/winnt/game/se484857.html" target="_blank">ぎゃるばん</a></li>
+	<li><a href="http://www.vector.co.jp/soft/winnt/game/se482485.html" target="_blank">リィンカーネーション</a></li>
+	<li><a href="http://humind.sakura.ne.jp/game/genpei/index.html" target="_blank">源平闘乱</a></li>
+	<li><a href="http://hanakovn.web.fc2.com/" target="_blank">ハナコ</a></li>
+	<li><a href="http://yuri.saiin.net/" target="_blank">彼女と彼女と私の七日</a></li>
+	<li><a href="http://true-re.sakura.ne.jp/true3.htm" target="_blank">TRUE REMEMBRANCE</a></li>
+	<li><a href="http://www.vector.co.jp/soft/dl/win95/game/se414790.html" target="_blank">ある夏の日、山荘にて……</a></li>
+	<li><a href="http://eslaf.main.jp/" target="_blank">E's Laf</a></li>
+  </ul>
+  <h2>ゲームエミュレータ情報サイト</h2>
+<ul>
+	<li><a href="http://www.emulation9.com/" target="_blank">emulation number 9</a></li>
+	<li><a href="http://www.e2j.net/" target="_blank">MAME E2J</a></li>
+  </ul>
+  <h2>ROMハックバッチ</h2>
+<ul>
+	<li><a href="http://mxmkitchen.com/2007/06/21/1531.php" target="_blank">WinIPS</a></li>
+	<li><a href="http://dqnbinary.jp.land.to/" target="_blank">ドラクエバイナリ</a></li>
+	<li><a href="http://www9.atwiki.jp/ffbin/pages/9.html" target="_blank">ffbin@Wiki</a></li>
+	<li><a href="http://www3.atwiki.jp/romancing/" target="_blank">romancing@Wiki</a></li>
+	<li><a href="http://www7.atwiki.jp/tacticsogre/" target="_blank">タクティクスオウガバイナリ</a></li>
+	<li><a href="http://wiki.livedoor.jp/fe_mars/d/FrontPage" target="_blank">ファイアーエンブレム　改造まとめWiki</a></li>
+	<li><a href="http://www.geocities.jp/t_echigoya/" target="_blank">越後屋本舗</a></li>
+	<li><a href="http://tsuru.tri6.net/emuclub/" target="_blank">エミュレータ倶楽部</a></li>
+	<li><a href="http://smblabo.web.fc2.com/" target="_blank">SMB Laboratory</a></li>
+	<li><a href="http://www1.chironoworks.com/game/" target="_blank">ゲーム人の大地</a></li>
+	<li><a href="http://www.geocities.jp/rinkaku89/" target="_blank">麟閣頁</a></li>
+	<li><a href="http://www.geocities.co.jp/Playtown-Bingo/2392/" target="_blank">ゲイムのお部屋へよおこそ</a></li>
+	<li><a href="http://www.geocities.jp/m_jackson0313/" target="_blank">ファミコンハックロム製作室</a></li>
+	<li><a href="http://www9.atwiki.jp/catnap222/pages/232.html" target="_blank">スーパーメトロイド研究所</a></li>
+  </ul>
+  <h2>PS2エミュレータ</h2>
+<ul>
+	<li><a href="http://www.pcsx2.net/" target="_blank">PCSX2</a></li>
+	<li><a href="https://www29.atwiki.jp/emups2/" target="_blank">PCSX2を語ろう</a></li>
+  </ul>
+  <h2>PSエミュレータ</h2>
+<ul>
+	<li><a href="http://www.epsxe.com/" target="_blank">ePSXe</a></li>
+	<li><a href="http://www.pbernert.com/html/gpu.htm" target="_blank">Pete's OpenGL2 PSX GPU</a></li>
+	<li><a href="https://www.zophar.net/utilities/psspuplugins/eternal-spu.html" target="_blank">Eternal SPU </a></li>
+	<li><a href="http://www.pbernert.com/html/cdr.htm" target="_blank">P.E.Op.S. CDR </a></li>
+	<li><a href="http://www.geocities.co.jp/Playtown-Rook/2087/" target="_blank">Harakiri Pad Plugin</a></li>
+  </ul>
+  <h2>セガサターンエミュレータ</h2>
+<ul>
+	<li><a href="http://www.geocities.jp/mj3kj8o5/ssf/" target="_blank">SSF</a></li>
+  </ul>
+  <h2>Nintendo64エミュレータ</h2>
+<ul>
+	<li><a href="http://www.pj64.net/main/" target="_blank">Project64</a></li>
+  </ul>
+  <h2>アーケードゲームエミュレータ</h2>
+<ul>
+	<li><a href="http://mameplus.sourceforge.net/" target="_blank">MAME32 Plus!</a></li>
+	<li><a href="http://59aku.fam.cx/new/impact/impact_p1.htm" target="_blank">Zinc1.1(本体とGPUプラグイン）</a></li>
+	<li><a href="http://nebula.emulatronia.com/" target="_blank">MODEL2emulator</a></li>
+	<li><a href="http://nebula.emulatronia.com/" target="_blank">CPS3 emulator</a></li>
+  </ul>

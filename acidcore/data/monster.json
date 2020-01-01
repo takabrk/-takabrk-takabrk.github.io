@@ -1,0 +1,164 @@
+[
+    {
+        "monster" : "vivid3/m50.png",
+        "width" :  150,
+        "height" : 210,
+        "hp" :  256
+    },
+    {
+        "monster" : "vivid3/lizard03.png",
+        "width" : 108,
+        "height" : 144,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/valkyrie.png",
+        "width" :  175,
+        "height" : 235,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/lilim.png",
+        "width" : 133,
+        "height" : 180,
+        "hp" : 350
+    },
+    {
+        "monster" : "vivid3/lilith.png",
+        "width" :  121,
+        "height" : 180,
+        "hp" : 350
+    },
+    {
+        "monster" : "vivid3/ibitsureimu.png",
+        "width" : 244,
+        "height" : 260,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/kyuubi.png",
+        "width" :  234,
+        "height" : 210,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/kali.png",
+        "width" : 208,
+        "height" : 180,
+        "hp" :  300
+    },
+    {
+         "monster" : "vivid3/witch-re01.png",
+         "width" :  200,
+         "height" :  265,
+         "hp" :  300
+    },
+    {
+        "monster" : "vivid3/parts_flower_a.png",
+        "width" : 150,
+        "height" : 150,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/nyarlathotep-face-vx.png",
+        "width" :  289,
+        "height" : 275,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/joker.png",
+        "width" : 233,
+        "height" : 260,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/chimera.png",
+        "width" : 148,
+        "height" : 220,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/ganesha.png",
+        "width" : 245,
+        "height" : 277,
+        "hp" : 300
+    },
+    {
+         "monster" : "vivid3/asmodeus.png",
+         "width" : 274,
+         "height" : 288,
+         "hp" : 300
+    },
+    {
+        "monster" : "vivid3/succubus.png",
+        "width" :  133,
+        "height" : 180,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/pixy01.png",
+        "width" : 120,
+        "height" : 180,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/pixy02.png",
+        "width" : 120,
+        "height" : 180,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/pixy03.png",
+        "width" : 120,
+        "height" : 180,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/minotauros.png",
+        "width" : 175,
+        "height" : 252,
+        "hp" : 300
+    },
+    {
+        "monster" : "vivid3/shadow-yukari2.png",
+        "width" : 330,
+        "height" : 275,
+        "hp" : 300
+    },
+    {
+         "monster" : "vivid3/wyvern01.png",
+         "width" : 343,
+         "height" : 220,
+         "hp" : 300
+    },
+    {
+         "monster" : "vivid3/dragon01.png",
+         "width" : 320,
+         "height" : 287,
+         "hp" : 300
+    },
+    {
+         "monster" : "vivid3/atena.png",
+         "width" : 159,
+         "height" : 180,
+         "hp" : 300
+    },
+    {
+         "monster" : "vivid3/alice.png",
+         "width" : 190,
+         "height" : 243,
+         "hp" : 300
+    },
+    {
+         "monster" : "vivid3/lucifer.png",
+         "width" : 428,
+         "height" : 280,
+         "hp" : 300
+    },
+    {
+         "monster" : "vivid3/yamatanoorochi.png",
+         "width" : 286,
+         "height" : 280,
+         "hp" : 300
+    }
+]

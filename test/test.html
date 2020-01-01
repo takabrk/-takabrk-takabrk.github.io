@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Web Test</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="auther" content="taka.BRK">
+    <link rel="stylesheet" href="../CSS/moon.css" type="text/css">
+    <style type="text/css">
+        .top{
+            width:100%;
+            height:600px;
+            margin:0;
+            hadding:0;
+        }
+        .left{
+            float:left;
+            width:50%;
+            height:600px;
+            margin:0;
+            padding:0;
+        }
+        .right{
+            float:right;
+            width:50%;
+            height:600px;
+            margin:0;
+            padding:0;
+        }
+        .bottom{
+            width:100%;
+            height:480px;
+            margin:0;
+            padding:0;
+        }
+        .svgxxx{
+            top:600px;
+            left:800px;
+            z-index:60;
+        }
+    </style>
+</head>
+<body>
+     <div class="cubemenu">
+         <ul>
+             <li class="component"><a href="#" class="face" data-hover="C">C</a></li>
+             <li class="component"><a href="#" class="face" data-hover="U">U</a></li>
+             <li class="component"><a href="#" class="face" data-hover="B">B</a></li>
+             <li class="component"><a href="#" class="face" data-hover="E">E</a></li>
+         </ul>
+      </div>
+<h1>spider.js Test</h1>
+<div class="top">
+    <div id="testx"></div>
+    <div id="xxx"></div>
+    <div id="xxx2"></div>
+    <canvas id="yyy"></canvas>
+ <div class="circlePositioner">
+    <div class="mainCircle">
+      <div class="spinningContainer">
+        <div class="leftContainer"></div>
+        <div class="rightContainer"></div>
+      </div>
+      <div class="overlay">
+        <p>Button</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="ac-container">
+  <div>
+    <input id="ac-1" name="accordion-1" type="radio" checked>
+    <label for="ac-1">About us</label>
+    <article>
+      <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+    </article>
+  </div>
+  <div>
+    <input id="ac-2" name="accordion-1" type="radio">
+    <label for="ac-2">How we work</label>
+    <article>
+      <p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
+    </article>
+  </div>
+  <div>
+    <input id="ac-3" name="accordion-1" type="radio">
+    <label for="ac-3">References</label>
+    <article>
+      <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now.</p>
+    </article>
+  </div>
+  <div>
+    <input id="ac-4" name="accordion-1" type="radio">
+    <label for="ac-4">Contact us</label>
+    <article>
+      <p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone.</p>
+    </article>
+  </div>
+            </section>
+<div class="left">
+    <div class="svgxxx">
+        <object type="text/svg+xml" data="xxx.svg"></object>
+    </div>
+</div>
+<div class="right">
+    <div class="port-8 effect-1">
+        <div class="image-box">
+            <img src="img-2.jpg" alt="Image-1">
+        </div>
+        <div class="text-desc">
+            <h3>Your Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="dslide1">
+        <div class="dslide2">
+            <div class="dslide3">
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../Spider/spider.js"></script>
+<script type="text/javascript">
+load(function(){
+        var s = spider("");
+        s.tool("accordion");
+        s.tool("animationbutton");
+        s.createLayer("av1",{width:640,height:480});
+        s.createLayer("av2",{width:300,height:200});
+        s.createLayer("av3",{width:200,height:200});
+        s.createLayer("av4",{width:300,height:300});
+        spider("av1")
+        .css("background",{color:"#ff0000"})
+        .css("position",{x:300,y:200})
+        .css("opacity",{opacity:70})
+        .html("add",{string:"av1"})
+        .click(function(){
+            spider("av2").css("movexy",{speed:-1,end:50}).css("shrinkxy",{speed:1}).css("fadeout",{speed:1});
+        })
+        .mouseover(function(){
+            spider("av1").css("background",{color:"#0000ff"});
+        })
+        .mouseout(function(){
+            spider("av1").css("background",{color:"#ff0000"});
+        });
+
+
+        spider("av2")
+        .css("background",{color:"#00ff00"})
+        .css("position",{position:"absolute",x:400,y:300})
+        .css("zindex",{z:10})
+        .html("add",{string:"av2"})
+        .click(function(){
+            spider("av1").css("movex",{speed:-1,end:100}).css("fadeout",{speed:1});
+            //spider("").drag(new spider("av1").id);
+        });
+
+        spider("av3").css("position",{x:850,y:350})
+                     .css("gradient",{x:100,y:100,deg:60,delay:1,duration:0.5,radius:2})
+                     .html("add",{string:"av3"})
+                     .click(function(){
+                         spider("av3").css("spreadx",{speed:1,end:300});
+                         spider("testx").tool("scrollMessage",{string:"パーリーピーポー？"});
+                     });
+
+        spider("av4").css("background",{color:"#df3333"})
+                     .css("position",{x:280,y:300})
+                     .html("add",{string:"av4"})
+                     .click(function(){
+        　　　　　　　   //spider("av4").css("scaleeffect",{scale:2});
+                         spider("yyy").particle("#ff0000","#00ff00","#0000ff");
+                         spider("body").css("colorchange",{array:["#ffffff","#eeeeee","#adbcff","#333555"]});
+
+                     });
+        spider("xxx2").css("background",{src:"../BRKpics/slide/slide_valkyrie10.jpg",repeat:"no-repeat"}).css("size",{width:300,height:300}).css("shrinkxy",{speed:1,end:60});
+        //spider("").tool("loaction",{array:["n","o","p","q"]});
+        //spider("xxx2").tool("imageanimation",{array:["../BRKpics/slide/slide_valkyrie10.jpg","../BRKpics/slide/slide_valkyrie_srx.jpg","../BRKpics/slide/slide_valkyrie_srx_kupfer.jpg","../BRKpics/slide/slide_valkyrie_srx_xmonad.jpg"],speed:100});
+        //spider("av1").css("size",{width:100,height:200});
+        //s.slideShow(["img1","img2","img3","img4"]);
+        //spider("xxx").selectImage("../BRKpics/slide",["slide_valkyrie10.jpg","slide_valkyrie_srx.jpg","slide_valkyrie_srx_kupfer.jpg","slide_valkyrie_srx_xmonad.jpg"],["img1","img2","img3","img4"]);
+         spider("xxx").tool("stopwatch");
+        //spider("xxx").css("csssprites","../BRKpics/slide/slide_valkyrie10.jpg",100,100,50,10);
+       s.createLayer("movie1",{width:800,height:640});
+       spider("movie1").css("background",{color:"#cdcdcd"})
+                                     .css("position",{x:300,y:500})
+                                     .html("add",{string:"movie1"});
+       //spider("movie1").moviePlayer("bg-video",["http://localhost/Website/BRKpics/movie/valkyrie17.mp4"],"",{control_set:"false",mute_set:"true",loop_set:"true",preload_set:"true"});
+       spider("movie1").audioPlayer(["PassCode - Ray.mp3"]);
+    }
+);
+</script>
+</html>

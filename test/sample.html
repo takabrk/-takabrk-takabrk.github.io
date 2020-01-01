@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <script type="text/javascript" src="../Spider/spider.js"></script>
+  </head>
+  <body>
+
+    <h2>Add React in One Minute</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
+    <div id="like_button_container"></div>
+    <div id="browser_info"></div>
+
+   <script type="text/javascript">
+       load(function(){
+           spider("").require("hello_message.js");
+           spider("browser_info").css("font",{size:"10pt",fontcolor:"#000000"})
+                         .info("date")
+                         .info("browser")
+                         .info("screen")
+                         .matrixEffect();
+
+       });
+   </script>
+  </body>
+</html>
