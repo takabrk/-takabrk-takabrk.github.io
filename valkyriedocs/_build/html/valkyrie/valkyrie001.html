@@ -55,7 +55,7 @@
 <p>デスクトップ環境は、LXQtを採用しています。</p>
 <p>このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 19」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。</p>
-<p>「Chromium Browser」「GIMP」「SM Player」「Sayonara Player」「Emacs」「PlayOnLinux」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
+<p>「Chromium Browser」「GIMP」「SM Player」「Sayonara Player」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。</p>
 <p>Phantom Valkyrie Linux is a 64bit OS which was developed based on the “Ubuntu LTS”, which is a Linux distribution.</p>
@@ -64,7 +64,7 @@ Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実�
 Phantom Valkyrie Linux is carried out the “providing development environment and execution environment for artificial intelligence programs”,
 “providing execution environment for Linux/Windows applications”, “providing software development and web development environment”,
 “providing multimedia contents creation environment , “Providing cutting-edge science and technology/data science environment”,”building a gaming environment”.</p>
-<p>It is equipped with popular application such as “Chromium Browser”,”GIMP”,”Shotcut”,”SM Player”,”Sayonara Player”,”Emacs”,”PlayOnLinux”etc.
+<p>It is equipped with popular application such as “Chromium Browser”,”GIMP”,”Shotcut”,”SM Player”,”Sayonara Player”,”Emacs”,”PlayOnLinux”,”OBS Studio”,”Shotcut”,etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
 Valkyrie Super Remixed Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application “Viper Tools”.</p>
@@ -99,12 +99,12 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="kernel">
 <h2>1.4. Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
-<p>◎VSRX Kernel 5.3.11-bmq53r2</p>
+<p>◎VSRX Kernel 5.4.11-bmq54r1</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> ◇based kernel
-   zen-tune kernel 5.3
+   zen-tune kernel 5.4
 
  ◇Applied patches
- - linux 5.3.11-bmq53r2 patch
+ - linux 5.4.11-bmq54r1 patch
  - BMQ patch
  - Aufs patch
  - Ubuntu patch
@@ -112,15 +112,15 @@ addition of new application in original application “Viper Tools”.</p>
  - Add-x86-zstd-kernel-compression patch
 
  ◇Optimized kernel configuration
-- CPU shceduler &quot;MuQSS&quot;
+- CPU shceduler &quot;BMQ&quot;
 - Default I/O scheduler -&gt; MQ-deadline
 - Meltdown,spectre_v1,spectre_v2 : Mitigation
 - Processer family -&gt; Generic X86_64
 - Kernel Compression mode -&gt; gzip
 - Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)
 - Timer frequency -&gt; 500Hz
-- Compiler optimization level -&gt; Optimize harder
-- MuQSS on
+- Compiler optimization level -&gt; Optimize more for performance(-O3)
+- BMQ on
 - UKSM on
 - Aufs on
 - Zen Interactive Tune on
@@ -128,7 +128,9 @@ addition of new application in original application “Viper Tools”.</p>
 - HD-audio pre-allocated buffer size 4096
 - Delete most items of Kernel Hacking
 - BBR TCP Congestion Control
-- Built on the GCC 8.3
+- Built on the GCC 9.1.2
+- Meltdown,spectre_v1,spectre_v2 : Mitigation
+- CPU idle governor -&gt; TEO
 </pre></div>
 </div>
 </div>
@@ -154,10 +156,10 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="id2">
 <h2>1.7. プログラミング言語及びスクリプト言語、コンパイラ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC8</span><span class="o">.</span><span class="mi">3</span>
-<span class="n">LLVM</span> <span class="mf">8.0</span>
-<span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">15</span>
-<span class="n">PHP</span> <span class="mf">7.2</span><span class="o">.</span><span class="mi">17</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC</span> <span class="mf">9.1</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">LLVM</span> <span class="mf">9.0</span>
+<span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">17</span>
+<span class="n">PHP</span> <span class="mf">7.2</span><span class="o">.</span><span class="mi">24</span>
 <span class="n">Perl</span> <span class="mf">5.26</span><span class="o">.</span><span class="mi">1</span>
 <span class="n">Lua</span> <span class="mf">5.3</span><span class="o">.</span><span class="mi">3</span>
 </pre></div>
@@ -166,7 +168,7 @@ addition of new application in original application “Viper Tools”.</p>
 <div class="section" id="id3">
 <h2>1.8. 収録ソフトウェア<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>○Linuxアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.173.10
+<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.173.14
 ウィンドウマネージャー：Openbox
 パネル：Tint2
 サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -186,24 +188,24 @@ Openbox設定マネージャー：obconf-qt
 スクリーンショットツール:gnome screenshooter
 システム通知:dunst
 フォント : IPAフォント,Cicaなど
-Webブラウザ:Chromium Browser 78
-フォトレタッチソフト:GIMP 2.8.22
-テキストエディタ:Emacs nox 25.2.2,Leafpad
-動画編集ソフト:Avidemux 2.7.4,Shotcut 19.07.15
+Webブラウザ:Chromium Browser 79
+フォトレタッチソフト:GIMP 2.10.14
+テキストエディタ:Emacs nox 25.2,Leafpad
+動画編集ソフト:Avidemux 2.7.4,Shotcut 19.12.31
 音楽プレーヤー:Sayonara Player 1.5.1
 オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-動画プレーヤー:SMPlayer 19.5.0
+動画プレーヤー:SMPlayer 19.10.2
 SSH:OpenSSH
 LiveUSB作成:UNetbootin
 Webサーバ:Apache 2.4.29
 日本語入力環境:Mozc,fcitx
-ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion、Yabause
+ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion
 Windowsアプリ実行環境:Wine 4.0.2,PlayOnLinux 4.2.12
 ライディングソフト:xfburn 0.5.5
 合成音声ソフト:OpenJtalk
 Windowsの圧縮ファイル対応アーカイバ:unar
 PDFビューア:evince 3.28.2
-音声編集ソフトウェア:Audacity 2.2.2
+音声編集ソフトウェア:Audacity 2.2.1
 grub修復ツール:Boot Repair
 ドキュメント作成ツール:Sphinx 1.6.7
 キャッシュアプリケーション:preload,prelink

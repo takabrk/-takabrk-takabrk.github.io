@@ -209,13 +209,13 @@ const spider = (() => {
               if(!animationFlag){
                   if(anim_mode == "fadein"){
                       spiderobj.css("fadein",{speed:10});
-                  }else if(anim_mode == "spreadl"){
-                      spiderobj.css("spreadx",{speed:1,end:1325}).css("fadein",{speed:1});
-                  }else if(anim_mode == "spreadr"){
-                      spiderobj.css("spreadx",{speed:-1,end:0}).css("fadein",{speed:1});
-                  }else if(anim_mode == "spreadu"){
-                      spiderobj.css("spready",{speed:1,end:400}).css("fadein",{speed:1});
-                  }
+                  }else if(anim_mode == "fadeout"){
+                      spiderobj.css("fadeout",{speed:10});
+                  }else if(anim_mode == "movex"){
+                      spiderobj.css("movex",{speed:1,end:300}).css("fadein",{speed:1});
+                  }else if(anim_mode == "movey"){
+                      spiderobj.css("movey",{speed:1,end:100}).css("fadein",{speed:1});
+                       }
                   animationFlag = true;
               }
             }

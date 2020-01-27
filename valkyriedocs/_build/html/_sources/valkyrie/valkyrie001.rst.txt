@@ -13,7 +13,7 @@ Phantom Valkyrie Linuxは、Linuxディストリビューションである「Ub
 このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 19」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
 
-「Chromium Browser」「GIMP」「SM Player」「Sayonara Player」「Emacs」「PlayOnLinux」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
+「Chromium Browser」「GIMP」「SM Player」「Sayonara Player」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。
 
@@ -26,7 +26,7 @@ Phantom Valkyrie Linux is carried out the "providing development environment and
 "providing execution environment for Linux/Windows applications", "providing software development and web development environment",
 "providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
 
-It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Sayonara Player","Emacs","PlayOnLinux"etc.
+It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Sayonara Player","Emacs","PlayOnLinux","OBS Studio","Shotcut",etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
 Valkyrie Super Remixed Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application "Viper Tools".
@@ -77,13 +77,13 @@ Ubuntu 18.04 LTS
 Kernel
 ------------
 
-◎VSRX Kernel 5.3.11-bmq53r2
+◎VSRX Kernel 5.4.11-bmq54r1
 ::
   ◇based kernel
-    zen-tune kernel 5.3
+    zen-tune kernel 5.4
 
   ◇Applied patches
-  - linux 5.3.11-bmq53r2 patch
+  - linux 5.4.11-bmq54r1 patch
   - BMQ patch
   - Aufs patch
   - Ubuntu patch
@@ -91,15 +91,15 @@ Kernel
   - Add-x86-zstd-kernel-compression patch
 
   ◇Optimized kernel configuration
- - CPU shceduler "MuQSS"
+ - CPU shceduler "BMQ"
  - Default I/O scheduler -> MQ-deadline
  - Meltdown,spectre_v1,spectre_v2 : Mitigation
  - Processer family -> Generic X86_64
  - Kernel Compression mode -> gzip
  - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
  - Timer frequency -> 500Hz
- - Compiler optimization level -> Optimize harder
- - MuQSS on
+ - Compiler optimization level -> Optimize more for performance(-O3)
+ - BMQ on
  - UKSM on
  - Aufs on
  - Zen Interactive Tune on
@@ -107,7 +107,9 @@ Kernel
  - HD-audio pre-allocated buffer size 4096
  - Delete most items of Kernel Hacking
  - BBR TCP Congestion Control
- - Built on the GCC 8.3
+ - Built on the GCC 9.1.2
+ - Meltdown,spectre_v1,spectre_v2 : Mitigation
+ - CPU idle governor -> TEO
 
 PPA
 -----------
@@ -135,10 +137,10 @@ PPA
 
 ::
 
-    GCC8.3
-    LLVM 8.0
-    Python 3.6.8/2.7.15
-    PHP 7.2.17
+    GCC 9.1.2
+    LLVM 9.0
+    Python 3.6.9/2.7.17
+    PHP 7.2.24
     Perl 5.26.1
     Lua 5.3.3
 
@@ -146,7 +148,7 @@ PPA
 ---------------------
 ○Linuxアプリ::
 
-  ファームウェア：Linux Firmware 1.173.10
+  ファームウェア：Linux Firmware 1.173.14
   ウィンドウマネージャー：Openbox
   パネル：Tint2
   サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -166,24 +168,24 @@ PPA
   スクリーンショットツール:gnome screenshooter
   システム通知:dunst
   フォント : IPAフォント,Cicaなど
-  Webブラウザ:Chromium Browser 78
-  フォトレタッチソフト:GIMP 2.8.22
-  テキストエディタ:Emacs nox 25.2.2,Leafpad
-  動画編集ソフト:Avidemux 2.7.4,Shotcut 19.07.15
+  Webブラウザ:Chromium Browser 79
+  フォトレタッチソフト:GIMP 2.10.14
+  テキストエディタ:Emacs nox 25.2,Leafpad
+  動画編集ソフト:Avidemux 2.7.4,Shotcut 19.12.31
   音楽プレーヤー:Sayonara Player 1.5.1
   オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-  動画プレーヤー:SMPlayer 19.5.0
+  動画プレーヤー:SMPlayer 19.10.2
   SSH:OpenSSH
   LiveUSB作成:UNetbootin
   Webサーバ:Apache 2.4.29
   日本語入力環境:Mozc,fcitx
-  ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion、Yabause
+  ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion
   Windowsアプリ実行環境:Wine 4.0.2,PlayOnLinux 4.2.12
   ライディングソフト:xfburn 0.5.5
   合成音声ソフト:OpenJtalk
   Windowsの圧縮ファイル対応アーカイバ:unar
   PDFビューア:evince 3.28.2
-  音声編集ソフトウェア:Audacity 2.2.2
+  音声編集ソフトウェア:Audacity 2.2.1
   grub修復ツール:Boot Repair
   ドキュメント作成ツール:Sphinx 1.6.7
   キャッシュアプリケーション:preload,prelink
