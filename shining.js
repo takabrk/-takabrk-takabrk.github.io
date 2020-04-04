@@ -34,21 +34,21 @@ load(
                          .info("browser")
                          .info("screen")
                          .matrixEffect();
-              spider("").createLayer("av1",{width:800,height:480});
-              spider("av1")
-              .css("background",{color:"#ff0000"})
-              .css("position",{x:-300,y:500})
-              .css("opacity",{opacity:0})
-              .html("add",{string:"av1"});
-              spider("av1").scrollanim("movex");
+              //spider("").createLayer("av1",{width:800,height:480});
+              //spider("av1")
+              //.css("background",{color:"#ff0000"})
+              //.css("position",{x:-300,y:500})
+              //.css("opacity",{opacity:0})
+              //.html("add",{string:"av1"});
+              //spider("av1").scrollanim("movex");
 
-              spider("").createLayer("av2",{width:300,height:200});
-              spider("av2")
-                  .css("background",{color:"#00ff00"})
-                  .css("position",{x:-300,y:300})
-                  .css("opacity",{opacity:0})
-                  .html("add",{string:"av2"});
-              spider("av2").scrollanim("movex");
+              //spider("").createLayer("av2",{width:300,height:200});
+              //spider("av2")
+              //    .css("background",{color:"#00ff00"})
+               //   .css("position",{x:-300,y:300})
+                //  .css("opacity",{opacity:0})
+                //  .html("add",{string:"av2"});
+              //spider("av2").scrollanim("movex");
           }else{
               spider("youtube").html("ajax",{url:"youtube.txt"});
               spider("bookmarks").html("ajax",{url:"bookmarks.txt"});
