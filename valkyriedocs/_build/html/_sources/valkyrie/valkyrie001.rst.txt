@@ -72,44 +72,52 @@ STCK1A32WFC(Intel)
 Based Linux destribution
 -----------------------------------
 
-Ubuntu 18.04 LTS
+Ubuntu 18.04.4 LTS
 
 Kernel
 ------------
 
-◎VSRX Kernel 5.4.11-bmq54r1
+◎PVL Kernel 5.7-bmq57r0
 ::
   ◇based kernel
-    zen-tune kernel 5.4
+    linux kernel 5.7
 
   ◇Applied patches
-  - linux 5.4.11-bmq54r1 patch
-  - BMQ patch
-  - Aufs patch
-  - Ubuntu patch
-  - graysky's GCC patch
-  - Add-x86-zstd-kernel-compression patch
+Applied patches:
+ - BMQ 5.7-r0 patch (http://cchalpha.blogspot.com/)
+ - Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
+ - Aufs patch (http://aufs.sourceforge.net/)
+ - UKSM patch (https://github.com/dolohow/uksm)
+ - zstd-v5 (https://github.com/terrelln/linux/commits/zstd-v5)
+ - Introduce per-task latency_nice for scheduler hints (https://lkml.org/lkml/2020/2/28/166)
+ - blk-mq: per-ctx tag caching (https://patchwork.kernel.org/cover/11321155/)
+ - futex: Split key setup from key queue locking and read (https://lkml.org/lkml/2019/7/30/1398)
+ - add-acs-overrides.patch (https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
+ - Clear Linux (https://github.com/clearlinux-pkgs/linux)
+ - cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i
+ - LL patch (https://github.com/sirlucjan/kernel-patches</a>)
+ - Performance-Helping FSGSBASE Patches (https://lkml.org/lkml/2020/5/28/1358)
 
   ◇Optimized kernel configuration
- - CPU shceduler "BMQ"
- - Default I/O scheduler -> MQ-deadline
- - Meltdown,spectre_v1,spectre_v2 : Mitigation
+ - CPU shceduler -> "BMQ"
+ - Default I/O scheduler -> Kyber
  - Processer family -> Generic X86_64
- - Kernel Compression mode -> gzip
+ - Kernel Compression mode -> lz4
  - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
  - Timer frequency -> 500Hz
- - Compiler optimization level -> Optimize more for performance(-O3)
+ - Compiler optimization level -> Optimize for performance(-O2)
  - BMQ on
  - UKSM on
  - Aufs on
- - Zen Interactive Tune on
- - Default CPUFreq Governor -&gt; ondemand
+ - Default CPUFreq Governor -&gt; performance
  - HD-audio pre-allocated buffer size 4096
- - Delete most items of Kernel Hacking
  - BBR TCP Congestion Control
- - Built on the GCC 9.1.2
+ - Built on the GCC 10.1.0
  - Meltdown,spectre_v1,spectre_v2 : Mitigation
  - CPU idle governor -> TEO
+ - Wine/Proton fsync on
+ - PCIe ACS Override on
+ - ZSTD kernel and initram support
 
 PPA
 -----------
@@ -125,6 +133,7 @@ PPA
     Wine HQ PPA
     GIMP PPA
     OBS Studio PPA
+    Intel Media Driver PPA
 
 デスクトップ環境
 ----------------------
@@ -137,8 +146,8 @@ PPA
 
 ::
 
-    GCC 9.1.2
-    LLVM 9.0
+    GCC 10.1.0
+    LLVM 10
     Python 3.6.9/2.7.17
     PHP 7.2.24
     Perl 5.26.1
@@ -148,7 +157,7 @@ PPA
 ---------------------
 ○Linuxアプリ::
 
-  ファームウェア：Linux Firmware 1.173.14
+  ファームウェア：Linux Firmware 1.173.18
   ウィンドウマネージャー：Openbox
   パネル：Tint2
   サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -165,22 +174,22 @@ PPA
   音量制御：　gnome-alsamixer
   コンポジット制御：compton
   文字入力：Fcitx+Mozc
-  スクリーンショットツール:gnome screenshooter
+  スクリーンショットツール:xfce4 screenshooter
   システム通知:dunst
-  フォント : IPAフォント,Cicaなど
-  Webブラウザ:Chromium Browser 79
+  フォント : Takaoフォント,Cicaなど
+  Webブラウザ:Chromium Browser 83,Firefox 77
   フォトレタッチソフト:GIMP 2.10.14
-  テキストエディタ:Emacs nox 25.2,Leafpad
-  動画編集ソフト:Avidemux 2.7.4,Shotcut 19.12.31
-  音楽プレーヤー:Sayonara Player 1.5.1
+  テキストエディタ:Emacs nox 25.2,mousepad
+  動画編集ソフト:Shotcut 19.12.31
+  音楽プレーヤー:Audacious
   オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
   動画プレーヤー:SMPlayer 19.10.2
   SSH:OpenSSH
   LiveUSB作成:UNetbootin
   Webサーバ:Apache 2.4.29
   日本語入力環境:Mozc,fcitx
-  ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion
-  Windowsアプリ実行環境:Wine 4.0.2,PlayOnLinux 4.2.12
+  ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion
+  Windowsアプリ実行環境:Wine 5.9,PlayOnLinux 4.2.12
   ライディングソフト:xfburn 0.5.5
   合成音声ソフト:OpenJtalk
   Windowsの圧縮ファイル対応アーカイバ:unar
@@ -194,7 +203,7 @@ PPA
   APNG生成 : apngasm 2.7
   APNGからAGIFに変換 : apng2gif
   Live USB作成ツール : UNetbootin
-  ディスクパーティション管理ツール : GNOME Disks
+  ディスクパーティション管理ツール : GParted
   動画配信ツール：OBS Studio
   分散コンパイラ：distcc
   並列コンピューティングAPI：OpenCV

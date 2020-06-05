@@ -95,44 +95,59 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="based-linux-destribution">
 <h2>1.3. Based Linux destribution<a class="headerlink" href="#based-linux-destribution" title="Permalink to this headline">¶</a></h2>
-<p>Ubuntu 18.04 LTS</p>
+<p>Ubuntu 18.04.4 LTS</p>
 </div>
 <div class="section" id="kernel">
 <h2>1.4. Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
-<p>◎VSRX Kernel 5.4.11-bmq54r1</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> ◇based kernel
-   zen-tune kernel 5.4
+<p>◎PVL Kernel 5.7-bmq57r0</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>◇based kernel
+  linux kernel 5.7
 
- ◇Applied patches
- - linux 5.4.11-bmq54r1 patch
- - BMQ patch
- - Aufs patch
- - Ubuntu patch
- - graysky&#39;s GCC patch
- - Add-x86-zstd-kernel-compression patch
-
- ◇Optimized kernel configuration
-- CPU shceduler &quot;BMQ&quot;
-- Default I/O scheduler -&gt; MQ-deadline
-- Meltdown,spectre_v1,spectre_v2 : Mitigation
-- Processer family -&gt; Generic X86_64
-- Kernel Compression mode -&gt; gzip
-- Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)
-- Timer frequency -&gt; 500Hz
-- Compiler optimization level -&gt; Optimize more for performance(-O3)
-- BMQ on
-- UKSM on
-- Aufs on
-- Zen Interactive Tune on
-- Default CPUFreq Governor -&amp;gt; ondemand
-- HD-audio pre-allocated buffer size 4096
-- Delete most items of Kernel Hacking
-- BBR TCP Congestion Control
-- Built on the GCC 9.1.2
-- Meltdown,spectre_v1,spectre_v2 : Mitigation
-- CPU idle governor -&gt; TEO
+◇Applied patches
 </pre></div>
 </div>
+<dl class="docutils">
+<dt>Applied patches:</dt>
+<dd><ul class="first simple">
+<li>BMQ 5.7-r0 patch (<a class="reference external" href="http://cchalpha.blogspot.com/">http://cchalpha.blogspot.com/</a>)</li>
+<li>Ubuntu patch (<a class="reference external" href="https://kernel.ubuntu.com/~kernel-ppa/mainline/">https://kernel.ubuntu.com/~kernel-ppa/mainline/</a>)</li>
+<li>Aufs patch (<a class="reference external" href="http://aufs.sourceforge.net/">http://aufs.sourceforge.net/</a>)</li>
+<li>UKSM patch (<a class="reference external" href="https://github.com/dolohow/uksm">https://github.com/dolohow/uksm</a>)</li>
+<li>zstd-v5 (<a class="reference external" href="https://github.com/terrelln/linux/commits/zstd-v5">https://github.com/terrelln/linux/commits/zstd-v5</a>)</li>
+<li>Introduce per-task latency_nice for scheduler hints (<a class="reference external" href="https://lkml.org/lkml/2020/2/28/166">https://lkml.org/lkml/2020/2/28/166</a>)</li>
+<li>blk-mq: per-ctx tag caching (<a class="reference external" href="https://patchwork.kernel.org/cover/11321155/">https://patchwork.kernel.org/cover/11321155/</a>)</li>
+<li>futex: Split key setup from key queue locking and read (<a class="reference external" href="https://lkml.org/lkml/2019/7/30/1398">https://lkml.org/lkml/2019/7/30/1398</a>)</li>
+<li>add-acs-overrides.patch (<a class="reference external" href="https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio">https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio</a>)</li>
+<li>Clear Linux (<a class="reference external" href="https://github.com/clearlinux-pkgs/linux">https://github.com/clearlinux-pkgs/linux</a>)</li>
+<li>cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i</li>
+<li>LL patch (<a class="reference external" href="https://github.com/sirlucjan/kernel">https://github.com/sirlucjan/kernel</a>-patches&lt;/a&gt;)</li>
+<li>Performance-Helping FSGSBASE Patches (<a class="reference external" href="https://lkml.org/lkml/2020/5/28/1358">https://lkml.org/lkml/2020/5/28/1358</a>)</li>
+</ul>
+<blockquote>
+<div>◇Optimized kernel configuration</div></blockquote>
+<ul class="last simple">
+<li>CPU shceduler -&gt; “BMQ”</li>
+<li>Default I/O scheduler -&gt; Kyber</li>
+<li>Processer family -&gt; Generic X86_64</li>
+<li>Kernel Compression mode -&gt; lz4</li>
+<li>Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)</li>
+<li>Timer frequency -&gt; 500Hz</li>
+<li>Compiler optimization level -&gt; Optimize for performance(-O2)</li>
+<li>BMQ on</li>
+<li>UKSM on</li>
+<li>Aufs on</li>
+<li>Default CPUFreq Governor -&amp;gt; performance</li>
+<li>HD-audio pre-allocated buffer size 4096</li>
+<li>BBR TCP Congestion Control</li>
+<li>Built on the GCC 10.1.0</li>
+<li>Meltdown,spectre_v1,spectre_v2 : Mitigation</li>
+<li>CPU idle governor -&gt; TEO</li>
+<li>Wine/Proton fsync on</li>
+<li>PCIe ACS Override on</li>
+<li>ZSTD kernel and initram support</li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="ppa">
 <h2>1.5. PPA<a class="headerlink" href="#ppa" title="Permalink to this headline">¶</a></h2>
@@ -145,6 +160,7 @@ addition of new application in original application “Viper Tools”.</p>
 <span class="n">Wine</span> <span class="n">HQ</span> <span class="n">PPA</span>
 <span class="n">GIMP</span> <span class="n">PPA</span>
 <span class="n">OBS</span> <span class="n">Studio</span> <span class="n">PPA</span>
+<span class="n">Intel</span> <span class="n">Media</span> <span class="n">Driver</span> <span class="n">PPA</span>
 </pre></div>
 </div>
 </div>
@@ -156,8 +172,8 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="id2">
 <h2>1.7. プログラミング言語及びスクリプト言語、コンパイラ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC</span> <span class="mf">9.1</span><span class="o">.</span><span class="mi">2</span>
-<span class="n">LLVM</span> <span class="mf">9.0</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC</span> <span class="mf">10.1</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">LLVM</span> <span class="mi">10</span>
 <span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">17</span>
 <span class="n">PHP</span> <span class="mf">7.2</span><span class="o">.</span><span class="mi">24</span>
 <span class="n">Perl</span> <span class="mf">5.26</span><span class="o">.</span><span class="mi">1</span>
@@ -168,7 +184,7 @@ addition of new application in original application “Viper Tools”.</p>
 <div class="section" id="id3">
 <h2>1.8. 収録ソフトウェア<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>○Linuxアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.173.14
+<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.173.18
 ウィンドウマネージャー：Openbox
 パネル：Tint2
 サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -185,22 +201,22 @@ Openbox設定マネージャー：obconf-qt
 音量制御：　gnome-alsamixer
 コンポジット制御：compton
 文字入力：Fcitx+Mozc
-スクリーンショットツール:gnome screenshooter
+スクリーンショットツール:xfce4 screenshooter
 システム通知:dunst
-フォント : IPAフォント,Cicaなど
-Webブラウザ:Chromium Browser 79
+フォント : Takaoフォント,Cicaなど
+Webブラウザ:Chromium Browser 83,Firefox 77
 フォトレタッチソフト:GIMP 2.10.14
-テキストエディタ:Emacs nox 25.2,Leafpad
-動画編集ソフト:Avidemux 2.7.4,Shotcut 19.12.31
-音楽プレーヤー:Sayonara Player 1.5.1
+テキストエディタ:Emacs nox 25.2,mousepad
+動画編集ソフト:Shotcut 19.12.31
+音楽プレーヤー:Audacious
 オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
 動画プレーヤー:SMPlayer 19.10.2
 SSH:OpenSSH
 LiveUSB作成:UNetbootin
 Webサーバ:Apache 2.4.29
 日本語入力環境:Mozc,fcitx
-ゲームエミュレーター:PCSX2 1.4.0(with plugins for PCSX2 1.5.0)、PPSSPP 1.7.0、Mednafen、Kega Fusion
-Windowsアプリ実行環境:Wine 4.0.2,PlayOnLinux 4.2.12
+ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion
+Windowsアプリ実行環境:Wine 5.9,PlayOnLinux 4.2.12
 ライディングソフト:xfburn 0.5.5
 合成音声ソフト:OpenJtalk
 Windowsの圧縮ファイル対応アーカイバ:unar
@@ -214,7 +230,7 @@ Cコンパイル高速化ツール:ccache 3.4.1
 APNG生成 : apngasm 2.7
 APNGからAGIFに変換 : apng2gif
 Live USB作成ツール : UNetbootin
-ディスクパーティション管理ツール : GNOME Disks
+ディスクパーティション管理ツール : GParted
 動画配信ツール：OBS Studio
 分散コンパイラ：distcc
 並列コンピューティングAPI：OpenCV
