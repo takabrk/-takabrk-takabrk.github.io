@@ -83,41 +83,41 @@ Kernel
     linux kernel 5.7
 
   ◇Applied patches
-Applied patches:
- - BMQ 5.7-r0 patch (http://cchalpha.blogspot.com/)
- - Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
- - Aufs patch (http://aufs.sourceforge.net/)
- - UKSM patch (https://github.com/dolohow/uksm)
- - zstd-v5 (https://github.com/terrelln/linux/commits/zstd-v5)
- - Introduce per-task latency_nice for scheduler hints (https://lkml.org/lkml/2020/2/28/166)
- - blk-mq: per-ctx tag caching (https://patchwork.kernel.org/cover/11321155/)
- - futex: Split key setup from key queue locking and read (https://lkml.org/lkml/2019/7/30/1398)
- - add-acs-overrides.patch (https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
- - Clear Linux (https://github.com/clearlinux-pkgs/linux)
- - cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i
- - LL patch (https://github.com/sirlucjan/kernel-patches</a>)
- - Performance-Helping FSGSBASE Patches (https://lkml.org/lkml/2020/5/28/1358)
+  Applied patches
+  - BMQ 5.7-r0 patch (http://cchalpha.blogspot.com/)
+  - Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
+  - Aufs patch (http://aufs.sourceforge.net/)
+  - UKSM patch (https://github.com/dolohow/uksm)
+  - zstd-v5 (https://github.com/terrelln/linux/commits/zstd-v5)
+  - Introduce per-task latency_nice for scheduler hints (https://lkml.org/lkml/2020/2/28/166)
+  - blk-mq: per-ctx tag caching (https://patchwork.kernel.org/cover/11321155/)
+  - futex: Split key setup from key queue locking and read (https://lkml.org/lkml/2019/7/30/1398)
+  - add-acs-overrides.patch (https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
+  - Clear Linux (https://github.com/clearlinux-pkgs/linux)
+  - cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i
+  - LL patch (https://github.com/sirlucjan/kernel-patches</a>)
+  - Performance-Helping FSGSBASE Patches (https://lkml.org/lkml/2020/5/28/1358)
 
   ◇Optimized kernel configuration
- - CPU shceduler -> "BMQ"
- - Default I/O scheduler -> Kyber
- - Processer family -> Generic X86_64
- - Kernel Compression mode -> lz4
- - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
- - Timer frequency -> 500Hz
- - Compiler optimization level -> Optimize for performance(-O2)
- - BMQ on
- - UKSM on
- - Aufs on
- - Default CPUFreq Governor -&gt; performance
- - HD-audio pre-allocated buffer size 4096
- - BBR TCP Congestion Control
- - Built on the GCC 10.1.0
- - Meltdown,spectre_v1,spectre_v2 : Mitigation
- - CPU idle governor -> TEO
- - Wine/Proton fsync on
- - PCIe ACS Override on
- - ZSTD kernel and initram support
+  - CPU shceduler -> "BMQ"
+  - Default I/O scheduler -> Kyber
+  - Processer family -> Generic X86_64
+  - Kernel Compression mode -> lz4
+  - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
+  - Timer frequency -> 500Hz
+  - Compiler optimization level -> Optimize for performance(-O2)
+  - BMQ on
+  - UKSM on
+  - Aufs on
+  - Default CPUFreq Governor -&gt; performance
+  - HD-audio pre-allocated buffer size 4096
+  - BBR TCP Congestion Control
+  - Built on the GCC 10.1.0
+  - Meltdown,spectre_v1,spectre_v2 : Mitigation
+  - CPU idle governor -> TEO
+  - Wine/Proton fsync on
+  - PCIe ACS Override on
+  - ZSTD kernel and initram support
 
 PPA
 -----------

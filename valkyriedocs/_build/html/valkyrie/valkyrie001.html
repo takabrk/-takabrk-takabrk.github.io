@@ -104,50 +104,43 @@ addition of new application in original application “Viper Tools”.</p>
   linux kernel 5.7
 
 ◇Applied patches
+Applied patches
+- BMQ 5.7-r0 patch (http://cchalpha.blogspot.com/)
+- Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
+- Aufs patch (http://aufs.sourceforge.net/)
+- UKSM patch (https://github.com/dolohow/uksm)
+- zstd-v5 (https://github.com/terrelln/linux/commits/zstd-v5)
+- Introduce per-task latency_nice for scheduler hints (https://lkml.org/lkml/2020/2/28/166)
+- blk-mq: per-ctx tag caching (https://patchwork.kernel.org/cover/11321155/)
+- futex: Split key setup from key queue locking and read (https://lkml.org/lkml/2019/7/30/1398)
+- add-acs-overrides.patch (https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
+- Clear Linux (https://github.com/clearlinux-pkgs/linux)
+- cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i
+- LL patch (https://github.com/sirlucjan/kernel-patches&lt;/a&gt;)
+- Performance-Helping FSGSBASE Patches (https://lkml.org/lkml/2020/5/28/1358)
+
+◇Optimized kernel configuration
+- CPU shceduler -&gt; &quot;BMQ&quot;
+- Default I/O scheduler -&gt; Kyber
+- Processer family -&gt; Generic X86_64
+- Kernel Compression mode -&gt; lz4
+- Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)
+- Timer frequency -&gt; 500Hz
+- Compiler optimization level -&gt; Optimize for performance(-O2)
+- BMQ on
+- UKSM on
+- Aufs on
+- Default CPUFreq Governor -&amp;gt; performance
+- HD-audio pre-allocated buffer size 4096
+- BBR TCP Congestion Control
+- Built on the GCC 10.1.0
+- Meltdown,spectre_v1,spectre_v2 : Mitigation
+- CPU idle governor -&gt; TEO
+- Wine/Proton fsync on
+- PCIe ACS Override on
+- ZSTD kernel and initram support
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Applied patches:</dt>
-<dd><ul class="first simple">
-<li>BMQ 5.7-r0 patch (<a class="reference external" href="http://cchalpha.blogspot.com/">http://cchalpha.blogspot.com/</a>)</li>
-<li>Ubuntu patch (<a class="reference external" href="https://kernel.ubuntu.com/~kernel-ppa/mainline/">https://kernel.ubuntu.com/~kernel-ppa/mainline/</a>)</li>
-<li>Aufs patch (<a class="reference external" href="http://aufs.sourceforge.net/">http://aufs.sourceforge.net/</a>)</li>
-<li>UKSM patch (<a class="reference external" href="https://github.com/dolohow/uksm">https://github.com/dolohow/uksm</a>)</li>
-<li>zstd-v5 (<a class="reference external" href="https://github.com/terrelln/linux/commits/zstd-v5">https://github.com/terrelln/linux/commits/zstd-v5</a>)</li>
-<li>Introduce per-task latency_nice for scheduler hints (<a class="reference external" href="https://lkml.org/lkml/2020/2/28/166">https://lkml.org/lkml/2020/2/28/166</a>)</li>
-<li>blk-mq: per-ctx tag caching (<a class="reference external" href="https://patchwork.kernel.org/cover/11321155/">https://patchwork.kernel.org/cover/11321155/</a>)</li>
-<li>futex: Split key setup from key queue locking and read (<a class="reference external" href="https://lkml.org/lkml/2019/7/30/1398">https://lkml.org/lkml/2019/7/30/1398</a>)</li>
-<li>add-acs-overrides.patch (<a class="reference external" href="https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio">https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio</a>)</li>
-<li>Clear Linux (<a class="reference external" href="https://github.com/clearlinux-pkgs/linux">https://github.com/clearlinux-pkgs/linux</a>)</li>
-<li>cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i</li>
-<li>LL patch (<a class="reference external" href="https://github.com/sirlucjan/kernel">https://github.com/sirlucjan/kernel</a>-patches&lt;/a&gt;)</li>
-<li>Performance-Helping FSGSBASE Patches (<a class="reference external" href="https://lkml.org/lkml/2020/5/28/1358">https://lkml.org/lkml/2020/5/28/1358</a>)</li>
-</ul>
-<blockquote>
-<div>◇Optimized kernel configuration</div></blockquote>
-<ul class="last simple">
-<li>CPU shceduler -&gt; “BMQ”</li>
-<li>Default I/O scheduler -&gt; Kyber</li>
-<li>Processer family -&gt; Generic X86_64</li>
-<li>Kernel Compression mode -&gt; lz4</li>
-<li>Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)</li>
-<li>Timer frequency -&gt; 500Hz</li>
-<li>Compiler optimization level -&gt; Optimize for performance(-O2)</li>
-<li>BMQ on</li>
-<li>UKSM on</li>
-<li>Aufs on</li>
-<li>Default CPUFreq Governor -&amp;gt; performance</li>
-<li>HD-audio pre-allocated buffer size 4096</li>
-<li>BBR TCP Congestion Control</li>
-<li>Built on the GCC 10.1.0</li>
-<li>Meltdown,spectre_v1,spectre_v2 : Mitigation</li>
-<li>CPU idle governor -&gt; TEO</li>
-<li>Wine/Proton fsync on</li>
-<li>PCIe ACS Override on</li>
-<li>ZSTD kernel and initram support</li>
-</ul>
-</dd>
-</dl>
 </div>
 <div class="section" id="ppa">
 <h2>1.5. PPA<a class="headerlink" href="#ppa" title="Permalink to this headline">¶</a></h2>
