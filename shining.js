@@ -9,15 +9,12 @@ load(
         spider("anim4").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim5").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim6").css("opacity",{opacity:0}).scrollanim("fadein");
+        spider("anim7").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim8").css("opacity",{opacity:0}).scrollanim("fadein");
+        spider("anim9").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim10").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim11").css("opacity",{opacity:0}).scrollanim("fadein");
-        spider("anim12").css("opacity",{opacity:0}).scrollanim("fadein");
-        spider("anim13").css("opacity",{opacity:0}).scrollanim("fadein");
-        spider("anim14").css("opacity",{opacity:0}).scrollanim("fadein");
-        spider("anim15").css("opacity",{opacity:0}).scrollanim("fadein");
-        spider("youtube").css("opacity",{opacity:0}).scrollanim("fadein").html("ajax",{url:"youtube.txt"});
-        spider("bookmarks").css("opacity",{opacity:0}).scrollanim("fadein").html("ajax",{url:"bookmarks.txt"});
+        spider("bookmarks").html("ajax",{url:"bookmarks.txt"});
         //spider("app_display").command("s u p e r d a t a b a s e 2","super_database2.php");
         //spider("app_display").command("g l o w","webdata/main_data/site.html");
 //Background Movie

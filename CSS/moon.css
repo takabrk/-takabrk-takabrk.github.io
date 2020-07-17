@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("../Spider/siren.css?date=20200101");
+@import url("../Spider/siren.css?date=20200717a");
 h1{
   height:49px;
   background-image:url("../BRKpics/brk20121010a.png");
@@ -30,9 +30,13 @@ header{
  display:none;
  visibility:hidden;
 }
+.item-7 .img_left{
+   width:100px;
+   height:100px;
+}
 @media screen and (min-width: 769px) {
 body{
-   background-image:url("../BRKpics/bg/phantom20200101d.jpg");
+   background-image:url("../BRKpics/bg/vsrx20200717.png");
    background-size:100% auto;
    background-repeat:no-repeat;
  }
@@ -46,5 +50,9 @@ body{
  }
 .item-3{
     color:#ffffff;
+}
+.item-7 > .img_left{
+   width:400px;
+   height:400px;
 }
  }

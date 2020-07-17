@@ -192,7 +192,7 @@
         <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 4.x source</a></li>
         <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/projects/rt/" target="_blank">PREEMPT_RT patch</a></li>
-        <li><a href="http://cchalpha.blogspot.jp/" target="_blank">PDS</a>
+        <li><a href="http://cchalpha.blogspot.jp/" target="_blank">BMQ</a>
         <li><a href="http://ck-hack.blogspot.jp/" target="_blank">CK1 patch(with MuQSS,BFQ)</a></li>
         <li><a href="http://algo.ing.unimo.it/people/paolo/disk_sched/" target="_blank">BFQ</a></li>
         <li><a href="https://github.com/sirlucjan/kernel-patches" target="_blank">BFQ-SQ・BFQ-MQ</a></li>
