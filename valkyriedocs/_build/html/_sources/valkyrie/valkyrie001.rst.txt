@@ -10,10 +10,10 @@ Phantom Valkyrie Linuxは、Linuxディストリビューションである「Ub
 
 デスクトップ環境は、LXQtを採用しています。
 
-このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 19」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
+このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
 
-「Chromium Browser」「GIMP」「SM Player」「Sayonara Player」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
+「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。
 
@@ -21,14 +21,14 @@ Phantom Valkyrie Linux is a 64bit OS which was developed based on the "Ubuntu LT
 
 The desktop environment of this OS has been adopted LXQt.
 
-This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 19" and the latest Linux Firmware.
+This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 20" and the latest Linux Firmware.
 Phantom Valkyrie Linux is carried out the "providing development environment and execution environment for artificial intelligence programs",
 "providing execution environment for Linux/Windows applications", "providing software development and web development environment",
 "providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
 
-It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Sayonara Player","Emacs","PlayOnLinux","OBS Studio","Shotcut",etc.
+It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Audacious","Emacs","PlayOnLinux","OBS Studio","Shotcut","Avidemux","Steam",etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
-Valkyrie Super Remixed Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
+Phantom Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application "Viper Tools".
 
 
@@ -77,14 +77,14 @@ Ubuntu 18.04.4 LTS
 Kernel
 ------------
 
-◎PVL Kernel 5.7-bmq57r0
+◎PVL Kernel 5.7-prjc57r2
 ::
   ◇based kernel
     linux kernel 5.7
 
   ◇Applied patches
   Applied patches
-  - BMQ 5.7-r0 patch (http://cchalpha.blogspot.com/)
+  - prjc 5.7-r2 patch (http://cchalpha.blogspot.com/)
   - Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
   - Aufs patch (http://aufs.sourceforge.net/)
   - UKSM patch (https://github.com/dolohow/uksm)
@@ -219,14 +219,12 @@ PPA
  Google Drive
  Cups Browser
  Google Calendar
- Install Android Studio
  Install Processing
  Install Eclipse
  Install Jdownloader2
  Add Ubuntu PPAs
  DP-IP
  Animizer
- JSNES
  Wifu2x
  Insecam
  IP hiroba
@@ -237,13 +235,9 @@ PPA
  Animizer
  Wifu2x
  Office Online
- TVer
- JRA
- chihou_keiba live
- BOATRACE
  MSI電源容量計算機
 
-○オプション
+○オプション（未定）
 人工知能の開発環境「Brunhild」
  Python用機械学習ライブラリ:scikit learn,CPU版Tensor Flow,Keras
 

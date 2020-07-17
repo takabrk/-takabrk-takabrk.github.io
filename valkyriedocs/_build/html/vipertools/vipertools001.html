@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. viper.pyに引数を付け加えて機能を使う" href="vipertools002.html" />
-    <link rel="prev" title="20. 過去の履歴" href="../valkyrie/valkyrie020.html" /> 
+    <link rel="prev" title="19. 過去の履歴" href="../valkyrie/valkyrie020.html" /> 
   </head>
   <body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -38,7 +38,7 @@
           <a href="vipertools002.html" title="2. viper.pyに引数を付け加えて機能を使う"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../valkyrie/valkyrie020.html" title="20. 過去の履歴"
+          <a href="../valkyrie/valkyrie020.html" title="19. 過去の履歴"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
@@ -55,12 +55,12 @@
 <ul class="simple">
 <li>実行ファイル「vipertools.x」を同梱しました。これをダブルクリックする事でツールを起動させられます。</li>
 <li>競艇予想や数字選択式宝くじ予想機能</li>
-<li>Ubuntu系LinuxディストリビューションをオリジナルのLinuxディストリビューションである「VSRX」のデスクトップ環境に変換する機能</li>
+<li>Ubuntu系LinuxディストリビューションをオリジナルのLinuxディストリビューションである「Phantom Valkyrie Linux」のデスクトップ環境に変換する機能</li>
 <li>OpenJtalkを使ってコンピューターを喋らせる機能</li>
 <li>tmpfsのRAMDISK量の調整機能</li>
 <li>アニメーションGIFのようなアニメーションSVG、APNGを作成する機能</li>
 <li>Ubuntu系Linuxディストリビューション対応のアプリケーションのインストール</li>
-<li>オリジナルOS「Valkyrie SRX」などのUbuntu系Linuxディストリビューションのリマスター機能「Valkyrie Builder」（リマスターツール「Ubuntu Builder」をベースにGUI部分をGambas2からGlade(gtk+3)に変更）。各種情報を入力し、解凍したいISOを指定後に「Settings」ボタンを押します。その後、「Extract」ボタンを押す事で解凍が始まり、リマスターを行えます。リマスター作業が終われば、「Build」ボタンでビルドをします。</li>
+<li>オリジナルOS「Phantom Valkyrie Linux」などのUbuntu系Linuxディストリビューションのリマスター機能「Valkyrie Builder」（リマスターツール「Ubuntu Builder」をベースにGUI部分をGambas2からGlade(gtk+3)に変更）。各種情報を入力し、解凍したいISOを指定後に「Settings」ボタンを押します。その後、「Extract」ボタンを押す事で解凍が始まり、リマスターを行えます。リマスター作業が終われば、「Build」ボタンでビルドをします。</li>
 <li>ChromiumにGoogle Chrome内蔵のWidevineを入れる事が出来る「install widevine」機能</li>
 <li>カスタムカーネルのビルド機能</li>
 </ul>
@@ -93,13 +93,12 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 <p>vipertools.xは、シェルスクリプトを実行ファイルにしたものです。</p>
 <p>これをダブルクリックしてもアプリケーションを起動させられます。</p>
 </div>
-<div class="section" id="vsrx-kernel">
-<h2>1.3. カスタムカーネル「VSRX kernel」をビルドする<a class="headerlink" href="#vsrx-kernel" title="Permalink to this headline">¶</a></h2>
-<p>カスタムカーネル「VSRX kernel」をビルドする機能で、カスタムカーネルは3種類のフレーバーがあります。</p>
-<p>・VSRX kernel 4.16-pds　ー　CPUスケジューラーにPDS-MQ、I/OスケジューラーにBFQ-SQを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
-<p>・VSRX kernel 4.15-muqss　ー　CPUスケジューラーにMuQSS、I/OスケジューラーにBFQ-SQを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
-<p>・VSRX kernel 4.14-rt　ー　I/OスケジューラーにDeadlineを使用。PREEMPT_RTパッチを適用する事でハードリアルタイムカーネルに仕上がっています。</p>
-<p>3種類のカスタムカーネルは、レスポンス性能を向上させる「Zen Interactive Tune」をONにしています。</p>
+<div class="section" id="pvl-kernel">
+<h2>1.3. カスタムカーネル「PVL kernel」をビルドする<a class="headerlink" href="#pvl-kernel" title="Permalink to this headline">¶</a></h2>
+<p>カスタムカーネル「PVL kernel」をビルドする機能で、カスタムカーネルは2種類のフレーバーがあります。</p>
+<p>・PVL kernel -prjc　ー　CPUスケジューラーにBMQ、I/OスケジューラーにKyberを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
+<p>・VSRX kernel -ck1　ー　CPUスケジューラーにMuQSS、I/OスケジューラーにKyberを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
+<p>2種類のカスタムカーネルは、レスポンス性能やパフォーマンス性能を向上させる様々なサードパーティー性のパッチを適用しています。</p>
 <p>カスタムカーネル機能は半自動でカーネルをビルドする事が出来ます。</p>
 </div>
 <div class="section" id="ubuntu">
@@ -110,18 +109,18 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 </div>
 <div class="section" id="id2">
 <h2>1.5. システム起動音声を切り替える機能<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>「Change to the lightweight desktop enviroment」の項目を使いますと、私が開発したLinuxディストリビューション「VSRX」と同等のデスクトップ環境を構築する事が出来ます。</p>
+<p>「Change to the lightweight desktop enviroment」の項目を使いますと、私が開発したLinuxディストリビューション「Phantom Valkyrie Linux」と同等のデスクトップ環境を構築する事が出来ます。</p>
 <p>Valkyrie SRXには、起動時に女性の声を使った起動音が鳴るようになっています。</p>
 <p>このシステム起動音を切り替えるのが『ログインサウンド「イオリ」に変更』『ログインサウンド「メイドイオリ」に変更』『ログインサウンド「SFイオリ」に変更』という項目です。</p>
 </div>
 <div class="section" id="tmpfs-ramdisk-slider">
 <h2>1.6. tmpfs RAMDisk Slider<a class="headerlink" href="#tmpfs-ramdisk-slider" title="Permalink to this headline">¶</a></h2>
-<img alt="vipertools/../_images/vipertools003.jpg" src="vipertools/../_images/vipertools003.jpg" />
+<img alt="../_images/vipertools003.jpg" src="../_images/vipertools003.jpg" />
 <p>tmpfsのRAMディスクの容量を変更出来ます。</p>
 </div>
 <div class="section" id="id3">
 <h2>1.7. コンピューターに喋らせる機能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<img alt="vipertools/../_images/vipertools002.jpg" src="vipertools/../_images/vipertools002.jpg" />
+<img alt="../_images/vipertools002.jpg" src="../_images/vipertools002.jpg" />
 <p>テキストフォームに入力する事でコンピューターに喋らせる事が出来ます。</p>
 </div>
 <div class="section" id="id4">
@@ -133,7 +132,7 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 <div class="section" id="id5">
 <h2>1.9. 競艇予想機能<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>選手のデータはSQLiteで構築しており、viper/kyotei/kyotei.sqliteで保存されています。</p>
-<img alt="vipertools/../_images/vipertools004.jpg" src="vipertools/../_images/vipertools004.jpg" />
+<img alt="../_images/vipertools004.jpg" src="../_images/vipertools004.jpg" />
 <p>出力された結果は、そのままでは当たらない事が多いので、3連単で選ぶ例を示しておきます。
 順位はこのスクリプトで出した指数順位</p>
 <div class="line-block">
@@ -149,7 +148,7 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 </div>
 <div class="section" id="image-tool">
 <h2>1.10. Image tool機能<a class="headerlink" href="#image-tool" title="Permalink to this headline">¶</a></h2>
-<img alt="vipertools/../_images/vipertools001.jpg" src="vipertools/../_images/vipertools001.jpg" />
+<img alt="../_images/vipertools001.jpg" src="../_images/vipertools001.jpg" />
 <div class="section" id="svg">
 <h3>1.10.1. アニメーションSVG機能<a class="headerlink" href="#svg" title="Permalink to this headline">¶</a></h3>
 <p>アニメーションGIFのような動画ファイルをSVGを使って再現した物がアニメーションSVGです。
@@ -171,7 +170,7 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 </div>
 <div class="section" id="pngjpeg">
 <h3>1.10.3. PNG画像を一括でJPEGにする<a class="headerlink" href="#pngjpeg" title="Permalink to this headline">¶</a></h3>
-<img alt="vipertools/../_images/vipertools001.jpg" src="vipertools/../_images/vipertools001.jpg" />
+<img alt="../_images/vipertools001.jpg" src="../_images/vipertools001.jpg" />
 <p>複数のPNG画像を一括でJPEG画像に変換します。</p>
 <p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
 </div>
@@ -190,29 +189,20 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 <p>一括でJPEG画像を任意の角度に回転させます。</p>
 </div>
 <div class="section" id="id6">
-<h3>1.10.7. ペネトレーションテストツールのインストール<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<p>vipertools.pyを起動させて、「Install Penetration Tools」の項目にチェックをしてOKボタンを押すとインストールが可能です。</p>
-<p>サーバなどにおいてネットワークの脆弱性を発見するのに役立つツールをインストールします。</p>
-</div>
-<div class="section" id="id7">
-<h3>1.10.8. 動画エンコード<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Handbrake CLIを使って、動画エンコードを行えます。</p>
+<h3>1.10.7. 動画エンコード<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>ffmpegを使って、動画エンコードを行えます。</p>
 <p>GUIでエンコードしたいソース、出力ファイル名、動画の解像度を入力します。</p>
-<p>出力したファイルの動画コーデックはH.264、音声コーデックはMP3、コンテナはMP4となっています。</p>
+<p>動画コーデックをH.264/AVCとH.265/HEVC、音声コーデックをAACという構成の動画ファイルを作成する事を目的にしています。QSVなどのハードウェアエンコードにも対応しています。</p>
 </div>
 <div class="section" id="wifu2x-py">
-<h3>1.10.9. wifu2x.pyによる拡大機能<a class="headerlink" href="#wifu2x-py" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.8. wifu2x.pyによる拡大機能<a class="headerlink" href="#wifu2x-py" title="Permalink to this headline">¶</a></h3>
 <p>深層畳み込みニューラルネットワークを活用して、二次元画像を超解像技術で画像を拡大します。</p>
 </div>
 <div class="section" id="chromiumgoogle-chromewidevine">
-<h3>1.10.10. ChromiumにGoogle Chrome内蔵のWidevineを入れる<a class="headerlink" href="#chromiumgoogle-chromewidevine" title="Permalink to this headline">¶</a></h3>
+<h3>1.10.9. ChromiumにGoogle Chrome内蔵のWidevineを入れる<a class="headerlink" href="#chromiumgoogle-chromewidevine" title="Permalink to this headline">¶</a></h3>
 <p>最近のGoogle Chromeには、Widevineプラグインと呼ばれるデジタル著作権管理されているコンテンツを見る為のプラグインを搭載しています。</p>
 <p>Chromiumには搭載していないので、これをGoogle Chromeから抜き出してChromiumでも使えるようにしようという機能を搭載しています。</p>
 <p>但し、これを使っても完全にオンデマンドサービスで公開されている映像コンテンツが視聴出来るわけではありませんので注意してください。</p>
-</div>
-<div class="section" id="googlejpegguetzlijpeg">
-<h3>1.10.11. GoogleのJPEGエンコーダ「Guetzli」を利用したJPEGファイルの容量削減機能<a class="headerlink" href="#googlejpegguetzlijpeg" title="Permalink to this headline">¶</a></h3>
-<p>Guetzilは、Googleが開発したJPEGエンコーダーです。これを利用する事で、JPEGフォーマットの画像をほとんど変化なく、ファイル容量を削減する事が出来ます。</p>
 </div>
 </div>
 </div>
@@ -228,7 +218,7 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 <li><a class="reference internal" href="#">1. Viper Tools</a><ul>
 <li><a class="reference internal" href="#id1">1.1. Viper Tools動作環境</a></li>
 <li><a class="reference internal" href="#viper-toolsgui">1.2. Viper ToolsをGUIツールとして起動させる</a></li>
-<li><a class="reference internal" href="#vsrx-kernel">1.3. カスタムカーネル「VSRX kernel」をビルドする</a></li>
+<li><a class="reference internal" href="#pvl-kernel">1.3. カスタムカーネル「PVL kernel」をビルドする</a></li>
 <li><a class="reference internal" href="#ubuntu">1.4. Ubuntu系ディストリビューションをリマスターする</a></li>
 <li><a class="reference internal" href="#id2">1.5. システム起動音声を切り替える機能</a></li>
 <li><a class="reference internal" href="#tmpfs-ramdisk-slider">1.6. tmpfs RAMDisk Slider</a></li>
@@ -242,11 +232,9 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 <li><a class="reference internal" href="#pnggif">1.10.4. PNG画像を一括でGIFにする</a></li>
 <li><a class="reference internal" href="#gifpng">1.10.5. GIF画像を一括でPNGにする</a></li>
 <li><a class="reference internal" href="#jpeg">1.10.6. JPEG画像を一括で回転させて保存する</a></li>
-<li><a class="reference internal" href="#id6">1.10.7. ペネトレーションテストツールのインストール</a></li>
-<li><a class="reference internal" href="#id7">1.10.8. 動画エンコード</a></li>
-<li><a class="reference internal" href="#wifu2x-py">1.10.9. wifu2x.pyによる拡大機能</a></li>
-<li><a class="reference internal" href="#chromiumgoogle-chromewidevine">1.10.10. ChromiumにGoogle Chrome内蔵のWidevineを入れる</a></li>
-<li><a class="reference internal" href="#googlejpegguetzlijpeg">1.10.11. GoogleのJPEGエンコーダ「Guetzli」を利用したJPEGファイルの容量削減機能</a></li>
+<li><a class="reference internal" href="#id6">1.10.7. 動画エンコード</a></li>
+<li><a class="reference internal" href="#wifu2x-py">1.10.8. wifu2x.pyによる拡大機能</a></li>
+<li><a class="reference internal" href="#chromiumgoogle-chromewidevine">1.10.9. ChromiumにGoogle Chrome内蔵のWidevineを入れる</a></li>
 </ul>
 </li>
 </ul>
@@ -255,7 +243,7 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../valkyrie/valkyrie020.html"
-                        title="previous chapter">20. 過去の履歴</a></p>
+                        title="previous chapter">19. 過去の履歴</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="vipertools002.html"
                         title="next chapter">2. viper.pyに引数を付け加えて機能を使う</a></p>
@@ -290,7 +278,7 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
           <a href="vipertools002.html" title="2. viper.pyに引数を付け加えて機能を使う"
              >next</a> |</li>
         <li class="right" >
-          <a href="../valkyrie/valkyrie020.html" title="20. 過去の履歴"
+          <a href="../valkyrie/valkyrie020.html" title="19. 過去の履歴"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
