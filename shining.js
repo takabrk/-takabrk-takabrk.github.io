@@ -15,6 +15,7 @@ load(
         spider("anim10").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("anim11").css("opacity",{opacity:0}).scrollanim("fadein");
         spider("bookmarks").html("ajax",{url:"bookmarks.txt"});
+        spider("anim12").css("opacity",{opacity:0}).scrollanim("fadein");
         //spider("app_display").command("s u p e r d a t a b a s e 2","super_database2.php");
         //spider("app_display").command("g l o w","webdata/main_data/site.html");
 //Background Movie
