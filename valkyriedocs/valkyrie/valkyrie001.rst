@@ -72,53 +72,72 @@ STCK1A32WFC(Intel)
 Based Linux destribution
 -----------------------------------
 
-Ubuntu 18.04.4 LTS
+Ubuntu 18.04.5 LTS
 
 Kernel
 ------------
 
-◎PVL Kernel 5.7-prjc57r2
+◎PVL Kernel 5.9.1-v3
 ::
   ◇based kernel
-    linux kernel 5.7
+    linux kernel 5.9
 
   ◇Applied patches
-  Applied patches
-  - prjc 5.7-r2 patch (http://cchalpha.blogspot.com/)
-  - Ubuntu patch (https://kernel.ubuntu.com/~kernel-ppa/mainline/)
-  - Aufs patch (http://aufs.sourceforge.net/)
-  - UKSM patch (https://github.com/dolohow/uksm)
-  - zstd-v5 (https://github.com/terrelln/linux/commits/zstd-v5)
-  - Introduce per-task latency_nice for scheduler hints (https://lkml.org/lkml/2020/2/28/166)
-  - blk-mq: per-ctx tag caching (https://patchwork.kernel.org/cover/11321155/)
-  - futex: Split key setup from key queue locking and read (https://lkml.org/lkml/2019/7/30/1398)
-  - add-acs-overrides.patch (https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
-  - Clear Linux (https://github.com/clearlinux-pkgs/linux)
-  - cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i
-  - LL patch (https://github.com/sirlucjan/kernel-patches</a>)
-  - Performance-Helping FSGSBASE Patches (https://lkml.org/lkml/2020/5/28/1358)
-
+  [Applied patches]
+  - linux 5.9.1 patch(https://www.kernel.org/)
+  - CK1 patch( http://ck-hack.blogspot.com/ )
+  0004-Create-highres-timeout-variants-of-schedule_timeout-.patch
+  0006-Convert-msleep-to-use-hrtimers-when-active.patch
+  - UKSM patch(https://github.com/sirlucjan/kernel-patches)
+  - add-acs-overrides.patch(https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
+  - Introduce per-task latency_nice for scheduler hints(https://lkml.org/lkml/2020/2/28/166 | https://www.phoronix.com/scan.php?page=news_item&px=IBM-Latency-Sensitive-Idle)
+  - LL patches(https://github.com/sirlucjan/kernel-patches)
+     0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+     0003-sched-core-nr_migrate-256-increases-number-of-tasks-.patch
+     0004-mm-set-2048-for-address_space-level-file-read-ahead-.patch
+  - Zen Patches( https://github.com/zen-kernel/zen-kernel/tree/5.9/master )
+     ZEN_INTERACTIVE_Base_config_item.patch
+     ZEN_INTERACTIVE_Tune_CFS_for_interactivity.patch
+     ZEN_INTERACTIVE_Increase_default_writeback_thresholds.patch
+     ZEN_INTERACTIVE_Tune_ondemand_governor_for_interactivity.patch
+     ZEN_INTERACTIVE_Enable_background_reclaim_of_hugepages.patch
+     ZEN_Add_VHBA_driver.patch
+     ZEN_Enable_additional_CPU_Optimizations_for_GCC_v10_1.patch
+     ZEN_Unrestrict_CONFIG_OPTIMIZE_FOR_PERFORMANCE_O3.patch
+  - futex(https://github.com/sirlucjan/kernel-patches)
   ◇Optimized kernel configuration
-  - CPU shceduler -> "BMQ"
-  - Default I/O scheduler -> Kyber
+  - CPU shceduler -> "CFS"
+  - Default I/O scheduler -> kyber
   - Processer family -> Generic X86_64
-  - Kernel Compression mode -> lz4
+  - Kernel Compression mode -> zstd
   - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
-  - Timer frequency -> 500Hz
-  - Compiler optimization level -> Optimize for performance(-O2)
-  - BMQ on
+  - CPU Timer frequency -> 750Hz
+  - RCU boost delay -> 500Hz
+  - Compiler optimization level -> Optimize for more performance(-O3)
   - UKSM on
-  - Aufs on
-  - Default CPUFreq Governor -&gt; performance
+  - Default CPUFreq Governor -> ondemand
   - HD-audio pre-allocated buffer size 4096
   - BBR TCP Congestion Control
-  - Built on the GCC 10.1.0
-  - Meltdown,spectre_v1,spectre_v2 : Mitigation
+  - Built on the GCC 10.2.0
   - CPU idle governor -> TEO
-  - Wine/Proton fsync on
+  - fsync for Wine/Proton on
   - PCIe ACS Override on
   - ZSTD kernel and initram support
-
+  - TSX -> auto
+  - FSGSBASE support
+  - Timer tick handling -> Full dynticks system
+  - Schefuler features -> Enable utilization clamping for RT/FAIR tasks -> Number of supported utilization clamp buckets(5)
+  - Zen Interactive Tuning on
+        Mem dirty before bg writeback 10% -> 20%
+        Mem dirty before sync writeback 20% -> 50%
+        Background-reclaim hugepages no -> yes
+        Scheduling latency 6 -> 4ms
+        Minimal granularity  0.75 -> 0.4ms
+        Wakeup granularity 1 -> 0.5ms
+        CPU migration cost 0.5 -> 0.25ms
+        Bandwidth slice size 5 -> 3ms
+        Ondemand sampling down factor 1 -> 5
+  - Meltdown,spectre_v1,spectre_v2 : Mitigation
 PPA
 -----------
 
@@ -133,7 +152,7 @@ PPA
     Wine HQ PPA
     GIMP PPA
     OBS Studio PPA
-    Intel Media Driver PPA
+    Lutris  PPA
 
 デスクトップ環境
 ----------------------
@@ -146,9 +165,9 @@ PPA
 
 ::
 
-    GCC 10.1.0
+    GCC 10.2.0
     LLVM 10
-    Python 3.6.9/2.7.17
+    Python 3.6.9/3.9.0/2.7.17
     PHP 7.2.24
     Perl 5.26.1
     Lua 5.3.3
@@ -177,10 +196,10 @@ PPA
   スクリーンショットツール:xfce4 screenshooter
   システム通知:dunst
   フォント : Takaoフォント,Cicaなど
-  Webブラウザ:Chromium Browser 83,Firefox 77
+  Webブラウザ:Chromium Browser 86,Firefox 82
   フォトレタッチソフト:GIMP 2.10.14
   テキストエディタ:Emacs nox 25.2,mousepad
-  動画編集ソフト:Shotcut 19.12.31
+  動画編集ソフト:Shotcut 20.09.27
   音楽プレーヤー:Audacious
   オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
   動画プレーヤー:SMPlayer 19.10.2
@@ -188,8 +207,9 @@ PPA
   LiveUSB作成:UNetbootin
   Webサーバ:Apache 2.4.29
   日本語入力環境:Mozc,fcitx
-  ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion
-  Windowsアプリ実行環境:Wine 5.9,PlayOnLinux 4.2.12
+  ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion,redream,yabause
+  Windowsアプリ実行環境:Wine 5.0.2,PlayOnLinux 4.2.12
+  ゲーム実行環境:Steam
   ライディングソフト:xfburn 0.5.5
   合成音声ソフト:OpenJtalk
   Windowsの圧縮ファイル対応アーカイバ:unar
