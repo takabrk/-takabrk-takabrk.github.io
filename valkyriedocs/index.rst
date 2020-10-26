@@ -6,14 +6,14 @@
 Phantom Valkyrie Linux,Viper Tools,spider.js,siren.css documentation & Programming hacks
 ==============================================================
 
-To `Main Web site "VSRX-19" <http://vsrx.work>`_
+To `Main Web site "VSRX-2020" <http://vsrx.work>`_
 
 Software Download
 ----------------------------
 
-`Phantom Valkyrie Linux Download <http://www.vsrx.work/article/451561416.html>`_
+`Valkyrie Linux Download <http://www.vsrx.work/article/451561416.html>`_
 
-`VSRX kernel  Download <http://www.vsrx.work/article/449185431.html>`_
+`Noir linux kernel  Download <http://www.vsrx.work/article/449185431.html>`_
 
 `Viper Tools Download <http://www.vsrx.work/article/420558380.html>`_
 
@@ -29,10 +29,10 @@ Software Download
 
 `Crossover Download <http://www.vsrx.work/article/412605816.html>`_
 
-Phantom Valkyrie Linux
+Valkyrie Linux
 ---------------------------------
 
-Phantom Valkyrieは、Linuxディストリビューション「Ubuntu LTS版」をベースに開発したOSです。
+Valkyrieは、Linuxディストリビューション「Ubuntu LTS版」をベースに開発したOSです。
 
 .. image:: _images/bg20180116.png
 
@@ -42,7 +42,7 @@ http://www.vsrx.work/article/418075361.html
 
 このOSは、最新のLinuxカーネルのソースコードをベースにした高レスポンスで、ハイパフォーマンスデスクトップ用途向けのカスタムカーネルを搭載しています。
 
-Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を行っています。
+Valkyrie Linuxは、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を行っています。
 
 
 

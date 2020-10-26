@@ -3,32 +3,32 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Phantom Valkyrie Linux
+Valkyrie Linux
 =========================
 
-Phantom Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS版」をベースに開発した64bit OSです。
+Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS版」をベースに開発した64bit OSです。
 
 デスクトップ環境は、LXQtを採用しています。
 
 このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
-Phantom Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
+Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
 
 「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。
 
-Phantom Valkyrie Linux is a 64bit OS which was developed based on the "Ubuntu LTS", which is a Linux distribution.
+Valkyrie Linux is a 64bit OS which was developed based on the "Ubuntu LTS", which is a Linux distribution.
 
 The desktop environment of this OS has been adopted LXQt.
 
 This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 20" and the latest Linux Firmware.
-Phantom Valkyrie Linux is carried out the "providing development environment and execution environment for artificial intelligence programs",
+Valkyrie Linux is carried out the "providing development environment and execution environment for artificial intelligence programs",
 "providing execution environment for Linux/Windows applications", "providing software development and web development environment",
 "providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
 
 It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Audacious","Emacs","PlayOnLinux","OBS Studio","Shotcut","Avidemux","Steam",etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
-Phantom Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
+Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application "Viper Tools".
 
 
@@ -77,7 +77,7 @@ Ubuntu 18.04.5 LTS
 Kernel
 ------------
 
-◎PVL Kernel 5.9.1-v3
+◎Noir linux Kernel 5.9.1-v3
 ::
   ◇based kernel
     linux kernel 5.9
@@ -331,7 +331,7 @@ homeディレクトリを別にした状態で、再インストールをして�
 
 4.保存して再起動させると、セキュアブートが無効化されてシステムを起動する事が出来ます。
 
-64bit OS「Phantom Valkyrie Linux」の特長
+64bit OS「Valkyrie Linux」の特長
 =========================
 
 * デスクトップ環境は、LXQtを採用しています。
@@ -342,7 +342,7 @@ homeディレクトリを別にした状態で、再インストールをして�
 
 * Linuxカーネルは、最新のLinuxカーネルベースの高レスポンス性が高いカスタムカーネルを搭載。
 
-* Mesa 19の導入により、WineやPCSX2などで3Dゲームを動作させた時のパフォーマンスが大幅に向上しています。
+* Mesa 20の導入により、WineやPCSX2などで3Dゲームを動作させた時のパフォーマンスが大幅に向上しています。
 
 * VDAPU及びVAAPI対応ドライバを採用している為、動画支援機能で低CPU負荷で動画を再生出来ます。
 
@@ -372,18 +372,18 @@ homeディレクトリを別にした状態で、再インストールをして�
 
 * 日本語入力環境にMoscとFcitxを採用
 
-Phantom Valkyrie Linuxの高速化と最適化
+Valkyrie Linuxの高速化と最適化
 ========================
 
-64bit OS「Phantom Valkyrie Linux」は、LTS版Ubuntuをベースに数多くの高速化・最適化策を講じています。
+64bit OS「Valkyrie Linux」は、LTS版Ubuntuをベースに数多くの高速化・最適化策を講じています。
 
-Ubuntu LTSをベースにして開発したオリジナル64bit OS「Phantom Valkyrie Linux」には、様々な高速化テクニックを導入しています。
+Ubuntu LTSをベースにして開発したオリジナル64bit OS「Valkyrie Linux」には、様々な高速化テクニックを導入しています。
 
 1.Ubuntuパッチが当たっているLinuxカーネルのソースコードを使って、最適化ビルドしたカスタムカーネルの導入
 
 Linuxカーネルを更に最適化する
 
-64bit OS「VSRX-19」用のカスタムカーネルを作成
+64bit OS「Valkyrie Linux」用のカスタムカーネルを作成
 
 2.デスクトップ環境をOpenbox+fbpanel+Xfce/LXDE/GNOME用アプリで構成
 
@@ -411,8 +411,8 @@ Linuxカーネルを更に最適化する
 
     kernel.interactive = 0
 
-Phantom Valkyrie Linuxの高音質化
-=================
+Valkyrie Linuxの高音質化
+====================
 
 PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openboxの起動スクリプトからこれらを起動させたり、PulseAudioのデーモンをRAMDISKに配置したりして高音質化を図っています。
 
@@ -435,11 +435,11 @@ PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openbox�
    sleep 2;ln -s /usr/bin/pulseaudio /tmp &
    sleep 10;/tmp/pulseaudio --start &
 
-Phantom Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法
+Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法
 ======================================================================
 
 EFIパーティションの状況によって、システムインストール時にGRUBが正常にインストールされない事があります。
-その時には、Phantom Valkyrie Linuxに収録しているboot-repairを使ってGRUBをインストールする事が出来ます。::
+その時には、Valkyrie Linuxに収録しているboot-repairを使ってGRUBをインストールする事が出来ます。::
 
        1.右クリックメニューでboot-repairを選択します。
        2.boot-repairが起動したら、「高度なオプション」を選択し、適用を押します。
