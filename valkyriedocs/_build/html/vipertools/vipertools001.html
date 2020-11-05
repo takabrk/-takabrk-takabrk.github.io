@@ -53,16 +53,17 @@
 <h1>1. Viper Tools<a class="headerlink" href="#viper-tools" title="Permalink to this headline">¶</a></h1>
 <p>様々な機能を追加するためのPythonアプリです。</p>
 <ul class="simple">
-<li>実行ファイル「vipertools.x」を同梱しました。これをダブルクリックする事でツールを起動させられます。</li>
+<li>カーネルビルド機能</li>
 <li>競艇予想や数字選択式宝くじ予想機能</li>
-<li>Ubuntu系LinuxディストリビューションをオリジナルのLinuxディストリビューションである「Phantom Valkyrie Linux」のデスクトップ環境に変換する機能</li>
+<li>Ubuntu系LinuxディストリビューションをオリジナルのLinuxディストリビューションである「Valkyrie Linux」のデスクトップ環境に変換する機能</li>
 <li>OpenJtalkを使ってコンピューターを喋らせる機能</li>
 <li>tmpfsのRAMDISK量の調整機能</li>
 <li>アニメーションGIFのようなアニメーションSVG、APNGを作成する機能</li>
-<li>Ubuntu系Linuxディストリビューション対応のアプリケーションのインストール</li>
-<li>オリジナルOS「Phantom Valkyrie Linux」などのUbuntu系Linuxディストリビューションのリマスター機能「Valkyrie Builder」（リマスターツール「Ubuntu Builder」をベースにGUI部分をGambas2からGlade(gtk+3)に変更）。各種情報を入力し、解凍したいISOを指定後に「Settings」ボタンを押します。その後、「Extract」ボタンを押す事で解凍が始まり、リマスターを行えます。リマスター作業が終われば、「Build」ボタンでビルドをします。</li>
+<li>アプリケーションやライブラリのインストール</li>
+<li>OSのリマスター機能</li>
 <li>ChromiumにGoogle Chrome内蔵のWidevineを入れる事が出来る「install widevine」機能</li>
-<li>カスタムカーネルのビルド機能</li>
+<li>動画ダウンロード機能</li>
+<li>VAAPI対応ffmpegとiHD Driverを使ったQSVハードウェアエンコード機能</li>
 </ul>
 <div class="section" id="id1">
 <h2>1.1. Viper Tools動作環境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -87,18 +88,10 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 <div class="highlight-default"><div class="highlight"><pre><span></span>$./vipertools
 </pre></div>
 </div>
-<p>vipertools.pyを起動させると、アプリケーションの一括インストールを行えたり、Ubuntu LTSをベースにリマスター出来たり、オリジナルOS「Valkyrie SRX」に変換したりという事が出来ます。</p>
-<p>コンピューターを喋らせたり、動画をコマ毎の画像に変換したり、アニメーションSVGを作成したり、MPEG4/AVC+MP3の動画にエンコードしたりも出来ます。</p>
-<p>フォルダに入っている画像ファイルを色々と変換させる事も出来ます。</p>
-<p>vipertools.xは、シェルスクリプトを実行ファイルにしたものです。</p>
-<p>これをダブルクリックしてもアプリケーションを起動させられます。</p>
 </div>
-<div class="section" id="pvl-kernel">
-<h2>1.3. カスタムカーネル「PVL kernel」をビルドする<a class="headerlink" href="#pvl-kernel" title="Permalink to this headline">¶</a></h2>
-<p>カスタムカーネル「PVL kernel」をビルドする機能で、カスタムカーネルは2種類のフレーバーがあります。</p>
-<p>・PVL kernel -prjc　ー　CPUスケジューラーにBMQ、I/OスケジューラーにKyberを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
-<p>・VSRX kernel -ck1　ー　CPUスケジューラーにMuQSS、I/OスケジューラーにKyberを使用。高レスポンス性とハイパフォーマンス性能を持つカーネルです。</p>
-<p>2種類のカスタムカーネルは、レスポンス性能やパフォーマンス性能を向上させる様々なサードパーティー性のパッチを適用しています。</p>
+<div class="section" id="noir-linux-kernel">
+<h2>1.3. カスタムカーネル「Noir linux kernel」をビルドする<a class="headerlink" href="#noir-linux-kernel" title="Permalink to this headline">¶</a></h2>
+<p>カスタムカーネル「Noir linux kernel」をビルドする機能です。カスタムカーネルは、レスポンス性能やパフォーマンス性能を向上させる様々なサードパーティー性のパッチを適用しています。</p>
 <p>カスタムカーネル機能は半自動でカーネルをビルドする事が出来ます。</p>
 </div>
 <div class="section" id="ubuntu">
@@ -109,8 +102,6 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 </div>
 <div class="section" id="id2">
 <h2>1.5. システム起動音声を切り替える機能<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>「Change to the lightweight desktop enviroment」の項目を使いますと、私が開発したLinuxディストリビューション「Phantom Valkyrie Linux」と同等のデスクトップ環境を構築する事が出来ます。</p>
-<p>Valkyrie SRXには、起動時に女性の声を使った起動音が鳴るようになっています。</p>
 <p>このシステム起動音を切り替えるのが『ログインサウンド「イオリ」に変更』『ログインサウンド「メイドイオリ」に変更』『ログインサウンド「SFイオリ」に変更』という項目です。</p>
 </div>
 <div class="section" id="tmpfs-ramdisk-slider">
@@ -121,13 +112,12 @@ fbpanelなどのタスクバーアプリケーションの場合でも、コマ�
 <div class="section" id="id3">
 <h2>1.7. コンピューターに喋らせる機能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <img alt="../_images/vipertools002.jpg" src="../_images/vipertools002.jpg" />
-<p>テキストフォームに入力する事でコンピューターに喋らせる事が出来ます。</p>
+<p>テキストフォームに入力する事でコンピューターに喋らせる事が出来ます。また、テキストファイルの音読も可能です。</p>
 </div>
 <div class="section" id="id4">
 <h2>1.8. 数字式宝くじ（ナンバーズ）予想機能<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>みずほ銀行のWebサイトの当選結果ページをダウンロードする機能、そのページをパースして、当選結果をPythonのリストに変換して保存する機能、リストを使って予想する機能で構成されています。</p>
-<p>「ナンバーズデータダウンロード」、「ナンバーズリスト生成」、「ナンバーズ予想」の項目をそれぞれチェックしてOKボタンを押す事で機能を使えます。
-予想した数字は、viper/numbersフォルダの直下にnumbers.txtというファイルが出来ていますので、これを見てください。</p>
+<p>ナンバーズ4・ナンバーズ3・ロト6に対応しています。
+予想した数字は、viperフォルダの直下にnumbers.txtというファイルが出来ていますので、これを見てください。</p>
 </div>
 <div class="section" id="id5">
 <h2>1.9. 競艇予想機能<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -218,7 +208,7 @@ TumblrなどでアニメーションGIFを公開しているケースが多い�
 <li><a class="reference internal" href="#">1. Viper Tools</a><ul>
 <li><a class="reference internal" href="#id1">1.1. Viper Tools動作環境</a></li>
 <li><a class="reference internal" href="#viper-toolsgui">1.2. Viper ToolsをGUIツールとして起動させる</a></li>
-<li><a class="reference internal" href="#pvl-kernel">1.3. カスタムカーネル「PVL kernel」をビルドする</a></li>
+<li><a class="reference internal" href="#noir-linux-kernel">1.3. カスタムカーネル「Noir linux kernel」をビルドする</a></li>
 <li><a class="reference internal" href="#ubuntu">1.4. Ubuntu系ディストリビューションをリマスターする</a></li>
 <li><a class="reference internal" href="#id2">1.5. システム起動音声を切り替える機能</a></li>
 <li><a class="reference internal" href="#tmpfs-ramdisk-slider">1.6. tmpfs RAMDisk Slider</a></li>
