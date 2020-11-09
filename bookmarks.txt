@@ -187,10 +187,14 @@
     </ul>
 <h2 id="linux">Linux</h2>
     <ul>
-        <li><a href="http://simosnet.com/livecdroom/" target="_blank">ライブCDの部屋</a></li>
         <li><a href="http://www.kernel.org/" target="_blank">The Linux Kernel Archives</a></li>
+        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" target="_blank">カーネル Arch Wiki</a></li>
+        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
+        <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
+
         <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 5.x source</a></li>
         <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
+        <li><a href="https://git.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/log/?h=cod/mainline/cod/tip/daily/2020-11-09" target="_blank">Ubuntu patch  git</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/projects/rt/" target="_blank">PREEMPT_RT patch</a></li>
         <li><a href="https://gitlab.com/alfredchen/linux-prjc/-/releases" target="_blank">Project C</a>
         <li><a href="http://ck-hack.blogspot.jp/" target="_blank">CK1 patch(with MuQSS,BFQ)</a></li>
@@ -206,13 +210,11 @@
         <li><a href="https://pf.natalenko.name/" target="_blank">pf-kernel</a></li>
         <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
         <li><a href="https://drive.google.com/drive/folders/0B63KzJgfI7FnRVMwXy1sQXlDdUk" target="_blank">Kona Linux</a></li>
-        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" target="_blank">カーネル Arch Wiki</a></li>
-        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
-        <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
         <li><a href="https://www.ubuntuupdates.org/ppas" target="_blank">UbuntuUpdates.org</a></li>
         <li><a href="https://kledgeb.blogspot.jp/" target="_blank">kledgeb </a></li>
         <li><a href="https://ubuntuapps.blog.fc2.com/" target="_blank">Ubuntuアプリのいいところ</a></li>
         <li><a href="https://linuxfan.info/" target="_blank">Linux Fan</a></li>
+        <li><a href="http://simosnet.com/livecdroom/" target="_blank">ライブCDの部屋</a></li>
         <li><a href="https://debiandog.github.io/doglinux/" target="_blank">Dog Linux</a></li>
         <li><a href="https://ferenos.weebly.com/" target="_blank">Feren OS</a></li>
         <li><a href="https://ubuntuforums.org/index.php" target="_blank">Ubuntu forum</a></li>
