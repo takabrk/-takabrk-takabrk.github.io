@@ -194,7 +194,7 @@
 
         <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 5.x source</a></li>
         <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
-        <li><a href="https://git.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/log/?h=cod/mainline/cod/tip/daily/2020-11-09" target="_blank">Ubuntu patch  git</a></li>
+        <li><a href="https://git.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/" target="_blank">Ubuntu patch  git</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/projects/rt/" target="_blank">PREEMPT_RT patch</a></li>
         <li><a href="https://gitlab.com/alfredchen/linux-prjc/-/releases" target="_blank">Project C</a>
         <li><a href="http://ck-hack.blogspot.jp/" target="_blank">CK1 patch(with MuQSS,BFQ)</a></li>
