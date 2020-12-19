@@ -55,7 +55,7 @@
 <p>デスクトップ環境は、LXQtを採用しています。</p>
 <p>このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。</p>
-<p>「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
+<p>「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。</p>
 <p>Valkyrie Linux is a 64bit OS which was developed based on the “Ubuntu LTS”, which is a Linux distribution.</p>
@@ -64,7 +64,7 @@ Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境
 Valkyrie Linux is carried out the “providing development environment and execution environment for artificial intelligence programs”,
 “providing execution environment for Linux/Windows applications”, “providing software development and web development environment”,
 “providing multimedia contents creation environment , “Providing cutting-edge science and technology/data science environment”,”building a gaming environment”.</p>
-<p>It is equipped with popular application such as “Chromium Browser”,”GIMP”,”Shotcut”,”SM Player”,”Audacious”,”Emacs”,”PlayOnLinux”,”OBS Studio”,”Shotcut”,”Avidemux”,”Steam”,etc.
+<p>It is equipped with popular application such as “Chromium Browser”,”GIMP”,”Shotcut”,”SM Player”,”Audacious”,”Emacs”,”OBS Studio”,”Shotcut”,”Avidemux”,”Steam”,etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
 Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application “Viper Tools”.</p>
@@ -99,68 +99,99 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="kernel">
 <h2>1.4. Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
-<p>◎Noir linux Kernel 5.9.1-v3</p>
+<p>◎Noir linux Kernel 5.10.1-v8</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>◇based kernel
-  linux kernel 5.9
+  linux kernel 5.10
 
 ◇Applied patches
 [Applied patches]
-- linux 5.9.1 patch(https://www.kernel.org/)
-- CK1 patch( http://ck-hack.blogspot.com/ )
-0004-Create-highres-timeout-variants-of-schedule_timeout-.patch
-0006-Convert-msleep-to-use-hrtimers-when-active.patch
-- UKSM patch(https://github.com/sirlucjan/kernel-patches)
-- add-acs-overrides.patch(https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
-- Introduce per-task latency_nice for scheduler hints(https://lkml.org/lkml/2020/2/28/166 | https://www.phoronix.com/scan.php?page=news_item&amp;px=IBM-Latency-Sensitive-Idle)
-- LL patches(https://github.com/sirlucjan/kernel-patches)
-   0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
-   0003-sched-core-nr_migrate-256-increases-number-of-tasks-.patch
-   0004-mm-set-2048-for-address_space-level-file-read-ahead-.patch
-- Zen Patches( https://github.com/zen-kernel/zen-kernel/tree/5.9/master )
-   ZEN_INTERACTIVE_Base_config_item.patch
-   ZEN_INTERACTIVE_Tune_CFS_for_interactivity.patch
-   ZEN_INTERACTIVE_Increase_default_writeback_thresholds.patch
-   ZEN_INTERACTIVE_Tune_ondemand_governor_for_interactivity.patch
-   ZEN_INTERACTIVE_Enable_background_reclaim_of_hugepages.patch
-   ZEN_Add_VHBA_driver.patch
-   ZEN_Enable_additional_CPU_Optimizations_for_GCC_v10_1.patch
-   ZEN_Unrestrict_CONFIG_OPTIMIZE_FOR_PERFORMANCE_O3.patch
-- futex(https://github.com/sirlucjan/kernel-patches)
-◇Optimized kernel configuration
-- CPU shceduler -&gt; &quot;CFS&quot;
+- linux 5.10.1 patch( https://www.kernel.org/ )
+- Project C 5.10-r0 patch( https://gitlab.com/alfredchen/linux-prjc/-/releases | http://  cchalpha.blogspot.com/ )
+- i10( https://github.com/i10-kernel/upstream-linux | https://lore.kernel.org/lkml/20201112140752.1554-1-rach4x0r@gmail.com/ )
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>　Add_i10_IO_Scheduler.patch</dt>
+<dd><ul class="first last simple">
+<li>add-acs-overrides.patch( <a class="reference external" href="https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio">https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio</a> )</li>
+<li>Zen Patches( <a class="reference external" href="https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/zen-sauce">https://github.com/torvalds/linux/compare/master…zen-kernel:5.10/zen-sauce</a> )</li>
+<li>futex-multiple-wait from Zen kernel( <a class="reference external" href="https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/futex-multiple-wait-v3">https://github.com/torvalds/linux/compare/master…zen-kernel:5.10/futex-multiple-wait-v3</a> )</li>
+<li>fixes patchset from Zen kernel( <a class="reference external" href="https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/fixes">https://github.com/torvalds/linux/compare/master…zen-kernel:5.10/fixes</a> )</li>
+<li>CK1 patch( <a class="reference external" href="http://ck-hack.blogspot.com/">http://ck-hack.blogspot.com/</a> )</li>
+</ul>
+</dd>
+</dl>
+<p>　0004-Create-highres-timeout-variants-of-schedule_timeout-.patch
+　0006-Convert-msleep-to-use-hrtimers-when-active.patch
+　0014-Swap-sucks.patch</p>
+<blockquote>
+<div><ul class="simple">
+<li>Introduce per-task latency_nice for scheduler hints( <a class="reference external" href="https://lkml.org/lkml/2020/2/28/166">https://lkml.org/lkml/2020/2/28/166</a> | <a class="reference external" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=IBM-Latency-Sensitive-Idle">https://www.phoronix.com/scan.php?page=news_item&amp;px=IBM-Latency-Sensitive-Idle</a> )</li>
+<li>patches( <a class="reference external" href="https://github.com/sirlucjan/kernel-patches/tree/master/5.10">https://github.com/sirlucjan/kernel-patches/tree/master/5.10</a> )</li>
+</ul>
+</div></blockquote>
+<p>　0001-UKSM-for-5.10.patch
+　0001-clearlinux-patches.patch
+　0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+　0003-sched-core-nr_migrate-256-increases-number-of-tasks-.patch
+　0004-mm-set-8-megabytes-for-address_space-level-file-read.patch
+　0001-cpu-5.10-merge-graysky-s-patchset.patch
+　0002-init-Kconfig-enable-O3-for-all-arches.patch
+　0001-ntfs3-patches.patch
+　0001-zstd-dev-patches.patch
+　0001-btrfs-patches.patch
+　0003-block-set-rq_affinity-2-for-full-multithreading-I-O.patch</p>
+<blockquote>
+<div><ul class="simple">
+<li>seccomp: Implement syscall isolation based on memory areas( <a class="reference external" href="https://lore.kernel.org/lkml/50a9e680-6be1-ff50-5c82-1bf54c7484a9&#64;gmail.com/T/#m9f74cfb8d6f5356a428e88b097ba3fda832179fa">https://lore.kernel.org/lkml/50a9e680-6be1-ff50-5c82-1bf54c7484a9&#64;gmail.com/T/#m9f74cfb8d6f5356a428e88b097ba3fda832179fa</a> )</li>
+<li>Aufs patch( <a class="reference external" href="http://aufs.sourceforge.net/">http://aufs.sourceforge.net/</a> | <a class="reference external" href="https://sourceforge.net/projects/lxpup/files/Other/huge-kernels/kernel-5.10-aufs-changes/">https://sourceforge.net/projects/lxpup/files/Other/huge-kernels/kernel-5.10-aufs-changes/</a>)</li>
+</ul>
+<p>◇Optimized kernel configuration
+- CPU shceduler -&gt; PDS
 - Default I/O scheduler -&gt; kyber
 - Processer family -&gt; Generic X86_64
 - Kernel Compression mode -&gt; zstd
-- Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)
+- Preemption Model -&gt; Preemptible Kernel(lowlatency desktop)
 - CPU Timer frequency -&gt; 750Hz
-- RCU boost delay -&gt; 500Hz
+- RCU boost delay -&gt; 339
 - Compiler optimization level -&gt; Optimize for more performance(-O3)
+- Timer tick handling -&gt; Full dynticks system
+- Enable utillization clamping for RT/FAIR tasks
 - UKSM on
-- Default CPUFreq Governor -&gt; ondemand
+- Default CPUFreq Governor -&gt; performance
 - HD-audio pre-allocated buffer size 4096
 - BBR TCP Congestion Control
 - Built on the GCC 10.2.0
 - CPU idle governor -&gt; TEO
-- fsync for Wine/Proton on
 - PCIe ACS Override on
+- futex for Wine/Proton
 - ZSTD kernel and initram support
 - TSX -&gt; auto
-- FSGSBASE support
-- Timer tick handling -&gt; Full dynticks system
-- Schefuler features -&gt; Enable utilization clamping for RT/FAIR tasks -&gt; Number of supported utilization clamp buckets(5)
-- Zen Interactive Tuning on
-      Mem dirty before bg writeback 10% -&gt; 20%
-      Mem dirty before sync writeback 20% -&gt; 50%
-      Background-reclaim hugepages no -&gt; yes
-      Scheduling latency 6 -&gt; 4ms
-      Minimal granularity  0.75 -&gt; 0.4ms
-      Wakeup granularity 1 -&gt; 0.5ms
-      CPU migration cost 0.5 -&gt; 0.25ms
-      Bandwidth slice size 5 -&gt; 3ms
-      Ondemand sampling down factor 1 -&gt; 5
-- Meltdown,spectre_v1,spectre_v2 : Mitigation
-</pre></div>
-</div>
+- Zen Interactive Tuning on</p>
+<blockquote>
+<div>Mem dirty before bg writeback 10% -&gt; 20%
+Mem dirty before sync writeback 20% -&gt; 50%
+Background-reclaim hugepages no -&gt; yes
+[CFS CPU Scheduler]
+Scheduling latency 6 -&gt; 4ms
+Minimal granularity 0.75 -&gt; 0.4ms
+Wakeup granularity 1 -&gt; 0.5ms
+CPU migration cost 0.5 -&gt; 0.25ms
+Bandwidth slice size 5 -&gt; 3ms
+Task rebalancing threshold 32 -&gt; 256
+Ondemand sampling down factor 1 -&gt; 5
+[MuQSS CPU Scheduler]
+Scheduling interval 6-&gt; 4 ms
+ISO task max realtime use 70 % -&gt; 25 %
+Yield type 1 -&gt; 0</div></blockquote>
+<ul class="simple">
+<li>Meltdown,spectre_v1,spectre_v2 : Mitigation</li>
+<li>Clear Linux support</li>
+<li>rt_runtime 95000 -&gt; 98000</li>
+<li>rq_affinity 2</li>
+</ul>
+<p>-Aufs support</p>
+</div></blockquote>
 </div>
 <div class="section" id="ppa">
 <h2>1.5. PPA<a class="headerlink" href="#ppa" title="Permalink to this headline">¶</a></h2>
@@ -188,7 +219,7 @@ addition of new application in original application “Viper Tools”.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC</span> <span class="mf">10.2</span><span class="o">.</span><span class="mi">0</span>
 <span class="n">LLVM</span> <span class="mi">10</span>
 <span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">17</span>
-<span class="n">PHP</span> <span class="mf">7.2</span><span class="o">.</span><span class="mi">24</span>
+<span class="n">PHP</span> <span class="mf">8.0</span>
 <span class="n">Perl</span> <span class="mf">5.26</span><span class="o">.</span><span class="mi">1</span>
 <span class="n">Lua</span> <span class="mf">5.3</span><span class="o">.</span><span class="mi">3</span>
 </pre></div>
@@ -197,7 +228,7 @@ addition of new application in original application “Viper Tools”.</p>
 <div class="section" id="id3">
 <h2>1.8. 収録ソフトウェア<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>○Linuxアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.173.18
+<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.190.1
 ウィンドウマネージャー：Openbox
 パネル：Tint2
 サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -217,19 +248,20 @@ Openbox設定マネージャー：obconf-qt
 スクリーンショットツール:xfce4 screenshooter
 システム通知:dunst
 フォント : Takaoフォント,Cicaなど
-Webブラウザ:Chromium Browser 86,Firefox 82
-フォトレタッチソフト:GIMP 2.10.14
+Webブラウザ:Chromium Browser 87,Firefox 84
+フォトレタッチソフト:GIMP 2.10.22
 テキストエディタ:Emacs nox 25.2,mousepad
-動画編集ソフト:Shotcut 20.09.27
+動画編集ソフト:Shotcut 20.11.28,Avidemux 2.7
+3Dモデリングツール;Blender 2.9
 音楽プレーヤー:Audacious
 オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-動画プレーヤー:SMPlayer 19.10.2
+動画プレーヤー:SMPlayer 18.2.2
 SSH:OpenSSH
 LiveUSB作成:UNetbootin
 Webサーバ:Apache 2.4.29
 日本語入力環境:Mozc,fcitx
 ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion,redream,yabause
-Windowsアプリ実行環境:Wine 5.0.2,PlayOnLinux 4.2.12
+Windowsアプリ実行環境:Wine 5.0.3
 ゲーム実行環境:Steam
 ライディングソフト:xfburn 0.5.5
 合成音声ソフト:OpenJtalk
@@ -249,36 +281,28 @@ Live USB作成ツール : UNetbootin
 分散コンパイラ：distcc
 並列コンピューティングAPI：OpenCV
 オーディオAPI:OpenAL
+デスクトップファイル編集ツール : Arronax
 </pre></div>
 </div>
 <p>○オリジナルアプリ:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Python製アプリケーション</span><span class="p">:</span><span class="n">Viper</span> <span class="n">Tools</span>
 </pre></div>
 </div>
-<p>◯Webアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Gmail</span>
-<span class="n">Google</span> <span class="n">Drive</span>
-<span class="n">Cups</span> <span class="n">Browser</span>
-<span class="n">Google</span> <span class="n">Calendar</span>
-<span class="n">Install</span> <span class="n">Processing</span>
-<span class="n">Install</span> <span class="n">Eclipse</span>
-<span class="n">Install</span> <span class="n">Jdownloader2</span>
-<span class="n">Add</span> <span class="n">Ubuntu</span> <span class="n">PPAs</span>
-<span class="n">DP</span><span class="o">-</span><span class="n">IP</span>
-<span class="n">Animizer</span>
-<span class="n">Wifu2x</span>
-<span class="n">Insecam</span>
-<span class="n">IP</span> <span class="n">hiroba</span>
-<span class="n">Youtube</span>
-<span class="n">Google</span> <span class="n">Maps</span>
-<span class="n">Google</span> <span class="n">translation</span>
-<span class="n">BROARDBAND</span>  <span class="n">Speedtest</span>
-<span class="n">Animizer</span>
-<span class="n">Wifu2x</span>
-<span class="n">Office</span> <span class="n">Online</span>
-<span class="n">MSI電源容量計算機</span>
-</pre></div>
-</div>
+<dl class="docutils">
+<dt>◯Webアプリ::</dt>
+<dd>DP-IP
+Animizer
+Wifu2x
+Insecam
+IP hiroba
+Youtube
+Google Maps
+Google translation
+BROARDBAND  Speedtest
+Animizer
+Wifu2x
+MSI電源容量計算機</dd>
+</dl>
 <p>○オプション（未定）
 人工知能の開発環境「Brunhild」</p>
 <blockquote>

@@ -13,7 +13,7 @@ Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS
 このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
 
-「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「PlayOnLinux」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
+「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。
 
@@ -26,7 +26,7 @@ Valkyrie Linux is carried out the "providing development environment and executi
 "providing execution environment for Linux/Windows applications", "providing software development and web development environment",
 "providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
 
-It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Audacious","Emacs","PlayOnLinux","OBS Studio","Shotcut","Avidemux","Steam",etc.
+It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Audacious","Emacs","OBS Studio","Shotcut","Avidemux","Steam",etc.
 This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
 Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
 addition of new application in original application "Viper Tools".
@@ -77,67 +77,84 @@ Ubuntu 18.04.5 LTS
 Kernel
 ------------
 
-◎Noir linux Kernel 5.9.1-v3
+◎Noir linux Kernel 5.10.1-v8
 ::
   ◇based kernel
-    linux kernel 5.9
+    linux kernel 5.10
 
   ◇Applied patches
   [Applied patches]
-  - linux 5.9.1 patch(https://www.kernel.org/)
+  - linux 5.10.1 patch( https://www.kernel.org/ )
+  - Project C 5.10-r0 patch( https://gitlab.com/alfredchen/linux-prjc/-/releases | http://  cchalpha.blogspot.com/ )
+  - i10( https://github.com/i10-kernel/upstream-linux | https://lore.kernel.org/lkml/20201112140752.1554-1-rach4x0r@gmail.com/ )
+　Add_i10_IO_Scheduler.patch
+  - add-acs-overrides.patch( https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio )
+  - Zen Patches( https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/zen-sauce )
+  - futex-multiple-wait from Zen kernel( https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/futex-multiple-wait-v3 )
+  - fixes patchset from Zen kernel( https://github.com/torvalds/linux/compare/master...zen-kernel:5.10/fixes )
   - CK1 patch( http://ck-hack.blogspot.com/ )
-  0004-Create-highres-timeout-variants-of-schedule_timeout-.patch
-  0006-Convert-msleep-to-use-hrtimers-when-active.patch
-  - UKSM patch(https://github.com/sirlucjan/kernel-patches)
-  - add-acs-overrides.patch(https://aur.archlinux.org/cgit/aur.git/tree/add-acs-overrides.patch?h=linux-vfio)
-  - Introduce per-task latency_nice for scheduler hints(https://lkml.org/lkml/2020/2/28/166 | https://www.phoronix.com/scan.php?page=news_item&px=IBM-Latency-Sensitive-Idle)
-  - LL patches(https://github.com/sirlucjan/kernel-patches)
-     0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
-     0003-sched-core-nr_migrate-256-increases-number-of-tasks-.patch
-     0004-mm-set-2048-for-address_space-level-file-read-ahead-.patch
-  - Zen Patches( https://github.com/zen-kernel/zen-kernel/tree/5.9/master )
-     ZEN_INTERACTIVE_Base_config_item.patch
-     ZEN_INTERACTIVE_Tune_CFS_for_interactivity.patch
-     ZEN_INTERACTIVE_Increase_default_writeback_thresholds.patch
-     ZEN_INTERACTIVE_Tune_ondemand_governor_for_interactivity.patch
-     ZEN_INTERACTIVE_Enable_background_reclaim_of_hugepages.patch
-     ZEN_Add_VHBA_driver.patch
-     ZEN_Enable_additional_CPU_Optimizations_for_GCC_v10_1.patch
-     ZEN_Unrestrict_CONFIG_OPTIMIZE_FOR_PERFORMANCE_O3.patch
-  - futex(https://github.com/sirlucjan/kernel-patches)
+　0004-Create-highres-timeout-variants-of-schedule_timeout-.patch
+　0006-Convert-msleep-to-use-hrtimers-when-active.patch
+　0014-Swap-sucks.patch
+  - Introduce per-task latency_nice for scheduler hints( https://lkml.org/lkml/2020/2/28/166 | https://www.phoronix.com/scan.php?page=news_item&px=IBM-Latency-Sensitive-Idle )
+  - patches( https://github.com/sirlucjan/kernel-patches/tree/master/5.10 )
+　0001-UKSM-for-5.10.patch
+　0001-clearlinux-patches.patch
+　0001-LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+　0003-sched-core-nr_migrate-256-increases-number-of-tasks-.patch
+　0004-mm-set-8-megabytes-for-address_space-level-file-read.patch
+　0001-cpu-5.10-merge-graysky-s-patchset.patch
+　0002-init-Kconfig-enable-O3-for-all-arches.patch
+　0001-ntfs3-patches.patch
+　0001-zstd-dev-patches.patch
+　0001-btrfs-patches.patch
+　0003-block-set-rq_affinity-2-for-full-multithreading-I-O.patch
+  - seccomp: Implement syscall isolation based on memory areas( https://lore.kernel.org/lkml/50a9e680-6be1-ff50-5c82-1bf54c7484a9@gmail.com/T/#m9f74cfb8d6f5356a428e88b097ba3fda832179fa )
+  - Aufs patch( http://aufs.sourceforge.net/ | https://sourceforge.net/projects/lxpup/files/Other/huge-kernels/kernel-5.10-aufs-changes/)
+
   ◇Optimized kernel configuration
-  - CPU shceduler -> "CFS"
+  - CPU shceduler -> PDS
   - Default I/O scheduler -> kyber
   - Processer family -> Generic X86_64
   - Kernel Compression mode -> zstd
-  - Preemption Model -> Preemptible Kernel(Low-Latency Desktop)
+  - Preemption Model -> Preemptible Kernel(lowlatency desktop)
   - CPU Timer frequency -> 750Hz
-  - RCU boost delay -> 500Hz
+  - RCU boost delay -> 339
   - Compiler optimization level -> Optimize for more performance(-O3)
+  - Timer tick handling -> Full dynticks system
+  - Enable utillization clamping for RT/FAIR tasks
   - UKSM on
-  - Default CPUFreq Governor -> ondemand
+  - Default CPUFreq Governor -> performance
   - HD-audio pre-allocated buffer size 4096
   - BBR TCP Congestion Control
   - Built on the GCC 10.2.0
   - CPU idle governor -> TEO
-  - fsync for Wine/Proton on
   - PCIe ACS Override on
+  - futex for Wine/Proton
   - ZSTD kernel and initram support
   - TSX -> auto
-  - FSGSBASE support
-  - Timer tick handling -> Full dynticks system
-  - Schefuler features -> Enable utilization clamping for RT/FAIR tasks -> Number of supported utilization clamp buckets(5)
   - Zen Interactive Tuning on
-        Mem dirty before bg writeback 10% -> 20%
-        Mem dirty before sync writeback 20% -> 50%
-        Background-reclaim hugepages no -> yes
-        Scheduling latency 6 -> 4ms
-        Minimal granularity  0.75 -> 0.4ms
-        Wakeup granularity 1 -> 0.5ms
-        CPU migration cost 0.5 -> 0.25ms
-        Bandwidth slice size 5 -> 3ms
-        Ondemand sampling down factor 1 -> 5
+     Mem dirty before bg writeback 10% -> 20%
+     Mem dirty before sync writeback 20% -> 50%
+     Background-reclaim hugepages no -> yes
+     [CFS CPU Scheduler]
+     Scheduling latency 6 -> 4ms
+     Minimal granularity 0.75 -> 0.4ms
+     Wakeup granularity 1 -> 0.5ms
+     CPU migration cost 0.5 -> 0.25ms
+     Bandwidth slice size 5 -> 3ms
+     Task rebalancing threshold 32 -> 256
+     Ondemand sampling down factor 1 -> 5
+     [MuQSS CPU Scheduler]
+     Scheduling interval 6-> 4 ms
+     ISO task max realtime use 70 % -> 25 %
+     Yield type 1 -> 0
   - Meltdown,spectre_v1,spectre_v2 : Mitigation
+  - Clear Linux support
+  - rt_runtime 95000 -> 98000
+  - rq_affinity 2
+  -Aufs support
+
 PPA
 -----------
 
@@ -168,7 +185,7 @@ PPA
     GCC 10.2.0
     LLVM 10
     Python 3.6.9/3.9.0/2.7.17
-    PHP 7.2.24
+    PHP 8.0
     Perl 5.26.1
     Lua 5.3.3
 
@@ -176,7 +193,7 @@ PPA
 ---------------------
 ○Linuxアプリ::
 
-  ファームウェア：Linux Firmware 1.173.18
+  ファームウェア：Linux Firmware 1.190.1
   ウィンドウマネージャー：Openbox
   パネル：Tint2
   サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
@@ -196,19 +213,20 @@ PPA
   スクリーンショットツール:xfce4 screenshooter
   システム通知:dunst
   フォント : Takaoフォント,Cicaなど
-  Webブラウザ:Chromium Browser 86,Firefox 82
-  フォトレタッチソフト:GIMP 2.10.14
+  Webブラウザ:Chromium Browser 87,Firefox 84
+  フォトレタッチソフト:GIMP 2.10.22
   テキストエディタ:Emacs nox 25.2,mousepad
-  動画編集ソフト:Shotcut 20.09.27
+  動画編集ソフト:Shotcut 20.11.28,Avidemux 2.7
+  3Dモデリングツール;Blender 2.9
   音楽プレーヤー:Audacious
   オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-  動画プレーヤー:SMPlayer 19.10.2
+  動画プレーヤー:SMPlayer 18.2.2
   SSH:OpenSSH
   LiveUSB作成:UNetbootin
   Webサーバ:Apache 2.4.29
   日本語入力環境:Mozc,fcitx
   ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion,redream,yabause
-  Windowsアプリ実行環境:Wine 5.0.2,PlayOnLinux 4.2.12
+  Windowsアプリ実行環境:Wine 5.0.3
   ゲーム実行環境:Steam
   ライディングソフト:xfburn 0.5.5
   合成音声ソフト:OpenJtalk
@@ -228,21 +246,13 @@ PPA
   分散コンパイラ：distcc
   並列コンピューティングAPI：OpenCV
   オーディオAPI:OpenAL
+  デスクトップファイル編集ツール : Arronax
 
 ○オリジナルアプリ::
 
  Python製アプリケーション:Viper Tools
 
 ◯Webアプリ::
-
- Gmail
- Google Drive
- Cups Browser
- Google Calendar
- Install Processing
- Install Eclipse
- Install Jdownloader2
- Add Ubuntu PPAs
  DP-IP
  Animizer
  Wifu2x
@@ -254,7 +264,6 @@ PPA
  BROARDBAND  Speedtest
  Animizer
  Wifu2x
- Office Online
  MSI電源容量計算機
 
 ○オプション（未定）
