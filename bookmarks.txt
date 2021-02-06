@@ -213,6 +213,7 @@
         <li><a href="https://www.ubuntuupdates.org/ppas" target="_blank">UbuntuUpdates.org</a></li>
         <li><a href="https://kledgeb.blogspot.jp/" target="_blank">kledgeb </a></li>
         <li><a href="https://ubuntuapps.blog.fc2.com/" target="_blank">Ubuntuアプリのいいところ</a></li>
+        <li><a href="https://ubuntuhandbook.org/" target="_blank">Ubuntuhandbook.com</a></li>
         <li><a href="https://linuxfan.info/" target="_blank">Linux Fan</a></li>
         <li><a href="http://simosnet.com/livecdroom/" target="_blank">ライブCDの部屋</a></li>
         <li><a href="https://debiandog.github.io/doglinux/" target="_blank">Dog Linux</a></li>
