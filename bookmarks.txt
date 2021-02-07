@@ -32,7 +32,7 @@
     <li><a href="https://readcrx-2.github.io/read.crx-2/" target="_blank">read.crx-2</a></li>
     <li><a href="https://chrome.google.com/webstore/detail/scroll-to-top/hegiignepmecppikdlbohnnbfjdoaghj?hl=ja" target="_blank">Scroll To Top</a></li>
     <li><a href="https://chrome.google.com/webstore/detail/searchpreview/hcjdanpjacpeeppdjkppebobilhaglfo?hl=ja" target="_blank">SearchPreview</a></li>
-    <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=ja" target="_blank">User Agent Switcher</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=ja" target="_blank">User-Agent Switcher and Manager</a></li>
     <li><a href="https://chrome.google.com/webstore/detail/translate-anywhere/hhimhiimpaicidimabokfbdokhpcnmoh?hl=ja" target="_blank">どこでも翻訳</a></li>
     <li><a href="https://chrome.google.com/webstore/detail/%E6%96%87%E5%AD%97%E6%95%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF%E3%83%BC/glilfjhglngcfhiogplalcgepclphbhd?hl=ja" target="_blank">文字数カウンター</a></li>
     <li><a href="https://chrome.google.com/webstore/detail/caret/fljalecfjciodhpcledpamjachpmelml" target="_blank">Caret</a></li>
