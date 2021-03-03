@@ -27,7 +27,7 @@ load(
             spider("").meltdown();
         });
 // Display Information
-        spider("browser_info").css("font",{size:"10pt",fontcolor:"#ffffff"})
+        spider("browser_info").css("font",{size:"10pt",fontcolor:"#00ee00"})
                          .info("date")
                          .info("browser")
                          .info("screen")
