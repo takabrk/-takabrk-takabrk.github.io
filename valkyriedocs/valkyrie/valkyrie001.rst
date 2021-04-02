@@ -147,6 +147,7 @@ PPA
 
 OS SPEC
 -------------
+
 ::
     - Ubuntu 18.04.5 LTS based
     - Custom kernel "Noir linux kernel 5.11.11" / Ubuntu kernel 5.8.0 lowlatency
@@ -161,6 +162,7 @@ OS SPEC
     - Intel iHD Driver 21.1.0
 Applications
 -----------------
+
 ::
     - Chromium Browser 89,Firefox 87
     - emacs-nox 27.1,leafpad,glade
@@ -182,11 +184,13 @@ Applications
 
 icons
 --------
+
 ::
     - Suru++
 
 Fonts
 --------
+
 ::
     - Takao font
     - font noto-emoji
