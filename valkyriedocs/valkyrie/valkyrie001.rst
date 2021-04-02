@@ -10,7 +10,7 @@ Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS
 
 デスクトップ環境は、LXQtを採用しています。
 
-このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
+このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 21」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
 
 「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
@@ -21,7 +21,7 @@ Valkyrie Linux is a 64bit OS which was developed based on the "Ubuntu LTS", whic
 
 The desktop environment of this OS has been adopted LXQt.
 
-This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 20" and the latest Linux Firmware.
+This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 21" and the latest Linux Firmware.
 Valkyrie Linux is carried out the "providing development environment and execution environment for artificial intelligence programs",
 "providing execution environment for Linux/Windows applications", "providing software development and web development environment",
 "providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
@@ -38,9 +38,9 @@ Recommended system requirements
 --------------------------------------------------
 
 Processor :
-    Intel Core i7/i5/i3,Pentium G/Celeron G,SoC after Atom Z3000
+    Intel Core i,Pentium G/Celeron G,Atom SoC
 
-    AMD Ryzen,FX processor、A10/A8/A6 APU
+    AMD Ryzen
 
 Memory: 2GB and over
 
@@ -77,10 +77,10 @@ Ubuntu 18.04.5 LTS
 Kernel
 ------------
 
-◎Noir linux Kernel 5.10.11
+◎Noir linux Kernel 5.11.11
 ::
   ◇based kernel
-    linux kernel 5.10
+    linux kernel 5.11
 
   ◇Applied patches
   - CPU shceduler -> PDS
@@ -141,101 +141,75 @@ PPA
     GIMP PPA
     OBS Studio PPA
     Lutris  PPA
+    LibreOffice PPA
+    Inkscape PPA
+    StepMania PPA
 
-デスクトップ環境
-----------------------
+OS SPEC
+-------------
 ::
- 
-    LXQt
-
-プログラミング言語及びスクリプト言語、コンパイラ
-------------------------------------------------------------
-
+    - Ubuntu 18.04.5 LTS based
+    - Custom kernel "Noir linux kernel 5.11.11" / Ubuntu kernel 5.8.0 lowlatency
+    - original application "Viper Tools"
+    - linux firmware 1.190.4
+    - Mesa 21.0.1
+    - LXQt
+    - Tint2
+    - Openbox
+    - gmrun,dunst
+    - xfce4-terminal,xfce4-taskmanager,xfce4-screenshooter
+    - Intel iHD Driver 21.1.0
+Applications
+-----------------
 ::
+    - Chromium Browser 89,Firefox 87
+    - emacs-nox 27.1,leafpad,glade
+    - pulseaudio,jackd2
+    - GIMP 2.10.22
+    - GCC 10.2.0,Python 3.6.9/3.9.0/2.7.18,node.js,libllvm11/10,PHP 8.0,node.js
+    - Wine 6.0.0
+    - OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.92,mpv 0.33,ffmpeg 4.3.1,SMPlyer 20.6.0
+    - Steam,PCSX2,PPSSPP,mednafen,kega fusion,redream
+    - gnumeric,abiword
+    - keepassxc
+    - unetbootin,gparted,boot-repair,gnome disks
+    - git 2.30
+    - X11VNC,remmina
+    - apache2.4.29
+    - OpenJtalk
+    - Arronax
+    - Thunderbird
 
-    GCC 10.2.0
-    LLVM 11
-    Python 3.6.9/3.9.0/2.7.17
-    PHP 8.0
-    Perl 5.26.1
-    Lua 5.3.3
+icons
+--------
+::
+    - Suru++
 
-収録ソフトウェア
----------------------
-○Linuxアプリ::
-
-  ファームウェア：Linux Firmware 1.190.4
-  ウィンドウマネージャー：Openbox
-  パネル：Tint2
-  サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
-  ディスプレイマネージャー：LightDM
-  コマンドランチャー：gmrun
-  ランチャー:Plank
-  ファイルマネージャー：PCManFM-Qt
-  ネットワーク管理：network-manager-gnome
-  電源管理：xfce4-powermanager
-  システムモニター：xfce4-taskmanager
-  ターミナル:xfce4-terminal
-  Openboxメニュー管理：obmenu
-  Openbox設定マネージャー：obconf-qt
-  音量制御：　gnome-alsamixer
-  コンポジット制御：compton
-  文字入力：Fcitx+Mozc
-  スクリーンショットツール:xfce4 screenshooter
-  システム通知:dunst
-  フォント : Takaoフォント,Cicaなど
-  Webブラウザ:Chromium Browser 87,Firefox 84
-  フォトレタッチソフト:GIMP 2.10.22
-  テキストエディタ:Emacs nox 25.2,mousepad
-  動画編集ソフト:Shotcut 20.11.28,Avidemux 2.7
-  3Dモデリングツール;Blender 2.9
-  音楽プレーヤー:Audacious
-  オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-  動画プレーヤー:SMPlayer 18.2.2
-  SSH:OpenSSH
-  LiveUSB作成:UNetbootin
-  Webサーバ:Apache 2.4.29
-  日本語入力環境:Mozc,fcitx
-  ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion,redream
-  Windowsアプリ実行環境:Wine 6.0.0
-  ゲーム実行環境:Steam
-  ライディングソフト:xfburn 0.5.5
-  合成音声ソフト:OpenJtalk
-  Windowsの圧縮ファイル対応アーカイバ:unar
-  PDFビューア:evince 3.28.2
-  音声編集ソフトウェア:Audacity 2.2.1
-  grub修復ツール:Boot Repair
-  ドキュメント作成ツール:Sphinx 1.6.7
-  キャッシュアプリケーション:preload,prelink
-  CDリッパー:Asunder CD Ripper 2.9.2
-  Cコンパイル高速化ツール:ccache 3.4.1
-  APNG生成 : apngasm 2.7
-  APNGからAGIFに変換 : apng2gif
-  Live USB作成ツール : UNetbootin
-  ディスクパーティション管理ツール : GParted
-  動画配信ツール：OBS Studio
-  分散コンパイラ：distcc
-  並列コンピューティングAPI：OpenCV
-  オーディオAPI:OpenAL
-  デスクトップファイル編集ツール : Arronax
+Fonts
+--------
+::
+    - Takao font
+    - font noto-emoji
+    - font noto cjk
+    - font noto cjk extra
+    - Cica
 
 ○オリジナルアプリ::
-
- Python製アプリケーション:Viper Tools
+    Python製アプリケーション:Viper Tools
 
 ◯Webアプリ::
- DP-IP
- Animizer
- Wifu2x
- Insecam
- IP hiroba
- Youtube
- Google Maps
- Google translation
- BROARDBAND  Speedtest
- Animizer
- Wifu2x
- MSI電源容量計算機
+    DP-IP
+    Animizer
+    Wifu2x
+    Insecam
+    IP hiroba
+    Youtube
+    Google Maps
+    Google translation
+    BROARDBAND  Speedtest
+    Animizer
+    Wifu2x
+    MSI電源容量計算機
 
 ○オプション（未定）
 人工知能の開発環境「Brunhild」

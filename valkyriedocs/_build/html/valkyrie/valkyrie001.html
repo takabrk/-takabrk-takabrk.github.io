@@ -53,14 +53,14 @@
 <h1>1. Valkyrie Linux<a class="headerlink" href="#valkyrie-linux" title="Permalink to this headline">¶</a></h1>
 <p>Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS版」をベースに開発した64bit OSです。</p>
 <p>デスクトップ環境は、LXQtを採用しています。</p>
-<p>このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 20」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
+<p>このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 21」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
 Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。</p>
 <p>「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
 強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
 オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。</p>
 <p>Valkyrie Linux is a 64bit OS which was developed based on the “Ubuntu LTS”, which is a Linux distribution.</p>
 <p>The desktop environment of this OS has been adopted LXQt.</p>
-<p>This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver “Mesa 20” and the latest Linux Firmware.
+<p>This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver “Mesa 21” and the latest Linux Firmware.
 Valkyrie Linux is carried out the “providing development environment and execution environment for artificial intelligence programs”,
 “providing execution environment for Linux/Windows applications”, “providing software development and web development environment”,
 “providing multimedia contents creation environment , “Providing cutting-edge science and technology/data science environment”,”building a gaming environment”.</p>
@@ -73,8 +73,8 @@ addition of new application in original application “Viper Tools”.</p>
 <h2>1.1. Recommended system requirements<a class="headerlink" href="#recommended-system-requirements" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Processor :</dt>
-<dd><p class="first">Intel Core i7/i5/i3,Pentium G/Celeron G,SoC after Atom Z3000</p>
-<p class="last">AMD Ryzen,FX processor、A10/A8/A6 APU</p>
+<dd><p class="first">Intel Core i,Pentium G/Celeron G,Atom SoC</p>
+<p class="last">AMD Ryzen</p>
 </dd>
 </dl>
 <p>Memory: 2GB and over</p>
@@ -99,9 +99,9 @@ addition of new application in original application “Viper Tools”.</p>
 </div>
 <div class="section" id="kernel">
 <h2>1.4. Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
-<p>◎Noir linux Kernel 5.10.11</p>
+<p>◎Noir linux Kernel 5.11.11</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>◇based kernel
-  linux kernel 5.10
+  linux kernel 5.11
 
 ◇Applied patches
 - CPU shceduler -&gt; PDS
@@ -161,90 +161,82 @@ addition of new application in original application “Viper Tools”.</p>
 <span class="n">GIMP</span> <span class="n">PPA</span>
 <span class="n">OBS</span> <span class="n">Studio</span> <span class="n">PPA</span>
 <span class="n">Lutris</span>  <span class="n">PPA</span>
+<span class="n">LibreOffice</span> <span class="n">PPA</span>
+<span class="n">Inkscape</span> <span class="n">PPA</span>
+<span class="n">StepMania</span> <span class="n">PPA</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>1.6. デスクトップ環境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LXQt</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>1.7. プログラミング言語及びスクリプト言語、コンパイラ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GCC</span> <span class="mf">10.2</span><span class="o">.</span><span class="mi">0</span>
-<span class="n">LLVM</span> <span class="mi">11</span>
-<span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">17</span>
-<span class="n">PHP</span> <span class="mf">8.0</span>
-<span class="n">Perl</span> <span class="mf">5.26</span><span class="o">.</span><span class="mi">1</span>
-<span class="n">Lua</span> <span class="mf">5.3</span><span class="o">.</span><span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>1.8. 収録ソフトウェア<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>○Linuxアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ファームウェア：Linux Firmware 1.190.4
-ウィンドウマネージャー：Openbox
-パネル：Tint2
-サウンドサーバ:Jack Audio Connection Kit,Pulse Audio
-ディスプレイマネージャー：LightDM
-コマンドランチャー：gmrun
-ランチャー:Plank
-ファイルマネージャー：PCManFM-Qt
-ネットワーク管理：network-manager-gnome
-電源管理：xfce4-powermanager
-システムモニター：xfce4-taskmanager
-ターミナル:xfce4-terminal
-Openboxメニュー管理：obmenu
-Openbox設定マネージャー：obconf-qt
-音量制御：　gnome-alsamixer
-コンポジット制御：compton
-文字入力：Fcitx+Mozc
-スクリーンショットツール:xfce4 screenshooter
-システム通知:dunst
-フォント : Takaoフォント,Cicaなど
-Webブラウザ:Chromium Browser 87,Firefox 84
-フォトレタッチソフト:GIMP 2.10.22
-テキストエディタ:Emacs nox 25.2,mousepad
-動画編集ソフト:Shotcut 20.11.28,Avidemux 2.7
-3Dモデリングツール;Blender 2.9
-音楽プレーヤー:Audacious
-オフィスツール:Abiword 3.0.2,Gnumeric 1.12.35
-動画プレーヤー:SMPlayer 18.2.2
-SSH:OpenSSH
-LiveUSB作成:UNetbootin
-Webサーバ:Apache 2.4.29
-日本語入力環境:Mozc,fcitx
-ゲームエミュレーター:PCSX2 1.7.0、PPSSPP 1.7.0、Mednafen、Kega Fusion,redream
-Windowsアプリ実行環境:Wine 6.0.0
-ゲーム実行環境:Steam
-ライディングソフト:xfburn 0.5.5
-合成音声ソフト:OpenJtalk
-Windowsの圧縮ファイル対応アーカイバ:unar
-PDFビューア:evince 3.28.2
-音声編集ソフトウェア:Audacity 2.2.1
-grub修復ツール:Boot Repair
-ドキュメント作成ツール:Sphinx 1.6.7
-キャッシュアプリケーション:preload,prelink
-CDリッパー:Asunder CD Ripper 2.9.2
-Cコンパイル高速化ツール:ccache 3.4.1
-APNG生成 : apngasm 2.7
-APNGからAGIFに変換 : apng2gif
-Live USB作成ツール : UNetbootin
-ディスクパーティション管理ツール : GParted
-動画配信ツール：OBS Studio
-分散コンパイラ：distcc
-並列コンピューティングAPI：OpenCV
-オーディオAPI:OpenAL
-デスクトップファイル編集ツール : Arronax
-</pre></div>
-</div>
-<p>○オリジナルアプリ:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Python製アプリケーション</span><span class="p">:</span><span class="n">Viper</span> <span class="n">Tools</span>
-</pre></div>
-</div>
+<div class="section" id="os-spec">
+<h2>1.6. OS SPEC<a class="headerlink" href="#os-spec" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
+<dt>::</dt>
+<dd><ul class="first last simple">
+<li>Ubuntu 18.04.5 LTS based</li>
+<li>Custom kernel “Noir linux kernel 5.11.11” / Ubuntu kernel 5.8.0 lowlatency</li>
+<li>original application “Viper Tools”</li>
+<li>linux firmware 1.190.4</li>
+<li>Mesa 21.0.1</li>
+<li>LXQt</li>
+<li>Tint2</li>
+<li>Openbox</li>
+<li>gmrun,dunst</li>
+<li>xfce4-terminal,xfce4-taskmanager,xfce4-screenshooter</li>
+<li>Intel iHD Driver 21.1.0</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="applications">
+<h2>1.7. Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>::</dt>
+<dd><ul class="first last simple">
+<li>Chromium Browser 89,Firefox 87</li>
+<li>emacs-nox 27.1,leafpad,glade</li>
+<li>pulseaudio,jackd2</li>
+<li>GIMP 2.10.22</li>
+<li>GCC 10.2.0,Python 3.6.9/3.9.0/2.7.18,node.js,libllvm11/10,PHP 8.0,node.js</li>
+<li>Wine 6.0.0</li>
+<li>OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.92,mpv 0.33,ffmpeg 4.3.1,SMPlyer 20.6.0</li>
+<li>Steam,PCSX2,PPSSPP,mednafen,kega fusion,redream</li>
+<li>gnumeric,abiword</li>
+<li>keepassxc</li>
+<li>unetbootin,gparted,boot-repair,gnome disks</li>
+<li>git 2.30</li>
+<li>X11VNC,remmina</li>
+<li>apache2.4.29</li>
+<li>OpenJtalk</li>
+<li>Arronax</li>
+<li>Thunderbird</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="icons">
+<h2>1.8. icons<a class="headerlink" href="#icons" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>::</dt>
+<dd><ul class="first last simple">
+<li>Suru++</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="fonts">
+<h2>1.9. Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>::</dt>
+<dd><ul class="first last simple">
+<li>Takao font</li>
+<li>font noto-emoji</li>
+<li>font noto cjk</li>
+<li>font noto cjk extra</li>
+<li>Cica</li>
+</ul>
+</dd>
+<dt>○オリジナルアプリ::</dt>
+<dd>Python製アプリケーション:Viper Tools</dd>
 <dt>◯Webアプリ::</dt>
 <dd>DP-IP
 Animizer
@@ -296,8 +288,8 @@ MSI電源容量計算機</dd>
 </div>
 </div>
 </div>
-<div class="section" id="id4">
-<h1>2. インストール方法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h1>2. インストール方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>◇インストール方法
 1.ISOをダウンロード（OneDriveのアカウントが無くてもダウンロードは出来ます。右クリックメニューで「ダウンロード」の項目を選択して下さい。）</p>
 <p>2.UNetbootinでUSBメモリーにインストールディスク(Live USB)を作成。</p>
@@ -310,8 +302,8 @@ MSI電源容量計算機</dd>
 <p>8.GRUBをインストールしたら、システムの再起動（エラーが出ていてもGrub2はインストールされているので問題無く起動出来ます。）。
 homeディレクトリを別にした状態で、再インストールをしている時は、/etc/skelの下にあるファイルやフォルダを全てユーザーディレクトリにコピーしなければ反映されません。</p>
 </div>
-<div class="section" id="id5">
-<h1>3. セキュアブートの無効化<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h1>3. セキュアブートの無効化<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <p>1.パソコンを起動させた時にメーカーのロゴが表示されるので、この時にF2キーかDeleteキーを押す。</p>
 <img alt="../_images/uefi001.jpg" src="../_images/uefi001.jpg" />
 <p>2.UEFIに入るので、詳細モードに変更する。（使っているマザーボードによって異なります。）</p>
@@ -359,8 +351,8 @@ homeディレクトリを別にした状態で、再インストールをして�
 </li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h1>5. Valkyrie Linuxの高速化と最適化<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id3">
+<h1>5. Valkyrie Linuxの高速化と最適化<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
 <p>64bit OS「Valkyrie Linux」は、LTS版Ubuntuをベースに数多くの高速化・最適化策を講じています。</p>
 <p>Ubuntu LTSをベースにして開発したオリジナル64bit OS「Valkyrie Linux」には、様々な高速化テクニックを導入しています。</p>
 <p>1.Ubuntuパッチが当たっているLinuxカーネルのソースコードを使って、最適化ビルドしたカスタムカーネルの導入</p>
@@ -382,8 +374,8 @@ homeディレクトリを別にした状態で、再インストールをして�
 <p>kernel.interactive = 0</p>
 </div></blockquote>
 </div>
-<div class="section" id="id7">
-<h1>6. Valkyrie Linuxの高音質化<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id4">
+<h1>6. Valkyrie Linuxの高音質化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
 <p>PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openboxの起動スクリプトからこれらを起動させたり、PulseAudioのデーモンをRAMDISKに配置したりして高音質化を図っています。</p>
 <p>高音質化部分は以下の通りです。:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> #JACK+PulseAudio
@@ -431,16 +423,17 @@ sleep 10;/tmp/pulseaudio --start &amp;
 <li><a class="reference internal" href="#based-linux-destribution">1.3. Based Linux destribution</a></li>
 <li><a class="reference internal" href="#kernel">1.4. Kernel</a></li>
 <li><a class="reference internal" href="#ppa">1.5. PPA</a></li>
-<li><a class="reference internal" href="#id1">1.6. デスクトップ環境</a></li>
-<li><a class="reference internal" href="#id2">1.7. プログラミング言語及びスクリプト言語、コンパイラ</a></li>
-<li><a class="reference internal" href="#id3">1.8. 収録ソフトウェア</a></li>
+<li><a class="reference internal" href="#os-spec">1.6. OS SPEC</a></li>
+<li><a class="reference internal" href="#applications">1.7. Applications</a></li>
+<li><a class="reference internal" href="#icons">1.8. icons</a></li>
+<li><a class="reference internal" href="#fonts">1.9. Fonts</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">2. インストール方法</a></li>
-<li><a class="reference internal" href="#id5">3. セキュアブートの無効化</a></li>
+<li><a class="reference internal" href="#id1">2. インストール方法</a></li>
+<li><a class="reference internal" href="#id2">3. セキュアブートの無効化</a></li>
 <li><a class="reference internal" href="#bit-osvalkyrie-linux">4. 64bit OS「Valkyrie Linux」の特長</a></li>
-<li><a class="reference internal" href="#id6">5. Valkyrie Linuxの高速化と最適化</a></li>
-<li><a class="reference internal" href="#id7">6. Valkyrie Linuxの高音質化</a></li>
+<li><a class="reference internal" href="#id3">5. Valkyrie Linuxの高速化と最適化</a></li>
+<li><a class="reference internal" href="#id4">6. Valkyrie Linuxの高音質化</a></li>
 <li><a class="reference internal" href="#valkyrie-linuxgrub">7. Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法</a></li>
 </ul>
 
