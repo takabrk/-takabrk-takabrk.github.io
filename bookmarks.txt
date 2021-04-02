@@ -141,50 +141,6 @@
         <li><a href="http://codezine.jp/" target="_blank">CodeZine</a></li>
         <li><a href="http://www.anandtech.com/bench/CPU/2" target="_blank">Anandtech CPU Bench</a></li>
     </ul>
-<h2 id="pcshop">PCショップ・家電量販店</h2>
-    <ul>
-      <li><a href="http://www.sofmap.com/shop/default.asp" target="_blank">Sofmap</a></li>
-      <li><a href="http://www.yodobashi.com/" target="_blank">ヨドバシカメラ</a></li>
-      <li><a href="http://www.biccamera.com/" target="_blank">ビックカメラ</a></li>
-      <li><a href="http://joshinweb.jp/top.html" target="_blank">ジョーシン</a></li>
-      <li><a href="http://kakaku.com/" target="_blank">価格.com</a></li>
-      <li><a href="https://www.pc-koubou.jp/" target="_blank">パソコン工房</a></li>
-      <li><a href="http://www.dospara.co.jp/" target="_blank">ドスパラ</a></li>
-      <li><a href="http://www.1-s.jp/" target="_blank">1's</a></li>
-      <li><a href="http://www.best-do.com/shopping/shop/frontpage.php" target="_blank">Best Do!</a></li>
-      <li><a href="https://iosys.co.jp/" target="_blank">イオシス</a></li>
-    </ul>
-<h2 id="maker">メーカー</h2>
-    <ul>
-      <li><a href="http://www.apple.co.jp/" target="_blank">Apple</a></li>
-      <li><a href="http://www8.hp.com/jp/ja/home.html" target="_blank">HP</a></li>
-      <li><a href="http://www.amd.com/jp-ja/" target="_blank">AMD</a></li>
-      <li><a href="http://jp.nvidia.com/" target="_blank">NVIDIA</a></li>
-      <li><a href="https://www.sonymobile.co.jp/" target="_blank">ソニーモバイル</a></li>
-    </ul>
-<h2 id="career">キャリア・プロバイダー</h2>
-    <ul>
-        <li><a href="http://www.nttdocomo.co.jp/" target="_blank">NTT DoCoMo</a></li>
-        <li><a href="https://www.au.com/" target="_blank">au</a></li>
-        <li><a href="http://www.uqwimax.jp/" target="_blank">UQ</a></li>
-        <li><a href="http://www.biglobe.ne.jp/" target="_blank">BIGLOBE</a></li>
-        <li><a href="http://www.nifty.com/" target="_blank">Nifty</a></li>
-    </ul>
-<h2 id="webtech">Webプログラミングテクニック</h2>
-    <ul>
-        <li><a href="http://www.ibm.com/developerworks/jp/" target="_blank">IBM Developer Works Japan</a></li>
-        <li><a href="http://blog.chromium.org/" target="_blank">Chromium Blog</a></li>
-        <li><a href="http://blogs.msdn.com/b/ie/" target="_blank">IE Blog</a></li>
-        <li><a href="http://www.geocities.jp/m_hiroi/light/" target="_blank">Pythonアルゴリズム</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MOZILLA DEVELOPER NETWORK</a></li>
-        <li><a href="http://phpspot.org/blog/" target="_blank">phpspot開発日誌</a></li>
-        <li><a href="http://www.sitepoint.com/" target="_blank">sitepoint</a></li>
-        <li><a href="http://mozillalabs.com/" target="_blank">Mozilla Labs</a></li>
-        <li><a href="http://blog.mozilla.com/" target="_blank">The Mozilla Blog</a></li>
-        <li><a href="http://ejohn.org/category/blog/" target="_blank">John Resig Blog</a></li>
-        <li><a href="http://jsdo.it/event/svggirl" target="_blank">SVG女子</a></li>
-        <li><a href="http://www.atmarkit.co.jp/index.html" target="_blank">@IT</a></li>
-    </ul>
 <h2 id="linux">Linux</h2>
     <ul>
         <li><a href="http://www.kernel.org/" target="_blank">The Linux Kernel Archives</a></li>
@@ -239,6 +195,51 @@
         <li><a href="http://shellscript.sunone.me/" target="_blank">UNIX &amp; Linuxコマンド・シェルスクリプトリファレンス</a></li>
         <li><a href="https://www6.atwiki.jp/vpvpwiki/pages/298.html" target="_blank">VPVP wiki</a></li>
         <li><a href="http://open-jtalk.sourceforge.net/" target="_blank">Open Jtalk</a></li>
+    </ul>
+
+<h2 id="pcshop">PCショップ・家電量販店</h2>
+    <ul>
+      <li><a href="http://www.sofmap.com/shop/default.asp" target="_blank">Sofmap</a></li>
+      <li><a href="http://www.yodobashi.com/" target="_blank">ヨドバシカメラ</a></li>
+      <li><a href="http://www.biccamera.com/" target="_blank">ビックカメラ</a></li>
+      <li><a href="http://joshinweb.jp/top.html" target="_blank">ジョーシン</a></li>
+      <li><a href="http://kakaku.com/" target="_blank">価格.com</a></li>
+      <li><a href="https://www.pc-koubou.jp/" target="_blank">パソコン工房</a></li>
+      <li><a href="http://www.dospara.co.jp/" target="_blank">ドスパラ</a></li>
+      <li><a href="http://www.1-s.jp/" target="_blank">1's</a></li>
+      <li><a href="http://www.best-do.com/shopping/shop/frontpage.php" target="_blank">Best Do!</a></li>
+      <li><a href="https://iosys.co.jp/" target="_blank">イオシス</a></li>
+    </ul>
+<h2 id="maker">メーカー</h2>
+    <ul>
+      <li><a href="http://www.apple.co.jp/" target="_blank">Apple</a></li>
+      <li><a href="http://www8.hp.com/jp/ja/home.html" target="_blank">HP</a></li>
+      <li><a href="http://www.amd.com/jp-ja/" target="_blank">AMD</a></li>
+      <li><a href="http://jp.nvidia.com/" target="_blank">NVIDIA</a></li>
+      <li><a href="https://www.sonymobile.co.jp/" target="_blank">ソニーモバイル</a></li>
+    </ul>
+<h2 id="career">キャリア・プロバイダー</h2>
+    <ul>
+        <li><a href="http://www.nttdocomo.co.jp/" target="_blank">NTT DoCoMo</a></li>
+        <li><a href="https://www.au.com/" target="_blank">au</a></li>
+        <li><a href="http://www.uqwimax.jp/" target="_blank">UQ</a></li>
+        <li><a href="http://www.biglobe.ne.jp/" target="_blank">BIGLOBE</a></li>
+        <li><a href="http://www.nifty.com/" target="_blank">Nifty</a></li>
+    </ul>
+<h2 id="webtech">Webプログラミングテクニック</h2>
+    <ul>
+        <li><a href="http://www.ibm.com/developerworks/jp/" target="_blank">IBM Developer Works Japan</a></li>
+        <li><a href="http://blog.chromium.org/" target="_blank">Chromium Blog</a></li>
+        <li><a href="http://blogs.msdn.com/b/ie/" target="_blank">IE Blog</a></li>
+        <li><a href="http://www.geocities.jp/m_hiroi/light/" target="_blank">Pythonアルゴリズム</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MOZILLA DEVELOPER NETWORK</a></li>
+        <li><a href="http://phpspot.org/blog/" target="_blank">phpspot開発日誌</a></li>
+        <li><a href="http://www.sitepoint.com/" target="_blank">sitepoint</a></li>
+        <li><a href="http://mozillalabs.com/" target="_blank">Mozilla Labs</a></li>
+        <li><a href="http://blog.mozilla.com/" target="_blank">The Mozilla Blog</a></li>
+        <li><a href="http://ejohn.org/category/blog/" target="_blank">John Resig Blog</a></li>
+        <li><a href="http://jsdo.it/event/svggirl" target="_blank">SVG女子</a></li>
+        <li><a href="http://www.atmarkit.co.jp/index.html" target="_blank">@IT</a></li>
     </ul>
 <h2 id="livehouse">ライブハウス</h2>
     <ul>
