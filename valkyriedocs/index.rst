@@ -1,4 +1,4 @@
-.. Phantom Valkyrie Linux documentation master file, created by
+.. Valkyrie Linux documentation master file, created by
    sphinx-quickstart on Wed Feb  3 19:35:57 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.

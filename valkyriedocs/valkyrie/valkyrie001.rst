@@ -83,7 +83,7 @@ Kernel
     linux kernel 5.11
 
   ◇Applied patches
-  - CPU shceduler -> PDS
+  - CPU shceduler -> MuQSS
   - Default I/O scheduler -> Kyber
   - Processer family -> Generic X86_64
   - Kernel Compression mode -> zstd
