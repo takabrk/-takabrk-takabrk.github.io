@@ -1,33 +1,25 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>19. 過去の履歴 &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/analytics.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Viper Tools" href="../vipertools/vipertools001.html" />
     <link rel="prev" title="18. カスタムカーネルについて" href="valkyrie004.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +32,8 @@
         <li class="right" >
           <a href="valkyrie004.html" title="18. カスタムカーネルについて"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">19. </span>過去の履歴</a></li> 
       </ul>
     </div>  
 
@@ -50,7 +43,7 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>19. 過去の履歴<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">19. </span>過去の履歴<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>2019年11月15日、VSRX-19から「Phantom Valkyrie Linux」に名称変更</p>
 <p>64bit OS「VSRX-19」シリーズ公開　2019年</p>
 <p>64bit OS「VSRX-18」シリーズ公開　2018年</p>
@@ -251,7 +244,7 @@
 <p>・Ubuntu 15.04のリポジトリ追加。これに伴って、追加していたPPAの大幅整理を行っています。
 基本的にはUbuntu 14.04 LTSですので、起動デーモンは、systemdではなく、Upstartを使っており、Ubuntu 15.04のリポジトリは、システムに悪影響を与えないレベルでアプリケーションを導入する為に使う事になります。</p>
 <p>Ubuntu 15.04のリポジトリにあるアプリケーションを導入する場合には、明示的に指定する必要があります。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$sudo apt-get install -t vivid xxx
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install -t vivid xxx
 </pre></div>
 </div>
 <p>「-t vivid」を付ける事でUbuntu 15.04のアプリケーションを導入出来ます。</p>
@@ -435,6 +428,7 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -442,10 +436,10 @@
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="valkyrie004.html"
-                        title="previous chapter">18. カスタムカーネルについて</a></p>
+                        title="previous chapter"><span class="section-number">18. </span>カスタムカーネルについて</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../vipertools/vipertools001.html"
-                        title="next chapter">1. Viper Tools</a></p>
+                        title="next chapter"><span class="section-number">1. </span>Viper Tools</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -454,15 +448,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -479,12 +473,13 @@
         <li class="right" >
           <a href="valkyrie004.html" title="18. カスタムカーネルについて"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">19. </span>過去の履歴</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>

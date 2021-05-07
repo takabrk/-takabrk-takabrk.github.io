@@ -1,33 +1,25 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5. Processing用ライブラリ「CX2 Engine」 &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/analytics.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Ubuntu系ディストリビューション向けテクニック" href="../tech/tech001.html" />
     <link rel="prev" title="3. spider.php" href="../spiderphp/spiderphp001.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +32,8 @@
         <li class="right" >
           <a href="../spiderphp/spiderphp001.html" title="3. spider.php"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>Processing用ライブラリ「CX2 Engine」</a></li> 
       </ul>
     </div>  
 
@@ -50,14 +43,14 @@
           <div class="body" role="main">
             
   <div class="section" id="processingcx2-engine">
-<h1>5. Processing用ライブラリ「CX2 Engine」<a class="headerlink" href="#processingcx2-engine" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Processing用ライブラリ「CX2 Engine」<a class="headerlink" href="#processingcx2-engine" title="Permalink to this headline">¶</a></h1>
 <p>CX2 Engineは、Java+Processing環境で使う事が出来るライブラリです。</p>
 <ul class="simple">
-<li>Processingを使った多彩な表現</li>
+<li><p>Processingを使った多彩な表現</p></li>
 </ul>
 </div>
 <div class="section" id="processing-3eclipse">
-<h1>6. Processing 3をEclipseで使う<a class="headerlink" href="#processing-3eclipse" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Processing 3をEclipseで使う<a class="headerlink" href="#processing-3eclipse" title="Permalink to this headline">¶</a></h1>
 <p>このライブラリを使うには、統合開発環境「Eclipse」を使います。</p>
 <p>1.Eclipseの「Help」→「Install New Software」からhttp://proclipsing.googlecode.com/svn/tags/current_releases/proclipsingSite/を登録して、Proclipsingプラグインをインストール</p>
 <p>2.[Window]-&gt;[Preference] で [Preferences]ダイアログを開き、左側のリストから Proclipsing を選択する。</p>
@@ -70,7 +63,7 @@
 <p>ライブラリのインポート</p>
 </div>
 <div class="section" id="id1">
-<h1>7. クラスの生成<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>クラスの生成<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>package xxx;</p>
 <p>import CX2.CX2;</p>
@@ -79,103 +72,107 @@
 <div><p>CX2 cx;</p>
 <p>public void setup(){</p>
 <blockquote>
-<div>cx = new CX2(this,800,600);</div></blockquote>
+<div><p>cx = new CX2(this,800,600);</p>
+</div></blockquote>
 <p>}</p>
 <p>public void draw(){</p>
 <p>}</p>
 <p>public void settings(){</p>
 <blockquote>
-<div>size(800,600);</div></blockquote>
+<div><p>size(800,600);</p>
+</div></blockquote>
 <p>}</p>
 <p>public static void main(String _args[]) {</p>
 <blockquote>
-<div>PApplet.main(new String[] { xxx.Xxx.class.getName() });</div></blockquote>
+<div><p>PApplet.main(new String[] { xxx.Xxx.class.getName() });</p>
+</div></blockquote>
 <p>}</p>
 </div></blockquote>
 <p>}</p>
 </div></blockquote>
 </div>
 <div class="section" id="id2">
-<h1>8. メソッド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>メソッド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="card-shuffle">
-<h2>8.1. card_shuffle<a class="headerlink" href="#card-shuffle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>card_shuffle<a class="headerlink" href="#card-shuffle" title="Permalink to this headline">¶</a></h2>
 <p>トランプをシャッフルするようなエフェクトを表現する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">card_shuffle</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">card_shuffle</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="rbw">
-<h2>8.2. RBW<a class="headerlink" href="#rbw" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>RBW<a class="headerlink" href="#rbw" title="Permalink to this headline">¶</a></h2>
 <p>赤、青、白の短形と円形のオブジェクトで表現した風車風のエフェクトを表示する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">RBW</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">RBW</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="worp-man">
-<h2>8.3. worp_man<a class="headerlink" href="#worp-man" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>worp_man<a class="headerlink" href="#worp-man" title="Permalink to this headline">¶</a></h2>
 <p>楕円形オブジェクトを使ってポップなエフェクトを実現する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">worp_man</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">worp_man</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="prism">
-<h2>8.4. prism<a class="headerlink" href="#prism" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>prism<a class="headerlink" href="#prism" title="Permalink to this headline">¶</a></h2>
 <p>光が降り注ぐようなエフェクトを描画する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">prism</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">prism</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="snow-circle">
-<h2>8.5. snow_circle<a class="headerlink" href="#snow-circle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.5. </span>snow_circle<a class="headerlink" href="#snow-circle" title="Permalink to this headline">¶</a></h2>
 <p>雪が散るような表現を行う:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">snow_circle</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">snow_circle</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="spider-ball">
-<h2>8.6. spider_ball<a class="headerlink" href="#spider-ball" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.6. </span>spider_ball<a class="headerlink" href="#spider-ball" title="Permalink to this headline">¶</a></h2>
 <p>円形オブジェクトが蜘蛛の巣のように動く:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">spider_ball</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">spider_ball</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="random-line">
-<h2>8.7. random_line<a class="headerlink" href="#random-line" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.7. </span>random_line<a class="headerlink" href="#random-line" title="Permalink to this headline">¶</a></h2>
 <p>ランダムに線を引く:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">randomLine</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">randomLine</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="sea">
-<h2>8.8. sea<a class="headerlink" href="#sea" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.8. </span>sea<a class="headerlink" href="#sea" title="Permalink to this headline">¶</a></h2>
 <p>煌く海面を表現する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">sea</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">sea</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="crimson-world">
-<h2>8.9. crimson_world<a class="headerlink" href="#crimson-world" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9. </span>crimson_world<a class="headerlink" href="#crimson-world" title="Permalink to this headline">¶</a></h2>
 <p>深紅の網目のようなエフェクトを描画する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">crimson_world</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">crimson_world</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="check">
-<h2>8.10. check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.10. </span>check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
 <p>タータンチェックを表現する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">check</span><span class="p">();</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">check</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">5. Processing用ライブラリ「CX2 Engine」</a></li>
 <li><a class="reference internal" href="#processing-3eclipse">6. Processing 3をEclipseで使う</a></li>
@@ -197,10 +194,10 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../spiderphp/spiderphp001.html"
-                        title="previous chapter">3. spider.php</a></p>
+                        title="previous chapter"><span class="section-number">3. </span>spider.php</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../tech/tech001.html"
-                        title="next chapter">1. Ubuntu系ディストリビューション向けテクニック</a></p>
+                        title="next chapter"><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -209,15 +206,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -234,12 +231,13 @@
         <li class="right" >
           <a href="../spiderphp/spiderphp001.html" title="3. spider.php"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>Processing用ライブラリ「CX2 Engine」</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>

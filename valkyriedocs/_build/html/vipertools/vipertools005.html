@@ -1,33 +1,25 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. ナンバーズ予想用モジュール &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/analytics.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. spider.js" href="../spiderjs/spiderjs001.html" />
     <link rel="prev" title="6. kyotei.pyのクラス生成" href="vipertools004.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +32,8 @@
         <li class="right" >
           <a href="vipertools004.html" title="6. kyotei.pyのクラス生成"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8. </span>ナンバーズ予想用モジュール</a></li> 
       </ul>
     </div>  
 
@@ -50,28 +43,28 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>8. ナンバーズ予想用モジュール<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>ナンバーズ予想用モジュール<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 </div>
 <div class="section" id="download-data-py">
-<h1>9. download_data.pyのクラス生成<a class="headerlink" href="#download-data-py" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>download_data.pyのクラス生成<a class="headerlink" href="#download-data-py" title="Permalink to this headline">¶</a></h1>
 <p>クラスの生成は以下のように行います。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="download-data">
-<h1>10. download_dataモジュールのメソッド<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10. </span>download_dataモジュールのメソッド<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="download-html">
-<h2>10.1. download_html<a class="headerlink" href="#download-html" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>download_html<a class="headerlink" href="#download-html" title="Permalink to this headline">¶</a></h2>
 <p>みずほ銀行の宝くじ結果ページからHTMLをダウンロードします:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">db2list</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">db2list</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="set-list-set-list2-set-list3">
-<h2>10.2. set_list,set_list2,set_list3<a class="headerlink" href="#set-list-set-list2-set-list3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>set_list,set_list2,set_list3<a class="headerlink" href="#set-list-set-list2-set-list3" title="Permalink to this headline">¶</a></h2>
 <p>当選結果日時を参考にHTMLファイルの名称をつける為のリストを生成します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">set_list</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">set_list</span><span class="p">()</span>
 
 <span class="n">k</span><span class="o">.</span><span class="n">set_list2</span><span class="p">()</span>
 
@@ -81,69 +74,69 @@
 </div>
 </div>
 <div class="section" id="load-numbers-py">
-<h1>11. load_numbers.pyモジュールのクラス生成<a class="headerlink" href="#load-numbers-py" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>load_numbers.pyモジュールのクラス生成<a class="headerlink" href="#load-numbers-py" title="Permalink to this headline">¶</a></h1>
 <p>クラスの生成は以下のように行います。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span> <span class="o">=</span> <span class="n">numbers_list</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span> <span class="o">=</span> <span class="n">numbers_list</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="section" id="make-list3-total">
-<h2>11.1. make_list3_total<a class="headerlink" href="#make-list3-total" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>make_list3_total<a class="headerlink" href="#make-list3-total" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ3の過去の当選結果のリストを生成します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list3_total</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list3_total</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="make-list4-total">
-<h2>11.2. make_list4_total<a class="headerlink" href="#make-list4-total" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>make_list4_total<a class="headerlink" href="#make-list4-total" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ4の過去の当選結果のリストを生成します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list4_total</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list4_total</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id2">
-<h2>11.3. set_list,set_list2,set_list3<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>set_list,set_list2,set_list3<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>HTMLファイル群のリストを生成します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">set_list</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">set_list</span><span class="p">()</span>
 <span class="n">nl</span><span class="o">.</span><span class="n">set_list2</span><span class="p">()</span>
 <span class="n">nl</span><span class="o">.</span><span class="n">set_list3</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="make-list3-new-make-list3">
-<h2>11.4. make_list3,new_make_list3<a class="headerlink" href="#make-list3-new-make-list3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>make_list3,new_make_list3<a class="headerlink" href="#make-list3-new-make-list3" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ3の当選結果ページをパースして、データを取り出します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list3</span><span class="p">(</span><span class="s2">&quot;xxx.html&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list3</span><span class="p">(</span><span class="s2">&quot;xxx.html&quot;</span><span class="p">)</span>
 <span class="n">nl</span><span class="o">.</span><span class="n">new_make_list3</span><span class="p">(</span><span class="s2">&quot;yyy.html&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="make-list4-new-make-list4">
-<h2>11.5. make_list4,new_make_list4<a class="headerlink" href="#make-list4-new-make-list4" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.5. </span>make_list4,new_make_list4<a class="headerlink" href="#make-list4-new-make-list4" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ4の当選結果ページをパースして、データを取り出します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list4</span><span class="p">(</span><span class="s2">&quot;xxx.html&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">make_list4</span><span class="p">(</span><span class="s2">&quot;xxx.html&quot;</span><span class="p">)</span>
 <span class="n">nl</span><span class="o">.</span><span class="n">new_make_list4</span><span class="p">(</span><span class="s2">&quot;yyy.html&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="write-file">
-<h2>11.6. write_file<a class="headerlink" href="#write-file" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.6. </span>write_file<a class="headerlink" href="#write-file" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ3とナンバーズ4の結果データのリストをファイルに書き込みます。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">write_file</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nl</span><span class="o">.</span><span class="n">write_file</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="numbers-py">
-<h1>12. numbers.pyモジュールのクラス生成<a class="headerlink" href="#numbers-py" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">12. </span>numbers.pyモジュールのクラス生成<a class="headerlink" href="#numbers-py" title="Permalink to this headline">¶</a></h1>
 <p>クラス生成は以下のように行います。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">n3</span> <span class="o">=</span> <span class="n">numbers3</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n3</span> <span class="o">=</span> <span class="n">numbers3</span><span class="p">()</span>
 <span class="n">n4</span> <span class="o">=</span> <span class="n">numbers4</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="section" id="makemininumber1-etc">
-<h2>12.1. makeMiniNumber1 etc<a class="headerlink" href="#makemininumber1-etc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.1. </span>makeMiniNumber1 etc<a class="headerlink" href="#makemininumber1-etc" title="Permalink to this headline">¶</a></h2>
 <p>ナンバーズ3ミニの基本数字を生成します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">n3</span><span class="o">.</span><span class="n">makeMiniNumber1</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n3</span><span class="o">.</span><span class="n">makeMiniNumber1</span><span class="p">()</span>
 <span class="n">n3</span><span class="o">.</span><span class="n">makeMiniNumber2</span><span class="p">()</span>
 <span class="n">n3</span><span class="o">.</span><span class="n">makeMiniNumber3</span><span class="p">()</span>
 </pre></div>
@@ -152,12 +145,13 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">8. ナンバーズ予想用モジュール</a></li>
 <li><a class="reference internal" href="#download-data-py">9. download_data.pyのクラス生成</a></li>
@@ -183,10 +177,10 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="vipertools004.html"
-                        title="previous chapter">6. kyotei.pyのクラス生成</a></p>
+                        title="previous chapter"><span class="section-number">6. </span>kyotei.pyのクラス生成</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../spiderjs/spiderjs001.html"
-                        title="next chapter">1. spider.js</a></p>
+                        title="next chapter"><span class="section-number">1. </span>spider.js</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -195,15 +189,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -220,12 +214,13 @@
         <li class="right" >
           <a href="vipertools004.html" title="6. kyotei.pyのクラス生成"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8. </span>ナンバーズ予想用モジュール</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>

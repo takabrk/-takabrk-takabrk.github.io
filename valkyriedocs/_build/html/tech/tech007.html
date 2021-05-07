@@ -1,32 +1,24 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7. PlayOnLinux(Wine)で動作するソフトウェアまとめ &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/analytics.js"></script>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/analytics.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="6. PHP Hack" href="tech006.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -36,7 +28,8 @@
         <li class="right" >
           <a href="tech006.html" title="6. PHP Hack"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">7. </span>PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li> 
       </ul>
     </div>  
 
@@ -46,7 +39,7 @@
           <div class="body" role="main">
             
   <div class="section" id="playonlinux-wine">
-<h1>7. PlayOnLinux(Wine)で動作するソフトウェアまとめ<a class="headerlink" href="#playonlinux-wine" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>PlayOnLinux(Wine)で動作するソフトウェアまとめ<a class="headerlink" href="#playonlinux-wine" title="Permalink to this headline">¶</a></h1>
 <p>◇Wine 3.0の変更点</p>
 <p>以下でWine 3.0の変更点が記載されています。主にDirect3D 10/11がサポートされた事でグラフィック周りが強化されています。</p>
 <p><a class="reference external" href="https://www.winehq.org/announce/3.0">https://www.winehq.org/announce/3.0</a></p>
@@ -68,7 +61,7 @@
 <p>また、同人ソフトは、インストーラーでインストールする物が多くありますが、直接実行ファイルを起動させるタイプの方が起動確率は高いです。Flash・2次元ゲームの起動率は高く、3Dゲームはユーザーの環境依存が強くて、エラーが出る確率が高いようです。</p>
 <p>◇PlayOnLinuxの各仮想環境上でwinetricksを起動させる方法</p>
 <p>winetricksは、Wine環境に様々なライブラリや環境設定を視覚的に行えるツールです。Linux上ではターミナルエミュレーターで以下のコマンドを実行すると起動します。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$winetricks
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$winetricks
 </pre></div>
 </div>
 <p>PlayOnLinuxでも各仮想環境でwinetricksを使う事が可能です。「設定」→仮想ドライブを選択→「Miscellaneous」→「シェルを開く」でシェルを起動させ、前述のコマンドを実行するとwinetricksが起動します。</p>
@@ -155,7 +148,7 @@
 <p>超高精細な最近の3Dゲームを動作させたい場合には、別途Windows搭載マシンを用意した方が良いでしょう。</p>
 <p>PlayOnLinuxは、環境構築が上手く出来れば、Linux環境とWindows環境を統合出来る手段として優れているツールと言えます。</p>
 <div class="section" id="id1">
-<h2>7.1. イリュージョン「尾行2」インストール方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>イリュージョン「尾行2」インストール方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>1.製品CD2枚を用意して光学ドライブにセットするか、ISOとしてリッピングする。ISOを使う場合には、Furius ISO Mount(Synapticパッケージマネージャーなどからインストール可能)をインストールし、マウントさせる。</p>
 <p>2.新しくフォルダを作成して、その中にCD-ROM、ISOの内容をコピーアンドペーストする。ここでは作成したディレクトリを１枚目のCD-ROMの内容が入っている物を「biko2base」、２枚目のCD-ROMの内容の物を「biko2w」とします。</p>
 <p>3.winecfgを端末などから起動させ、ドライブタブの部分でDドライブレターに先ほどのbiko2baseを指定する。</p>
@@ -164,7 +157,7 @@
 <p>6.biko2wのゲーム起動実行ファイルをWineで起動させると、ゲームが遊べます。</p>
 </div>
 <div class="section" id="id2">
-<h2>7.2. イリュージョン「尾行3」インストール方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>イリュージョン「尾行3」インストール方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>1.製品DVD-ROMを用意し、DVDドライブにセットするか、ISOとしてリッピングし、Furius ISO Mount(Synapticパッケージマネージャーなどでインストール可)を使ってマウントする</p>
 <p>2.新しくディレクトリ「Biko3」を作成して、DVD-ROMの中身をコピーアンドペーストする。</p>
 <p>3.Biko3フォルダをwinecfgのドライブタブからDドライブとして指定する</p>
@@ -176,9 +169,9 @@
 <p><a class="reference external" href="http://www.rabidfiles.com/5AW">http://www.rabidfiles.com/5AW</a></p>
 </div>
 <div class="section" id="ubuntu-14-04-lts-12-04-ltswine">
-<h2>7.3. Ubuntu 14.04 LTS/12.04 LTSでWineがインストール出来ない現象の対処方法<a class="headerlink" href="#ubuntu-14-04-lts-12-04-ltswine" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Ubuntu 14.04 LTS/12.04 LTSでWineがインストール出来ない現象の対処方法<a class="headerlink" href="#ubuntu-14-04-lts-12-04-ltswine" title="Permalink to this headline">¶</a></h2>
 <p>WineはWindowsのAPIをLinuxに移植しようというプロジェクトです。 このWineをUbuntu 14.04 LTS/12.04 LTSにインストールすることで、Windowsのソフトウェアを動作させることが出来ます。 しかし、インストールの時にエラーが出てインストールが出来ないことがあります。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">packages</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">installed</span><span class="o">.</span> <span class="n">This</span> <span class="n">may</span> <span class="n">mean</span> <span class="n">that</span> <span class="n">you</span> <span class="n">have</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">packages</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">installed</span><span class="o">.</span> <span class="n">This</span> <span class="n">may</span> <span class="n">mean</span> <span class="n">that</span> <span class="n">you</span> <span class="n">have</span>
 <span class="n">requested</span> <span class="n">an</span> <span class="n">impossible</span> <span class="n">situation</span> <span class="ow">or</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">using</span> <span class="n">the</span> <span class="n">unstable</span>
 <span class="n">distribution</span> <span class="n">that</span> <span class="n">some</span> <span class="n">required</span> <span class="n">packages</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">been</span> <span class="n">created</span>
 <span class="ow">or</span> <span class="n">been</span> <span class="n">moved</span> <span class="n">out</span> <span class="n">of</span> <span class="n">Incoming</span><span class="o">.</span>
@@ -190,28 +183,28 @@
 </pre></div>
 </div>
 <p>以上のようなメッセージが出た場合、対処法としては「i386」と書かれたアプリケーションをインストールすることです。 APTのリストに現れない場合には以下のコマンドを打ち込みます。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$dpkg --add-architecture i386
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$dpkg --add-architecture i386
 </pre></div>
 </div>
 <p>この後に、「sudo apt-get update」を行なって通常のインストールを行えばインストールすることが可能になります。</p>
 </div>
 <div class="section" id="wine">
-<h2>7.4. Wineでジョイパッドのキーが効かない時の対処法<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Wineでジョイパッドのキーが効かない時の対処法<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h2>
 <p>Wine1.4にバージョンアップしてからは、基本的にはDirect Xを別途用意しなくてもWindowsのソフトの起動率と動作安定度はずいぶん上がりました。しかし、たまにWineでジョイパッドのキーが効かないことがあります。その時は、ジョイパッドのキーにキーボードのキーを割り当てましょう。「QJoyPad」というソフトウェアが便利です。</p>
 <p><a class="reference external" href="http://qjoypad.sourceforge.net/">http://qjoypad.sourceforge.net/</a></p>
 <p>リポジトリを公開している人もいます。</p>
 <p><a class="reference external" href="http://linux.ikoinoba.net/index.php?UID=1320506521">http://linux.ikoinoba.net/index.php?UID=1320506521</a></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$sudo add-apt-repository ppa:ikoinoba/ppa
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo add-apt-repository ppa:ikoinoba/ppa
 $sudo apt-get update
 $sudo apt-get install qjoypad
 </pre></div>
 </div>
 </div>
 <div class="section" id="august18fortune-arterialwine">
-<h2>7.5. Augustの18禁ゲーム「FORTUNE ARTERIAL」をWineで動かす<a class="headerlink" href="#august18fortune-arterialwine" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Augustの18禁ゲーム「FORTUNE ARTERIAL」をWineで動かす<a class="headerlink" href="#august18fortune-arterialwine" title="Permalink to this headline">¶</a></h2>
 <p>Augustの18禁ゲーム「FORTUNE ARTERIAL」をUbuntu 10.10で動かしてみました。WineとVirtualBoxで動いています。 VirtualBoxは普通に3D/2Dアクセラレーション機能をオンにした仮想PCにXP以降のWindowsを入れて、FORTUNE ATERIALをインストールすれば遊べます。
 問題はWineの方です。 1.FORTUNE ARTERIALのDVD-ROMをPCの光学ドライブにマウントして、インストールする。あるいはISO化(ここではFA.ISOとする）している場合はhomeフォルダに置いて、以下のコマンドでマウントします。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$sudo mount -o loop FA.ISO /media
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo mount -o loop FA.ISO /media
 </pre></div>
 </div>
 <p>/media/FORTUNE ARTERIAL/SetUp.exeを右クリックメニューのWine Windows Program Loaderで起動させると、インストール出来ます。</p>
@@ -221,39 +214,39 @@ $sudo apt-get install qjoypad
 <p><a class="reference external" href="http://anbalanz.blog33.fc2.com/blog-entry-117.html">http://anbalanz.blog33.fc2.com/blog-entry-117.html</a></p>
 </div>
 <div class="section" id="squashfsaufswinesquashfs">
-<h2>7.6. SquashFSとaufsを使って、Wineのフォルダを一つのsquashfsファイルにして管理する方法<a class="headerlink" href="#squashfsaufswinesquashfs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.6. </span>SquashFSとaufsを使って、Wineのフォルダを一つのsquashfsファイルにして管理する方法<a class="headerlink" href="#squashfsaufswinesquashfs" title="Permalink to this headline">¶</a></h2>
 <p>SquashFSとaufsを使って、Wine用のフォルダ「.wine」を一つのsquashfsファイルにして管理することが出来ます。作業は全てhomeディレクトリ上で管理者権限で行っています。</p>
 <p>1.wine_cacheフォルダを作成する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#mkdir wine_cache</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mkdir wine_cache</span>
 </pre></div>
 </div>
 <p>2.「.wine」フォルダをSquashFSで圧縮する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#mksquashfs .wine wine.squashfs</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mksquashfs .wine wine.squashfs</span>
 </pre></div>
 </div>
 <p>3.元の「.wine」をリネームし、新規に空の「.wine」フォルダを作成する:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#mkdir .wine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mkdir .wine</span>
 <span class="c1">#chmod 777 .wine</span>
 </pre></div>
 </div>
 <p>4.wine.squashfsをマウントする:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#mount -o loop wine.squashfs .wine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mount -o loop wine.squashfs .wine</span>
 </pre></div>
 </div>
 <p>5.「.wine」を書き込み用のディレクトリ「wine_cache」にマウントする:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#mount -t aufs -o br:wine_cache:.wine none .wine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mount -t aufs -o br:wine_cache:.wine none .wine</span>
 </pre></div>
 </div>
 <p>これで今までのWineの設定・アプリケーションを使用できるようになりました。以後、4,5の作業をすればいつでもwine.squashfsを使うことが出来ます。/etc/fstabで設定しておけば、システム起動時に自動的にマウントすることが可能です。アンマウントするときは以下のようにします。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#umount wine_cache</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#umount wine_cache</span>
 <span class="c1">#umount .wine</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
-<h2>7.7. Wineの文字化けを防ぐレジストリファイル<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.7. </span>Wineの文字化けを防ぐレジストリファイル<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>◇wine_font_reg.reg:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">HKEY_CURRENT_USER</span>\<span class="n">Software</span>\<span class="n">Wine</span>\<span class="n">Fonts</span>\<span class="n">Replacements</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">HKEY_CURRENT_USER</span>\<span class="n">Software</span>\<span class="n">Wine</span>\<span class="n">Fonts</span>\<span class="n">Replacements</span><span class="p">]</span>
 <span class="s2">&quot;MS Gothic&quot;</span><span class="o">=</span><span class="s2">&quot;IPA モナー ゴシック&quot;</span>
 <span class="s2">&quot;MS Mincho&quot;</span><span class="o">=</span><span class="s2">&quot;IPA モナー 明朝&quot;</span>
 <span class="s2">&quot;MS PGothic&quot;</span><span class="o">=</span><span class="s2">&quot;IPA モナー Pゴシック&quot;</span>
@@ -276,35 +269,35 @@ $sudo apt-get install qjoypad
 <p>IPA モナーフォントをインストール後、regeditを起動して、「ファイル」からこのレジストリファイルをインポートし、Wineを起動すれば文字化けを直すことが出来ます。</p>
 </div>
 <div class="section" id="ubuntu-winewindowsdllwinetricks">
-<h2>7.8. Ubuntu+Wineの環境にWindowsのDLLなどをインストールする「winetricks」<a class="headerlink" href="#ubuntu-winewindowsdllwinetricks" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.8. </span>Ubuntu+Wineの環境にWindowsのDLLなどをインストールする「winetricks」<a class="headerlink" href="#ubuntu-winewindowsdllwinetricks" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://wiki.winehq.org/winetricks">http://wiki.winehq.org/winetricks</a></p>
 <p>Ubuntu +Wineの環境はまだ真っ新なXPのような状態で、これに各種DLLやランタイム、Direct Xなどを入れる必要があります。そこで簡単にWineにDLLなどをインストールすることが出来るスクリプトが「winetricks」です。</p>
 <p>1.ターミナルで以下のコマンドを打ち、winetricksをダウンロード、インストールします。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$wget http://www.kegel.com/wine/winetricks
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$wget http://www.kegel.com/wine/winetricks
 </pre></div>
 </div>
 <p>2.下のコマンドで各種DLL、ランタイムをインストールすることが出来ます。アプリ名はwinetricksの公式サイトに掲載されています。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$sh winetricks corefonts アプリ名
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sh winetricks corefonts アプリ名
 </pre></div>
 </div>
 <p>Wineで動くアプリケーションが増えていくと思います。ゲームはUbuntuの「ホーム」にファイルを持ってくると起動させやすいです。</p>
 </div>
 <div class="section" id="ubuntu-10-04-wineaviutl">
-<h2>7.9. Ubuntu 10.04+Wine環境でAviUtlを使う<a class="headerlink" href="#ubuntu-10-04-wineaviutl" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.9. </span>Ubuntu 10.04+Wine環境でAviUtlを使う<a class="headerlink" href="#ubuntu-10-04-wineaviutl" title="Permalink to this headline">¶</a></h2>
 <p>Windowsの定番動画編集環境をUbuntu 10.04 + Wineの環境で使うことが出来ます。</p>
 <p>1.AviUtlとプラグインを「~/.wine/drive_c/Program Files/」直下に置く。</p>
 <p>2.winetricksをダウンロードする。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$wget http://www.kegel.com/wine/winetricks
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$wget http://www.kegel.com/wine/winetricks
 </pre></div>
 </div>
 <p>3..NET Franework、VC++2008、DirectX 9.0cなどをwinetricksでインストールする。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$sh winetricks dotnet20 vcrun2008 vb5run vb6run directx9
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sh winetricks dotnet20 vcrun2008 vb5run vb6run directx9
 </pre></div>
 </div>
 <p>4.Wineのレジストリエディタを起動し、以下の項目と値を追加して、環境変数にパスを通します。端末で「regedit」と入力して、レジストリエディタを起動</p>
 <p>「HKEY_LOACL_MACHINE/System/CurrentControlSet/Control/Session Manager/Enviroment」の「PATH」に「C:Program Filesaviutl99plugins（AviUtlのプラグインがある場所を指定）」を追加すると、環境変数にパスが通り、プラグインが使えるようになります。</p>
 <p>5.後はエンコードに必要なコーデックなどをWindowsの時と同じようにインストールしていきます。ただし、「.inf」「.ax」といった拡張子を持つファイルでインストールするものは以下の方法でインストールします。:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>・「.inf」の場合
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>・「.inf」の場合
 $ wine rundll32 setupapi,InstallHinfSection DefaultInstall 132 [filename].inf
 ・「.ax」の場合
 Wineのコマンドプロンプトを起動 $wine cmd 「.ax」の拡張子を持つファイルをc:/windows/system32にコピーし、system32フォルダで以下のコマンドを打ってインストールする。 &gt;regsvr32 [filename].ax
@@ -315,12 +308,13 @@ Wineのコマンドプロンプトを起動 $wine cmd 「.ax」の拡張子を�
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a><ul>
 <li><a class="reference internal" href="#id1">7.1. イリュージョン「尾行2」インストール方法</a></li>
@@ -338,7 +332,7 @@ Wineのコマンドプロンプトを起動 $wine cmd 「.ax」の拡張子を�
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="tech006.html"
-                        title="previous chapter">6. PHP Hack</a></p>
+                        title="previous chapter"><span class="section-number">6. </span>PHP Hack</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -347,15 +341,15 @@ Wineのコマンドプロンプトを起動 $wine cmd 「.ax」の拡張子を�
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -369,12 +363,13 @@ Wineのコマンドプロンプトを起動 $wine cmd 「.ax」の拡張子を�
         <li class="right" >
           <a href="tech006.html" title="6. PHP Hack"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">7. </span>PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
     </div>
   </body>
 </html>
