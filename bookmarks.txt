@@ -152,7 +152,7 @@
         <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
         <li><a href="https://git.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/" target="_blank">Ubuntu patch  git</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/projects/rt/" target="_blank">PREEMPT_RT patch</a></li>
-        <li><a href="https://gitlab.com/alfredchen/linux-prjc/-/releases" target="_blank">Project C</a>
+        <li><a href="https://gitlab.com/alfredchen/projectc" target="_blank">Project C</a>
         <li><a href="http://ck-hack.blogspot.jp/" target="_blank">CK1 patch(with MuQSS,BFQ)</a></li>
         <li><a href="http://algo.ing.unimo.it/people/paolo/disk_sched/" target="_blank">BFQ</a></li>
         <li><a href="https://github.com/sirlucjan/kernel-patches" target="_blank">BFQ-SQ・BFQ-MQ</a></li>
@@ -161,7 +161,7 @@
         <li><a href="https://github.com/dolohow/uksm" target="_blank">UKSM</a></li>
         <li><a href="https://github.com/sirlucjan/kernel-patches" target="_blank">kernel-patches</a>
         <li><a href="https://xanmod.org/" target="_blank">XanMod Kernel</a></li>
-        <li><a href="https://github.com/zen-kernel/zen-kernel" target="_blank">Zen kernel</a></li>
+        <li><a href="https://github.com/zen-kernel/zen-kernel/releases" target="_blank">Zen kernel</a></li>
         <li><a href="https://github.com/Frogging-Family/linux-tkg" target="_blank">linux-tkg</a></li>
         <li><a href="https://pf.natalenko.name/" target="_blank">pf-kernel</a></li>
         <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
