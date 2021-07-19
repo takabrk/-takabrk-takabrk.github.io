@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>1. Ubuntu系ディストリビューション向けテクニック &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="../cx2/cx2engine001.html" title="5. Processing用ライブラリ「CX2 Engine」"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,20 +44,20 @@
           <div class="body" role="main">
             
   <div class="section" id="ubuntu">
-<h1><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h1>
+<h1>1. Ubuntu系ディストリビューション向けテクニック<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="chromiumtverinstagram">
-<h2><span class="section-number">1.1. </span>ChromiumにTVerやInstagram用のユーザーエージェントを追加してみた<a class="headerlink" href="#chromiumtverinstagram" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. ChromiumにTVerやInstagram用のユーザーエージェントを追加してみた<a class="headerlink" href="#chromiumtverinstagram" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="google-chromechromiumtverinstagrampc">
-<h3><span class="section-number">1.1.1. </span>Google ChromeやChromiumのユーザーエージェントを変更して、TVerの視聴やInstagramのPCからの投稿を可能にする方法<a class="headerlink" href="#google-chromechromiumtverinstagrampc" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.1. Google ChromeやChromiumのユーザーエージェントを変更して、TVerの視聴やInstagramのPCからの投稿を可能にする方法<a class="headerlink" href="#google-chromechromiumtverinstagrampc" title="Permalink to this headline">¶</a></h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5w79Bo83OxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <div class="section" id="user-agent-switcher">
-<h3><span class="section-number">1.1.2. </span>User-Agent Switcher<a class="headerlink" href="#user-agent-switcher" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.2. User-Agent Switcher<a class="headerlink" href="#user-agent-switcher" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg/related?hl=ja">https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg/related?hl=ja</a></p>
 <p>Google ChromeやChromiumなどのChrome系ブラウザでユーザーエージェントを変更しようと思いますと、User-Agent SwitcherというChrome拡張を利用するのが便利です。</p>
 <p>TVerは、Linux版のChromiumで正常に動作しなくなってしまっているので、Firefoxのユーザーエージェントを変更して観る事が出来るようになります。僕の場合は、Mac版Firefoxの最新版のユーザーエージェントに変更しています。ちなみに、Windows版Firefoxのユーザーエージェントでも構いません。</p>
 </div>
 <div class="section" id="macfirefox">
-<h3><span class="section-number">1.1.3. </span>Mac版Firefoxのユーザーエージェント<a class="headerlink" href="#macfirefox" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.3. Mac版Firefoxのユーザーエージェント<a class="headerlink" href="#macfirefox" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Macintosh</span><span class="p">;</span> <span class="n">Intel</span> <span class="n">Mac</span> <span class="n">OS</span> <span class="n">X</span> <span class="mf">10.14</span><span class="p">;</span> <span class="n">rv</span><span class="p">:</span><span class="mf">63.0</span><span class="p">)</span> <span class="n">Gecko</span><span class="o">/</span><span class="mi">20100101</span> <span class="n">Firefox</span><span class="o">/</span><span class="mf">63.0</span>
 </pre></div>
 </div>
@@ -75,22 +76,21 @@
 </div>
 </div>
 <div class="section" id="google-chromechromemindmap-tab">
-<h2><span class="section-number">1.2. </span>Google Chromeでマインドマップを手軽に作る事が出来るChrome拡張「MindMap Tab」<a class="headerlink" href="#google-chromechromemindmap-tab" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Google Chromeでマインドマップを手軽に作る事が出来るChrome拡張「MindMap Tab」<a class="headerlink" href="#google-chromechromemindmap-tab" title="Permalink to this headline">¶</a></h2>
 <p>マインドマップをLinux上で作成する時に「FreePlane」というソフトウェアを使っていましたが、これはJavaのランタイムやGroovyというJVM言語が必要になり、結構インストールする依存パッケージがあります。アプリからいちいち起動してマインドマップを作るのも面倒臭いので、Chrome拡張で何か便利な物が無いかなと探したら、マインドマップツールを作っている人がいました(^_^;)。</p>
-<dl class="simple">
-<dt>◇もっとマインドマップを簡単に描くためにChrome拡張機能を作りました</dt><dd><p><a class="reference external" href="https://qiita.com/yoichiro6642/items/b465cbec2f3dcaaccdb0">https://qiita.com/yoichiro6642/items/b465cbec2f3dcaaccdb0</a></p>
-</dd>
+<dl class="docutils">
+<dt>◇もっとマインドマップを簡単に描くためにChrome拡張機能を作りました</dt>
+<dd><a class="reference external" href="https://qiita.com/yoichiro6642/items/b465cbec2f3dcaaccdb0">https://qiita.com/yoichiro6642/items/b465cbec2f3dcaaccdb0</a></dd>
 </dl>
 <p>実際に「MindMap Tab」をChromium Browserにインストールしたところ、かなり便利に使えています。インデントを入れる事で自動的に区分けしてくれますので、思いついた事をどんどんテキストフォームに入力していくだけというお手軽さがとても良いです。
 セーブは自動的に行ってくれますし、履歴から過去のマインドマップデータを呼び出す事も可能となっています。また、PNGやJPEGで画像保存が出来ます。ブラウザから呼び出して直ぐに使えるのは大きな利点でしょう。</p>
 <a class="reference internal image-reference" href="../_images/Screenshot20from202019-06-162015-39-06.png"><img alt="../_images/Screenshot20from202019-06-162015-39-06.png" src="../_images/Screenshot20from202019-06-162015-39-06.png" style="width: 683.0px; height: 384.0px;" /></a>
 </div>
 <div class="section" id="continuos-savegimp-2-10-10">
-<h2><span class="section-number">1.3. </span>レイヤー毎の画像を保存する事が出来るスクリプト「continuos-save」をGIMP 2.10.10にで使えるようにするには<a class="headerlink" href="#continuos-savegimp-2-10-10" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. レイヤー毎の画像を保存する事が出来るスクリプト「continuos-save」をGIMP 2.10.10にで使えるようにするには<a class="headerlink" href="#continuos-savegimp-2-10-10" title="Permalink to this headline">¶</a></h2>
 <p>大量の画像を纏めて拡大・縮小・トリミングをするには、レイヤー毎に画像を入れて、この画像を保存出来るスクリプト「continuos-save」を使うのが便利です。オリジナルのサイトが消えていますので、改良版を導入すると良いでしょう。</p>
 <blockquote>
-<div><p><a class="reference external" href="http://userweb.pep.ne.jp/tamubun/computer/continuous-save.html">http://userweb.pep.ne.jp/tamubun/computer/continuous-save.html</a></p>
-</div></blockquote>
+<div><a class="reference external" href="http://userweb.pep.ne.jp/tamubun/computer/continuous-save.html">http://userweb.pep.ne.jp/tamubun/computer/continuous-save.html</a></div></blockquote>
 <p>continuos-saveの導入方法は簡単であり、WindowsとLinuxでは以下のようにしますと導入が可能です。</p>
 <p>◇Windowsの場合</p>
 <p>C:Usersユーザ名AppDataRoamingGIMP2.10scripts以下にcontinuous-save.scmを置く。</p>
@@ -100,22 +100,22 @@
 137行目(+ 1 (* 2 tmp-image-type)) “Temp Layer” 100 NORMAL)))」となっていますが、NORMALの部分を0にします。これで、GIMPを起動しますとconinuos-saveが使えるようになり、レイヤー毎にある画像を個別に画像ファイルとして書き出せます。</p>
 </div>
 <div class="section" id="linuxaffter-effects">
-<h2><span class="section-number">1.4. </span>Linux環境でAffter Effectsのような事をするにはどうすれば良いのか？<a class="headerlink" href="#linuxaffter-effects" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Linux環境でAffter Effectsのような事をするにはどうすれば良いのか？<a class="headerlink" href="#linuxaffter-effects" title="Permalink to this headline">¶</a></h2>
 <p>動画編集をする時に、WindowsやmacOSはAdobe Premiere ProやAfter Effectsといった高性能なソフトウェアが使えますが、Linuxの場合は、ShotcutやAvidemuxで動画編集をするのが良いと思います。個人的にはShotcutだけで良いと思いますが、問題はAfter Effectsに相当するソフトウェアが無いという事です。
 そこで、一つの策としては、3DモデリングソフトウェアのBlenderを使うという事です。これで予めAfter Effectっぽい映像を作っておいて、Shotcut上で他の動画クリップと組み合わせる事で、高度な映像を作れるのではないかと思います。
 ちなみに、Shotcutのフィルタ機能には面白い機能があって、HTML5の機能を使ったフィルタを適用出来たりします(^_^;)。工夫次第では、面白い表現が出来るかもしれませんね。</p>
 <p>LinuxでもAfter Effectsっぽいモーショングラフィックスを作る事が出来るソフトウェア「Natron」がありましたが、公式サイトが落ちていました(^_^;)。</p>
 <p>Blenderでモーショングラフィックスっぽい動画クリップを作るというのも有効な手段ですが、その他にはShotcutのHTML5フィルタを使うのも良いかもしれません。
 JavaScriptやCSS3を使って表現が出来るので、Web技術に長けているなら、この機能を使ってみても良いのではないでしょうか？</p>
-<dl class="simple">
-<dt>Shotcutの公式サイトにHTML5フィルタを使った作例動画が公開されています。</dt><dd><p><a class="reference external" href="https://shotcut.org/blog/video-tutorial-using-html5/">https://shotcut.org/blog/video-tutorial-using-html5/</a></p>
-</dd>
+<dl class="docutils">
+<dt>Shotcutの公式サイトにHTML5フィルタを使った作例動画が公開されています。</dt>
+<dd><a class="reference external" href="https://shotcut.org/blog/video-tutorial-using-html5/">https://shotcut.org/blog/video-tutorial-using-html5/</a></dd>
 </dl>
 </div>
 <div class="section" id="jack-audio-connetion-kitpulseaudio">
-<h2><span class="section-number">1.5. </span>Jack Audio Connetion Kitと連携せずにPulseAudioを高音質化させるには<a class="headerlink" href="#jack-audio-connetion-kitpulseaudio" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. Jack Audio Connetion Kitと連携せずにPulseAudioを高音質化させるには<a class="headerlink" href="#jack-audio-connetion-kitpulseaudio" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="etc-pulse-daemon-conf">
-<h3><span class="section-number">1.5.1. </span>◇高音質化設定した/etc/pulse/daemon.conf<a class="headerlink" href="#etc-pulse-daemon-conf" title="Permalink to this headline">¶</a></h3>
+<h3>1.5.1. ◇高音質化設定した/etc/pulse/daemon.conf<a class="headerlink" href="#etc-pulse-daemon-conf" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file is part of PulseAudio.</span>
 <span class="c1">#</span>
 <span class="c1"># PulseAudio is free software; you can redistribute it and/or modify</span>
@@ -213,7 +213,7 @@ JavaScriptやCSS3を使って表現が出来るので、Web技術に長けてい
 </div>
 </div>
 <div class="section" id="ubuntuexfat">
-<h2><span class="section-number">1.6. </span>Ubuntu系ディストリビューションでexFATを使うには<a class="headerlink" href="#ubuntuexfat" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Ubuntu系ディストリビューションでexFATを使うには<a class="headerlink" href="#ubuntuexfat" title="Permalink to this headline">¶</a></h2>
 <p>Windows 10のデフォルトのファイルシステムは、MicroSoft社が開発したexFATです。このファイルシステムは、従来のFAT32とNTFSといったファイルシステムの弱点を克服しており、LinuxやmacOSなどのOSと4GB超えのファイルのやり取りをする時に優れています。Ubuntu系ディストリビューションでもexFATを使えるようにしておく事で、システムドライブはext4、持ち運び用のデータドライブはexFATといった使い分けが出来るようになります。</p>
 <p>Ubuntu 18.04 LTSのGpartedは、exFATのフォーマットに対応していません。exFATを取り扱う事が出来るツールを導入して、コマンドでのフォーマット、あるいはGUIでのフォーマットを行えるようにしましょう。</p>
 <p>1.exFATを扱う為の2つのツールをインストール:</p>
@@ -236,15 +236,14 @@ JavaScriptやCSS3を使って表現が出来るので、Web技術に長けてい
 <p>Windows系のファイルシステムの中では、exFATがext4などの他のファイルシステムと相性が良く、高速ですので、データ保存用のポータブルHDDやUSBメモリーのフォーマットはexFATにしておけば良いでしょう。</p>
 </div>
 <div class="section" id="ubuntu-18-04-ltsgksu">
-<h2><span class="section-number">1.7. </span>Ubuntu 18.04 LTSに廃止されたgksuをインストールするには<a class="headerlink" href="#ubuntu-18-04-ltsgksu" title="Permalink to this headline">¶</a></h2>
+<h2>1.7. Ubuntu 18.04 LTSに廃止されたgksuをインストールするには<a class="headerlink" href="#ubuntu-18-04-ltsgksu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu 18.04 LTS以降は、suのフロントエンドアプリであるgksuがリポジトリから削除され、インストールも出来ない状態になっています。しかし、現在でもUbuntu 16.04 LTS向けのgksuは公開されていますので、これをインストールする事で使えるようになります。但し、依存関係が色々とありますので、ターミナルでインストール作業をしながら必要に応じて依存関係を解消していかなければいけません。最低限2つのdebファイルが必要です。</p>
 <p>◇gksu</p>
 <blockquote>
-<div><p><a class="reference external" href="https://launchpad.net/ubuntu/+source/gksu">https://launchpad.net/ubuntu/+source/gksu</a></p>
-</div></blockquote>
-<dl class="simple">
-<dt>◇libgksu2-0</dt><dd><p><a class="reference external" href="https://packages.ubuntu.com/ja/xenial/libgksu2-0">https://packages.ubuntu.com/ja/xenial/libgksu2-0</a></p>
-</dd>
+<div><a class="reference external" href="https://launchpad.net/ubuntu/+source/gksu">https://launchpad.net/ubuntu/+source/gksu</a></div></blockquote>
+<dl class="docutils">
+<dt>◇libgksu2-0</dt>
+<dd><a class="reference external" href="https://packages.ubuntu.com/ja/xenial/libgksu2-0">https://packages.ubuntu.com/ja/xenial/libgksu2-0</a></dd>
 </dl>
 <p>2つのdebファイルを同じディレクトリに置いて、dpkgやapt installでインストールしていくと依存関係で必要な物を知る事が出来ますし、依存関係が解消されていれば、すんなりとインストール出来ると思います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo dpkg -i *.deb
@@ -252,13 +251,12 @@ JavaScriptやCSS3を使って表現が出来るので、Web技術に長けてい
 </div>
 </div>
 <div class="section" id="windowssteam">
-<h2><span class="section-number">1.8. </span>Windows版Steamのクライアントを動作させる時に諸々の問題を解決しよう<a class="headerlink" href="#windowssteam" title="Permalink to this headline">¶</a></h2>
+<h2>1.8. Windows版Steamのクライアントを動作させる時に諸々の問題を解決しよう<a class="headerlink" href="#windowssteam" title="Permalink to this headline">¶</a></h2>
 <p>ゲームプラットフォームとして、すっかり定着したSteamで公開・販売されているソフトウェアはWindows版の物が多いです。Steamを使うには、クライアントソフトが必要になってきますが、Windows版・Mac版・Linux版が存在します。この中で、最も良いのは、Windows版です。動作するソフトウェアが非常に多いので、LinuxにおいてもLinux版＋Protonでは無くて、Wine+Windows版Steamを使うのが良いでしょう。しかし、Windows版Steamを使う上で色々と問題が起こりますので、これをクリアすれば、Windows環境と同じようにSteamが使えるようになります。</p>
 <p>Windows版SteamをWineで使う場合には、ArchLinuxのWikiが参考に出来るでしょう。</p>
 <p>◇Steam/Wine ArchLinux Wiki</p>
 <blockquote>
-<div><p><a class="reference external" href="https://wiki.archlinux.jp/index.php/Steam/Wine">https://wiki.archlinux.jp/index.php/Steam/Wine</a></p>
-</div></blockquote>
+<div><a class="reference external" href="https://wiki.archlinux.jp/index.php/Steam/Wine">https://wiki.archlinux.jp/index.php/Steam/Wine</a></div></blockquote>
 <p>1.クライアントで文字化けが起こる、あるいは文字が表示されない。</p>
 <p>クライアントのインストーラーを起動させて、Steamをインストールする時に文字が表示されなかったり、文字化けを起こしたりします。これを解決するには、インストーラーを起動させる時に、以下のWineのオプション「-no-dwrite」を追加します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite
@@ -281,7 +279,7 @@ JavaScriptやCSS3を使って表現が出来るので、Web技術に長けてい
 <a class="reference internal image-reference" href="../_images/cm003.png"><img alt="../_images/cm003.png" src="../_images/cm003.png" style="width: 683.0px; height: 384.0px;" /></a>
 </div>
 <div class="section" id="xconfigqt5">
-<h2><span class="section-number">1.9. </span>xconfigをQt5で立ち上げるには<a class="headerlink" href="#xconfigqt5" title="Permalink to this headline">¶</a></h2>
+<h2>1.9. xconfigをQt5で立ち上げるには<a class="headerlink" href="#xconfigqt5" title="Permalink to this headline">¶</a></h2>
 <p>Linuxカーネルをビルドする前に色々と設定を行う事が多いですが、その時に使う設定ツールでxconfigを立ち上げる場合、Qtの開発ツールが必要になります。Ubuntu系ディストリビューションでQt4の開発ツールを使うのであれば、以下のようにコマンドを入力する事でQt4の開発ツールをインストールする事ができ、xconfigを立ち上げる事が出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install qt4-dev
 
@@ -296,7 +294,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="chromerajikoradiko">
-<h2><span class="section-number">1.10. </span>Chromeアプリ「Rajiko」でradikoを聴こう！<a class="headerlink" href="#chromerajikoradiko" title="Permalink to this headline">¶</a></h2>
+<h2>1.10. Chromeアプリ「Rajiko」でradikoを聴こう！<a class="headerlink" href="#chromerajikoradiko" title="Permalink to this headline">¶</a></h2>
 <p>Google ChromeやChromiumにChrome拡張「Rajiko」を入れて、radikoを聴けるようにしましょう(^^)</p>
 <p>1.ブラウザにChrome拡張「Radiko」をインストールします。ページにアクセスして、「Chromeに追加」ボタンを押すだけです。</p>
 <p><a class="reference external" href="https://chrome.google.com/webstore/detail/rajiko/ejcfdikabeebbgbopoagpabbdokepnff/related">https://chrome.google.com/webstore/detail/rajiko/ejcfdikabeebbgbopoagpabbdokepnff/related</a></p>
@@ -307,7 +305,7 @@ $make xconfig
 <p>4.後は好きな番組を選んで視聴してください。</p>
 </div>
 <div class="section" id="linuxlivedvdisouefi">
-<h2><span class="section-number">1.11. </span>LinuxのLiveDVDのISOをUEFI搭載のパソコンで直接起動させるには<a class="headerlink" href="#linuxlivedvdisouefi" title="Permalink to this headline">¶</a></h2>
+<h2>1.11. LinuxのLiveDVDのISOをUEFI搭載のパソコンで直接起動させるには<a class="headerlink" href="#linuxlivedvdisouefi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://www.rmprepusb.com/tutorials/136_uefi_ubuntu">https://www.rmprepusb.com/tutorials/136_uefi_ubuntu</a></p>
 <p>BIOS時代にLinuxのLiveDVDのISOを直接起動させて使ったりしていました。これは、UNetbootinなどのLiveUSBを作成するツールを使わなくても、LiveDVDのISOを交換するだけで、システムドライブとは別にLinuxの環境が使えて便利でした。しかし、UEFIが主流になってきて、しばらくこの方法が分からなかったので放置していたのですが、久しぶりに調べてみたら、既にUEFI向けの直接起動用のツールが公開されていました。</p>
 <p><a class="reference external" href="https://www.rmprepusb.com/tutorials/136_uefi_ubuntu/UEFI_boot_from_ISO.zip?attredirects=0&amp;d=1">https://www.rmprepusb.com/tutorials/136_uefi_ubuntu/UEFI_boot_from_ISO.zip?attredirects=0&amp;d=1</a></p>
@@ -331,7 +329,7 @@ $make xconfig
 <img alt="../_images/Screenshot20from202018-11-162012-59-27.png" src="../_images/Screenshot20from202018-11-162012-59-27.png" />
 </div>
 <div class="section" id="qt-qpa-platformtheme-environment-variable-is-not-set-correctlyqt5ct">
-<h2><span class="section-number">1.12. </span>「QT_QPA_PLATFORMTHEME environment variable is not set correctly」というエラーが出てqt5ctが使えない時の対処法<a class="headerlink" href="#qt-qpa-platformtheme-environment-variable-is-not-set-correctlyqt5ct" title="Permalink to this headline">¶</a></h2>
+<h2>1.12. 「QT_QPA_PLATFORMTHEME environment variable is not set correctly」というエラーが出てqt5ctが使えない時の対処法<a class="headerlink" href="#qt-qpa-platformtheme-environment-variable-is-not-set-correctlyqt5ct" title="Permalink to this headline">¶</a></h2>
 <p>Qt5で開発されたアプリケーションのデザインを一括で変更するには、qt5ctを使う事になります。Ubuntu系ディストリビューションの場合は以下のコマンドでインストール出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install qt5ct
 </pre></div>
@@ -346,7 +344,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="bluemansettings-schema-org-blueman-general-is-not-installed">
-<h2><span class="section-number">1.13. </span>Bluemanを立ち上げた時に「Settings schema ‘org.blueman.general’ is not installed」のエラーが出た時の対処法<a class="headerlink" href="#bluemansettings-schema-org-blueman-general-is-not-installed" title="Permalink to this headline">¶</a></h2>
+<h2>1.13. Bluemanを立ち上げた時に「Settings schema ‘org.blueman.general’ is not installed」のエラーが出た時の対処法<a class="headerlink" href="#bluemansettings-schema-org-blueman-general-is-not-installed" title="Permalink to this headline">¶</a></h2>
 <p>UbuntuなどでBluetoothを使う時に、設定マネージャーである「blueman」が立ち上がらずに以下のエラーが表示される事があります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">blueman</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span><span class="mi">4017</span><span class="p">):</span> <span class="n">GLib</span><span class="o">-</span><span class="n">GIO</span><span class="o">-</span><span class="n">ERROR</span> <span class="o">**</span><span class="p">:</span> <span class="mi">02</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mf">55.562</span><span class="p">:</span> <span class="n">Settings</span> <span class="n">schema</span> <span class="s1">&#39;org.blueman.general&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">installed</span>
 </pre></div>
@@ -357,7 +355,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="ubuntuwi-fi">
-<h2><span class="section-number">1.14. </span>Ubuntu系ディストリビューションでWi-Fiアダプタの型番を調べるには<a class="headerlink" href="#ubuntuwi-fi" title="Permalink to this headline">¶</a></h2>
+<h2>1.14. Ubuntu系ディストリビューションでWi-Fiアダプタの型番を調べるには<a class="headerlink" href="#ubuntuwi-fi" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu系ディストリビューションでWi-Fiアダプタの型番を知るには以下のコマンドを使います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo lshw -class network
 </pre></div>
@@ -368,18 +366,18 @@ $make xconfig
    <span class="n">製品</span><span class="p">:</span> <span class="n">WDC</span><span class="o">-</span><span class="mi">150</span><span class="n">SU2M</span>
    <span class="n">ベンダー</span><span class="p">:</span> <span class="n">ELECOM</span>
    <span class="n">物理ID</span><span class="p">:</span> <span class="mi">8</span>
-   <span class="n">バス情報</span><span class="p">:</span> <span class="n">usb</span><span class="o">@</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span>
+   <span class="n">バス情報</span><span class="p">:</span> <span class="n">usb</span><span class="nd">@1</span><span class="p">:</span><span class="mi">8</span>
    <span class="n">論理名</span><span class="p">:</span> <span class="n">wlxbc5c4c4dc201</span>
    <span class="n">バージョン</span><span class="p">:</span> <span class="mf">0.00</span>
    <span class="n">シリアル</span><span class="p">:</span> <span class="n">bc</span><span class="p">:</span><span class="mi">5</span><span class="n">c</span><span class="p">:</span><span class="mi">4</span><span class="n">c</span><span class="p">:</span><span class="mi">4</span><span class="n">d</span><span class="p">:</span><span class="n">c2</span><span class="p">:</span><span class="mi">01</span>
    <span class="n">性能</span><span class="p">:</span> <span class="n">usb</span><span class="o">-</span><span class="mf">2.00</span> <span class="n">__________________</span> <span class="n">physical</span> <span class="n">wireless</span>
-   <span class="n">設定</span><span class="p">:</span> <span class="n">broadcast</span><span class="o">=</span><span class="n">yes</span> <span class="n">driver</span><span class="o">=</span><span class="n">r8188eu</span> <span class="n">ip</span><span class="o">=</span><span class="mf">192.168.100.119</span> <span class="n">maxpower</span><span class="o">=</span><span class="mi">500</span><span class="n">mA</span> <span class="n">multicast</span><span class="o">=</span><span class="n">yes</span> <span class="n">speed</span><span class="o">=</span><span class="mi">480</span><span class="n">Mbit</span><span class="o">/</span><span class="n">s</span> <span class="n">wireless</span><span class="o">=</span><span class="n">IEEE</span> <span class="mf">802.11</span><span class="n">bgn</span>
+   <span class="n">設定</span><span class="p">:</span> <span class="n">broadcast</span><span class="o">=</span><span class="n">yes</span> <span class="n">driver</span><span class="o">=</span><span class="n">r8188eu</span> <span class="n">ip</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">100.119</span> <span class="n">maxpower</span><span class="o">=</span><span class="mi">500</span><span class="n">mA</span> <span class="n">multicast</span><span class="o">=</span><span class="n">yes</span> <span class="n">speed</span><span class="o">=</span><span class="mi">480</span><span class="n">Mbit</span><span class="o">/</span><span class="n">s</span> <span class="n">wireless</span><span class="o">=</span><span class="n">IEEE</span> <span class="mf">802.11</span><span class="n">bgn</span>
 <span class="o">*-</span><span class="n">network</span>
    <span class="n">詳細</span><span class="p">:</span> <span class="n">イーサネット</span> <span class="n">interface</span>
    <span class="n">製品</span><span class="p">:</span> <span class="n">Ethernet</span> <span class="n">Connection</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">I219</span><span class="o">-</span><span class="n">V</span>
    <span class="n">ベンダー</span><span class="p">:</span> <span class="n">Intel</span> <span class="n">Corporation</span>
-   <span class="n">物理ID</span><span class="p">:</span> <span class="mi">1</span><span class="n">f</span><span class="mf">.6</span>
-   <span class="n">バス情報</span><span class="p">:</span> <span class="n">pci</span><span class="o">@</span><span class="mi">0000</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">1</span><span class="n">f</span><span class="mf">.6</span>
+   <span class="n">物理ID</span><span class="p">:</span> <span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="mi">6</span>
+   <span class="n">バス情報</span><span class="p">:</span> <span class="n">pci</span><span class="nd">@0000</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="mi">6</span>
    <span class="n">論理名</span><span class="p">:</span> <span class="n">enp0s31f6</span>
    <span class="n">バージョン</span><span class="p">:</span> <span class="mi">31</span>
    <span class="n">シリアル</span><span class="p">:</span> <span class="n">d0</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">99</span><span class="p">:</span><span class="mi">85</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="n">da</span>
@@ -387,13 +385,13 @@ $make xconfig
    <span class="n">幅</span><span class="p">:</span> <span class="mi">32</span> <span class="n">bits</span>
    <span class="n">クロック</span><span class="p">:</span> <span class="mi">33</span><span class="n">MHz</span>
    <span class="n">性能</span><span class="p">:</span> <span class="n">pm</span> <span class="n">msi</span> <span class="n">bus_master</span> <span class="n">cap_list</span> <span class="n">__________________</span> <span class="n">physical</span> <span class="n">tp</span> <span class="mi">10</span><span class="n">bt</span> <span class="mi">10</span><span class="n">bt</span><span class="o">-</span><span class="n">fd</span> <span class="mi">100</span><span class="n">bt</span> <span class="mi">100</span><span class="n">bt</span><span class="o">-</span><span class="n">fd</span> <span class="mi">1000</span><span class="n">bt</span><span class="o">-</span><span class="n">fd</span> <span class="n">autonegotiation</span>
-   <span class="n">設定</span><span class="p">:</span> <span class="n">autonegotiation</span><span class="o">=</span><span class="n">on</span> <span class="n">broadcast</span><span class="o">=</span><span class="n">yes</span> <span class="n">driver</span><span class="o">=</span><span class="n">e1000e</span> <span class="n">driverversion</span><span class="o">=</span><span class="mf">3.2.6</span><span class="o">-</span><span class="n">k</span> <span class="n">firmware</span><span class="o">=</span><span class="mf">0.8</span><span class="o">-</span><span class="mi">4</span> <span class="n">latency</span><span class="o">=</span><span class="mi">0</span> <span class="n">link</span><span class="o">=</span><span class="n">no</span> <span class="n">multicast</span><span class="o">=</span><span class="n">yes</span> <span class="n">port</span><span class="o">=</span><span class="n">twisted</span> <span class="n">pair</span>
+   <span class="n">設定</span><span class="p">:</span> <span class="n">autonegotiation</span><span class="o">=</span><span class="n">on</span> <span class="n">broadcast</span><span class="o">=</span><span class="n">yes</span> <span class="n">driver</span><span class="o">=</span><span class="n">e1000e</span> <span class="n">driverversion</span><span class="o">=</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">k</span> <span class="n">firmware</span><span class="o">=</span><span class="mf">0.8</span><span class="o">-</span><span class="mi">4</span> <span class="n">latency</span><span class="o">=</span><span class="mi">0</span> <span class="n">link</span><span class="o">=</span><span class="n">no</span> <span class="n">multicast</span><span class="o">=</span><span class="n">yes</span> <span class="n">port</span><span class="o">=</span><span class="n">twisted</span> <span class="n">pair</span>
    <span class="n">リソース</span><span class="p">:</span> <span class="n">irq</span><span class="p">:</span><span class="mi">125</span> <span class="n">メモリー</span><span class="p">:</span><span class="n">dff00000</span><span class="o">-</span><span class="n">dff1ffff</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="var-lib-apt-listsubuntu">
-<h2><span class="section-number">1.15. </span>/var/lib/apt/listsの直下が肥大化するUbuntuの公式リポジトリとは？<a class="headerlink" href="#var-lib-apt-listsubuntu" title="Permalink to this headline">¶</a></h2>
+<h2>1.15. /var/lib/apt/listsの直下が肥大化するUbuntuの公式リポジトリとは？<a class="headerlink" href="#var-lib-apt-listsubuntu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuベースでディストリビューションを作成する時には、出来るだけ容量を減らしたいところです。肥大化し易いところとしては、/var/lib/apt/listsがあります。この直下にあるファイルは、sudo apt updateで更新したAPTで管理しているリポジトリのパッケージリストが保管されるところです。つまり、ここの容量を抑えるにはリポジトリの数を減らすのが有効です。</p>
 <p>公式リポジトリの中でも肥大化し易いのがUniverseというコンポーネントに所属するものであり、ここだけで何万パッケージというソフトウェアがあります。Linuxとしてだけで使うのであれば、mainとRestrictedのコンポーネントを有効にしておけば良いでしょう。WineなどはUniverseに登録されています。</p>
 <p><a class="reference external" href="https://ja.wikipedia.org/wiki/Ubuntu">https://ja.wikipedia.org/wiki/Ubuntu</a></p>
@@ -404,14 +402,14 @@ $make xconfig
 <p>/etc/apt/sources.listをこれらをコメントアウトして、sudo apt-get updateを行えば、/var/lib/apt/listsの容量を大幅に削減可能です。</p>
 </div>
 <div class="section" id="ubiquity-bgrububuntu">
-<h2><span class="section-number">1.16. </span>Ubiquityの「-b」オプションでブートローダ「GRUB」のインストール無しでUbuntuをインストールする<a class="headerlink" href="#ubiquity-bgrububuntu" title="Permalink to this headline">¶</a></h2>
+<h2>1.16. Ubiquityの「-b」オプションでブートローダ「GRUB」のインストール無しでUbuntuをインストールする<a class="headerlink" href="#ubiquity-bgrububuntu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuに採用されているインストーラー「Ubiquity」は、-bオプションを付けて起動させる事で、ブートローダ「GRUB」のインストールをせずに、OSのインストールを行う事が出来ます。</p>
 <p><a class="reference external" href="http://averagelinuxuser.com/install-linux-mint-without-a-bootloader/">http://averagelinuxuser.com/install-linux-mint-without-a-bootloader/</a></p>
 <p>$ ubiquity -b</p>
 <p>UbiquityによるGRUBインストールは、ユーザーの環境によって失敗する事がありますので、別の方法でGRUBをインストールするようにした方が便利です。</p>
 </div>
 <div class="section" id="error-could-not-locate-dkms-conf-file-file-does-not-exist">
-<h2><span class="section-number">1.17. </span>「Error! Could not locate dkms.conf file.File:  does not exist.」が出た場合の対処法<a class="headerlink" href="#error-could-not-locate-dkms-conf-file-file-does-not-exist" title="Permalink to this headline">¶</a></h2>
+<h2>1.17. 「Error! Could not locate dkms.conf file.File:  does not exist.」が出た場合の対処法<a class="headerlink" href="#error-could-not-locate-dkms-conf-file-file-does-not-exist" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuのバージョンアップを行なった時に、新しいカーネルのインストールが出来ない事があります。その時にエラーメッセージを調べますと、以下のエラーが表示されます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Error! Could not locate dkms.conf file.
     File:  does not exist.
@@ -423,14 +421,14 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="squashfs">
-<h2><span class="section-number">1.18. </span>SquashFSで作成したファイルの圧縮方式を確認するには<a class="headerlink" href="#squashfs" title="Permalink to this headline">¶</a></h2>
+<h2>1.18. SquashFSで作成したファイルの圧縮方式を確認するには<a class="headerlink" href="#squashfs" title="Permalink to this headline">¶</a></h2>
 <p>SquashFSで作成したファイルの圧縮方式をするには、xxx.suqashfsというファイルで確認したい場合、以下のコマンドで確認出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ unsquashfs -s xxx.squashfs | awk &#39;/^Compression/{print $2}&#39;
 </pre></div>
 </div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">1.19. </span>Ubuntuで絵文字がカラーで表示されるようにする<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>1.19. Ubuntuで絵文字がカラーで表示されるようにする<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>1.カラー絵文字フォントをダウンロードする:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$mkdir ~/.local/share/fonts ; cd ~/.local/share/fonts &amp;&amp; wget https://github.com/emojione/emojione-assets/releases/download/3.1.2/emojione-android.ttf ; cd -
 </pre></div>
@@ -441,7 +439,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">1.20. </span>各種プログラミング言語リファレンス<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>1.20. 各種プログラミング言語リファレンス<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>プログラミング言語を使いこなすには、文法から理解し、どのような事が出来るのかを知る事が大切です。</p>
 <p>公式サイトやユーザー有志によって作られたリファレンスは、基礎から応用まで様々な知識を身につけられるようになっています。</p>
 <p>◇シェルスクリプト
@@ -472,7 +470,7 @@ $make xconfig
 <p><a class="reference external" href="https://developer.apple.com/swift/">https://developer.apple.com/swift/</a></p>
 </div>
 <div class="section" id="htsvoiceubuntu">
-<h2><span class="section-number">1.21. </span>htsvoiceファイル変換プログラムをUbuntuでも使えるようにする方法<a class="headerlink" href="#htsvoiceubuntu" title="Permalink to this headline">¶</a></h2>
+<h2>1.21. htsvoiceファイル変換プログラムをUbuntuでも使えるようにする方法<a class="headerlink" href="#htsvoiceubuntu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu+OpenJtalkでコンピューターに喋らせる事が出来るようになりますが、その音声合成には音声モデルが必要になります。</p>
 <p>比較的新しいバージョンのOpenJtalkで使う音声モデルは、htsvoiceファイル一つがありますと使えるようになっています。</p>
 <p>ここでは、htsvoiceファイル変換プログラムをUbuntu+OpenJtalk用に使えるようにし、htsvoiceファイルを生成します。</p>
@@ -494,7 +492,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="tumblrwordpress">
-<h2><span class="section-number">1.22. </span>Tumblrの記事データをWordPress経由でバックアップ<a class="headerlink" href="#tumblrwordpress" title="Permalink to this headline">¶</a></h2>
+<h2>1.22. Tumblrの記事データをWordPress経由でバックアップ<a class="headerlink" href="#tumblrwordpress" title="Permalink to this headline">¶</a></h2>
 <p>Tumblrには、記事のインポート機能やエクスポート機能がありません。</p>
 <p>そこで、WordPressのインポート機能。エクスポート機能を活用して、Tumblrの記事データをバックアップしていきます。</p>
 <p>WordPressは、自分でサーバを用意してインストールしても構いませんし、WordPress.comを使っても構いませんので、取り敢えず、適当にブログを一つ作成します。</p>
@@ -503,7 +501,7 @@ $make xconfig
 <p>インポートした記事は、このインポート画面で「アカウント情報を消去」という項目を選択すれば、WordPressにインポートした記事を消す事ができ、再度Tumblrで作成したサイトを選択すれば、記事が被らずに再度インポートを行えます。</p>
 </div>
 <div class="section" id="atomweb">
-<h2><span class="section-number">1.23. </span>テキストエディタ「Atom」に気になるワードをWeb検索出来る機能を追加する<a class="headerlink" href="#atomweb" title="Permalink to this headline">¶</a></h2>
+<h2>1.23. テキストエディタ「Atom」に気になるワードをWeb検索出来る機能を追加する<a class="headerlink" href="#atomweb" title="Permalink to this headline">¶</a></h2>
 <p>Atomで様々な文章やソースコードを開いている時に、気になるワードがあれば、そのワードをWebで検索したいという事があるでしょう。</p>
 <p>これをわざわざブラウザを起動しなくても、Web検索が出来るようにするのが「web-search」というプラグインです。</p>
 <p>インストールするには、以下のコマンドをLinuxなどのターミナルで実行します。:</p>
@@ -514,7 +512,7 @@ $make xconfig
 <img alt="../_images/Screenshot20from202017-03-282000-28-29.png" src="../_images/Screenshot20from202017-03-282000-28-29.png" />
 </div>
 <div class="section" id="atom">
-<h2><span class="section-number">1.24. </span>テキストエディタ「Atom」でターミナルを呼び出す<a class="headerlink" href="#atom" title="Permalink to this headline">¶</a></h2>
+<h2>1.24. テキストエディタ「Atom」でターミナルを呼び出す<a class="headerlink" href="#atom" title="Permalink to this headline">¶</a></h2>
 <p>テキストエディタ「Atom」でターミナルを使えるようになれば、Pythonスクリプトを実行したり、Sphinxでドキュメントをパブリッシュ出来たりする時に便利です。</p>
 <p>ターミナルを使えるようにするにはプラグインを追加します。</p>
 <p>「Terminal-plus」と「platformio-ide-terminal」がありますが、Terminal-plusはバージョンによってターミナルを呼び出せない不具合がありますので、platformio-ide-terminalの方が安定していて普段使っているLinuxのターミナルと同じデザインですので良いと思います。</p>
@@ -526,7 +524,7 @@ $make xconfig
 <img alt="../_images/Screenshot20from202017-03-282000-29-03.png" src="../_images/Screenshot20from202017-03-282000-29-03.png" />
 </div>
 <div class="section" id="atomremote-ftp">
-<h2><span class="section-number">1.25. </span>ファイルを保存する時に、AtomのRemote-FTPで自動的にサーバにアップロードさせないようにする<a class="headerlink" href="#atomremote-ftp" title="Permalink to this headline">¶</a></h2>
+<h2>1.25. ファイルを保存する時に、AtomのRemote-FTPで自動的にサーバにアップロードさせないようにする<a class="headerlink" href="#atomremote-ftp" title="Permalink to this headline">¶</a></h2>
 <p>GitHubが開発したテキストエディタ「Atom」。</p>
 <p>非常に高機能で使いやすいエディタの一つですが、これのプラグインにRemote-FTPという物があります。このプラグインは、サーバと接続してローカル上のファイルをアップロードしたり、ダウンロードしたりというように、AtomにFTP機能を追加してくれます。</p>
 <p>この機能を使う事で、別途FTPソフトを用意する必要が無くなり、効率的にサーバ上のWebページを更新する事が出来ます。</p>
@@ -535,7 +533,7 @@ $make xconfig
 <img alt="../_images/Screenshot20from202017-03-242015-24-36.png" src="../_images/Screenshot20from202017-03-242015-24-36.png" />
 </div>
 <div class="section" id="google-maps-apiapi">
-<h2><span class="section-number">1.26. </span>標準版Google Maps APIでのAPIキー取得方法<a class="headerlink" href="#google-maps-apiapi" title="Permalink to this headline">¶</a></h2>
+<h2>1.26. 標準版Google Maps APIでのAPIキー取得方法<a class="headerlink" href="#google-maps-apiapi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cloud-ja.googleblog.com/2016/07/google-maps-api.html">https://cloud-ja.googleblog.com/2016/07/google-maps-api.html</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Google Maps API の標準プランを改定しました
 2016年7月8日金曜日
@@ -562,7 +560,7 @@ $make xconfig
 <p>クエリとしてURLに追加してあげれば良いです。</p>
 </div>
 <div class="section" id="wine">
-<h2><span class="section-number">1.27. </span>Wineで音割れがするのを改善する方法<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h2>
+<h2>1.27. Wineで音割れがするのを改善する方法<a class="headerlink" href="#wine" title="Permalink to this headline">¶</a></h2>
 <p>UbuntuなどのLinuxディストリビューションで使えるWindows APIレイヤー「Wine」は、WindowsのAPIを移植する事でWindowsソフトウェアを動かそうという革新的なプロジェクトです。フロントエンドのPlayOnLinuxを使えば、ソフトウェアの管理を行ったり、バージョンが違うWineを複数導入して管理したりする事が出来ます。</p>
 <p>但し、Wineはかなり機能面で強化されてきたとは言っても、Windowsを再現するには、色々なAPIが再現されておらず、その為、Windowsソフトウェアを全て動作させる事が出来ません。</p>
 <p>市販されているゲームソフトや同人ソフトは、動作する物と動作しない物があります。3Dゲームで遊ぶ場合には、ミドルレンジ以上のグラフィックボードが必要になります。</p>
@@ -574,7 +572,7 @@ $make xconfig
 <p><a class="reference external" href="https://wiki.ubuntulinux.jp/UbuntuStudioTips/Application/JACK-PulseAudio">https://wiki.ubuntulinux.jp/UbuntuStudioTips/Application/JACK-PulseAudio</a></p>
 </div>
 <div class="section" id="smplayer-mpv-youtube-dl1080p60fpsgpu">
-<h2><span class="section-number">1.28. </span>SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる<a class="headerlink" href="#smplayer-mpv-youtube-dl1080p60fpsgpu" title="Permalink to this headline">¶</a></h2>
+<h2>1.28. SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる<a class="headerlink" href="#smplayer-mpv-youtube-dl1080p60fpsgpu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu環境でSMPlayerを使っている人は多いと思います。この環境を活用して、MPVやyoutube-dlと連携させて、Youtubeなどの動画共有サイトで公開されている1080p60fpsの動画をGPUの動画支援機能で動作させる事が可能です。Webブラウザで視聴するよりも消費電力が低くなるのが利点です。</p>
 <p>◇環境
 CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
@@ -615,10 +613,10 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 <img alt="../_images/Screenshot20from202017-04-082014-08-20.png" src="../_images/Screenshot20from202017-04-082014-08-20.png" />
 </div>
 <div class="section" id="squashfs-toolszstd">
-<h2><span class="section-number">1.29. </span>squashfs-toolsでzstdを使えるようにする<a class="headerlink" href="#squashfs-toolszstd" title="Permalink to this headline">¶</a></h2>
+<h2>1.29. squashfs-toolsでzstdを使えるようにする<a class="headerlink" href="#squashfs-toolszstd" title="Permalink to this headline">¶</a></h2>
 <p>環境は、Ubuntu 16.04 LTS、GCC 7.2とします。</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://github.com/facebook/zstd">https://github.com/facebook/zstd</a>  でZstandardのソースコードを取得します。</p></li>
+<li><a class="reference external" href="https://github.com/facebook/zstd">https://github.com/facebook/zstd</a>  でZstandardのソースコードを取得します。</li>
 </ol>
 <p>2.ダウンロードしたファイルを解凍し、zstd-devフォルダに移動します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$cd zstd-dev
@@ -631,7 +629,7 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p><a class="reference external" href="https://github.com/iburinoc/squashfs-tools/tree/master">https://github.com/iburinoc/squashfs-tools/tree/master</a> でZstd対応のsquashfs-toolsのソースコードをダウンロードします。</p></li>
+<li><a class="reference external" href="https://github.com/iburinoc/squashfs-tools/tree/master">https://github.com/iburinoc/squashfs-tools/tree/master</a> でZstd対応のsquashfs-toolsのソースコードをダウンロードします。</li>
 </ol>
 <p>6.ダウンロードしたファイルを解凍して、squashfs-tools-master/squashfs-toolsへ移動します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$cd squashfs-tools-master/squashfs-tools
@@ -660,7 +658,7 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 <p>他の圧縮方式を追加したい場合は、7番で行ったMakefileで各圧縮方式に対応した部分のコメントアウトを外してビルド・インストールを行えば良いでしょう。</p>
 </div>
 <div class="section" id="instagrampc">
-<h2><span class="section-number">1.30. </span>InstagramをPCのブラウザから使う<a class="headerlink" href="#instagrampc" title="Permalink to this headline">¶</a></h2>
+<h2>1.30. InstagramをPCのブラウザから使う<a class="headerlink" href="#instagrampc" title="Permalink to this headline">¶</a></h2>
 <p>PCからも投稿出来ます。</p>
 <p>1.Google ChromeやChromiumであれば、まず、<a class="reference external" href="https://www.instagram.com">https://www.instagram.com</a> にアクセスして、Ctrl+Shift+Iでデベロッパーツールを起動させます。</p>
 <p>2.デベロッパーツールの左上部にあるアイコンの2つ目をクリックすると、モバイル端末向けのデザインに変化します。この状態で、ページを再読み込みすれば、上部にカメラアイコンが出てきますので、これをクリックすれば、パソコンに保存している写真をアップロード出来ます。</p>
@@ -669,7 +667,7 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 <p>4.PC向けのブラウザからアップロードするには、ユーザーエージェントをモバイル端末向けに変更すれば良いという事になりますので、ユーザーエージェントスイッチが出来るアドオンを導入すれば便利になるでしょう。</p>
 </div>
 <div class="section" id="gcc7">
-<h2><span class="section-number">1.31. </span>GCC7のデフォルト化<a class="headerlink" href="#gcc7" title="Permalink to this headline">¶</a></h2>
+<h2>1.31. GCC7のデフォルト化<a class="headerlink" href="#gcc7" title="Permalink to this headline">¶</a></h2>
 <p>GCC7をインストールして、update-alternativesでシンボリックリンクを張ります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> \
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span> <span class="o">-</span><span class="n">y</span> <span class="o">&amp;&amp;</span> \
@@ -687,7 +685,7 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 </div>
 </div>
 <div class="section" id="dockerpython">
-<h2><span class="section-number">1.32. </span>DockerでPython環境を構築する<a class="headerlink" href="#dockerpython" title="Permalink to this headline">¶</a></h2>
+<h2>1.32. DockerでPython環境を構築する<a class="headerlink" href="#dockerpython" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu系ディストリビューションにDockerを入れる場合は、Ubuntuに最適化されている物で良いでしょう。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">.</span><span class="n">io</span>
 </pre></div>
@@ -757,7 +755,7 @@ IMAGEがubuntu:16.04となっている場合には、以下のコマンドを実
 </div>
 </div>
 <div class="section" id="twitter">
-<h2><span class="section-number">1.33. </span>Twitter向けのテクニック<a class="headerlink" href="#twitter" title="Permalink to this headline">¶</a></h2>
+<h2>1.33. Twitter向けのテクニック<a class="headerlink" href="#twitter" title="Permalink to this headline">¶</a></h2>
 <p>◇Twitterバックアップ方法</p>
 <p>1.右上のプロフィール画像のアイコンをクリック</p>
 <p>2.「設定とプライバシー」→ユーザー情報→「全ツィート履歴をリクエストする」をクリック</p>
@@ -775,12 +773,12 @@ IMAGEがubuntu:16.04となっている場合には、以下のコマンドを実
 <p>「&#64;ユーザー名　#検索したいワード」</p>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">1.34. </span>【このリクエストはコンピュータによる自動的なものと判断されました。Twitterユーザーをスパムやその他の迷惑行為から保護するために、このリクエストを保留しています。しばらくしてからもう一度お試しください。】の対処法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>1.34. 【このリクエストはコンピュータによる自動的なものと判断されました。Twitterユーザーをスパムやその他の迷惑行為から保護するために、このリクエストを保留しています。しばらくしてからもう一度お試しください。】の対処法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>【このリクエストはコンピュータによる自動的なものと判断されました。Twitterユーザーをスパムやその他の迷惑行為から保護するために、このリクエストを保留しています。しばらくしてからもう一度お試しください。】というTwitterの中途半端なスパム対策のせいでこういうメッセージが出る人が続出しています。</p>
 <p>対処法は簡単であり、登録メールに該当メールが来ているはずなので、そのメールの指示通りにパスワードを変更するだけで復旧します。</p>
 </div>
 <div class="section" id="mysql">
-<h2><span class="section-number">1.35. </span>MySQLで知っておくべき事<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h2>
+<h2>1.35. MySQLで知っておくべき事<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h2>
 <p>◎root権限でmysqlを起動:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo su
 $mysql -u root -p
@@ -805,7 +803,7 @@ $mysql -u root -p
 </div>
 </div>
 <div class="section" id="alsa">
-<h2><span class="section-number">1.36. </span>ALSAの音量設定の保存方法<a class="headerlink" href="#alsa" title="Permalink to this headline">¶</a></h2>
+<h2>1.36. ALSAの音量設定の保存方法<a class="headerlink" href="#alsa" title="Permalink to this headline">¶</a></h2>
 <p>LinuxでのサウンドドライバはALSAですが、システム起動音などを調整して、その音量を永続的に保ちたい場合があります。alsactlというツールを使う事で音量設定の保存が可能です。</p>
 <p>1.alsamixerで音量を調整:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$alsamixer
@@ -817,7 +815,7 @@ $mysql -u root -p
 </div>
 </div>
 <div class="section" id="gitzen-kernel-source">
-<h2><span class="section-number">1.37. </span>GitでZen Kernel Sourceを取得<a class="headerlink" href="#gitzen-kernel-source" title="Permalink to this headline">¶</a></h2>
+<h2>1.37. GitでZen Kernel Sourceを取得<a class="headerlink" href="#gitzen-kernel-source" title="Permalink to this headline">¶</a></h2>
 <p>◇Zen Kernel Source取得:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$git clone https://github.com/zen-kernel/zen-kernel.git
 $cd zen-kernel
@@ -838,7 +836,7 @@ $git checkout origin/4.10/master
 </div>
 </div>
 <div class="section" id="livecdaufs">
-<h2><span class="section-number">1.38. </span>LiveCD用のカーネルを作るためにaufsのパッチを当てる<a class="headerlink" href="#livecdaufs" title="Permalink to this headline">¶</a></h2>
+<h2>1.38. LiveCD用のカーネルを作るためにaufsのパッチを当てる<a class="headerlink" href="#livecdaufs" title="Permalink to this headline">¶</a></h2>
 <p>UbuntuなどのLinuxディストリビューションは、アプリケーションやスクリプトを使ってLiveCDを作成する事が可能です。しかし、カーネルをビルドする際に、UbuntuのようにLiveCDの造りがcasperを活用している場合、aufsに対応したカーネルで無ければ、起動出来ず、Busyboxに落ちてしまいます。</p>
 <p>そこで、新しい機能を持ったLinuxカーネルをソースコードからビルドしてLiveCD上で起動出来るように、aufsパッチを当てます。</p>
 <p>aufsは以下のサイトで公開されています。サイトにアクセスすれば分かりますが、カーネルバージョンナンバーとaufsのバージョンが同じ物になっています。このバージョン番号を合わせないと、パッチを当てる時にエラーが出て、ビルド時にもエラーが発生してビルドを完了する事が出来ません。</p>
@@ -875,7 +873,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="linuxi-o">
-<h2><span class="section-number">1.39. </span>一時的にLinuxカーネルのI/Oスケジューラーを変更する方法<a class="headerlink" href="#linuxi-o" title="Permalink to this headline">¶</a></h2>
+<h2>1.39. 一時的にLinuxカーネルのI/Oスケジューラーを変更する方法<a class="headerlink" href="#linuxi-o" title="Permalink to this headline">¶</a></h2>
 <p>Linuxカーネルには、様々なI/Oスケジューラーが用意されています。カーネルをソースコードからビルドする時に、I/Oスケジューラーを設定しておくのが一般的ですが、現在利用しているカーネルで一時的にI/Oスケジューラーの変更をしたい時には、以下のコマンドを使うと良いでしょう。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">--</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo cfq &gt; /sys/block/sda/queue/scheduler&#39;</span>
 </pre></div>
@@ -893,7 +891,7 @@ $make xconfig
 <p>他のコマンドも記述する場合は、半角スペースで区切っていきます。</p>
 </div>
 <div class="section" id="cpui-o">
-<h2><span class="section-number">1.40. </span>CPUスケジューラとI/Oスケジューラの組み合せを探って性能アップを目指す<a class="headerlink" href="#cpui-o" title="Permalink to this headline">¶</a></h2>
+<h2>1.40. CPUスケジューラとI/Oスケジューラの組み合せを探って性能アップを目指す<a class="headerlink" href="#cpui-o" title="Permalink to this headline">¶</a></h2>
 <p>Linuxカーネルをビルドするのに、Zen KernelにAufsのパッチを当てたソースを使っています。以前、UbuntuカーネルのソースコードにMuQSSパッチを当ててビルドをしたら、Wineが動かなかったという事を書きましたが、Zen Kernelと&lt;a href=”<a class="reference external" href="https://liquorix.net/">https://liquorix.net/</a>” target=”_blank”&gt;LIQUORIX KERNEL&lt;/a&gt;のコンフィグファイルを使えば、ビルドが出来てWineが動作しました。</p>
 <p>ビルドの際には、.configファイルを作成する事になりますが、この時に該当するパッチを当てていたら、CPUスケジューラにMuQSS、I/OスケジューラにBFQが追加されて選択する事が出来ます。この組み合せだけでも、PCのパフォーマンスが大きく変わってくるようです。</p>
 <p>・CFS+CFS　デフォルトのUbuntuと同じ</p>
@@ -958,13 +956,13 @@ $make xconfig
 <p><a class="reference external" href="http://www.phoronix.com/scan.php?page=article&amp;item=bfs_scheduler_benchmarks&amp;num=1">http://www.phoronix.com/scan.php?page=article&amp;item=bfs_scheduler_benchmarks&amp;num=1</a></p>
 </div>
 <div class="section" id="muqsslinux">
-<h2><span class="section-number">1.41. </span>MuQSSを導入したLinuxカーネルをゲーミング用途で動作させる方法<a class="headerlink" href="#muqsslinux" title="Permalink to this headline">¶</a></h2>
+<h2>1.41. MuQSSを導入したLinuxカーネルをゲーミング用途で動作させる方法<a class="headerlink" href="#muqsslinux" title="Permalink to this headline">¶</a></h2>
 <p>MuQSSというCPUスケジューラを使いますと、システムのレスポンスが非常に良くなりますが、その反面、3Dゲームではパフォーマンスが落ちてしまいます。最近のMuQSSのパッチには、yeild_typeを変更する事が可能な機能が追加されており、デフォルトでは1に設定されています。これを0か2にするとMuQSSを導入したカーネルでもゲーミング用途で使えるようになります。</p>
 <p><a class="reference external" href="http://ck-hack.blogspot.jp/2016/12/linux-49-ck1-muqss-version-0150.html">http://ck-hack.blogspot.jp/2016/12/linux-49-ck1-muqss-version-0150.html</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span> <span class="n">someone</span> <span class="n">wants</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">non</span><span class="o">-</span><span class="n">official</span> <span class="n">TOI</span> <span class="n">code</span> <span class="k">for</span> <span class="mf">4.9.0</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Maybe</span> <span class="n">someone</span> <span class="n">wants</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">non</span><span class="o">-</span><span class="n">official</span> <span class="n">TOI</span> <span class="n">code</span> <span class="k">for</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span>
 <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">workupload</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">sVqjhDZ</span>
 <span class="o">*</span> <span class="n">checksumming</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">work</span><span class="p">,</span> <span class="n">don</span><span class="s1">&#39;t configure it</span>
-<span class="o">*</span> <span class="k">with</span> <span class="mf">4.9.0</span> <span class="o">+</span> <span class="n">MuQSS</span><span class="o">/</span><span class="n">ck</span> <span class="n">use</span> <span class="s2">&quot;echo 2 &amp;gt; /proc/sys/kernel/yield_type&quot;</span>
+<span class="o">*</span> <span class="k">with</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">0</span> <span class="o">+</span> <span class="n">MuQSS</span><span class="o">/</span><span class="n">ck</span> <span class="n">use</span> <span class="s2">&quot;echo 2 &amp;gt; /proc/sys/kernel/yield_type&quot;</span>
 <span class="o">*</span> <span class="n">possible</span> <span class="n">other</span> <span class="n">bugs</span> <span class="n">I</span> <span class="n">haven</span><span class="s1">&#39;t encountered, use at your own risk</span>
 
 <span class="n">I</span> <span class="n">did</span> <span class="n">some</span> <span class="n">benchmarks</span> <span class="ow">and</span> <span class="n">it</span> <span class="n">seems</span> <span class="n">that</span> <span class="k">yield</span><span class="o">=</span><span class="mi">1</span> <span class="n">has</span> <span class="n">slower</span> <span class="n">overall</span> <span class="n">performance</span><span class="p">,</span> <span class="n">at</span> <span class="n">least</span> <span class="ow">in</span> <span class="n">gaming</span><span class="p">,</span> <span class="n">on</span> <span class="n">average</span><span class="o">.</span> <span class="n">Yield</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">Yield</span> <span class="mi">0</span> <span class="n">performed</span> <span class="n">about</span> <span class="n">the</span> <span class="n">same</span><span class="p">:</span>
@@ -1042,7 +1040,7 @@ $make xconfig
 </div>
 </div>
 <div class="section" id="timer-frequency">
-<h2><span class="section-number">1.42. </span>使用用途で適切なTimer Frequencyはどの値にしたらいいのだろうか<a class="headerlink" href="#timer-frequency" title="Permalink to this headline">¶</a></h2>
+<h2>1.42. 使用用途で適切なTimer Frequencyはどの値にしたらいいのだろうか<a class="headerlink" href="#timer-frequency" title="Permalink to this headline">¶</a></h2>
 <p>Linuxカーネルを構築するのに迷う項目の一つがTimer Frequency。これは用途によって適切な値があるようです。</p>
 <p>xconfigで.configを見ますと、該当箇所の説明には以下の事が書かれています。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="n">Hz</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">typical</span> <span class="n">choice</span> <span class="k">for</span> <span class="n">servers</span><span class="p">,</span> <span class="n">SMP</span> <span class="ow">and</span> <span class="n">NUMA</span> <span class="n">systems</span>
@@ -1092,7 +1090,7 @@ The hz rating is per core, so if you set 1000hz you are actually running 2000hz,
 </div>
 </div>
 <div class="section" id="ubuntuccache">
-<h2><span class="section-number">1.43. </span>Ubuntu向けのカーネルを構築する時にccacheを使う<a class="headerlink" href="#ubuntuccache" title="Permalink to this headline">¶</a></h2>
+<h2>1.43. Ubuntu向けのカーネルを構築する時にccacheを使う<a class="headerlink" href="#ubuntuccache" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu向けのカーネルを構築する時に、少しでもビルド時間を短くするには、ccacheを使うのも効果的です。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install ccache
 
@@ -1110,7 +1108,7 @@ $sudo MAKEFLAGS=&quot;HOSTCC=/usr/lib/ccache/gcc HOSTCXX=/usr/lib/ccache/g++ CC=
 <p>ccacheの効果があるのは、2回目以降のビルドの時です。1回目は、ビルドと平行してキャッシュを実施しますので、ccache無しとビルド時間は変わりません。</p>
 </div>
 <div class="section" id="linux">
-<h2><span class="section-number">1.44. </span>海外のクールなカスタムLinuxカーネル<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>1.44. 海外のクールなカスタムLinuxカーネル<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>Linux本家で公開されているLinuxのソースコードをベースに、独自の機能を追加して公開されているカーネルが世界中に存在します。その中でも、デスクトップ/サーバ向けのカスタムカーネルで注目されているのが、CK1 Kernel、Zen Kernel、Liquorix kernel、XanMod kernel、pf kernelです。</p>
 <p>おすすめは、Zen kernelとCK1 kernelです。何れかを使えば、通常使用では十分なレスポンス性とパフォーマンス性を得られるはずです。</p>
 <p>◇CK1 kernel</p>
@@ -1132,7 +1130,7 @@ $sudo MAKEFLAGS=&quot;HOSTCC=/usr/lib/ccache/gcc HOSTCXX=/usr/lib/ccache/g++ CC=
 <p><a class="reference external" href="https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB">https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB</a></p>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">1.45. </span>Ubuntuにインテルのコンパイラをインストールする<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>1.45. Ubuntuにインテルのコンパイラをインストールする<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuで使えるCコンパイラとしてはGCCやLLVMがありますが、非商用目的でインテルのCコンパイラを使う事も出来ます。</p>
 <p>1.ユーザー登録を行う。</p>
 <p><a class="reference external" href="https://registrationcenter.intel.com/en/forms/?licensetype=2&amp;programID=opensource&amp;productid=2302">https://registrationcenter.intel.com/en/forms/?licensetype=2&amp;programID=opensource&amp;productid=2302</a></p>
@@ -1152,7 +1150,7 @@ $sudo MAKEFLAGS=&quot;HOSTCC=/usr/lib/ccache/gcc HOSTCXX=/usr/lib/ccache/g++ CC=
 </div>
 </div>
 <div class="section" id="audacious">
-<h2><span class="section-number">1.46. </span>Audaciousで動画ファイルの音声部分だけを再生させる<a class="headerlink" href="#audacious" title="Permalink to this headline">¶</a></h2>
+<h2>1.46. Audaciousで動画ファイルの音声部分だけを再生させる<a class="headerlink" href="#audacious" title="Permalink to this headline">¶</a></h2>
 <p>UbuntuなどのLinuxディストリビューションで動画ファイルを再生させる場合、SMPlayerやVLCなどの動画プレーヤーで再生させます。一方で、音楽を再生させたい場合には、Audaciousなどの音楽再生プレーヤーを使います。</p>
 <p>しかし、動画ファイルは持っていても、音楽ファイルを持っていなくて動画ファイルから音声データを分離させるのが手間と感じているのであれば、動画ファイルから音声データを分離せずに、そのまま動画ファイルをAudaciousで再生させる事で可能です。つまり、MVをAudaciousで再生させれば、音楽を聴けます。ただし、動画ファイルによっては、MP3ファイルやAACファイルよりも容量が大きくなってしまうのがデメリットです。</p>
 <p>UbuntuでのAudaciousのインストールは、Synapticパッケージマネージャーを使うか、端末で以下のコマンドを実行します。:</p>
@@ -1161,7 +1159,7 @@ $sudo MAKEFLAGS=&quot;HOSTCC=/usr/lib/ccache/gcc HOSTCXX=/usr/lib/ccache/g++ CC=
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">1.47. </span>ブラウザをアプリモードで使う<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>1.47. ブラウザをアプリモードで使う<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Google ChromeやChromium、FirefoxなどのWebブラウザを使用している人々は多いです。</p>
 <p>V8 JavaScript Engineなどメーカーが独自に開発したり、オープンソースコミュニティで開発された物をフィードバックさせて使ったりして、JavaScriptなどで構築されたWebアプリケーションの動作が従来よりも快適になっています。</p>
 <p>Googleのオンラインツール群など大手企業から個人まで様々な組織が、オンラインサービスやオンラインツールを公開しています。</p>
@@ -1193,19 +1191,19 @@ $sudo MAKEFLAGS=&quot;HOSTCC=/usr/lib/ccache/gcc HOSTCXX=/usr/lib/ccache/g++ CC=
 </div>
 </div>
 <div class="section" id="e-xxx">
-<h2><span class="section-number">1.48. </span>「E: パッケージ xxx を再インストールする必要がありますが、そのためのアーカイブを見つけることができませんでした。」のメッセージが出た場合の対処法<a class="headerlink" href="#e-xxx" title="Permalink to this headline">¶</a></h2>
+<h2>1.48. 「E: パッケージ xxx を再インストールする必要がありますが、そのためのアーカイブを見つけることができませんでした。」のメッセージが出た場合の対処法<a class="headerlink" href="#e-xxx" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo dpkg -P --force-remove-reinstreq xxx
 </pre></div>
 </div>
 </div>
 <div class="section" id="xfceemacs">
-<h2><span class="section-number">1.49. </span>xfceのターミナルからEmacsを起動させるコマンド<a class="headerlink" href="#xfceemacs" title="Permalink to this headline">¶</a></h2>
+<h2>1.49. xfceのターミナルからEmacsを起動させるコマンド<a class="headerlink" href="#xfceemacs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$xfce4-terminal --hide-menubar -e emacs --title=emacs
 </pre></div>
 </div>
 </div>
 <div class="section" id="ubuntugoogle-driveonedrive">
-<h2><span class="section-number">1.50. </span>UbuntuでGoogle DriveとOneDriveの同期を行う<a class="headerlink" href="#ubuntugoogle-driveonedrive" title="Permalink to this headline">¶</a></h2>
+<h2>1.50. UbuntuでGoogle DriveとOneDriveの同期を行う<a class="headerlink" href="#ubuntugoogle-driveonedrive" title="Permalink to this headline">¶</a></h2>
 <p>予め、Google DriveとOneDriveのアカウントを取得しておいてください。</p>
 <p>◇Google Driveの同期方法</p>
 <p>・以下のコマンドでgriveをインストールします。:</p>
@@ -1253,7 +1251,7 @@ $./install.sh
 </div>
 </div>
 <div class="section" id="ubuntud">
-<h2><span class="section-number">1.51. </span>Ubuntuでdアニメストアを観る方法<a class="headerlink" href="#ubuntud" title="Permalink to this headline">¶</a></h2>
+<h2>1.51. Ubuntuでdアニメストアを観る方法<a class="headerlink" href="#ubuntud" title="Permalink to this headline">¶</a></h2>
 <p>◇Google Chromeで視聴する場合
 dアニメストアをUbuntuで視聴するには、Google Chromeをインストールします。</p>
 <p>dアニメストアでは、2016年4月頃からChromeとEdgeに対応するようになっており、HTML5プレーヤーを通して見る事が可能になりました。</p>
@@ -1262,9 +1260,9 @@ dアニメストアをUbuntuで視聴するには、Google Chromeをインスト
 <p>＜注意＞Google ChromeとChromiumのバージョンが合っていないと使えません。</p>
 <p>Google Chromeをインストールした方が楽でしょう。</p>
 <p>dアニメストアをChromium Browserで視聴するには、Google ChromeからWidevineを移植する事で可能です。</p>
-<dl class="simple">
-<dt>1.Chromiumをインストール::</dt><dd><p>$sudo apt-get install chromium-browser</p>
-</dd>
+<dl class="docutils">
+<dt>1.Chromiumをインストール::</dt>
+<dd>$sudo apt-get install chromium-browser</dd>
 </dl>
 <p>2.以下のコマンドを入力:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -1287,7 +1285,7 @@ $ sudo cp -a chrome-dir/opt/google/chrome/WidevineCdm /usr/lib/chromium-browser
 <p>システムに再ログインすれば、反映されてGoogleが提供するAPIが有効になります。</p>
 </div>
 <div class="section" id="ubuntujstest-gtk">
-<h2><span class="section-number">1.52. </span>Ubuntuでjstest-gtkのプロファイルを保存してジョイパッドを使い易い環境にする<a class="headerlink" href="#ubuntujstest-gtk" title="Permalink to this headline">¶</a></h2>
+<h2>1.52. Ubuntuでjstest-gtkのプロファイルを保存してジョイパッドを使い易い環境にする<a class="headerlink" href="#ubuntujstest-gtk" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuでジョイパッドを使う場合、jstest-gtkを使って設定するのが良いです。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install jstest-gtk
 </pre></div>
@@ -1300,21 +1298,21 @@ $ sudo cp -a chrome-dir/opt/google/chrome/WidevineCdm /usr/lib/chromium-browser
 <p>なお、jstest-gtkのプロファイル保存機能は上手く保存する事が出来ませんので、キー割り当てを変更する毎に上記のコマンドだけを入力するようにしてください。</p>
 </div>
 <div class="section" id="xfce4-terminal">
-<h2><span class="section-number">1.53. </span>xfce4-terminalを透過<a class="headerlink" href="#xfce4-terminal" title="Permalink to this headline">¶</a></h2>
+<h2>1.53. xfce4-terminalを透過<a class="headerlink" href="#xfce4-terminal" title="Permalink to this headline">¶</a></h2>
 <p>コンポジットマネージャー「compton」を起動させた状態であれば、Openbox環境でもxfce4-terminalを透過させる事が出来ます。</p>
 <p>設定は、xfce4-terminalの「編集」→「設定」→「外観」→「背景」から行います。 不透明度は、0.7に設定しました。 背景色や文字色の変更も可能ですので、自分好みのカスタマイズを施してみると良いでしょう。</p>
 </div>
 <div class="section" id="chromee-gov">
-<h2><span class="section-number">1.54. </span>Chrome系ブラウザでe-Govを使う方法<a class="headerlink" href="#chromee-gov" title="Permalink to this headline">¶</a></h2>
+<h2>1.54. Chrome系ブラウザでe-Govを使う方法<a class="headerlink" href="#chromee-gov" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.gpki.go.jp/apca2/index.html">http://www.gpki.go.jp/apca2/index.html</a></p>
 <p>1.「◆アプリケーション認証局２の証明書」→「アプリケーション認証局２(Root)の自己署名証明書 (DER)」でAPCA2Root.derをダウンロードして保存。</p>
 <p>2.ブラウザの「設定」→「HTTPS/SSL」→「証明書マネージャー」→「認証局」→「インポート」でAPCA2Root.derをインポート</p>
 <ol class="arabic simple" start="3">
-<li><p><a class="reference external" href="https://www.e-gov.go.jp/policy/servlet/Propose">https://www.e-gov.go.jp/policy/servlet/Propose</a> が使えるようになります。</p></li>
+<li><a class="reference external" href="https://www.e-gov.go.jp/policy/servlet/Propose">https://www.e-gov.go.jp/policy/servlet/Propose</a> が使えるようになります。</li>
 </ol>
 </div>
 <div class="section" id="dmm">
-<h2><span class="section-number">1.55. </span>クレジットカード無しでDMMのコンテンツを購入する方法<a class="headerlink" href="#dmm" title="Permalink to this headline">¶</a></h2>
+<h2>1.55. クレジットカード無しでDMMのコンテンツを購入する方法<a class="headerlink" href="#dmm" title="Permalink to this headline">¶</a></h2>
 <p>AVやエロゲーや同人ソフトなどを購入する際に便利なDMM.com。でも、クレジットカードでここのコンテンツを買うのに抵抗があるという人が多いでしょう。
 そのような人でも、DMMはコンテンツを買えるように複数の支払い方法を用意しています。その方法は、ヘルプページに書かれています。</p>
 <p><a class="reference external" href="http://help.dmm.com/-/detail/=/qid=11108/">http://help.dmm.com/-/detail/=/qid=11108/</a></p>
@@ -1343,7 +1341,7 @@ $sudo pipelight-plugin --enable widevine
 Linuxであれば、Record my desktopで出来ました。</p>
 </div>
 <div class="section" id="stagingwinecsmt">
-<h2><span class="section-number">1.56. </span>staging版Wineにのみ搭載されている「CSMT」<a class="headerlink" href="#stagingwinecsmt" title="Permalink to this headline">¶</a></h2>
+<h2>1.56. staging版Wineにのみ搭載されている「CSMT」<a class="headerlink" href="#stagingwinecsmt" title="Permalink to this headline">¶</a></h2>
 <p>staging版Wineは、従来の開発版Wineであり、安定版では搭載されていない機能やバグフィクスなどを先行して採り入れています。このstaging版Wineには、マルチスレッドプロセッサ向けのパフォーマンスが向上する機能が搭載されており、それが「CSMT」です。</p>
 <p><a class="reference external" href="https://github.com/wine-compholio/wine-staging/wiki/CSMT">https://github.com/wine-compholio/wine-staging/wiki/CSMT</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">When</span> <span class="n">an</span> <span class="n">application</span> <span class="n">makes</span> <span class="n">use</span> <span class="n">of</span> <span class="n">Direct3D</span> <span class="n">on</span> <span class="n">Windows</span><span class="p">,</span> <span class="n">DirectX</span> <span class="n">will</span> <span class="n">implicitly</span> <span class="n">create</span> <span class="n">threads</span> <span class="n">to</span> <span class="n">decouple</span> <span class="n">the</span> <span class="n">actual</span> <span class="n">drawing</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">the</span> <span class="n">program</span><span class="o">.</span> <span class="n">Vanilla</span> <span class="n">Wine</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">implement</span> <span class="n">such</span> <span class="n">a</span> <span class="n">logic</span> <span class="ow">and</span> <span class="n">instead</span> <span class="n">directly</span> <span class="n">executes</span> <span class="n">the</span> <span class="n">OpenGL</span> <span class="n">calls</span> <span class="n">without</span> <span class="n">waiting</span> <span class="k">for</span> <span class="n">the</span> <span class="n">call</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">graphic</span> <span class="n">card</span><span class="o">.</span> <span class="n">This</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">somewhat</span> <span class="n">similar</span> <span class="n">performance</span> <span class="n">but</span> <span class="n">has</span> <span class="n">the</span> <span class="n">disadvantage</span> <span class="n">that</span> <span class="n">the</span> <span class="n">order</span> <span class="n">of</span> <span class="n">drawing</span> <span class="n">commands</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">longer</span> <span class="n">guaranteed</span> <span class="n">to</span> <span class="n">be</span> <span class="n">correct</span><span class="o">.</span>
@@ -1358,17 +1356,17 @@ Linuxであれば、Record my desktopで出来ました。</p>
 <img alt="../_images/Screenshot20from202017-05-172002-55-55.png" src="../_images/Screenshot20from202017-05-172002-55-55.png" />
 </div>
 <div class="section" id="chjdapi">
-<h2><span class="section-number">1.57. </span>2chブラウザ「JD」で新APIを使う方法<a class="headerlink" href="#chjdapi" title="Permalink to this headline">¶</a></h2>
+<h2>1.57. 2chブラウザ「JD」で新APIを使う方法<a class="headerlink" href="#chjdapi" title="Permalink to this headline">¶</a></h2>
 <p>2chブラウザ「JD」を新APIでも使えるようにするには、以下の設定を行います。</p>
 <p>JDを起動させて、メニューバーの「設定」→「<a class="reference external" href="about:config">about:config</a>」→「板一覧を取得するサーバ」を「<a class="reference external" href="http://kita.jikkyo.org/cbm/cbm.cgi/20.p0.m0.sc.op/-all/bbsmenu.html">http://kita.jikkyo.org/cbm/cbm.cgi/20.p0.m0.sc.op/-all/bbsmenu.html</a>」に変更するだけです。</p>
 </div>
 <div class="section" id="smarty-3-1">
-<h2><span class="section-number">1.58. </span>Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>PHPテンプレートエンジン「Smarty」では、プラグインの自作が出来ますが、従来の方法は <a class="reference external" href="http://www.smarty.net/docs/ja/variable.plugins.dir.tpl">http://www.smarty.net/docs/ja/variable.plugins.dir.tpl</a> のように、 SMARTY_DIR 直下の pluginsや新規に作成したフォルダに自作プラグインを放り込む事で以下のように、plugins_dir[]メソッドを使ってパスを指定すれば使えました。::</dt><dd><p>&lt;?php
+<h2>1.58. Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>PHPテンプレートエンジン「Smarty」では、プラグインの自作が出来ますが、従来の方法は <a class="reference external" href="http://www.smarty.net/docs/ja/variable.plugins.dir.tpl">http://www.smarty.net/docs/ja/variable.plugins.dir.tpl</a> のように、 SMARTY_DIR 直下の pluginsや新規に作成したフォルダに自作プラグインを放り込む事で以下のように、plugins_dir[]メソッドを使ってパスを指定すれば使えました。::</dt>
+<dd>&lt;?php
 $smarty-&gt;plugins_dir[] = ‘includes/my_smarty_plugins’;
-?&gt;</p>
-</dd>
+?&gt;</dd>
 </dl>
 <p>しかし、Smarty 3.1からは、自作プラグインの導入方法が変更されています。 上記の方法で追加してプログラムを動作させると、以下のようなエラーが表示されます。</p>
 <p>Notice: Indirect modification of overloaded property Smarty::$plugins_dir has no effect</p>
@@ -1381,7 +1379,7 @@ $smarty-&gt;plugins_dir[] = ‘includes/my_smarty_plugins’;
 <p><a class="reference external" href="http://www.smarty.net/docs/en/api.add.plugins.dir.tpl">http://www.smarty.net/docs/en/api.add.plugins.dir.tpl</a></p>
 </div>
 <div class="section" id="ubuntu-16-04apache2-wsgi">
-<h2><span class="section-number">1.59. </span>Ubuntu 16.04にApache2+WSGI環境を構築する<a class="headerlink" href="#ubuntu-16-04apache2-wsgi" title="Permalink to this headline">¶</a></h2>
+<h2>1.59. Ubuntu 16.04にApache2+WSGI環境を構築する<a class="headerlink" href="#ubuntu-16-04apache2-wsgi" title="Permalink to this headline">¶</a></h2>
 <p>1.mod-wsgiをインストールする:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install -y libapache2-mod-wsgi
 $sudo a2enmod mod-wsgi
@@ -1406,7 +1404,7 @@ $sudo a2enmod mod-wsgi
 </div>
 </div>
 <div class="section" id="ppssppubuntu-16-04-lts">
-<h2><span class="section-number">1.60. </span>PPSSPPをUbuntu 16.04 LTSにインストールする<a class="headerlink" href="#ppssppubuntu-16-04-lts" title="Permalink to this headline">¶</a></h2>
+<h2>1.60. PPSSPPをUbuntu 16.04 LTSにインストールする<a class="headerlink" href="#ppssppubuntu-16-04-lts" title="Permalink to this headline">¶</a></h2>
 <p>PSPエミュレーター「PPSSPP」はUbuntu 16.04 LTSにもインストールする事が出来ますが、全体的にライブラリのバージョンが上がっていますので、そのままでは依存関係の問題が発生してインストールする事が出来ません。
 <a class="reference external" href="https://launchpad.net/ubuntu/xenial/amd64/libglew1.10/1.10.0-3">https://launchpad.net/ubuntu/xenial/amd64/libglew1.10/1.10.0-3</a> からlibglew1.10をダウンロードしてインストールします。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo dpkg -i libglew1.10_1.10.0-3_amd64.deb
@@ -1420,13 +1418,13 @@ $sudo apt-get install ppsspp
 </div>
 </div>
 <div class="section" id="ubuntu-14-04cups">
-<h2><span class="section-number">1.61. </span>Ubuntu 14.04でプリンターを使う時にはCUPSを使うと楽に設定できる<a class="headerlink" href="#ubuntu-14-04cups" title="Permalink to this headline">¶</a></h2>
+<h2>1.61. Ubuntu 14.04でプリンターを使う時にはCUPSを使うと楽に設定できる<a class="headerlink" href="#ubuntu-14-04cups" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu 14.04でプリンターを使う時にはCUPSを使うと楽に設定出来ます。</p>
 <p>APTなどでCUPSをインストール後に、パソコンにプリンターを接続して電源を入れた状態でブラウザを起動させ、「 <a class="reference external" href="http://localhost:631">http://localhost:631</a> 」にアクセスして、指示通りに設定していくだけでプリンターを使うことが可能となります。</p>
 <p>Ubuntuではメニュー→システム→プリンターでプリンターの設定が出来ますが、環境によっては途中で止まってしまったりしますので、ブラウザでCUPSにアクセスした方が確実にプリンターの設定が可能です。</p>
 </div>
 <div class="section" id="playonlinux">
-<h2><span class="section-number">1.62. </span>PlayOnLinuxのバージョンを固定してエラーを防ぐ<a class="headerlink" href="#playonlinux" title="Permalink to this headline">¶</a></h2>
+<h2>1.62. PlayOnLinuxのバージョンを固定してエラーを防ぐ<a class="headerlink" href="#playonlinux" title="Permalink to this headline">¶</a></h2>
 <p>Windows APIレイヤーのWineを視覚的に操作することが出来るソフトウェアであるPlayOnLinuxは、Linuxユーザーがよく利用しているソフトウェアです。
 環境によって最新版の4.2.5は、アプリケーションインストールの画面で矢印が回転して作業が進まなかったり、32bitのOpenGLのライブラリが足りないなど様々なエラーに遭遇することが多々あります。
 このような時には、旧バージョンを利用すると問題が解決します。</p>
@@ -1435,7 +1433,7 @@ $sudo apt-get install ppsspp
 また、ターミナルでapt-get upgradeなどを行なうことが多い場合には、PlayOnLinuxのリポジトリを選択しないようにSynapticパッケージマネージャーなどで設定しておくと良いでしょう。</p>
 </div>
 <div class="section" id="id6">
-<h2><span class="section-number">1.63. </span>Ubuntuでファイアウォールを設定する<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>1.63. Ubuntuでファイアウォールを設定する<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>１．ufwのインストール:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install ufw
 </pre></div>
@@ -1467,7 +1465,7 @@ $sudo apt-get install ppsspp
 </div>
 </div>
 <div class="section" id="id7">
-<h2><span class="section-number">1.64. </span>Linuxディストリビューションのリマスターでデータ容量が肥大化しやすい箇所に注意して制作を行う<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>1.64. Linuxディストリビューションのリマスターでデータ容量が肥大化しやすい箇所に注意して制作を行う<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuなどをベースにして、リマスターを行い、オリジナルのディストリビューションを制作することが出来ます。
 その際に、データ容量が肥大化しやすい箇所を意識しながら、制作を行っていきますと、最終的なISO容量を抑えることが出来ます。</p>
 <p>1./usr/share/iconsは、各アイコンのキャッシュデータ（icon-theme.cache）が結構容量が大きいですので、インストールするアイコンを絞って入れると良いでしょう。</p>
@@ -1480,7 +1478,7 @@ $sudo apt-get install ppsspp
 <p>容量を減らす方法としては、SynapticパッケージマネージャーなどでPPAのチェックを外して、apt-get updateを行います。</p>
 </div>
 <div class="section" id="mksquashfslinuxiso">
-<h2><span class="section-number">1.65. </span>mksquashfsのオプションでLinuxディストリビューションのISO容量を削減する<a class="headerlink" href="#mksquashfslinuxiso" title="Permalink to this headline">¶</a></h2>
+<h2>1.65. mksquashfsのオプションでLinuxディストリビューションのISO容量を削減する<a class="headerlink" href="#mksquashfslinuxiso" title="Permalink to this headline">¶</a></h2>
 <p>Linuxディストリビューションの多くは、ISOファイルの形式で配布されていますが、SquashFSをLiveCDのファイルシステムとして活用しているケースが多いです。
 その為、SquashFSの使い方によってISOの容量が大きく変わってきます。</p>
 <p>・元のファイルサイズを2.4GBとします。$FSPATHは元のフォルダ、filesystem.squashfsが出力されるSquashFSファイルです。</p>
@@ -1518,7 +1516,7 @@ $sudo apt-get install ppsspp
 どのようなシステムを想定しているかによって、圧縮方式を変更していくと良いでしょう。</p>
 </div>
 <div class="section" id="ubuntuhdduefi">
-<h2><span class="section-number">1.66. </span>リマスターしたUbuntuでHDDにインストールしてもUEFIで起動出来ない場合の対処法<a class="headerlink" href="#ubuntuhdduefi" title="Permalink to this headline">¶</a></h2>
+<h2>1.66. リマスターしたUbuntuでHDDにインストールしてもUEFIで起動出来ない場合の対処法<a class="headerlink" href="#ubuntuhdduefi" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuをリマスターして、成果物をHDDにインストールした時に、UEFIモードでgrubプロンプトに落ちる事が多々あります。これを対処するには、リマスター時のLiveCDのホームディレクトリをubuntuにしておくだけで、LiveCDでもHDDインストールでもUEFIブート出来るようになります。</p>
 <p>LiveCDは、ERIディレクトリにあるファイル群を読み込んで、起動し、カーネルはvmlinuz.efiが使われます。UEFIモードでHDDインストールを行なう時には、EFIパーティション(GPT)を作っておく必要があります。
 UEFIブート用の特殊なFAT32のパーティションであり、起動ドライブにおいて最優先で読み込みます。これが無いと、HDDインストールしたUbuntuは動作しませんので、BIOSとの一番の違いと言えます。</p>
@@ -1530,7 +1528,7 @@ UEFIブート用の特殊なFAT32のパーティションであり、起動ド�
 </div>
 </div>
 <div class="section" id="boot-repairuefi">
-<h2><span class="section-number">1.67. </span>Boot Repairを使ったUEFI対応ポータブルドライブの作成<a class="headerlink" href="#boot-repairuefi" title="Permalink to this headline">¶</a></h2>
+<h2>1.67. Boot Repairを使ったUEFI対応ポータブルドライブの作成<a class="headerlink" href="#boot-repairuefi" title="Permalink to this headline">¶</a></h2>
 <p>UEFI環境において、BIOS時代の方法でポータルHDDやUSBメモリにフルインストールしますと、先に作成したドライブのGRUBがgrub rescueなどに落ちてしまいます。この現象を避ける為には、Boot Repairというソフトウェアを導入するのが有効です。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo add-apt-repository ppa:yannubuntu/boot-repair
 $ sudo apt-get update
@@ -1546,7 +1544,7 @@ $ sudo apt-get install -y boot-repair
 <p>再起動を行って、UEFIで起動するドライブを設定して保存、再起動させれば完了です。</p>
 </div>
 <div class="section" id="windows-10pclinux">
-<h2><span class="section-number">1.68. </span>Windows 10に仮想PCを設置してLinuxのパワーを活かす<a class="headerlink" href="#windows-10pclinux" title="Permalink to this headline">¶</a></h2>
+<h2>1.68. Windows 10に仮想PCを設置してLinuxのパワーを活かす<a class="headerlink" href="#windows-10pclinux" title="Permalink to this headline">¶</a></h2>
 <p>Windows 10を搭載したパソコンが大手家電量販店などで販売されています。</p>
 <p>UbuntuなどのLinuxディストリビューションは、最新のBIOSシステムであるUEFIとセキュアブートに対応しています。しかし、BaytrailなどのAtom系Socを搭載したWindowsタブレットは、独自のドライバを使っている各種チップを搭載しているケースが多く、32bit UEFIを採用しているケースもありますので、スムーズにLinuxディストリビューションをインストール出来ず、無線LANが使えなかったり、タッチパネルが使えなかったりします。
 Windowsとのデュアルブートが行いにくいといって欠点もあります。その為、WindowsタブレットでLinuxを使う方法としては、Virtualboxなどの仮想化ソフトウェアを使って仮想PCを構築し、そこにLinuxディストリビューションをインストールして使うというのが最も現実的です。</p>
@@ -1563,7 +1561,7 @@ Windowsとのデュアルブートが行いにくいといって欠点もあり�
 仮想環境のLinuxに使うデスクトップ環境は、LXDEやOpenboxなど軽量な物にしておいた方が軽快に動作します。</p>
 </div>
 <div class="section" id="linuxfirefoxwindowsflash">
-<h2><span class="section-number">1.69. </span>Linux版FirefoxでWindows用のFlashを使用する<a class="headerlink" href="#linuxfirefoxwindowsflash" title="Permalink to this headline">¶</a></h2>
+<h2>1.69. Linux版FirefoxでWindows用のFlashを使用する<a class="headerlink" href="#linuxfirefoxwindowsflash" title="Permalink to this headline">¶</a></h2>
 <p>Pipelightは、Windows用のブラウザープラグインをLinux上で動かす為のプラグインです。</p>
 <p>UbuntuではPPAが用意されていますので、以下の方法で入れていきます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo add-apt-repository ppa:pipelight/stable
@@ -1575,14 +1573,14 @@ $ sudo pipelight-plugin --enable flash
 </div>
 </div>
 <div class="section" id="pulseaudio">
-<h2><span class="section-number">1.70. </span>PulseAudioを切る<a class="headerlink" href="#pulseaudio" title="Permalink to this headline">¶</a></h2>
+<h2>1.70. PulseAudioを切る<a class="headerlink" href="#pulseaudio" title="Permalink to this headline">¶</a></h2>
 <p>Jackなどの他のサウンドサーバを使用したり、直接Alsaドライバーを各音楽ソフトウェアなどで使う場合にはPulseAudioを切る必要があります。</p>
 <p>1.管理者権限で「/etc/pulse/client.conf」をテキストエディタで開く</p>
 <p>2.「autospawn=no」「daemon-binary=/bin/true」を追記して保存し、システムを再起動させます。</p>
 <p>3.端末を使って手動で「pulseaudio –start」でPulseAudioを起動させ、「pulseaudio –kill」でPulseAudioを切ることができ、spwanが起きません。</p>
 </div>
 <div class="section" id="ubuntu-14-04">
-<h2><span class="section-number">1.71. </span>Ubuntu 14.04にゲームエミュレーターをインストールする<a class="headerlink" href="#ubuntu-14-04" title="Permalink to this headline">¶</a></h2>
+<h2>1.71. Ubuntu 14.04にゲームエミュレーターをインストールする<a class="headerlink" href="#ubuntu-14-04" title="Permalink to this headline">¶</a></h2>
 <p>◇Wii/ゲームキューブ(Dolphin):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo add-apt-repository ppa:glennric/dolphin-emu
 $ sudo apt-get update
@@ -1607,7 +1605,7 @@ $ sudo apt-get install pcsx2
 </div>
 </div>
 <div class="section" id="ubuntu-14-04-12-04-ltsnginx-php-fpm">
-<h2><span class="section-number">1.72. </span>Ubuntu 14.04/12.04 LTSにnginx＋PHP FPMをインストール<a class="headerlink" href="#ubuntu-14-04-12-04-ltsnginx-php-fpm" title="Permalink to this headline">¶</a></h2>
+<h2>1.72. Ubuntu 14.04/12.04 LTSにnginx＋PHP FPMをインストール<a class="headerlink" href="#ubuntu-14-04-12-04-ltsnginx-php-fpm" title="Permalink to this headline">¶</a></h2>
 <p>WebサーバのApache2を使う代わりに、nginxを使うことが出来ます。nginxでPHPを使用する場合にはPHP FPMが必要になります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install python-software-properties
 $sudo add-apt-repository ppa:nginx/stable
@@ -1647,14 +1645,14 @@ $sudo service nginx reload
 </div>
 </div>
 <div class="section" id="gzipsquashfs">
-<h2><span class="section-number">1.73. </span>Gzip以外でSquashFSを使う<a class="headerlink" href="#gzipsquashfs" title="Permalink to this headline">¶</a></h2>
+<h2>1.73. Gzip以外でSquashFSを使う<a class="headerlink" href="#gzipsquashfs" title="Permalink to this headline">¶</a></h2>
 <p>SquashFSは読み込み専用のファイルシステムの一種です。
 デフォルトでは圧縮プログラムにGzipが使われており、デフォルトの状態でも高圧縮が出来る仕掛けになっています。Ubuntu 14.04 LTS/12.04 LTSには、Squash Tools 4.2が搭載されており、XZやLZOといった圧縮プログラムを利用出来ます。また、Squash Tools 4.3のソースコードからビルドを行なうことでLZ4圧縮を使用することも可能です。
 XZ圧縮を行なうことでGzip圧縮よりもさらにファイル容量を小さくすることが出来ます。 mksquashコマンドを以下のように使うとXZ圧縮を使えます。</p>
 <p><a class="reference external" href="http://techoverflow.net/blog/2013/01/11/create-highly-compressed-squashfs-from-folder/">http://techoverflow.net/blog/2013/01/11/create-highly-compressed-squashfs-from-folder/</a></p>
-<dl class="simple">
-<dt>::</dt><dd><p>$mksquashfs [source folder] [SquashFS target file] -b 1048576 -comp xz -Xdict-size 100%</p>
-</dd>
+<dl class="docutils">
+<dt>::</dt>
+<dd>$mksquashfs [source folder] [SquashFS target file] -b 1048576 -comp xz -Xdict-size 100%</dd>
 </dl>
 <p>出来上がったファイルのマウント方法は以下のコマンドを使います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$mount -o loop -t squashfs [SquashFS file] [folder you want to mount it in]
@@ -1666,32 +1664,32 @@ XZ圧縮を行なうことでGzip圧縮よりもさらにファイル容量を�
 </div>
 </div>
 <div class="section" id="portablelinuxapps">
-<h2><span class="section-number">1.74. </span>ワンクリックで起動出来るPortableLinuxAppsで公開されているアプリケーション<a class="headerlink" href="#portablelinuxapps" title="Permalink to this headline">¶</a></h2>
+<h2>1.74. ワンクリックで起動出来るPortableLinuxAppsで公開されているアプリケーション<a class="headerlink" href="#portablelinuxapps" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.portablelinuxapps.org/">http://www.portablelinuxapps.org/</a></p>
 <p>PortableLinuxAppsは、UbuntuやCent OSやRHELなどのLinuxディストリビューションでワンクリックで使うことが出来るアプリケーションです。Windowsでは、USBメモリに入れて持ち運びが出来るポータブルアプリケーションと呼ばれる物がありますが、PortableLinuxAppsで公開されているアプリケーションはそのような類の物です。各ディストリビューションのインストール方法を使用すると、多くの依存関係のあるソフトウェアがまとめてインストールされてしまいます。</p>
 <p>PortableLinuxAppsのアプリを使用すると、余計なアプリがインストールされることがありません。
 また、USBメモリに入れておくとメインシステムの外部記憶装置の容量が圧迫されることから解放されるという利点があります。</p>
 </div>
 <div class="section" id="ubuntuubuntuupdates-org">
-<h2><span class="section-number">1.75. </span>Ubuntuを大幅に強化したい時に役に立つUbuntuUpdates.org<a class="headerlink" href="#ubuntuubuntuupdates-org" title="Permalink to this headline">¶</a></h2>
+<h2>1.75. Ubuntuを大幅に強化したい時に役に立つUbuntuUpdates.org<a class="headerlink" href="#ubuntuubuntuupdates-org" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.ubuntuupdates.org/ppas">http://www.ubuntuupdates.org/ppas</a></p>
 <p>Ubuntuの主要なアプリケーションを最新のLinux環境に近づける為に使うと役に立つPPAが集まっているサイトです。 特にUbuntu 12.04 LTSはPPAを使うと、Linuxカーネル3.16やPython 3.4やLLVM 3.4やPHP 5.5などの最新のバージョンが使えるようになります。</p>
 </div>
 <div class="section" id="id8">
-<h2><span class="section-number">1.76. </span>Ubuntuのアプリケーションのバージョンを固定する<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2>1.76. Ubuntuのアプリケーションのバージョンを固定する<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>UbuntuはAPTなどでアップデートをすると基本的に最新のバージョンが入るようになっています。しかし、場合によっては旧バージョンの方が使いやすかったり、安定していたりするケースは多々あります。
 その為、アップデートをしたくないという場合には、バージョンを固定するのが有効な手段です。</p>
 <p>Synapticパッケージマネージャーを起動し、バージョンを固定したいアプリケーションを選択し、メニューの「パッケージ」⇛「バージョンを固定」を選択すると、バージョン固定が可能になります。</p>
 </div>
 <div class="section" id="nautilus-dropboxdropbox">
-<h2><span class="section-number">1.77. </span>nautilus-dropboxを使わない安定したDropboxのインストール方法<a class="headerlink" href="#nautilus-dropboxdropbox" title="Permalink to this headline">¶</a></h2>
+<h2>1.77. nautilus-dropboxを使わない安定したDropboxのインストール方法<a class="headerlink" href="#nautilus-dropboxdropbox" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://www.dropbox.com/install-linux">https://www.dropbox.com/install-linux</a></p>
 <p>UbuntuなどのLinuxディストリビューションにDropboxのクライアントを導入する場合、APTなどのパッケージ管理ソフトウェアなどを使ってインストールを行いますが、環境によってはエラーが出ます。
 より安定してインストールするには、コマンドラインで直接クライアントをダウンロードして起動させることです。</p>
 <p>自動起動を確実に行いたい場合には、デスクトップ環境の自動設定用のフォルダ（.config/autostartなど）に「dropbox.desktop」というファイルを作り、「Exec=/home/(user)/.dropbox-dist/dropboxd」（(user)はユーザー名)の一文を書いておいて、再ログインすると出来るようになります。</p>
 </div>
 <div class="section" id="kvm">
-<h2><span class="section-number">1.78. </span>KVMで音を鳴らす<a class="headerlink" href="#kvm" title="Permalink to this headline">¶</a></h2>
+<h2>1.78. KVMで音を鳴らす<a class="headerlink" href="#kvm" title="Permalink to this headline">¶</a></h2>
 <p>Linuxに標準で搭載されている仮想化システムKVMではSpiceを使って音を鳴らすことが可能です。</p>
 <p>Spiceをインストールする:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install qemu-kvm-spice
@@ -1705,7 +1703,7 @@ $sudo apt-get install python-spice-client-gtk
 </div>
 </div>
 <div class="section" id="ubuntuskydrivegoogle-drive">
-<h2><span class="section-number">1.79. </span>Ubuntu系ディストリビューションでSkyDriveやGoogle Driveなどをネットワークドライブにする方法<a class="headerlink" href="#ubuntuskydrivegoogle-drive" title="Permalink to this headline">¶</a></h2>
+<h2>1.79. Ubuntu系ディストリビューションでSkyDriveやGoogle Driveなどをネットワークドライブにする方法<a class="headerlink" href="#ubuntuskydrivegoogle-drive" title="Permalink to this headline">¶</a></h2>
 <p>1.http://otixo.com/でアカウントを作成する</p>
 <p>2.otixo.comにSkyDriveなどのオンラインストレージを登録する</p>
 <p>3.davfs2をインストールする:</p>
@@ -1722,7 +1720,7 @@ $sudo apt-get install python-spice-client-gtk
 これでオンラインストレージをネットワークドライブとして使える</p>
 </div>
 <div class="section" id="macopix">
-<h2><span class="section-number">1.80. </span>デスクトップマスコット「MaCoPix」<a class="headerlink" href="#macopix" title="Permalink to this headline">¶</a></h2>
+<h2>1.80. デスクトップマスコット「MaCoPix」<a class="headerlink" href="#macopix" title="Permalink to this headline">¶</a></h2>
 <p>MaCoPixはLinuxなどで動作するデスクトップマスコットエンジンです。UbuntuではAPTでインストール出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo su
 #apt-get install macopix-gtk2
@@ -1731,7 +1729,7 @@ $sudo apt-get install python-spice-client-gtk
 <p>起動方法はターミナルで「macopix ファイル名」で起動出来ます。</p>
 </div>
 <div class="section" id="openjtalk">
-<h2><span class="section-number">1.81. </span>OpenJTalk<a class="headerlink" href="#openjtalk" title="Permalink to this headline">¶</a></h2>
+<h2>1.81. OpenJTalk<a class="headerlink" href="#openjtalk" title="Permalink to this headline">¶</a></h2>
 <p>OpenJtalkは、テキストデータなどを解析して読み上げるソフトウェアです。音声解析ソフトウェアと併用すると、コンピュータと「会話」することが出来るようになります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install open-jtalk open-jtalk-mecab-naist-jdic htsengine libhtsengine-dev hts-voice-nitech-jp-atr503-m001
 </pre></div>
@@ -1759,7 +1757,7 @@ $sudo cp -R MMDAgent_Example-1.1/Voice/* /usr/share/hts-voice/
 </div>
 </div>
 <div class="section" id="xubuntu-12-04">
-<h2><span class="section-number">1.82. </span>Xubuntu 12.04以降でシステム効果音を鳴らす<a class="headerlink" href="#xubuntu-12-04" title="Permalink to this headline">¶</a></h2>
+<h2>1.82. Xubuntu 12.04以降でシステム効果音を鳴らす<a class="headerlink" href="#xubuntu-12-04" title="Permalink to this headline">¶</a></h2>
 <p>Xubuntu 12.04以降ではデフォルトでシステム効果音が鳴らないように設定されています。</p>
 <p>Xubuntuの場合はシステムサウンドをONにしてから、gnome-session-canberraをSynapticパッケージマネージャーなどから導入します。</p>
 <p>・デスクトップ環境がXfceの場合は「設定マネージャー」→「設定エディター」→「xsettings」→「EnableEventSounds」にチェックを入れると、再ログオン時に音が鳴るようになります。また、SoundThemeNameでサウンドテーマを変更することが出来ます。:</p>
@@ -1781,7 +1779,7 @@ $sudo cp -R MMDAgent_Example-1.1/Voice/* /usr/share/hts-voice/
 <p>この設定は「~/.config/autostart」に保存されています。</p>
 </div>
 <div class="section" id="androidubuntu-12-04">
-<h2><span class="section-number">1.83. </span>リモートデスクトップを使ってAndroidタブレットにUbuntu 12.04のデスクトップを表示させる<a class="headerlink" href="#androidubuntu-12-04" title="Permalink to this headline">¶</a></h2>
+<h2>1.83. リモートデスクトップを使ってAndroidタブレットにUbuntu 12.04のデスクトップを表示させる<a class="headerlink" href="#androidubuntu-12-04" title="Permalink to this headline">¶</a></h2>
 <p>リモートデスクトップを使ってAndroidタブレットにUbuntu 12.04のデスクトップを表示させることが出来ます。これはAndoridoタブレットを仮想的なディスプレイとして利用出来ることを指しています。</p>
 <p>1.Google Playで「VNC」で検索して、AndroidタブレットにVNCアプリをインストールし、接続したいPCのユーザー名・パスワード・マシンのIPアドレス・ポートなどの必要な情報を登録しておきます。</p>
 <p>2.Wi-Fi接続出来るUbuntu 12.04マシンにAPTなどで「X11VNC」というGUIでVNC設定が出来るソフトウェアをインストールします。X11VNCを起動させて必要な情報を入力します。Sharedのチェックを入れると多人数でリモートデスクトップが利用出来るようになります。</p>
@@ -1831,29 +1829,29 @@ $ x11vnc -storepasswd
 <p>設定→デスクトップセッションの設定で「x11vnc自動起動」にチェックが入っているのを確認</p>
 </div>
 <div class="section" id="vo3-avi">
-<h2><span class="section-number">1.84. </span>音声コーデック「VO3+」を使ったAVI動画の修正方法<a class="headerlink" href="#vo3-avi" title="Permalink to this headline">¶</a></h2>
+<h2>1.84. 音声コーデック「VO3+」を使ったAVI動画の修正方法<a class="headerlink" href="#vo3-avi" title="Permalink to this headline">¶</a></h2>
 <p>Ogg Vorbis系の音声コーデック「VO3+」を使っている動画は、動画プレーヤー「VLC」などでは再生出来ません。コーデックを入れれば再生できますが、MP3やAACに変換した方が使い勝手がいいでしょう。</p>
 <p>1.Avidemuxで読み込む。音声の再生は出来ないが、音声の保存は出来るので、「音声」→「保存」で拡張子を「.ogg」にして音声を保存します。</p>
 <p>2.音声編集ソフトウェア「Audacity」で1で保存した音声を読み込み、「ファイル」→「書き出し」でWAVE（拡張子wav)ファイルとして保存します。</p>
 <p>3.Avidemuxで1の映像を読み込み、「音声」→「主トラック」で3のWAVEファイルを読み込み、映像コーデックは「コピー」、音声コーデックはCBRでMP3、AACなどに設定して、音声部分だけエンコードして完了です。これでVLCでも音声が聞けるようになります。</p>
 </div>
 <div class="section" id="gstreamerrequired-gstreamer-element-audioconvert">
-<h2><span class="section-number">1.85. </span>Gstreamerを使ったアプリケーションを起動させた時に「required: GStreamer element audioconvert」というエラーが出た時の対処法<a class="headerlink" href="#gstreamerrequired-gstreamer-element-audioconvert" title="Permalink to this headline">¶</a></h2>
+<h2>1.85. Gstreamerを使ったアプリケーションを起動させた時に「required: GStreamer element audioconvert」というエラーが出た時の対処法<a class="headerlink" href="#gstreamerrequired-gstreamer-element-audioconvert" title="Permalink to this headline">¶</a></h2>
 <p>Gstreamerを使ったアプリケーションを起動させた時に「required: GStreamer element audioconvert」というエラーが出ることがあります。 これを解消するには~/.gstreamerフォルダを削除して、Gstreamerを使ったアプリケーションを再起動させるだけです。</p>
 </div>
 <div class="section" id="upstart">
-<h2><span class="section-number">1.86. </span>Upstartの起動速度が遅くなる原因となるモジュール、サービス<a class="headerlink" href="#upstart" title="Permalink to this headline">¶</a></h2>
+<h2>1.86. Upstartの起動速度が遅くなる原因となるモジュール、サービス<a class="headerlink" href="#upstart" title="Permalink to this headline">¶</a></h2>
 <p>1.VMWare Player - VMWare Playerの起動に必要なモジュールをOS起動段階で読み込むので、OSの起動が遅くなる。約10秒ほど遅くなる。</p>
 <p>2.Winbind - OS起動時に読み込む。約数秒遅くなる。</p>
 <p>3.cups - OS起動時に読み込む。約数秒遅くなる。</p>
 <p>4.bluetooth関連 - OS起動時に読み込む。約数秒遅くなる。</p>
 </div>
 <div class="section" id="id9">
-<h2><span class="section-number">1.87. </span>Upstartの起動スクリプトを並列処理する<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<h2>1.87. Upstartの起動スクリプトを並列処理する<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>/etc/init.d/rcの「CONCURRENCY=makefile」を「CONCURRENCY=shell」に変更。OSの起動速度が速くなる。</p>
 </div>
 <div class="section" id="id10">
-<h2><span class="section-number">1.88. </span>自動起動するデーモンを切る<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<h2>1.88. 自動起動するデーモンを切る<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <p>sysv-rc-confを使う場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#sudo apt-get install sysv-rc-conf</span>
 <span class="c1">#sudo sysv-rc-conf</span>
@@ -1868,7 +1866,7 @@ $ x11vnc -storepasswd
 <p>/etc/sysctl.confに「vm.swappiness = 0」と書くと、メモリを使い切ってから、スワップを使う。</p>
 </div>
 <div class="section" id="wine1-4windowslivecd">
-<h2><span class="section-number">1.89. </span>Wine1.4を使ってWindows環境入りのLiveCDをつくる<a class="headerlink" href="#wine1-4windowslivecd" title="Permalink to this headline">¶</a></h2>
+<h2>1.89. Wine1.4を使ってWindows環境入りのLiveCDをつくる<a class="headerlink" href="#wine1-4windowslivecd" title="Permalink to this headline">¶</a></h2>
 <p>Windows APIレイヤー「Wine1.4」を使って、Windows環境を構築し、それが動作するLiveCDを作成します。</p>
 <p>1.UbuntuをHDDにインストール。</p>
 <p>2.Ubuntu Builder(<a class="reference external" href="http://code.google.com/p/ubuntu-builder/">http://code.google.com/p/ubuntu-builder/</a>)をインストール</p>
@@ -1886,32 +1884,32 @@ Wine1.4はDirectX 9が無くてもアプリケーションが動作するほど�
 動作するWindowsアプリケーションを組み合わせて「擬似Windows LiveCD」を作ってみてもいいのではないでしょうか。</p>
 </div>
 <div class="section" id="compiz-fusion-iconxmonad">
-<h2><span class="section-number">1.90. </span>Compiz Fusion IconでXmonadと他のウィンドウマネージャを切り替える<a class="headerlink" href="#compiz-fusion-iconxmonad" title="Permalink to this headline">¶</a></h2>
+<h2>1.90. Compiz Fusion IconでXmonadと他のウィンドウマネージャを切り替える<a class="headerlink" href="#compiz-fusion-iconxmonad" title="Permalink to this headline">¶</a></h2>
 <p>GPUで多彩なエフェクトを使うことが出来るウィンドウマネージャ「Compiz」にはパネルのトレイに常駐させることが出来る設定ソフトウェア「Compiz Fusion Icon」があります。これはUbuntuの場合、Synapticパッケージマネージャーなどで簡単にインストール出来ます。Comipz Fusion Iconには、Compiz以外のウィンドウマネージャに切り替える機能があります。これを使えば、Xmonadの環境からCompizなどのウィンドウマネージャへ切り替えることができます。</p>
 <p>1.Xmonadを終了させる(Mod(デフォルトではAltキー）+Shift+q)</p>
 <p>2.パネルのシステムトレイにあるCompiz Fusion Iconを右クリックして、「Select Window Manager」で切り替えたいウィンドウマネージャに切り替えます。Compizを使う場合、xcompmgr及びtranssetを使わないでください。</p>
 <p>3.Xmonadに戻したい場合は、現在使っているウィンドウマネージャをkillした後にターミナルで「xmonad &amp;」でXmonadを起動させます。以下のようなスクリプトを書いておくと便利です。</p>
-<dl class="simple">
-<dt>◇xmonad-start.py::</dt><dd><p>#!/usr/bin/env python
+<dl class="docutils">
+<dt>◇xmonad-start.py::</dt>
+<dd>#!/usr/bin/env python
 #-<em>- coding:utf-8 -</em>-
 import os
 import sys
 desktop_session = sys.argv[1]
 os.system(“skill -KILL %s” % (desktop_session))
-os.system(“xmonad &amp;”)</p>
-</dd>
+os.system(“xmonad &amp;”)</dd>
 </dl>
 <p>使い方はターミナルで「python xmonad-start.py 現在起動しているウィンドウマネージャ名」です。</p>
 </div>
 <div class="section" id="zipcomix">
-<h2><span class="section-number">1.91. </span>zipで固めた画像を閲覧できるソフトウェア「Comix」<a class="headerlink" href="#zipcomix" title="Permalink to this headline">¶</a></h2>
+<h2>1.91. zipで固めた画像を閲覧できるソフトウェア「Comix」<a class="headerlink" href="#zipcomix" title="Permalink to this headline">¶</a></h2>
 <p>本来は漫画を読むためのコミックビューアですが、zipで固めた画像を閲覧することも出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install comix
 </pre></div>
 </div>
 </div>
 <div class="section" id="id11">
-<h2><span class="section-number">1.92. </span>Ubuntuでの動画キャプチャー<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<h2>1.92. Ubuntuでの動画キャプチャー<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuでも動画キャプチャーを行うことができます。「recordMyDesktop」というソフトウェアをインストールします。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install recordmydesktop
 </pre></div>
@@ -1919,7 +1917,7 @@ os.system(“xmonad &amp;”)</p>
 <p>recordMyDesktopは、メニューには「Desctop recorder」という名前で登録されています。操作は簡単で設定で詳しい設定をすることが出来ます。「ウィンドウ選択」ボタンを押して録画したいウィンドウをクリックすると、そのウィンドウで動くソフトウェアの映像だけを記録することができます。録画の開始は「録音（なぜか日本語表示がそうなっている）」ボタンをクリックします。録画の停止はパネル上に表示されている赤い四角ボタンをクリックするとメニューが表れ、ここで出来ます。映像コーデック、音声コーデック、コンテナはそれぞれOGV,OGG,OVMとなっています。ライン端子などを使わずにPCの内部音源だけで録音するには、「サウンドの設定」→「入力」タブでサウンドカードの設定を出力だけにする必要があります。</p>
 </div>
 <div class="section" id="livecd">
-<h2><span class="section-number">1.93. </span>LiveCDで書き込み機能を有効にする<a class="headerlink" href="#livecd" title="Permalink to this headline">¶</a></h2>
+<h2>1.93. LiveCDで書き込み機能を有効にする<a class="headerlink" href="#livecd" title="Permalink to this headline">¶</a></h2>
 <p>LiveCDで書き込み機能を有効にするにはPesistence機能を有効にします。</p>
 <p>1.ext2/3/4でパーティションをフォーマットする</p>
 <p>2.ラベルを付けます。Persistence機能はLinuxの構成で書き込んだ部分を差分として記憶します。この書き込みが出来る領域のパーティションのラベルを「casper-rw」と書きます。homeディレクトリを別に記憶したい場合はラベルに「home-rw」と記述します。つまり、homeディレクトリを分けたい場合、Persistent機能で使う領域はcasper-rwとhome-rwの2つが必要になります。</p>
@@ -1933,14 +1931,14 @@ os.system(“xmonad &amp;”)</p>
 </div>
 </div>
 <div class="section" id="id12">
-<h2><span class="section-number">1.94. </span>メニューからアプリケーションが起動できない場合の対処法<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<h2>1.94. メニューからアプリケーションが起動できない場合の対処法<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <p>Synapticパッケージマネージャーなどのように管理者権限から起動させるタイプのアプリケーションはメニューから起動出来ない場合があります。その場合はhomeディレクトリにある「.gconf/apps/gksu/%gconf.xml」をテキストエディタで開き、以下のように変更してください。これでgksuをsudoモードで動かすことが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">entry</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sudo-mode&quot;</span> <span class="n">mtime</span><span class="o">=</span><span class="s2">&quot;1298474650&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bool&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ramdisk">
-<h2><span class="section-number">1.95. </span>RAMDISK設定<a class="headerlink" href="#ramdisk" title="Permalink to this headline">¶</a></h2>
+<h2>1.95. RAMDISK設定<a class="headerlink" href="#ramdisk" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo su
 #gedit /etc/fstab
 </pre></div>
@@ -1948,18 +1946,18 @@ os.system(“xmonad &amp;”)</p>
 <p>fstabに「tmpfs /tmp tmpfs default 0 0」を追記して、システムを再起動すると使えるようになります。</p>
 </div>
 <div class="section" id="hdd">
-<h2><span class="section-number">1.96. </span>HDD修復方法<a class="headerlink" href="#hdd" title="Permalink to this headline">¶</a></h2>
+<h2>1.96. HDD修復方法<a class="headerlink" href="#hdd" title="Permalink to this headline">¶</a></h2>
 <p>LiveCDを起動し、ターミナルで以下のコマンドを入力します。ここではファイルシステムをext4、デバイス名を/dev/sda2とします。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#fsck.ext4 -y /dev/sda2</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ubuntu-10-04-mtu">
-<h2><span class="section-number">1.97. </span>Ubuntu 10.04+ブロードバンドで回線速度が遅いと感じたら、MTUを調整<a class="headerlink" href="#ubuntu-10-04-mtu" title="Permalink to this headline">¶</a></h2>
+<h2>1.97. Ubuntu 10.04+ブロードバンドで回線速度が遅いと感じたら、MTUを調整<a class="headerlink" href="#ubuntu-10-04-mtu" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu 10.04をインストールして、いざネットを使ったときに遅く感じることがないでしょうか？これはネットワーク接続のMTUの設定が自動になっているからです。これを回線に合わせて変更しておきます。フレッツ光プレミアムの場合は「1438」、フレッツADSLを使っている場合は「1454」にしておくといいでしょう。ちなみにRWINはLinuxの場合、自動で調整してくれます。</p>
 </div>
 <div class="section" id="ipv6">
-<h2><span class="section-number">1.98. </span>IPv6を無効にする方法<a class="headerlink" href="#ipv6" title="Permalink to this headline">¶</a></h2>
+<h2>1.98. IPv6を無効にする方法<a class="headerlink" href="#ipv6" title="Permalink to this headline">¶</a></h2>
 <p>IPv6を無効にすると、無線LANなどが安定することがあります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo gedit /etc/modprobe.d/aliases
 </pre></div>
@@ -1970,7 +1968,7 @@ os.system(“xmonad &amp;”)</p>
 </div>
 </div>
 <div class="section" id="id13">
-<h2><span class="section-number">1.99. </span>パッケージキャッシュを消す<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<h2>1.99. パッケージキャッシュを消す<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <p>パッケージキャッシュを消すと、ディスクスペースを増やすことが出来ます。アプリケーションをインストールした後は不要になるので定期的に消しておきましょう。</p>
 <p>◇パッケージキャッシュ容量を確認:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$du -sh /var/cache/apt/archives/
@@ -1982,7 +1980,7 @@ os.system(“xmonad &amp;”)</p>
 </div>
 </div>
 <div class="section" id="wicd">
-<h2><span class="section-number">1.100. </span>ネットワークマネージャーをWicdに変更<a class="headerlink" href="#wicd" title="Permalink to this headline">¶</a></h2>
+<h2>1.100. ネットワークマネージャーをWicdに変更<a class="headerlink" href="#wicd" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuのウィンドウマネージャーの中にはGNOMEのネットワーク設定を引き継がないものがあるので、安定しているWicdに変更するといいでしょう。</p>
 <p>1.APTなどでWicdをインストール:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install wicd
@@ -1995,53 +1993,51 @@ os.system(“xmonad &amp;”)</p>
 <p>3.再ログインする</p>
 </div>
 <div class="section" id="id14">
-<h2><span class="section-number">1.101. </span>グラフィックドライバの情報を得る<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<h2>1.101. グラフィックドライバの情報を得る<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glxinfo</span> <span class="o">|</span><span class="n">grep</span> <span class="n">vendor</span>
 <span class="n">dmesg</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">drm</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id15">
-<h2><span class="section-number">1.102. </span>グラフィックドライバをカーネルに入っているオープンソースドライバに戻す<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<h2>1.102. グラフィックドライバをカーネルに入っているオープンソースドライバに戻す<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <p>1.xorg.conf を削除:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo rm /etc/X11/xorg.conf
 </pre></div>
 </div>
 <p>2.オープンソースの選択肢（/usr/lib/mesa/ld.so.conf）を選択</p>
 <blockquote>
-<div><p>$sudo update-alternatives –config gl_conf</p>
-</div></blockquote>
+<div>$sudo update-alternatives –config gl_conf</div></blockquote>
 <p>3.ld キャッシュと initramfs を更新</p>
 <blockquote>
-<div><p>$sudo ldconfig
-$sudo update-initramfs -u</p>
-</div></blockquote>
+<div>$sudo ldconfig
+$sudo update-initramfs -u</div></blockquote>
 <p>4.コンピュータを再起動</p>
 </div>
 <div class="section" id="mesa">
-<h2><span class="section-number">1.103. </span>MESAドライバをインストール<a class="headerlink" href="#mesa" title="Permalink to this headline">¶</a></h2>
+<h2>1.103. MESAドライバをインストール<a class="headerlink" href="#mesa" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install --reinstall libgl1-mesa-glx libgl1-mesa-dri
 </pre></div>
 </div>
 </div>
 <div class="section" id="fglrx">
-<h2><span class="section-number">1.104. </span>fglrxをアンインストール<a class="headerlink" href="#fglrx" title="Permalink to this headline">¶</a></h2>
+<h2>1.104. fglrxをアンインストール<a class="headerlink" href="#fglrx" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get remove --purge xorg-driver-fglrx
 </pre></div>
 </div>
 </div>
 <div class="section" id="id16">
-<h2><span class="section-number">1.105. </span>ウィンドウが消えた場合の対処法<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<h2>1.105. ウィンドウが消えた場合の対処法<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <p>GPUドライバを入れ替えた場合、再起動時にウィンドウマネージャーが起動せずにウィンドウが表示されないことがあります。</p>
 <p>これはウィンドウマネージャーが起動していないだけなので、端末でウィンドウマネージャーを起動すれば直ります。例えば、Openboxを使っている場合は「openbox」と端末に入力します。</p>
 <p>起動時にウィンドウマネージャーを確実に起動させたい場合は自動起動に登録しておくといいでしょう。</p>
 </div>
 <div class="section" id="gnome">
-<h2><span class="section-number">1.106. </span>「GNOMEの電源管理」関連でログイン出来ない場合の対処方法<a class="headerlink" href="#gnome" title="Permalink to this headline">¶</a></h2>
+<h2>1.106. 「GNOMEの電源管理」関連でログイン出来ない場合の対処方法<a class="headerlink" href="#gnome" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuを起動させ、ログインしようとすると右上に「GNOMEの電源管理の設定のデフォルトが正しくインストールされていません。あなたのコンピュータの管理者にお問い合わせください」というメッセージが出てログイン出来ないことがあります。これはHDDの容量が足りなくて、GNOMEの電源管理の設定ファイルをインストール出来ないことが原因で起こります。つまり、システムHDDの容量を増やしてあげればいいのです。 方法はいくつかありますが、Live CDを使って、任意のファイルを削除して容量を増やしてください。再起動させれば、通常通りにUbuntuのログインが出来るようになっています。</p>
 </div>
 <div class="section" id="ubuntuflex3python">
-<h2><span class="section-number">1.107. </span>UbuntuでFlex3のパスやPythonのモジュールのパスを通す<a class="headerlink" href="#ubuntuflex3python" title="Permalink to this headline">¶</a></h2>
+<h2>1.107. UbuntuでFlex3のパスやPythonのモジュールのパスを通す<a class="headerlink" href="#ubuntuflex3python" title="Permalink to this headline">¶</a></h2>
 <p>Windowsでは、スクリプト言語やライブラリ、フレームワークなどのパスを通すには「システムのプロパティ」の環境変数のPathの項目で出来ますが、Ubuntuではより簡単にこれらのパスを通すことが出来ます。 「home」フォルダのファイル表示をすべて表示出来るように設定（「表示」→「隠しファイルを表示する」にチェックを入れる）し、「.profile」というファイルがあるので任意のテキストエディタで表示します。以下をファイルに追加して保存します。</p>
 <p>◇環境変数にパスを通す方法</p>
 <p>・Flex3の場合（ダウンロードしたFlex3のフォルダのある場所を指定してください）:</p>
@@ -2055,11 +2051,11 @@ $sudo update-initramfs -u</p>
 <p>再ログインするとパスが通っています。</p>
 </div>
 <div class="section" id="thunar">
-<h2><span class="section-number">1.108. </span>Thunarのコンテキストメニューに各種アクションを追加する<a class="headerlink" href="#thunar" title="Permalink to this headline">¶</a></h2>
+<h2>1.108. Thunarのコンテキストメニューに各種アクションを追加する<a class="headerlink" href="#thunar" title="Permalink to this headline">¶</a></h2>
 <p>Thunarは軽量化のために機能を必要最低限に抑えています。しかし、Thunarには「アクション」と呼ばれるコンテキストメニューの機能を追加する仕組みがあります。設定の仕方はGNOMEのメインメニューと同じで名前とコマンドを入力します。Thunarのメニューバーの「アクション設定」、あるいはhomeフォルダにある「.config/Thunar/uca.xml」で機能を追加することが出来ます。</p>
 </div>
 <div class="section" id="thunarntfs">
-<h2><span class="section-number">1.109. </span>Thunarで自動的にNTFSのドライブをマウントする方法<a class="headerlink" href="#thunarntfs" title="Permalink to this headline">¶</a></h2>
+<h2>1.109. Thunarで自動的にNTFSのドライブをマウントする方法<a class="headerlink" href="#thunarntfs" title="Permalink to this headline">¶</a></h2>
 <p>Nautilusは半自動的にNTFSのドライブをマウント出来ますが、Thunarはデフォルトでは出来ません。そこで、fstabにマウントしたいドライブを設定して、Ubuntu起動時にマウントさせるようにします。 ドライブの構成を知りたい場合は以下のコマンドを実行してください。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo fdisk -l
 </pre></div>
@@ -2075,11 +2071,11 @@ $sudo update-initramfs -u</p>
 <p>fstabを閉じて、端末で「sudo mount -a」でドライブをマウントさせて、エラーが出なければ成功しています。 homeフォルダにあるdisk_sda3フォルダの中にマウントさせたsda3の中身が表示されます。以後再起動させてもThunarでsda3のドライブの読み書きが出来ます。</p>
 </div>
 <div class="section" id="dpkg-post-installation-script-1">
-<h2><span class="section-number">1.110. </span>dpkg: サブプロセス post-installation script はエラー終了ステータス 1 を返しました」からの復帰方法<a class="headerlink" href="#dpkg-post-installation-script-1" title="Permalink to this headline">¶</a></h2>
+<h2>1.110. dpkg: サブプロセス post-installation script はエラー終了ステータス 1 を返しました」からの復帰方法<a class="headerlink" href="#dpkg-post-installation-script-1" title="Permalink to this headline">¶</a></h2>
 <p>「/var/lib/dpkg/info」ディレクトリの*.postinst、<em>.preinst、</em>.prerm、<em>.postrmを削除すると復帰出来ます。</em>.deb ファイルを消す必要はありません 。また、UCKなどのリマスターツールでアプリケーションの更新を行うときに、この作業を行わないとLive CDのビルドに失敗したり、HDDインストール時にエラーが出る原因になります。</p>
 </div>
 <div class="section" id="ubuntu-10-04-lts">
-<h2><span class="section-number">1.111. </span>Ubuntu 10.04 LTSにおけるログイン画面の背景画像変更<a class="headerlink" href="#ubuntu-10-04-lts" title="Permalink to this headline">¶</a></h2>
+<h2>1.111. Ubuntu 10.04 LTSにおけるログイン画面の背景画像変更<a class="headerlink" href="#ubuntu-10-04-lts" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo cp /usr/share/applications/gnome-appearance-properties.desktop /usr/share/gdm/autostart/LoginWindow
 </pre></div>
 </div>
@@ -2089,7 +2085,7 @@ $sudo update-initramfs -u</p>
 </div>
 </div>
 <div class="section" id="id17">
-<h2><span class="section-number">1.112. </span>Ubuntu 10.04 LTSのスプラッシュ画像を変更する<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<h2>1.112. Ubuntu 10.04 LTSのスプラッシュ画像を変更する<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu 10.04 LTSからスプラッシュ画面の変更アプリケーションが「Plymouth」に変更されています。画像を変更するだけなら、以下の箇所を変更するだけです。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">plymouth</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="n">logo</span><span class="o">.</span><span class="n">png</span>
 </pre></div>
@@ -2097,7 +2093,7 @@ $sudo update-initramfs -u</p>
 <p>/lib/plymouth/themes以下の各テーマのフォルダ内にある「<em>_logo.png」あるいは「</em>-logo.png」</p>
 </div>
 <div class="section" id="plymouth">
-<h2><span class="section-number">1.113. </span>Plymouthでオリジナルスプラッシュテーマを作成する<a class="headerlink" href="#plymouth" title="Permalink to this headline">¶</a></h2>
+<h2>1.113. Plymouthでオリジナルスプラッシュテーマを作成する<a class="headerlink" href="#plymouth" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuではplymouthに加え、plymouth-x11もインストールします。</p>
 <p>1.ベースになるテーマをダウンロード:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$wget -O /tmp/mytheme.tar.gz http://brej.org/blog/wp-content/uploads/2009/12/mytheme.tar.gz
@@ -2122,7 +2118,7 @@ $sudo update-alternatives --install /lib/plymouth/themes/default.plymouth defaul
 <p><a class="reference external" href="https://wiki.ubuntu.com/Artwork/Documentation/Plymouth">https://wiki.ubuntu.com/Artwork/Documentation/Plymouth</a></p>
 </div>
 <div class="section" id="ubuntu-9-10">
-<h2><span class="section-number">1.114. </span>Ubuntu 9.10のスプラッシュ画面を変更する<a class="headerlink" href="#ubuntu-9-10" title="Permalink to this headline">¶</a></h2>
+<h2>1.114. Ubuntu 9.10のスプラッシュ画面を変更する<a class="headerlink" href="#ubuntu-9-10" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntu 9.10には2種類のスプラッシュ画面があります。一つはGRUB起動後に表示されるアニメーションスプラッシュの「usplash」、もう一つはログイン画面で表示される「xsplash」です。xsplashの変更は簡単で管理者権限で「/usr/share/images/xsplash」の画像を変更するだけです。サイズは決まっているようなので、元からある画像に合わせて作ってください。usplashの方はやや面倒です。作成方法は以下の通りです。</p>
 <p>◇USplash作成方法 1.gcc、libbogl-devをインストール:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install gcc libbogl-dev
@@ -2141,7 +2137,7 @@ $sudo update-alternatives --install /lib/plymouth/themes/default.plymouth defaul
 </pre></div>
 </div>
 <ol class="arabic" start="5">
-<li><p>~/usplash/examplesへ移動:</p>
+<li><p class="first">~/usplash/examplesへ移動:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$cd ~/usplash/examples
 </pre></div>
 </div>
@@ -2170,7 +2166,7 @@ $sudo update-alternatives --install /lib/plymouth/themes/default.plymouth defaul
 <p>9.StartStartUp-Managerで先ほどのeft-thme.soを指定して再起動すると作成したusplashが起動します。</p>
 </div>
 <div class="section" id="id18">
-<h2><span class="section-number">1.115. </span>Ubuntuのパッケージリストの作成と適用<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<h2>1.115. Ubuntuのパッケージリストの作成と適用<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <p>1.パッケージリストを作成します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ dpkg --get-selections &gt; packagelist
 </pre></div>
@@ -2183,12 +2179,12 @@ $sudo update-alternatives --install /lib/plymouth/themes/default.plymouth defaul
 <p>これでクリーンインストールしたときにも楽に以前使っていたアプリケーションをインストール出来ます。</p>
 </div>
 <div class="section" id="id19">
-<h2><span class="section-number">1.116. </span>Ubuntuでキーボードの「半角/全角」キーが動作しなくなった時の対処<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<h2>1.116. Ubuntuでキーボードの「半角/全角」キーが動作しなくなった時の対処<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <p>Ubuntuで設定をいじっていると、たまに「半角/全角」きーが動作しなくなることがあります。その時には以下のように対処すると直ります。
 「設定」→「キーボードの設定」の「レイアウト」タブをクリックし、「レイアウトの選択」で「日本語」以外を削除</p>
 </div>
 <div class="section" id="winem-u-g-e-n">
-<h2><span class="section-number">1.117. </span>Wine上で大量のキャラクターを搭載したM.U.G.E.Nが落ちる際の対処法<a class="headerlink" href="#winem-u-g-e-n" title="Permalink to this headline">¶</a></h2>
+<h2>1.117. Wine上で大量のキャラクターを搭載したM.U.G.E.Nが落ちる際の対処法<a class="headerlink" href="#winem-u-g-e-n" title="Permalink to this headline">¶</a></h2>
 <p>Wine上で大量のキャラクターを搭載したM.U.G.E.Nが落ちる事がありますので、その対処法としては以下のように書き換えます。</p>
 <p>◇/etc/sysctl.conf:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span><span class="o">.</span><span class="n">file</span><span class="o">-</span><span class="nb">max</span> <span class="o">=</span> <span class="mi">204708</span>
@@ -2196,7 +2192,7 @@ $sudo update-alternatives --install /lib/plymouth/themes/default.plymouth defaul
 </div>
 </div>
 <div class="section" id="firefoxsilverlight">
-<h2><span class="section-number">1.118. </span>FirefoxでSilverlightを使う<a class="headerlink" href="#firefoxsilverlight" title="Permalink to this headline">¶</a></h2>
+<h2>1.118. FirefoxでSilverlightを使う<a class="headerlink" href="#firefoxsilverlight" title="Permalink to this headline">¶</a></h2>
 <p>Linuxでは、Silverlightプラグインを使えませんが、特殊なパッチが追加されたWindows APIレイヤー「Wine」である「Wine Staging」であれば、Firefox上でSilverlightを使えるようになります。
 以下の方法があります。</p>
 <p>◇FirefoxにPipelightを導入する</p>
@@ -2215,7 +2211,7 @@ $export WINEARCH=win32 winecfg
 <p>最後の2行は、Wine StagingをデフォルトのWine環境に設定するものです。これを行なう事でLinux版FirefoxをWindows版のFirefoxのように見せる事ができ、DMMでダウンロード購入したコンテンツの再生やダウンロードが出来るようになります。</p>
 </div>
 <div class="section" id="mmd-mmdai-mmdagent">
-<h2><span class="section-number">1.119. </span>MMD/MMDAI/MMDAgentまとめサイト<a class="headerlink" href="#mmd-mmdai-mmdagent" title="Permalink to this headline">¶</a></h2>
+<h2>1.119. MMD/MMDAI/MMDAgentまとめサイト<a class="headerlink" href="#mmd-mmdai-mmdagent" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www6.atwiki.jp/vpvpwiki/pages/187.html">http://www6.atwiki.jp/vpvpwiki/pages/187.html</a></p>
 <p>MMDの使い方、モデルデータ作成用のツールの紹介、PMDファイル・Xファイルなどのリンクなどがまとめられています。</p>
 <p><a class="reference external" href="http://hkrn.github.io/MMDAI/">http://hkrn.github.io/MMDAI/</a></p>
@@ -2230,7 +2226,7 @@ $export WINEARCH=win32 winecfg
 </div>
 </div>
 <div class="section" id="mmdagent">
-<h2><span class="section-number">1.120. </span>MMDAgentを動作させる<a class="headerlink" href="#mmdagent" title="Permalink to this headline">¶</a></h2>
+<h2>1.120. MMDAgentを動作させる<a class="headerlink" href="#mmdagent" title="Permalink to this headline">¶</a></h2>
 <p>MMDAIで動作する3Dモデルを音声で反応させるように動かすことが出来るソフトウェアです。Ubuntu 12.04ではPPAが公開されています。</p>
 <p>1.MMDAgentをインストール:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo su
@@ -2243,7 +2239,7 @@ $export WINEARCH=win32 winecfg
 <p>2.mdfファイルが動作させる3Dモデルの本体であり、これをMMDAgentで立ち上がるように右クリックメニューを設定しておく</p>
 </div>
 <div class="section" id="id20">
-<h2><span class="section-number">1.121. </span>MMDAgentのモデルを初音ミクに変更<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<h2>1.121. MMDAgentのモデルを初音ミクに変更<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <p>MMDAgentのデフォルトの3Dモデルはメイですが、MMDのモデルなどを使うことが出来るので、初音ミクなどのボーカロイドに変更することが可能です。ここではUbuntu 12.04を使った方法を解説します。</p>
 <p><a class="reference external" href="http://sourceforge.net/projects/mmdagent/files/MMDAgent_Example/MMDAgent_Example-1.3.1/MMDAgent_Example-1.3.1.zip/download">http://sourceforge.net/projects/mmdagent/files/MMDAgent_Example/MMDAgent_Example-1.3.1/MMDAgent_Example-1.3.1.zip/download</a> でサンプルスクリプトをダウンロードします。</p>
 <p>このZIPファイルを解凍します。:</p>
@@ -2266,7 +2262,7 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p>MMDAgentを起動させるとMMDモデルに変わっています。</p>
 </div>
 <div class="section" id="mmdai">
-<h2><span class="section-number">1.122. </span>MMDAIを動作させる<a class="headerlink" href="#mmdai" title="Permalink to this headline">¶</a></h2>
+<h2>1.122. MMDAIを動作させる<a class="headerlink" href="#mmdai" title="Permalink to this headline">¶</a></h2>
 <p>MMDAIはボーカロイド初音ミクの3Dモデルを踊らせることが出来るソフトウェア「MMD」のデータを使って、MMDと同じようなことを行うことが出来るソフトウェアです。</p>
 <p>1.http://hkrn.github.io/MMDAI/でMMDAIをダウンロード</p>
 <p>2.https://developer.nvidia.com/cg-toolkit-downloadでNvidia Cg Toolkitをダウンロードし、解凍します。</p>
@@ -2279,7 +2275,7 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p>5.「ファイル」→「モーションを全てのモデルに追加」などでモーションデータを取り込む事が出来ます。</p>
 </div>
 <div class="section" id="gimp2-6-photoshop">
-<h2><span class="section-number">1.123. </span>GIMP2.6で使えるフラクタル＆アブストラクト系Photoshopブラシ<a class="headerlink" href="#gimp2-6-photoshop" title="Permalink to this headline">¶</a></h2>
+<h2>1.123. GIMP2.6で使えるフラクタル＆アブストラクト系Photoshopブラシ<a class="headerlink" href="#gimp2-6-photoshop" title="Permalink to this headline">¶</a></h2>
 <p>最近のバージョンのGIMPでは、Photoshopのブラシ(拡張子abr)を直接使用できるようになっています。abrファイルをGIMPがインストールされているフォルダの下にある「sharegimp2.0brushes」フォルダ以下に置いて、GIMPを起動させるとPhotoshopのブラシを使用できるようになります。以下のブラシは炎や光などの表現を作り出したい時に便利なブラシです。</p>
 <p><a class="reference external" href="http://www.brusheezy.com/brush/442-Rise-Brushes">http://www.brusheezy.com/brush/442-Rise-Brushes</a></p>
 <p><a class="reference external" href="http://www.brusheezy.com/brush/311-Green-Lotus-Brushes">http://www.brusheezy.com/brush/311-Green-Lotus-Brushes</a></p>
@@ -2303,7 +2299,7 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p><a class="reference external" href="http://www.brusheezy.com/brush/83-Stardust">http://www.brusheezy.com/brush/83-Stardust</a></p>
 </div>
 <div class="section" id="gimp2-4gimp2-6">
-<h2><span class="section-number">1.124. </span>GIMP2.4→GIMP2.6へ移行する方法<a class="headerlink" href="#gimp2-4gimp2-6" title="Permalink to this headline">¶</a></h2>
+<h2>1.124. GIMP2.4→GIMP2.6へ移行する方法<a class="headerlink" href="#gimp2-4gimp2-6" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://gimp-win.sourceforge.net/stable.html">http://gimp-win.sourceforge.net/stable.html</a></p>
 <p>オープンソースフォトレタッチソフト「GIMP」の安定版「2.6」がリリースされました。ダウンロード、インストールをした後に、2.4で使っていたプ ラグインを2.6の方に移します。2.6に入っていないプラグインだけを入れてください。特にPhotoshop Pluginを使う場合は「2.6」には「pspi.exe」が入っていないので、入れてください。</p>
 <p>・プラグインフォルダの場所</p>
@@ -2315,7 +2311,7 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p>2.6からはたくさんのバグ修正と共に新描画システム「GEGL」が一部で使われ、Python-Fuが標準装備されています。</p>
 </div>
 <div class="section" id="gimp-2-3-14-photoshop-plugin">
-<h2><span class="section-number">1.125. </span>GIMP 2.3.14 + Photoshop-Pluginで無料強力画像生成環境をつくる<a class="headerlink" href="#gimp-2-3-14-photoshop-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>1.125. GIMP 2.3.14 + Photoshop-Pluginで無料強力画像生成環境をつくる<a class="headerlink" href="#gimp-2-3-14-photoshop-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Linux、Windosws、Mac OS XなどのPC用OS上で動作し、豊富なフィルタで写真加工ができるフリーソフトウェア「GIMP」（<a class="reference external" href="http://www.gimp.org/">http://www.gimp.org/</a>）。 Script-Fuと呼ばれるSchemeベースのスクリプト言語で書かれたプログラムで機能拡張できる。あるいは、世界中で配布されているGIMPプラグインを使うことで、標準装備されていない機能 を追加することができる。もうひとつのGIMPの拡張機能として、「pspi」 （<a class="reference external" href="http://www.gimp.org/~tml/gimp/win32/pspi.html">http://www.gimp.org/~tml/gimp/win32/pspi.html</a>）というGIMPプラグインを使うことで、Photoshop-Plug-Inをも使用することができる。日本語版のプラグインには対応していないが、海外製のものは配布・販売されているものに関わらず、使用できる。ここでは、フリーで使用できる非常に強力なプラグインを紹介する。</p>
 <p>１．pspiをGIMPにインストールする。</p>
 <p><a class="reference external" href="http://www.gimp.org/~tml/gimp/win32/pspi">http://www.gimp.org/~tml/gimp/win32/pspi</a>.htmlからpspiをダウンロード、解凍し、「pspi.exe」をGIMP-2.3.14libgimp2.0plug-insへ手動でインストール する。GIMP本体→拡張→PhotoshopPlug-inを選び、一番左側のアイコンで新規プラグインを設定する。「OK」をクリックするとプラグインを使用できるようになる。</p>
@@ -2325,13 +2321,13 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p>自動で69ものパターンをつくる「VideoRave」が強力なフィルタプラグイン。GIMPのグラデーションや下塗りフィルタでは表現できない「下地」作りに適する。</p>
 </div>
 <div class="section" id="gimp2-4">
-<h2><span class="section-number">1.126. </span>GIMP2.4のドックを本体に格納する<a class="headerlink" href="#gimp2-4" title="Permalink to this headline">¶</a></h2>
+<h2>1.126. GIMP2.4のドックを本体に格納する<a class="headerlink" href="#gimp2-4" title="Permalink to this headline">¶</a></h2>
 <p>オープンソースウェア「GIMP2.4」は、使っているうちにウィンドウがたくさん散らばってしまいがちです。作業ウィンドウを除くウィンドウをGIMP本体にまとめてしまうと、非常に快適な環境が出来ます。</p>
 <p>GIMP本体→「ファイル」→「ウィンドウ」→「新規ドック作成」→「レイヤー・チャンネルとパス」「ブラシ・パターンとグラデーション」「その他いろいろ」のドックを表示します。各ドックのタブになっているアイコンをドラッグ&amp;ドロップでGIMP本体のドックに移動させると、ドックがGIMP本体に格納されます。</p>
 <p>また、「ファイル」→「ウィンドウ」→「ツールアイコン」ではGIMP本体のアイコンを表示・非表示させることが出来ます。デフォルトでは表示されていないものもあるので、ここで設定しておくとGIMP本体だけでほぼ全ての作業が出来るようになります。</p>
 </div>
 <div class="section" id="inkscapejpegsvg">
-<h2><span class="section-number">1.127. </span>inkscapeでJPEGなどの画像ファイルをSVGへ変換する<a class="headerlink" href="#inkscapejpegsvg" title="Permalink to this headline">¶</a></h2>
+<h2>1.127. inkscapeでJPEGなどの画像ファイルをSVGへ変換する<a class="headerlink" href="#inkscapejpegsvg" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.inkscape.org/">http://www.inkscape.org/</a></p>
 <p>Illustlatorライクな高機能ベクタグラフィックソフト「Inkscape」。GIMP同様、GTKをベースにしたマルチプラットフォームフリー ウェアです。基本機能はIllustlator並の機能を持ってますので、Illustlatorを買うお金が貯まるまでのつなぎとしても便利かもしれま せん。本来は絵を描くためのソフトですが、Webサイトを構築する人にも便利な機能があります。それは、「JPEGなどの画像ファイルをSVGとして保 存」できることです。</p>
 <p>1．「ファイル」→「インポート」でSVGにしたい画像ファイルをInkscapeへインポートします。</p>
@@ -2341,7 +2337,7 @@ MMDAgent_Example.fst ー MMDAgentの設定ファイルです。ここで使い�
 <p>InkscapeによるSVG変換ではファイルのデータ容量が少し大きくなります。SVGのデメリットは対応ブラウザかプラグインを使わなければ見るこ とが出来ないことです。しかし、これもFirefoxやOperaなどでは対応していて、IEでもAdobeのSVGプラグインを使えば閲覧することが出 来ます。ブラウザを限定すれば、InkscapeによるSVG変換は使える方法だと思います。また、SVGはXMLをベースにしたベクタグラフィック フォーマットです。よって、Java Scriptと併用すれば、さらに用途は広がると思います。</p>
 </div>
 <div class="section" id="osunetbootinliveusb-biosuefi">
-<h2><span class="section-number">1.128. </span>OSをUNetbootinでLiveUSBを作って運用する(BIOS、UEFIモード対応）<a class="headerlink" href="#osunetbootinliveusb-biosuefi" title="Permalink to this headline">¶</a></h2>
+<h2>1.128. OSをUNetbootinでLiveUSBを作って運用する(BIOS、UEFIモード対応）<a class="headerlink" href="#osunetbootinliveusb-biosuefi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://wiki.ubuntulinux.jp/UbuntuTips/Install/CreateSeparateHomePartition">https://wiki.ubuntulinux.jp/UbuntuTips/Install/CreateSeparateHomePartition</a></p>
 <p>最近ではSSDにOSを入れて、データをHDDに入れて運用するPCの構成が一般的になってきましたが、 UbuntuとUSBメモリを使って、より低価格でシステムを運用する方法です。</p>
 <p>・Live USBを作る為の容量は16GB程度で構いません。</p>
@@ -2384,7 +2380,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 </div>
 <div class="section" id="grub2-iso-persistencelinux-bios">
-<h2><span class="section-number">1.129. </span>GRUB2+ISO+Persistence機能で構成したLinuxシステム(BIOSモード対応)<a class="headerlink" href="#grub2-iso-persistencelinux-bios" title="Permalink to this headline">¶</a></h2>
+<h2>1.129. GRUB2+ISO+Persistence機能で構成したLinuxシステム(BIOSモード対応)<a class="headerlink" href="#grub2-iso-persistencelinux-bios" title="Permalink to this headline">¶</a></h2>
 <p>　Linuxをハードディスクにフルインストールせずに使う方法にLiveCDやLiveUSBという方法があります。USBメモリにフルインストールすれば、HDDやSSDにインストールするのと変わりませんが、LiveUSBはGRUB2やSyslinuxからISOを直接起動させることが出来るのでシステムの入れ替えはISOを入れ替えるだけで済むというメリットもあります。そこでUSBメモリでLinuxを運用する場合、「GRUB2+ISO+Persistence機能」の方がフルインストールよりもスマートなシステムを作ることが出来ます。</p>
 <p>1.3つのパーティションを作成します。
 　・FAT32でフォーマットし、GRUB2とLiveCDのISOを入れるパーティション</p>
@@ -2398,7 +2394,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 <p>./boot/grubにgrub.cfgを作成します。これはGRUBのブートメニューの各項目を設定するものです。 LinuxディストリビューションのISOを「linux.iso」とします。</p>
 <div class="section" id="ubuntu-debian">
-<h3><span class="section-number">1.129.1. </span>Ubuntu/Debian系ディストリビューションの場合<a class="headerlink" href="#ubuntu-debian" title="Permalink to this headline">¶</a></h3>
+<h3>1.129.1. Ubuntu/Debian系ディストリビューションの場合<a class="headerlink" href="#ubuntu-debian" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">menuentry</span> <span class="s2">&quot;linux.iso&quot;</span> <span class="p">{</span>
 <span class="n">loopback</span> <span class="n">loop</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">iso</span><span class="o">/</span><span class="n">linux</span><span class="o">.</span><span class="n">iso</span>
 <span class="n">linux</span> <span class="p">(</span><span class="n">loop</span><span class="p">)</span><span class="o">/</span><span class="n">casper</span><span class="o">/</span><span class="n">vmlinuz</span> <span class="n">boot</span><span class="o">=</span><span class="n">casper</span> <span class="n">iso</span><span class="o">-</span><span class="n">scan</span><span class="o">/</span><span class="n">filename</span><span class="o">=/</span><span class="n">iso</span><span class="o">/</span><span class="n">linux</span><span class="o">.</span><span class="n">iso</span> <span class="n">persistent</span> <span class="o">--</span>
@@ -2414,7 +2410,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 </div>
 <div class="section" id="grububuntu-puppy-linux-fedraliveusb">
-<h2><span class="section-number">1.130. </span>GRUBを使ったUbuntu/Puppy Linux/FedraトリプルブートLiveUSBの作成方法<a class="headerlink" href="#grububuntu-puppy-linux-fedraliveusb" title="Permalink to this headline">¶</a></h2>
+<h2>1.130. GRUBを使ったUbuntu/Puppy Linux/FedraトリプルブートLiveUSBの作成方法<a class="headerlink" href="#grububuntu-puppy-linux-fedraliveusb" title="Permalink to this headline">¶</a></h2>
 <p>　USBメモリに入れたUbuntuのLiveCDのISOに直接アクセスして起動させるには、GRUBをインストール設定するだけで出来ます。</p>
 <p>1.USBメモリに入れる場合は、USBメモリをFAT32でフォーマットしてください。Windowsを使ってもいいですし、Gpartedを使っても構いません。ターミナルを使う場合は以下のようになります(USBメモリが/dev/sdbとしてマウントされている場合):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">fdisk</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span>
@@ -2436,8 +2432,8 @@ $ln -s /tmp /home/user_name/.thumbnail
 <p>5./boot/grubにgrub.cfgを作成します。これはGRUBのブートメニューの各項目を設定するものです。</p>
 <p>◇Ubuntu/Debian系ディストリビューションの場合:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">menuentry</span> <span class="s2">&quot;valkyrie-spec2.5.iso&quot;</span> <span class="p">{</span>
-<span class="n">loopback</span> <span class="n">loop</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">iso</span><span class="o">/</span><span class="n">valkyrie</span><span class="o">-</span><span class="n">spec2</span><span class="mf">.5</span><span class="o">.</span><span class="n">iso</span>
-<span class="n">linux</span> <span class="p">(</span><span class="n">loop</span><span class="p">)</span><span class="o">/</span><span class="n">casper</span><span class="o">/</span><span class="n">vmlinuz</span> <span class="n">boot</span><span class="o">=</span><span class="n">casper</span> <span class="n">iso</span><span class="o">-</span><span class="n">scan</span><span class="o">/</span><span class="n">filename</span><span class="o">=/</span><span class="n">boot</span><span class="o">/</span><span class="n">iso</span><span class="o">/</span><span class="n">valkyrie</span><span class="o">-</span><span class="n">spec2</span><span class="mf">.5</span><span class="o">.</span><span class="n">iso</span> <span class="n">noeject</span> <span class="n">noprompt</span> <span class="n">quiet</span> <span class="n">splash</span> <span class="o">--</span>
+<span class="n">loopback</span> <span class="n">loop</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">iso</span><span class="o">/</span><span class="n">valkyrie</span><span class="o">-</span><span class="n">spec2</span><span class="o">.</span><span class="mf">5.</span><span class="n">iso</span>
+<span class="n">linux</span> <span class="p">(</span><span class="n">loop</span><span class="p">)</span><span class="o">/</span><span class="n">casper</span><span class="o">/</span><span class="n">vmlinuz</span> <span class="n">boot</span><span class="o">=</span><span class="n">casper</span> <span class="n">iso</span><span class="o">-</span><span class="n">scan</span><span class="o">/</span><span class="n">filename</span><span class="o">=/</span><span class="n">boot</span><span class="o">/</span><span class="n">iso</span><span class="o">/</span><span class="n">valkyrie</span><span class="o">-</span><span class="n">spec2</span><span class="o">.</span><span class="mf">5.</span><span class="n">iso</span> <span class="n">noeject</span> <span class="n">noprompt</span> <span class="n">quiet</span> <span class="n">splash</span> <span class="o">--</span>
 <span class="n">initrd</span> <span class="p">(</span><span class="n">loop</span><span class="p">)</span><span class="o">/</span><span class="n">casper</span><span class="o">/</span><span class="n">initrd</span><span class="o">.</span><span class="n">lz</span>
 <span class="p">}</span>
 </pre></div>
@@ -2487,7 +2483,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 <p>7.Gpartedなどで/dev/sdb2のラベル編集でbootのチェックを外します。bootにチェックが入っていると、/dev/sdb2のUNetBootinでインストールしたUbuntuが起動してしまうからです。</p>
 </div>
 <div class="section" id="ram">
-<h2><span class="section-number">1.131. </span>RAMキャッシュの設定方法<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h2>
+<h2>1.131. RAMキャッシュの設定方法<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h2>
 <p>Chromium系ブラウザにおけるRAMキャッシュの設定方法は以下のようになります。</p>
 <p>ここではChromiumベースのブラウザ「SRWare Iron」を使っています。他のChromium系ブラウザでも設定方法は基本的に同じです。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>◇Windowsの場合
@@ -2500,18 +2496,17 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 </div>
 <div class="section" id="firefox">
-<h2><span class="section-number">1.132. </span>Firefoxのプルダウンメニューの項目が消えた場合の対処法<a class="headerlink" href="#firefox" title="Permalink to this headline">¶</a></h2>
+<h2>1.132. Firefoxのプルダウンメニューの項目が消えた場合の対処法<a class="headerlink" href="#firefox" title="Permalink to this headline">¶</a></h2>
 <p>Firefoxのプルダウンメニューの項目の文字が消えることがあります。これはシステム側のデフォルトフォント設定とFirefoxのフォント設定が競合しているからです。対処するには、Linuxの場合「.gtkrc-2.0」ファイルをテキストエディタで開き、フォントに関する設定を削除して保存することで対処することが出来ます。</p>
 </div>
 <div class="section" id="firefox-google-chrome-internet-exploror-operaxmarks">
-<h2><span class="section-number">1.133. </span>Firefox,Google Chrome,Internet Exploror,Operaなどのブックマークを同期出来るサービス「XMarks」<a class="headerlink" href="#firefox-google-chrome-internet-exploror-operaxmarks" title="Permalink to this headline">¶</a></h2>
+<h2>1.133. Firefox,Google Chrome,Internet Exploror,Operaなどのブックマークを同期出来るサービス「XMarks」<a class="headerlink" href="#firefox-google-chrome-internet-exploror-operaxmarks" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><a class="reference external" href="http://www.xmarks.com/">Xmarks</a></p>
-</div></blockquote>
+<div><a class="reference external" href="http://www.xmarks.com/">Xmarks</a></div></blockquote>
 <p>複数のブラウザのブックマークや履歴を同期・バックアップ出来るクラウドサービスです。Xmarksでアカウントを取得後、各ブラウザにアドオンやエクステンションを追加することで同期出来るようになります。</p>
 </div>
 <div class="section" id="firefoxdeb">
-<h2><span class="section-number">1.134. </span>Firefoxをソースコードからビルドして、debパッケージを作成、インストールする方法<a class="headerlink" href="#firefoxdeb" title="Permalink to this headline">¶</a></h2>
+<h2>1.134. Firefoxをソースコードからビルドして、debパッケージを作成、インストールする方法<a class="headerlink" href="#firefoxdeb" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.$sudo add-apt-repository ppa:mozillateam/firefox-stable &amp;&amp; sudo apt-get update
 2.$apt-get source firefox
 3.ダウンロードしたファイルを解凍
@@ -2528,7 +2523,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 </div>
 <div class="section" id="firefox-3-6-user-js">
-<h2><span class="section-number">1.135. </span>Firefox 3.6 高速化　user.js<a class="headerlink" href="#firefox-3-6-user-js" title="Permalink to this headline">¶</a></h2>
+<h2>1.135. Firefox 3.6 高速化　user.js<a class="headerlink" href="#firefox-3-6-user-js" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user_pref</span><span class="p">(</span><span class="s2">&quot;general.useragent.extra.firefox&quot;</span><span class="p">,</span><span class="s2">&quot;Firefox/3.6.10&quot;</span><span class="p">);</span>
 <span class="n">user_pref</span><span class="p">(</span><span class="s2">&quot;browser.cache.disk.parent_directory&quot;</span><span class="p">,</span><span class="s2">&quot;/mnt/ramdisk&quot;</span><span class="p">);</span>
 <span class="n">user_pref</span><span class="p">(</span><span class="s2">&quot;browser.cache.disk.enable&quot;</span><span class="p">,</span><span class="n">false</span><span class="p">);</span>
@@ -2570,7 +2565,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 <p>Ubuntuの場合、user.jsを「/home/ユーザー/.mozilla/firefox/xxxxxxxx.default」に移動させ、Firefoxを起動させれば、高速化されます。</p>
 </div>
 <div class="section" id="bitubuntu-9-10firefox">
-<h2><span class="section-number">1.136. </span>64bit版Ubuntu 9.10用のFirefoxを最適化ビルドする<a class="headerlink" href="#bitubuntu-9-10firefox" title="Permalink to this headline">¶</a></h2>
+<h2>1.136. 64bit版Ubuntu 9.10用のFirefoxを最適化ビルドする<a class="headerlink" href="#bitubuntu-9-10firefox" title="Permalink to this headline">¶</a></h2>
 <p>　64bit版Ubuntu 9.10用にFirefoxをプロセッサやOSに最適化してビルドします。</p>
 <p>1.Mozilla FirefoxソースでFirefoxのソースをダウンロードし、homeフォルダに解凍すると、「mozilla-バージョン名」といったフォルダが出来ます。ここでは「mozilla-1.9.2」としておきます。</p>
 <p>2.mozilla-1.9.2フォルダに移動し、「.mozconfig」というファイルを作成します。.mozconfigの詳細はMDCにあります。僕の.mozconfigの設定は以下のようになっています。:</p>
@@ -2584,7 +2579,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 <p>4.完成したFirefoxは「mozilla-1.9.2/firefox_build/dist/bin」の中にあります。パッケージしたい場合は「firefox_build/browser/installer」へ移動し、「make」すると先ほどのdistフォルダに言語パックと共に生成されています。</p>
 </div>
 <div class="section" id="firefoxvacuum">
-<h2><span class="section-number">1.137. </span>FirefoxのデータベースをVACUUMして動作を軽くする<a class="headerlink" href="#firefoxvacuum" title="Permalink to this headline">¶</a></h2>
+<h2>1.137. FirefoxのデータベースをVACUUMして動作を軽くする<a class="headerlink" href="#firefoxvacuum" title="Permalink to this headline">¶</a></h2>
 <p>Firefoxは各種データベースをSQLiteで管理しています。使い続けると、「places.sqlite」が肥大化し、Firefoxの動作が緩慢になる原因になります。SQLiteには「VACUUM」というデータベースを最適化する方法があります。これを使うことでFirefoxのデータベースを最適化することが出来ます。</p>
 <p>◇コマンド編</p>
 <p>1.「ツール」⇒「エラーコンソール」を開きます</p>
@@ -2603,7 +2598,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 <p>・PlacesCleaner</p>
 </div>
 <div class="section" id="firefox3web">
-<h2><span class="section-number">1.138. </span>Firefox3のブックマークデータをWebサイトに埋め込む方法<a class="headerlink" href="#firefox3web" title="Permalink to this headline">¶</a></h2>
+<h2>1.138. Firefox3のブックマークデータをWebサイトに埋め込む方法<a class="headerlink" href="#firefox3web" title="Permalink to this headline">¶</a></h2>
 <p>Firefox3のブックマークはJSONで保存することが出来ます。つまり、スクリプト言語やJSONパーサなどを使えば、ブックマークのデータをWebサイトに埋め込むことが出来ます。一番簡単にブックマークデータにアクセスする方法はJavaScriptを使うことです。</p>
 <p>1.Firefox3のブックマークJSONファイルに「var bookmarks = 」を追加し、HTMLのscriptエレメントでロードする</p>
 <p>2.「bookmarks.children[0].children[0].children[0].title;」などとすると、ブックマークの対象のサイトのタイトルを取得することが出来ます。これをinnerHTMLなどでHTMLに取り込むとサイトに表示出来る様になります。</p>
@@ -2632,7 +2627,7 @@ $ln -s /tmp /home/user_name/.thumbnail
 </div>
 </div>
 <div class="section" id="web">
-<h2><span class="section-number">1.139. </span>Webサイトやブログの表示速度を向上させる<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
+<h2>1.139. Webサイトやブログの表示速度を向上させる<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
 <p>Webサイトやブログなどを公開している企業や個人は多いですが、最近、運営しているWebサイトやブログの表示が重いと感じる事があるのではないでしょうか。アフィリエイトサービスを使う事で、個人サイトでも企業やマスコミなどと似たような広告収入を得られる機会が増加している為、ASPと契約をしてネット広告をサイトやブログに貼っている人々は多いです。また、動画共有サイトで気になった動画を見つけたり、自分で投稿した動画を紹介したりする場合には、埋め込みコードを記事に貼り付けて投稿する事があるでしょう。</p>
 <p>サイトやブログの表示が重くなる原因は、テキストよりも容量が遥かに大きい画像や動画をたくさん貼り付けるからです。アクセスしてきた人は、そのページに貼られている動画の埋め込みコードなどを通して動画や画像を全て読み込む形になってしまいます。その為、同時に複数のトランザクションが発生してネット回線をそれぞれの処理で分けあってしまう為、ページの表示が遅くなってしまいます。近年のネット広告は、Flashベースの物以外に画像とJavaScriptの組み合せで出来ている物、動画を再生する物などがあります。これらがたくさん貼り付けられていれば、サーバへの問い合わせが多くなってしまいます。</p>
 <p>このような状況を簡単に解決する方法としては、画像や動画の数を減らし、代わりにそれらがある場所のリンクを掲載しておくというものです。特にYouTubeやDailyMotionなどの動画共有サイトやInstagramなどの写真投稿サイトの写真や動画をブログ記事に掲載したい時に効果的です。
@@ -2648,7 +2643,7 @@ ASPが提供するアフィリエイトプログラムの中には、テキス�
 <p>・HTMLで構築したページの要素が過剰に入れ子にならないように気をつける。</p>
 </div>
 <div class="section" id="ubuntulinux">
-<h2><span class="section-number">1.140. </span>Ubuntu系Linuxディストリビューション向けの音質向上テクニックのまとめ<a class="headerlink" href="#ubuntulinux" title="Permalink to this headline">¶</a></h2>
+<h2>1.140. Ubuntu系Linuxディストリビューション向けの音質向上テクニックのまとめ<a class="headerlink" href="#ubuntulinux" title="Permalink to this headline">¶</a></h2>
 <p>◇Ubuntu系情報</p>
 <p><a class="reference external" href="https://wiki.ubuntulinux.jp/UbuntuStudioTips">https://wiki.ubuntulinux.jp/UbuntuStudioTips</a></p>
 <p><a class="reference external" href="https://wiki.ubuntulinux.jp/UbuntuStudioTips/Application/JACK-PulseAudio">https://wiki.ubuntulinux.jp/UbuntuStudioTips/Application/JACK-PulseAudio</a></p>
@@ -2691,7 +2686,7 @@ ASPが提供するアフィリエイトプログラムの中には、テキス�
 </div>
 </div>
 <div class="section" id="xmonad">
-<h2><span class="section-number">1.141. </span>xmonad用設定ファイル<a class="headerlink" href="#xmonad" title="Permalink to this headline">¶</a></h2>
+<h2>1.141. xmonad用設定ファイル<a class="headerlink" href="#xmonad" title="Permalink to this headline">¶</a></h2>
 <p>レイアウトは、ミラー＋タイルの構成がメインになっていて、マスターウィンドウを２つに分割し、ウィンドウが水平方向にレイアウトされるように設定しています。
 mod+スペースの切り替えでタブ型のレイアウトに変更することができ、タブ型レイアウトはフルスクリーンレイアウトより利便性が高く、便利です。</p>
 <p>◇xmonad.hs</p>
@@ -2815,7 +2810,7 @@ main = do
 </div>
 </div>
 <div class="section" id="seesaa-blog">
-<h2><span class="section-number">1.142. </span>Seesaa BLOGのソーシャルボタンが邪魔という人に適した設定方法<a class="headerlink" href="#seesaa-blog" title="Permalink to this headline">¶</a></h2>
+<h2>1.142. Seesaa BLOGのソーシャルボタンが邪魔という人に適した設定方法<a class="headerlink" href="#seesaa-blog" title="Permalink to this headline">¶</a></h2>
 <p>最近のブログサービスは、ソーシャルボタンという物凄く要らない機能が搭載されています。</p>
 <p>Seesaa BLOGにもデフォルトでTwitterやFacebookなどのSNS向けのソーシャルボタンが搭載されており、この画像を読み込むだけでも、余計にデータの送受信をしています。</p>
 <p>そこで、このソーシャルボタンを消してしまいましょう。</p>
@@ -2825,7 +2820,7 @@ main = do
 <p>他のブログサービスにも、このような設定があると思いますので、「ソーシャルボタンは邪魔」という人々は、これらを排除すると良いです。</p>
 </div>
 <div class="section" id="id24">
-<h2><span class="section-number">1.143. </span>シェルスクリプトで知っておくと良い事<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<h2>1.143. シェルスクリプトで知っておくと良い事<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <p>◎常にカレントディレクトリに設定する方法</p>
 <p>スクリプトの最初に以下を書いておく。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>dirname `$0`
@@ -2846,7 +2841,7 @@ main = do
 <p>xxx.xというのが実行ファイルですので、これをクリックすれば、アプリケーションが起動します。</p>
 </div>
 <div class="section" id="id25">
-<h2><span class="section-number">1.144. </span>ネット上の古いコンテンツを一括削除出来る便利なサービス<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<h2>1.144. ネット上の古いコンテンツを一括削除出来る便利なサービス<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 <p>レンタルサーバを変更したり、他の会社のブログサービスやSNSに移行した場合、コンテンツを全て削除しても、古いコンテンツの情報が検索エンジンに残ってしまう事があります。</p>
 <p>また、Twitterでつぶやいていたツィートが非常に多くなって、管理しにくくなった場合に要らなくなった物を一括で削除したいという事もあるでしょう。</p>
 <p>そのような時に役立つのが、一括削除サービスです。</p>
@@ -2862,7 +2857,7 @@ main = do
 <p>このサービスは、一括削除をしてくれますので、ユーザーにとっては古いつぶやきが要らなくなって、全部消したい時に役立ちます。</p>
 </div>
 <div class="section" id="ip">
-<h2><span class="section-number">1.145. </span>画像変換やIPアドレスなどを調べるのに便利なオンラインサービスとソフトウェア<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h2>
+<h2>1.145. 画像変換やIPアドレスなどを調べるのに便利なオンラインサービスとソフトウェア<a class="headerlink" href="#ip" title="Permalink to this headline">¶</a></h2>
 <p>◎JPEGフォーマットの画像の画質をほぼ劣化させずに、容量を落としたい</p>
 <p>・ソースコード</p>
 <p><a class="reference external" href="https://github.com/google/guetzli">https://github.com/google/guetzli</a></p>
@@ -2903,7 +2898,6 @@ main = do
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -3074,10 +3068,10 @@ main = do
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../cx2/cx2engine001.html"
-                        title="previous chapter"><span class="section-number">5. </span>Processing用ライブラリ「CX2 Engine」</a></p>
+                        title="previous chapter">5. Processing用ライブラリ「CX2 Engine」</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tech002.html"
-                        title="next chapter"><span class="section-number">2. </span>CSS Hacks</a></p>
+                        title="next chapter">2. CSS Hacks</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -3086,15 +3080,17 @@ main = do
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -3111,13 +3107,12 @@ main = do
         <li class="right" >
           <a href="../cx2/cx2engine001.html" title="5. Processing用ライブラリ「CX2 Engine」"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

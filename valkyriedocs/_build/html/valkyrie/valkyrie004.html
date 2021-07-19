@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>18. カスタムカーネルについて &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="valkyrie003.html" title="17. トラブルが起こった時の対処法"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">18. </span>カスタムカーネルについて</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,11 +44,11 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1><span class="section-number">18. </span>カスタムカーネルについて<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>18. カスタムカーネルについて<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="http://takabrk.seesaa.net/article/449185431.html">http://takabrk.seesaa.net/article/449185431.html</a></p>
 <p>This low latency kernel is for Ubuntu 16.04 LTS(64bit) and is aimed at processors after the Intel SandyBridge architecture by adding an aufs patch and CK2 patch,kernel_gcc patch to Linux Kernel.</p>
 <div class="section" id="id2">
-<h2><span class="section-number">18.1. </span>カスタムカーネルの作成<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>18.1. カスタムカーネルの作成<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>64bit OS「Phantom Valkyrie Linux」用のカスタムカーネルを作成しました。フルインストール環境とLiveDVD環境で動作しています。</p>
 <p>Linuxカーネル4.11ベースでリアルタイムカーネルを作りたいのですが、まだRT Preempt(<a class="reference external" href="https://www.kernel.org/pub/linux/kernel/projects/rt/">https://www.kernel.org/pub/linux/kernel/projects/rt/</a>)のパッチが公開されていないようですので、取り敢えず、カーネルオプションでISDNやIEEE1394など明らかに現在の一般的なコンピューティングで使わないドライバとモジュールを外して、カーネルのファイル容量を減らしました。</p>
 <p>カスタムカーネルの作成方法は、昔からあるmakeを使う方法で行っています。</p>
@@ -89,20 +90,20 @@ $sudo apt-get build-dep linux-image-$(uname -r)
 <p>・Kernel Hacking関連全て</p>
 <p>◇最適化</p>
 <ul class="simple">
-<li><p>Processer family -&gt; Generic-x86-64</p></li>
-<li><p>Kernel Compression mode -&gt; LZ4</p></li>
-<li><p>Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)</p></li>
-<li><p>Timer frequency -&gt; 1000MHz</p></li>
-<li><p>Default I/O scheduler -&gt; BFQ-SQ</p></li>
-<li><p>Compiler optimization level -&gt; Optimized harder</p></li>
-<li><p>MuQSS on</p></li>
-<li><p>UKSM on</p></li>
-<li><p>Zen Interactive Tune on</p></li>
-<li><p>CPUFreq Governor -&gt; ondemand</p></li>
+<li>Processer family -&gt; Generic-x86-64</li>
+<li>Kernel Compression mode -&gt; LZ4</li>
+<li>Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)</li>
+<li>Timer frequency -&gt; 1000MHz</li>
+<li>Default I/O scheduler -&gt; BFQ-SQ</li>
+<li>Compiler optimization level -&gt; Optimized harder</li>
+<li>MuQSS on</li>
+<li>UKSM on</li>
+<li>Zen Interactive Tune on</li>
+<li>CPUFreq Governor -&gt; ondemand</li>
 </ul>
 </div>
 <div class="section" id="linux">
-<h2><span class="section-number">18.2. </span>Linuxカーネルのソースコードとパッチ<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>18.2. Linuxカーネルのソースコードとパッチ<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>1.カーネルソースコード</p>
 <p><a class="reference external" href="https://www.kernel.org/">https://www.kernel.org/</a></p>
 <p>2.公式パッチ</p>
@@ -153,7 +154,6 @@ $git checkout origin/4.10/master
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -170,10 +170,10 @@ $git checkout origin/4.10/master
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="valkyrie003.html"
-                        title="previous chapter"><span class="section-number">17. </span>トラブルが起こった時の対処法</a></p>
+                        title="previous chapter">17. トラブルが起こった時の対処法</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="valkyrie020.html"
-                        title="next chapter"><span class="section-number">19. </span>過去の履歴</a></p>
+                        title="next chapter">19. 過去の履歴</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -182,15 +182,17 @@ $git checkout origin/4.10/master
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -207,13 +209,12 @@ $git checkout origin/4.10/master
         <li class="right" >
           <a href="valkyrie003.html" title="17. トラブルが起こった時の対処法"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">18. </span>カスタムカーネルについて</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

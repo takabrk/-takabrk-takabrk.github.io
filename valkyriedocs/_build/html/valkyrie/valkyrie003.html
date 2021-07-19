@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>17. トラブルが起こった時の対処法 &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="valkyrie002.html" title="8. コマンドランチャー「gmrun」の使い方"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">17. </span>トラブルが起こった時の対処法</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,7 +44,7 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1><span class="section-number">17. </span>トラブルが起こった時の対処法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>17. トラブルが起こった時の対処法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>・Virtualboxでの仮想環境下では、Jack Audio Connection KitがD-Bus関連でエラーが起きて起動出来ません。この為、pulseaudio-module-jackによる連携が出来ません。実環境では、問題無く使えます。</p>
 <p>・GPU内蔵型プロセッサでグラフィックボードを使う場合には、UEFIでRADEONやGeforceなどを搭載しているグラフィックボードを一番初めに認識するように設定する必要があります。設定しない場合は、内蔵GPUが優先されます。</p>
 <p>・フルインストールする際に、homeディレクトリを別に分けている場合、.configなどが更新されない事がありますので、フルインストール後に「/etc/skel」のファイルを全てhomeディレクトリにコピーして上書きすれば、反映されます。</p>
@@ -70,7 +71,6 @@ GRUBを再インストールするか、BIOS設定画面でUEFIではなく、BI
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -78,10 +78,10 @@ GRUBを再インストールするか、BIOS設定画面でUEFIではなく、BI
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="valkyrie002.html"
-                        title="previous chapter"><span class="section-number">8. </span>コマンドランチャー「gmrun」の使い方</a></p>
+                        title="previous chapter">8. コマンドランチャー「gmrun」の使い方</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="valkyrie004.html"
-                        title="next chapter"><span class="section-number">18. </span>カスタムカーネルについて</a></p>
+                        title="next chapter">18. カスタムカーネルについて</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -90,15 +90,17 @@ GRUBを再インストールするか、BIOS設定画面でUEFIではなく、BI
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -115,13 +117,12 @@ GRUBを再インストールするか、BIOS設定画面でUEFIではなく、BI
         <li class="right" >
           <a href="valkyrie002.html" title="8. コマンドランチャー「gmrun」の使い方"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">17. </span>トラブルが起こった時の対処法</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

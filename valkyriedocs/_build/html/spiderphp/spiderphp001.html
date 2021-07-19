@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. spider.php &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="../spiderjs/spiderjs001.html" title="1. spider.js"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3. </span>spider.php</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,36 +44,36 @@
           <div class="body" role="main">
             
   <div class="section" id="spider-php">
-<h1><span class="section-number">3. </span>spider.php<a class="headerlink" href="#spider-php" title="Permalink to this headline">¶</a></h1>
+<h1>3. spider.php<a class="headerlink" href="#spider-php" title="Permalink to this headline">¶</a></h1>
 <p>spider.phpは、サーバサイドで行う事が出来る処理を纏めたライブラリです。</p>
 <ul class="simple">
-<li><p>Googl Map APIを使った女子校の地図の表示</p></li>
-<li><p>各種データをセレクトボックスで選択出来るアプリケーションを生成する機能</p></li>
-<li><p>各種データをテーブルレイアウトで表示出来るアプリケーションを生成する機能</p></li>
-<li><p>データベースを参照してJSONを作成</p></li>
-<li><p>Webページをファイルとして保存</p></li>
-<li><p>PHPの配列をJavaScriptの配列に変換</p></li>
-<li><p>AtomをXSLTを使ってHTMLに変換</p></li>
-<li><p>RSSの読み込み</p></li>
-<li><p>RSSをHTMLのリストに変換</p></li>
-<li><p>ディレクトのファイル一覧を配列に変換</p></li>
-<li><p>リモートページを取得する事が出来ます。</p></li>
-<li><p>取得したページをテキストに変換</p></li>
-<li><p>複数のページの一部分を書き換える</p></li>
-<li><p>ImageMagikを使ったサムネイルの生成</p></li>
-<li><p>カレンダーの表示</p></li>
+<li>Googl Map APIを使った女子校の地図の表示</li>
+<li>各種データをセレクトボックスで選択出来るアプリケーションを生成する機能</li>
+<li>各種データをテーブルレイアウトで表示出来るアプリケーションを生成する機能</li>
+<li>データベースを参照してJSONを作成</li>
+<li>Webページをファイルとして保存</li>
+<li>PHPの配列をJavaScriptの配列に変換</li>
+<li>AtomをXSLTを使ってHTMLに変換</li>
+<li>RSSの読み込み</li>
+<li>RSSをHTMLのリストに変換</li>
+<li>ディレクトのファイル一覧を配列に変換</li>
+<li>リモートページを取得する事が出来ます。</li>
+<li>取得したページをテキストに変換</li>
+<li>複数のページの一部分を書き換える</li>
+<li>ImageMagikを使ったサムネイルの生成</li>
+<li>カレンダーの表示</li>
 </ul>
 <div class="section" id="id1">
-<h2><span class="section-number">3.1. </span>spider.phpを使う<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. spider.phpを使う<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id2">
-<h3><span class="section-number">3.1.1. </span>spider.phpの呼び出し方<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.1. spider.phpの呼び出し方<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>PHPファイルの上部に以下の文を付け加えます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require_once</span><span class="p">(</span><span class="s2">&quot;Spider/spider.php&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
-<h3><span class="section-number">3.1.2. </span>クラスの生成<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2. クラスの生成<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>クラスを生成したい場合には、以下のように行います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s = new spider();
 </pre></div>
@@ -81,16 +82,16 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h1><span class="section-number">4. </span>メソッド<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<h1>4. メソッド<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="connectdb">
-<h2><span class="section-number">4.1. </span>connectDB<a class="headerlink" href="#connectdb" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. connectDB<a class="headerlink" href="#connectdb" title="Permalink to this headline">¶</a></h2>
 <p>データベースに接続します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sdb = $s-&gt;connectDB(&quot;mysql&quot;,&quot;database name&quot;,&quot;host name&quot;,&quot;user name&quot;,&quot;password&quot;);
 </pre></div>
 </div>
 </div>
 <div class="section" id="createjson">
-<h2><span class="section-number">4.2. </span>createjson<a class="headerlink" href="#createjson" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. createjson<a class="headerlink" href="#createjson" title="Permalink to this headline">¶</a></h2>
 <p>データベースからデータを取り出し、JSONに変換します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;createjson($sdb,$table_name,$mode);
 </pre></div>
@@ -103,14 +104,14 @@ db - テーブルのid,name,address,descriptionの項目のデータを取り出
 geo - テーブルのid,name,address,descriptionの項目のデータを取り出す</p>
 </div>
 <div class="section" id="smartyaccess">
-<h2><span class="section-number">4.3. </span>smartyAccess<a class="headerlink" href="#smartyaccess" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. smartyAccess<a class="headerlink" href="#smartyaccess" title="Permalink to this headline">¶</a></h2>
 <p>smartyAccessは、テンプレートエンジン「Smarty」のテンプレート、キャッシュなどのディレクトリを指定するメソッドです。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;smartyAccess()
 </pre></div>
 </div>
 </div>
 <div class="section" id="json2smarty">
-<h2><span class="section-number">4.4. </span>json2smarty<a class="headerlink" href="#json2smarty" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. json2smarty<a class="headerlink" href="#json2smarty" title="Permalink to this headline">¶</a></h2>
 <p>JSONデータをSmartyのテンプレートに挿入します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;json2smarty($json_src,$smarty_template);
 </pre></div>
@@ -119,7 +120,7 @@ geo - テーブルのid,name,address,descriptionの項目のデータを取り�
 $smarty_templateは、Smarty用のテンプレートを指定します。</p>
 </div>
 <div class="section" id="json2map">
-<h2><span class="section-number">4.5. </span>json2map<a class="headerlink" href="#json2map" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. json2map<a class="headerlink" href="#json2map" title="Permalink to this headline">¶</a></h2>
 <p>JSONデータをSmartyテンプレートとGoogleMaps APIを使って地図表示します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;json2map($json_src,$smarty_template);
 </pre></div>
@@ -128,7 +129,7 @@ $smarty_templateは、Smarty用のテンプレートを指定します。</p>
 $smarty_templateは、Smarty用のテンプレートを指定します。</p>
 </div>
 <div class="section" id="superdb">
-<h2><span class="section-number">4.6. </span>superDB<a class="headerlink" href="#superdb" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. superDB<a class="headerlink" href="#superdb" title="Permalink to this headline">¶</a></h2>
 <p>superDBメソッドは、MySQLで構築したデータベースにアクセスして、テンプレートエンジン「Smarty」を通してセレクトボックスを使ったアプリ、GoogleMaps APIを使った地図アプリなどを表示する事が可能です。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;superDB($mode);
 </pre></div>
@@ -146,14 +147,14 @@ school_rank - 関西の高校の総合力ランキングのデータベース
 company - ブラック企業のデータベース</p>
 </div>
 <div class="section" id="json-indent">
-<h2><span class="section-number">4.7. </span>json_indent<a class="headerlink" href="#json-indent" title="Permalink to this headline">¶</a></h2>
+<h2>4.7. json_indent<a class="headerlink" href="#json-indent" title="Permalink to this headline">¶</a></h2>
 <p>PHP 5.3以下の場合、標準ライブラリにあるjson_encodeでJSONを整形する事が出来ませんので、代わりにこのメソッドを使う事で、PHP 5.3以下でもJSONを整形する事が可能になります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;json_indent(&quot;xxx.json&quot;);
 </pre></div>
 </div>
 </div>
 <div class="section" id="writefile">
-<h2><span class="section-number">4.8. </span>writeFile<a class="headerlink" href="#writefile" title="Permalink to this headline">¶</a></h2>
+<h2>4.8. writeFile<a class="headerlink" href="#writefile" title="Permalink to this headline">¶</a></h2>
 <p>ファイルを書き出します:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;writeFile(&quot;url&quot;,&quot;file&quot;,&quot;binary&quot;);
 $s-&gt;writeFile(&quot;url&quot;,&quot;file&quot;,&quot;plain&quot;);
@@ -161,7 +162,7 @@ $s-&gt;writeFile(&quot;url&quot;,&quot;file&quot;,&quot;plain&quot;);
 </div>
 </div>
 <div class="section" id="arrayforjs">
-<h2><span class="section-number">4.9. </span>arrayForJS<a class="headerlink" href="#arrayforjs" title="Permalink to this headline">¶</a></h2>
+<h2>4.9. arrayForJS<a class="headerlink" href="#arrayforjs" title="Permalink to this headline">¶</a></h2>
 <p>フォルダ内のファイル名の一覧を取得後、JavaScript用の配列に変換します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s = new spider();
 $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
@@ -169,77 +170,77 @@ $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
 </div>
 </div>
 <div class="section" id="atomwithxslt">
-<h2><span class="section-number">4.10. </span>atomWithXSLT<a class="headerlink" href="#atomwithxslt" title="Permalink to this headline">¶</a></h2>
+<h2>4.10. atomWithXSLT<a class="headerlink" href="#atomwithxslt" title="Permalink to this headline">¶</a></h2>
 <p>XMLをXSLTで変換することが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;atomWithXSLT(atmのURL,XSL名);
 </pre></div>
 </div>
 </div>
 <div class="section" id="loadrss">
-<h2><span class="section-number">4.11. </span>loadRSS<a class="headerlink" href="#loadrss" title="Permalink to this headline">¶</a></h2>
+<h2>4.11. loadRSS<a class="headerlink" href="#loadrss" title="Permalink to this headline">¶</a></h2>
 <p>RSSを読み込んで表示します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;loadRSS(URL);
 </pre></div>
 </div>
 </div>
 <div class="section" id="rss2list">
-<h2><span class="section-number">4.12. </span>RSS2List<a class="headerlink" href="#rss2list" title="Permalink to this headline">¶</a></h2>
+<h2>4.12. RSS2List<a class="headerlink" href="#rss2list" title="Permalink to this headline">¶</a></h2>
 <p>RSSをHTMLのリストに変換します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;RSS2List(URL);
 </pre></div>
 </div>
 </div>
 <div class="section" id="firefoxbookmarklist">
-<h2><span class="section-number">4.13. </span>firefoxBookmarkList<a class="headerlink" href="#firefoxbookmarklist" title="Permalink to this headline">¶</a></h2>
+<h2>4.13. firefoxBookmarkList<a class="headerlink" href="#firefoxbookmarklist" title="Permalink to this headline">¶</a></h2>
 <p>Webブラウザ「Firefox」のブックマークをHTMLのテーブルにします。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;firefoxBookmarkList(ファイル名);
 </pre></div>
 </div>
 </div>
 <div class="section" id="createarray">
-<h2><span class="section-number">4.14. </span>createArray<a class="headerlink" href="#createarray" title="Permalink to this headline">¶</a></h2>
+<h2>4.14. createArray<a class="headerlink" href="#createarray" title="Permalink to this headline">¶</a></h2>
 <p>ディレクトリのファイルを読み出して配列で返します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;createArray(ディレクトリ名);
 </pre></div>
 </div>
 </div>
 <div class="section" id="getremortpage">
-<h2><span class="section-number">4.15. </span>getRemortPage<a class="headerlink" href="#getremortpage" title="Permalink to this headline">¶</a></h2>
+<h2>4.15. getRemortPage<a class="headerlink" href="#getremortpage" title="Permalink to this headline">¶</a></h2>
 <p>リモートページを取得することが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;getRemortPage(取得したいWebページのURL,書き出し用ファイル名);
 </pre></div>
 </div>
 </div>
 <div class="section" id="remortpage2text">
-<h2><span class="section-number">4.16. </span>remortPage2text<a class="headerlink" href="#remortpage2text" title="Permalink to this headline">¶</a></h2>
+<h2>4.16. remortPage2text<a class="headerlink" href="#remortpage2text" title="Permalink to this headline">¶</a></h2>
 <p>取得したページをテキストい変換する。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s = new spider(); $s-&gt;remortPage2text(html,始点,終点);
 </pre></div>
 </div>
 </div>
 <div class="section" id="page-parts-change">
-<h2><span class="section-number">4.17. </span>page_parts_change<a class="headerlink" href="#page-parts-change" title="Permalink to this headline">¶</a></h2>
+<h2>4.17. page_parts_change<a class="headerlink" href="#page-parts-change" title="Permalink to this headline">¶</a></h2>
 <p>複数ページの一部分を書き換えることが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;page_parts_change(ディレクトリ名,ページ数,キーワード,スクラップの最初の部分,スクラップの最後の部分,書き出し用のファイル名);
 </pre></div>
 </div>
 </div>
 <div class="section" id="pagescrap">
-<h2><span class="section-number">4.18. </span>pageScrap<a class="headerlink" href="#pagescrap" title="Permalink to this headline">¶</a></h2>
+<h2>4.18. pageScrap<a class="headerlink" href="#pagescrap" title="Permalink to this headline">¶</a></h2>
 <p>ページをスクラップします。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;pageScrap(ディレクトリ名,ページ数,キーワード,スクラップの最初の部分,スクラップの最後の部分);
 </pre></div>
 </div>
 </div>
 <div class="section" id="make-thumnail">
-<h2><span class="section-number">4.19. </span>make_thumnail<a class="headerlink" href="#make-thumnail" title="Permalink to this headline">¶</a></h2>
+<h2>4.19. make_thumnail<a class="headerlink" href="#make-thumnail" title="Permalink to this headline">¶</a></h2>
 <p>ImageMagickを利用したサムネイルを生成します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s-&gt;make_thumbnail(元の画像ソースの配列,リサイズした画像の配列,倍率,ImageMagickのURL);
 </pre></div>
 </div>
 </div>
 <div class="section" id="calender">
-<h2><span class="section-number">4.20. </span>calender<a class="headerlink" href="#calender" title="Permalink to this headline">¶</a></h2>
+<h2>4.20. calender<a class="headerlink" href="#calender" title="Permalink to this headline">¶</a></h2>
 <p>カレンダーを表示する:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$s = new spider(); $s-&gt;calender();
 </pre></div>
@@ -248,7 +249,6 @@ $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -291,10 +291,10 @@ $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../spiderjs/spiderjs001.html"
-                        title="previous chapter"><span class="section-number">1. </span>spider.js</a></p>
+                        title="previous chapter">1. spider.js</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../cx2/cx2engine001.html"
-                        title="next chapter"><span class="section-number">5. </span>Processing用ライブラリ「CX2 Engine」</a></p>
+                        title="next chapter">5. Processing用ライブラリ「CX2 Engine」</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -303,15 +303,17 @@ $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -328,13 +330,12 @@ $s-&gt;arrayForJS(ディレクトリ名,配列の変数名);
         <li class="right" >
           <a href="../spiderjs/spiderjs001.html" title="1. spider.js"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3. </span>spider.php</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

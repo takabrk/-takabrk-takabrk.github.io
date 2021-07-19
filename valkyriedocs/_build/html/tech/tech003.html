@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. Java Hacks &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="tech002.html" title="2. CSS Hacks"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3. </span>Java Hacks</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,9 +44,9 @@
           <div class="body" role="main">
             
   <div class="section" id="java-hacks">
-<h1><span class="section-number">3. </span>Java Hacks<a class="headerlink" href="#java-hacks" title="Permalink to this headline">¶</a></h1>
+<h1>3. Java Hacks<a class="headerlink" href="#java-hacks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="processing-3eclipse">
-<h2><span class="section-number">3.1. </span>Processing 3をEclipseで使う<a class="headerlink" href="#processing-3eclipse" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Processing 3をEclipseで使う<a class="headerlink" href="#processing-3eclipse" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Eclipseの「Help」→「Install New Software」からhttp://proclipsing.googlecode.com/svn/tags/current_releases/proclipsingSite/を登録して、Proclipsingプラグインをインストール
 2.[Window]-&gt;[Preference] で [Preferences]ダイアログを開き、左側のリストから Proclipsing を選択する。
 3.[Processing Path] のテキストフィールドに Processing をインストールしたパスを設定して、Applyボタンを押し、[OK]ボタンをクリックする。
@@ -57,7 +58,7 @@
 </div>
 </div>
 <div class="section" id="processing-with-eclipseopengl">
-<h2><span class="section-number">3.2. </span>Processing with EclipseでOpenGLを使う<a class="headerlink" href="#processing-with-eclipseopengl" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. Processing with EclipseでOpenGLを使う<a class="headerlink" href="#processing-with-eclipseopengl" title="Permalink to this headline">¶</a></h2>
 <p>ProcessingをEclipseで使う場合に困ることはOpenGLの使い方が分かりにくいことです。Linux環境においてOpenGLをProcessing with Eclipseで使う方法を紹介します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Eclipseのworkspaceに任意のProcessing用フォルダを作成します。ここでは「processing」ディレクトリを作成したとします。
 2.processingフォルダにProcessingのサイトからLinux版のProcessingをダウンロードして解凍し、中身を全てprocessingフォルダに入れます。
@@ -69,7 +70,7 @@
 <p>これでProcesssing IDEのようにOpenGLを使ったProcessingアプリケーションを作成することが出来ます。</p>
 </div>
 <div class="section" id="swingguiprocessing">
-<h2><span class="section-number">3.3. </span>Swingで作成したGUIアプリケーションにProcessingアプリケーションを埋め込む方法<a class="headerlink" href="#swingguiprocessing" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Swingで作成したGUIアプリケーションにProcessingアプリケーションを埋め込む方法<a class="headerlink" href="#swingguiprocessing" title="Permalink to this headline">¶</a></h2>
 <p>Swingで作成したGUIアプリケーションとProcessingアプリケーションは別々に開発します。以下はSwingでGUIを作成する例です。JFrameを継承して作成します。ここではGUIアプリケーション「xxx」、Processingアプリケーション「yyy」とします。Processingアプリケーションを組み込むのは簡単で、まず、yyyの変数（ここではvd)を定義します。次にyyyのインスタンスを作成、「vd.init()」でProcessingアプリケーションを初期化します。あとはJPanelに込み込むために「add」関数を使ってパネルに組み込んでいます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -196,7 +197,6 @@ public class swing_gui extends JFrame{
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -214,10 +214,10 @@ public class swing_gui extends JFrame{
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="tech002.html"
-                        title="previous chapter"><span class="section-number">2. </span>CSS Hacks</a></p>
+                        title="previous chapter">2. CSS Hacks</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tech004.html"
-                        title="next chapter"><span class="section-number">4. </span>JavaScript Hack</a></p>
+                        title="next chapter">4. JavaScript Hack</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -226,15 +226,17 @@ public class swing_gui extends JFrame{
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -251,13 +253,12 @@ public class swing_gui extends JFrame{
         <li class="right" >
           <a href="tech002.html" title="2. CSS Hacks"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3. </span>Java Hacks</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

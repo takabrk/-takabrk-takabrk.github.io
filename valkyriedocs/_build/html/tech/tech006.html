@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>6. PHP Hack &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="tech005.html" title="5. Python Hacks"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">6. </span>PHP Hack</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,9 +44,9 @@
           <div class="body" role="main">
             
   <div class="section" id="php-hack">
-<h1><span class="section-number">6. </span>PHP Hack<a class="headerlink" href="#php-hack" title="Permalink to this headline">¶</a></h1>
+<h1>6. PHP Hack<a class="headerlink" href="#php-hack" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="smarty-3-1">
-<h2><span class="section-number">6.1. </span>Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="Permalink to this headline">¶</a></h2>
+<h2>6.1. Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="Permalink to this headline">¶</a></h2>
 <p>PHPテンプレートエンジン「Smarty」では、プラグインの自作が出来ますが、従来の方法は <a class="reference external" href="http://www.smarty.net/docs/ja/variable.plugins.dir.tpl">http://www.smarty.net/docs/ja/variable.plugins.dir.tpl</a> のように、 SMARTY_DIR 直下の pluginsや新規に作成したフォルダに自作プラグインを放り込む事で以下のように、plugins_dir[]メソッドを使ってパスを指定すれば使えました。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
  $smarty-&gt;plugins_dir[] = &#39;includes/my_smarty_plugins&#39;;
@@ -68,7 +69,7 @@
 <p>これで、Smarty 3.1でも自作プラグインを他のディレクトリで管理出来るようになりますね。</p>
 </div>
 <div class="section" id="phphtml">
-<h2><span class="section-number">6.2. </span>PHPで出力したHTMLなどをファイルとして保存する<a class="headerlink" href="#phphtml" title="Permalink to this headline">¶</a></h2>
+<h2>6.2. PHPで出力したHTMLなどをファイルとして保存する<a class="headerlink" href="#phphtml" title="Permalink to this headline">¶</a></h2>
 <p>PHPで生成したHTMLやテキストはecho文やprint文で出力が出来ます。</p>
 <p>この標準出力されたHTMLやテキストをファイルとして保存する為には、ob_get_contents関数でバッファを作って、これをfopen関数とfwrite関数を使ってファイルとして保存します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
@@ -96,7 +97,7 @@
 </div>
 </div>
 <div class="section" id="cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in">
-<h2><span class="section-number">6.3. </span>【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in<a class="headerlink" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in" title="Permalink to this headline">¶</a></h2>
+<h2>6.3. 【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in<a class="headerlink" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in" title="Permalink to this headline">¶</a></h2>
 <p>/app/tmp/cache</p>
 <p>/app/tmp/logs</p>
 <p>/app/tmp/cache/persistent/</p>
@@ -107,7 +108,6 @@
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -125,10 +125,10 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="tech005.html"
-                        title="previous chapter"><span class="section-number">5. </span>Python Hacks</a></p>
+                        title="previous chapter">5. Python Hacks</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tech007.html"
-                        title="next chapter"><span class="section-number">7. </span>PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></p>
+                        title="next chapter">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -137,15 +137,17 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -162,13 +164,12 @@
         <li class="right" >
           <a href="tech005.html" title="5. Python Hacks"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">6. </span>PHP Hack</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

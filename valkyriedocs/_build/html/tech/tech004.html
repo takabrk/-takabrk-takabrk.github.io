@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>4. JavaScript Hack &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="tech003.html" title="3. Java Hacks"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>JavaScript Hack</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,9 +44,9 @@
           <div class="body" role="main">
             
   <div class="section" id="javascript-hack">
-<h1><span class="section-number">4. </span>JavaScript Hack<a class="headerlink" href="#javascript-hack" title="Permalink to this headline">¶</a></h1>
+<h1>4. JavaScript Hack<a class="headerlink" href="#javascript-hack" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="processing-jspde">
-<h2><span class="section-number">4.1. </span>Processing.jsで複数のpdeファイルを取り込むには<a class="headerlink" href="#processing-jspde" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Processing.jsで複数のpdeファイルを取り込むには<a class="headerlink" href="#processing-jspde" title="Permalink to this headline">¶</a></h2>
 <p>Processingは、Javaベースのデジタルアート向けのプログラミング環境であり、標準のエディタでは複数のpdeファイルを並行して使う事が出来る為、よく使う処理はクラスやメソッドにして、本体とは別のpdeファイルにするのが一般的であり、効率的です。JavaScript実装のprocessing.js( href=”<a class="reference external" href="http://processingjs.org/">http://processingjs.org/</a> )でも同じように本体pdeファイルとクラスpdeファイルを分けておく事が出来ます。
 クラスpdeファイルである「cx2.pde」と本体pdeファイルである「worp_man.pde」があるとします。以下はHTMLソースコードの一部です。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;processing.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
@@ -66,7 +67,7 @@
 <p>canvas要素のdata-processing-sources属性を「data-processing-sources=”cx2.pde worp_man.pde”」とする事で、纏めてpdeファイルの導入が可能です。</p>
 </div>
 <div class="section" id="webjavascriptcss">
-<h2><span class="section-number">4.2. </span>WebサイトのJavaScriptやCSSのキャッシュのせいで、これらのファイルが更新されない時の対処法<a class="headerlink" href="#webjavascriptcss" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. WebサイトのJavaScriptやCSSのキャッシュのせいで、これらのファイルが更新されない時の対処法<a class="headerlink" href="#webjavascriptcss" title="Permalink to this headline">¶</a></h2>
 <p>WebサイトやWebアプリケーションを開発していますと、ブラウザのキャッシュ機能によって、JavaScriptやCSSがキャッシュされている方を使われます。</p>
 <p>その為、Ctrl+更新ボタンやF5キーを押す事によって、強制キャッシュクリアをしなければいけません。</p>
 <p>このような現象が起こらないようにする為には、JavaScriptやCSSを呼び出す際に、クエリを付加させておきます。:</p>
@@ -85,7 +86,7 @@
 </div>
 </div>
 <div class="section" id="javascript">
-<h2><span class="section-number">4.3. </span>JavaScriptのショートコードテクニックとトリッキーなテクニック<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. JavaScriptのショートコードテクニックとトリッキーなテクニック<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
 <p>JavaScriptは、そのままプログラムを書きますと、比較的冗長的なソースコードになりがちですので、適度にショートコード化していくと良いでしょう。</p>
 <p>1.オブジェクトとメソッドをエイリアスで短くする</p>
 <p>オブジェクトやメソッドは、長い名前の物が多々あります。</p>
@@ -192,7 +193,7 @@ $d[$gtag](&quot;script&quot;);
 </div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">4.4. </span>JavaScriptにおける動的スクリプトインポートの注意点<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. JavaScriptにおける動的スクリプトインポートの注意点<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>外部スクリプトを動的には、document.createElementを使うのがポピュラーな方法ですが、この時に気をつけておくべき事があります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.HTML内でinnerHTMLを使って外部スクリプトを呼び出すと、scriptタグが被ってしまって、HTMLの文法エラーの原因になってしまって、結果的に外部スクリプトを呼び出せない。
 2.createElementを使って呼び出す場合には、document.writeを使って外部スクリプトの呼び出しを行なっているスクリプトを処理出来ないという仕様上の制約があります。
@@ -200,7 +201,7 @@ $d[$gtag](&quot;script&quot;);
 </div>
 </div>
 <div class="section" id="tumblrwordpress">
-<h2><span class="section-number">4.5. </span>Tumblrの記事データをWordPress経由でバックアップ<a class="headerlink" href="#tumblrwordpress" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. Tumblrの記事データをWordPress経由でバックアップ<a class="headerlink" href="#tumblrwordpress" title="Permalink to this headline">¶</a></h2>
 <p>Tumblrには、記事のインポート機能やエクスポート機能がありません。そこで、WordPressのインポート機能。エクスポート機能を活用して、Tumblrの記事データをバックアップしていきます。</p>
 <p>WordPressは、自分でサーバを用意してインストールしても構いませんし、WordPress.comを使っても構いませんので、取り敢えず、適当にブログを一つ作成します。</p>
 <p>「WordPressの管理」（ダッシュボード）→「ツール」→インポートでTumblrと連携させてインポートを行います。</p>
@@ -208,7 +209,7 @@ $d[$gtag](&quot;script&quot;);
 <p>インポートした記事は、このインポート画面で「アカウント情報を消去」という項目を選択すれば、WordPressにインポートした記事を消す事ができ、再度Tumblrで作成したサイトを選択すれば、記事が被らずに再度インポートを行えます。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">4.6. </span>関数やメソッド名を短くしてJavaScriptのライブラリの容量を減らす方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. 関数やメソッド名を短くしてJavaScriptのライブラリの容量を減らす方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>ライブラリを出来るだけ減らすにはサードパーティー製の圧縮する他にも関数名やメソッド名を短くする方法があります。</p>
 <p>例えば、以下のようにするとスクリプトが大きければ大きいほど効果が大きいことがわかると思います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $d = document,
@@ -218,7 +219,7 @@ var s = $d[$gei](&quot;id&quot;);
 </div>
 </div>
 <div class="section" id="javascript-cgi-php-css">
-<h2><span class="section-number">4.7. </span>JavaScript,CGI,PHP,CSSを読み込む関数<a class="headerlink" href="#javascript-cgi-php-css" title="Permalink to this headline">¶</a></h2>
+<h2>4.7. JavaScript,CGI,PHP,CSSを読み込む関数<a class="headerlink" href="#javascript-cgi-php-css" title="Permalink to this headline">¶</a></h2>
 <p>JavaScript、CGI、PHP、CSSを読み込むための関数は以下のようにすると出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> var require = function(src){
           var addElement = function(tag,ele){
@@ -261,7 +262,7 @@ var s = $d[$gei](&quot;id&quot;);
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">4.8. </span>キーボードのカーソルキーを使って、写真をスライドさせる<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>4.8. キーボードのカーソルキーを使って、写真をスライドさせる<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>キーボードのカーソルキー操作で写真を切り替えるには以下のようにします。「var ek = e.keyCode - 38;」の部分でカーソルキーのキーコードを取得しています。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var imgChange = function(id,wi,h,dir,array){
           var i = 0;
@@ -284,7 +285,7 @@ var s = $d[$gei](&quot;id&quot;);
 </div>
 </div>
 <div class="section" id="javascriptdynamichtml">
-<h2><span class="section-number">4.9. </span>JavaScriptによるDynamicHTMLアニメーション<a class="headerlink" href="#javascriptdynamichtml" title="Permalink to this headline">¶</a></h2>
+<h2>4.9. JavaScriptによるDynamicHTMLアニメーション<a class="headerlink" href="#javascriptdynamichtml" title="Permalink to this headline">¶</a></h2>
 <p>JavaScriptでDHTMLアニメーションをさせるには、setIntervalメソッドで処理をループさせて、CSSの値を調整するのが基本になります。
 +x方向へ移動させたい場合は以下のように書きます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var move_x = function(id,spd,end){
@@ -333,7 +334,7 @@ var s = $d[$gei](&quot;id&quot;);
 </div>
 </div>
 <div class="section" id="innerhtmlhtml">
-<h2><span class="section-number">4.10. </span>innerHTML以外でHTMLを読み込む方法<a class="headerlink" href="#innerhtmlhtml" title="Permalink to this headline">¶</a></h2>
+<h2>4.10. innerHTML以外でHTMLを読み込む方法<a class="headerlink" href="#innerhtmlhtml" title="Permalink to this headline">¶</a></h2>
 <p>innerHTML以外でHTMLを読み込むにはobjectやiframeを使います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">cobj</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">);</span>
 <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">cobj</span><span class="p">);</span>
@@ -379,7 +380,7 @@ httpRequest(&quot;取得したいHTMLのURL&quot;,&quot;GET&quot;,
 </div>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">4.11. </span>ループの高速化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>4.11. ループの高速化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>ループにキャッシュ用の変数を加えるだけでループを高速化することが出来ます。ここではdivという変数にdivエレメントの配列をキャッシュしています。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="p">,</span><span class="n">div</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span><span class="n">i</span><span class="o">&lt;</span><span class="n">div</span><span class="o">.</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
 <span class="p">}</span>
@@ -387,7 +388,7 @@ httpRequest(&quot;取得したいHTMLのURL&quot;,&quot;GET&quot;,
 </div>
 </div>
 <div class="section" id="javascriptphpperl">
-<h2><span class="section-number">4.12. </span>JavaScriptからPHP、Perlなどで書かれたサーバープログラムを呼び出す<a class="headerlink" href="#javascriptphpperl" title="Permalink to this headline">¶</a></h2>
+<h2>4.12. JavaScriptからPHP、Perlなどで書かれたサーバープログラムを呼び出す<a class="headerlink" href="#javascriptphpperl" title="Permalink to this headline">¶</a></h2>
 <p>JavaScriptでPHP、Perlで書かれたサーバーサイドプログラムを呼び出すには以下の方法があります。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>JavaScriptでscriptエレメントを生成して呼び出す。
 var sc = document.createElement(&quot;script&quot;);
@@ -398,7 +399,7 @@ document.body.appendChild(sc);
 <p>サーバープログラムのURLの後ろに「?param=xxx&amp;pram2=ccc」などを追記すると、サーバにクエリとして入力したい値を渡すことが出来ます。</p>
 </div>
 <div class="section" id="xmlhttprequest">
-<h2><span class="section-number">4.13. </span>クロスブラウザXMLHttpRequestオブジェクト<a class="headerlink" href="#xmlhttprequest" title="Permalink to this headline">¶</a></h2>
+<h2>4.13. クロスブラウザXMLHttpRequestオブジェクト<a class="headerlink" href="#xmlhttprequest" title="Permalink to this headline">¶</a></h2>
 <p>汎用性のあるXMLHttpRequestオブジェクトです。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var XMLObject = function(){
           return (typeof XMLHttpRequest != &quot;undefined&quot;) ? new XMLHttpRequest() : (new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;) || new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;));
@@ -407,7 +408,7 @@ document.body.appendChild(sc);
 </div>
 </div>
 <div class="section" id="id">
-<h2><span class="section-number">4.14. </span>「エレメント名+数字」のid名で特定のエレメントを指定する方法<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
+<h2>4.14. 「エレメント名+数字」のid名で特定のエレメントを指定する方法<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
 <p>「エレメント+数字」のid名で特定のエレメントを指定するには以下のように書きます。</p>
 <p>例えば、「var t = new spider(“div2”);」とすると、3番目のdivを取ることが出来ます。JavaScriptのメソッドを使いたい場合は「t.id.メソッド();」とすれば、使うことが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $int = parseInt;
@@ -433,11 +434,11 @@ var spider = function(id)[
 </div>
 </div>
 <div class="section" id="javascripteval">
-<h2><span class="section-number">4.15. </span>JavaScriptのevalの代用<a class="headerlink" href="#javascripteval" title="Permalink to this headline">¶</a></h2>
+<h2>4.15. JavaScriptのevalの代用<a class="headerlink" href="#javascripteval" title="Permalink to this headline">¶</a></h2>
 <p>(0)[“constructor”][“constructor”](“JavaScriptのコード”)()は、Functionコンストラクタの機能を持っているそうです。この性質を利用して、文字コードだけでJavaScriptを書いたり、日本語で書いたりすることも出来るようです。</p>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">4.16. </span>JavaScriptにおける独自関数の正式名称と省略形を併せて設定する方法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>4.16. JavaScriptにおける独自関数の正式名称と省略形を併せて設定する方法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>JavaScrptは無名関数を使うことで、開発者独自の関数を作り出すことが出来ますが、その正式名称と省略形をまとめて記述すると、スクリプトファイル容量の削減をすることが出来ます。</p>
 <p>例えば、createLayerという関数を作ったとすると、以下のように書くことが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $cly = createLayer = function(){}
@@ -446,7 +447,7 @@ var spider = function(id)[
 <p>こういう風に書くと、createLayer()というフルネームで書くことが出来ますし、省略形に$cly()と書くことも出来ます。</p>
 </div>
 <div class="section" id="css-spritesjavascript">
-<h2><span class="section-number">4.17. </span>CSS SpritesとJavaScriptを使ってパラパラアニメをつくる<a class="headerlink" href="#css-spritesjavascript" title="Permalink to this headline">¶</a></h2>
+<h2>4.17. CSS SpritesとJavaScriptを使ってパラパラアニメをつくる<a class="headerlink" href="#css-spritesjavascript" title="Permalink to this headline">¶</a></h2>
 <p>setIntervalで配列の中にある画像を次々と表示してアニメーションを作るものですが、これをCSS Spritesに応用すれば、より簡単にアニメーションを作ることが出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.まず、動画にしたい複数の画像をリサイズします。ここでは400x300にしました。
 2.PhotoshopやGIMPで縦に長い新規画像を作成し、この中に先ほどの画像を映写機のフィルムのように順番に縦に並べていきます。これをPNGなどで出力します。ここでは画像「oj.png」とします。先ほどの画像を10枚並べるので画像サイズは300x4000です。
@@ -474,7 +475,7 @@ window.onload = function(){
 <p>これを応用すると、スライドショーやサムネイル表示なども作ることができ、「配列無し」であらゆるコンテンツを作ることが可能になります。</p>
 </div>
 <div class="section" id="id6">
-<h2><span class="section-number">4.18. </span>JavaScriptで日本語の変数を使う<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>4.18. JavaScriptで日本語の変数を使う<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>ECMA262-3以降のECMAScriptでは日本語をオブジェクトやメソッドの名前に使えます。下のスクリプトはブラウザ上に「直江兼続」「リン・ミンメイ」と表示します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">html</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">xlink</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
@@ -501,14 +502,14 @@ window.onload = function(){
 </div>
 </div>
 <div class="section" id="id7">
-<h2><span class="section-number">4.19. </span>同一ドメインでJavaScript対応ブラウザ用ページと非対応ブラウザ用ページを振り分ける簡単な方法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>4.19. 同一ドメインでJavaScript対応ブラウザ用ページと非対応ブラウザ用ページを振り分ける簡単な方法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>日本でもノキアのスマートフォンやウィルコムのW-ZERO3シリーズなどのようにJavaScriptに対応するブラウザを持つ携帯電話は増えてきていますが、まだまだFOMAなどの携帯サイトのように非対応のブラウザを搭載しているものもま
 だまだ多いのが実情です。PC用のWebサイトをすでに持っていて、携帯サイトを用意したいとき、新たに構築するのは面倒と考える方もいるでしょう。そんなとき、同一ドメインでJava Script対応ブラウザと非対応ブラウザ、それぞれに対してJavaScriptの処理を振り分ける簡易な方法を紹介しましょう。それは非常に簡単なことで、まずXHTMLをキッチリと書きます。これは携帯電話ブラウザで
 もJava Script対応・非対応ブラウザでも見ることが出来るように書く必要があります。そして、対応ブラウザにはJavaScriptのinnerHTMLで書き換えます。bodyタグ直下にbody内容を一くくりにするdivタグを埋め込みid名を設定します。Java
 Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述してやり、ページがロードしたときにこのスクリプトが起動するように設定するだけです。Java Scriptを外部化しておけば、メンテナンスも楽です。もちろん、innerHTMLにはJavaScript/CSSを含むことも可能です。ただ、それでは煩雑になるので、XHTMLへJava Scriptで直接DOMコントロールする方が自然でしょう。つまり、非対応ブラウザにはXHTMLで対応し、対応ブラウザにはJavaScriptで対応するという最もシンプルかつ確実な場合分けがあるということです。</p>
 </div>
 <div class="section" id="id8">
-<h2><span class="section-number">4.20. </span>JavaScriptがニャルラトホテプ言語に((」・ω・)」うー!(/・ω・)/にゃー!)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2>4.20. JavaScriptがニャルラトホテプ言語に((」・ω・)」うー!(/・ω・)/にゃー!)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://gigazine.net/news/20120528-unyaencode/">http://gigazine.net/news/20120528-unyaencode/</a></p>
 <p>◇名状しがたいプログラミング言語のようなもの Nyaruko　いつもニコニコ あなたの隣に 這いよる混沌 ニャルラトホテプ言語 です</p>
 <p><a class="reference external" href="https://github.com/masarakki/nyaruko_lang">https://github.com/masarakki/nyaruko_lang</a></p>
@@ -526,7 +527,6 @@ Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述�
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -561,10 +561,10 @@ Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述�
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="tech003.html"
-                        title="previous chapter"><span class="section-number">3. </span>Java Hacks</a></p>
+                        title="previous chapter">3. Java Hacks</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tech005.html"
-                        title="next chapter"><span class="section-number">5. </span>Python Hacks</a></p>
+                        title="next chapter">5. Python Hacks</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -573,15 +573,17 @@ Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述�
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -598,13 +600,12 @@ Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述�
         <li class="right" >
           <a href="tech003.html" title="3. Java Hacks"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>JavaScript Hack</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

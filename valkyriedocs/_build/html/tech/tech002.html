@@ -1,19 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>2. CSS Hacks &#8212; Valkyrie SRX 1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/analytics.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,8 +34,7 @@
         <li class="right" >
           <a href="tech001.html" title="1. Ubuntu系ディストリビューション向けテクニック"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2. </span>CSS Hacks</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,12 +44,11 @@
           <div class="body" role="main">
             
   <div class="section" id="css-hacks">
-<h1><span class="section-number">2. </span>CSS Hacks<a class="headerlink" href="#css-hacks" title="Permalink to this headline">¶</a></h1>
+<h1>2. CSS Hacks<a class="headerlink" href="#css-hacks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="css-spritesweb">
-<h2><span class="section-number">2.1. </span>CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる<a class="headerlink" href="#css-spritesweb" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる<a class="headerlink" href="#css-spritesweb" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><a class="reference external" href="http://www.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/">The Mystery Of CSS Sprites: Techniques, Tools And Tutorials</a></p>
-</div></blockquote>
+<div><a class="reference external" href="http://www.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/">The Mystery Of CSS Sprites: Techniques, Tools And Tutorials</a></div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CSS</span> <span class="n">Sprites</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">new</span><span class="o">.</span> <span class="n">In</span> <span class="n">fact</span><span class="p">,</span> <span class="n">they</span> <span class="n">are</span> <span class="n">a</span> <span class="n">rather</span> <span class="n">well</span><span class="o">-</span><span class="n">established</span> <span class="n">technique</span> <span class="ow">and</span> <span class="n">have</span> <span class="n">managed</span> <span class="n">to</span> <span class="n">become</span> <span class="n">common</span> <span class="n">practice</span> <span class="ow">in</span> <span class="n">Web</span> <span class="n">development</span><span class="o">.</span> <span class="n">Of</span> <span class="n">course</span><span class="p">,</span> <span class="n">CSS</span> <span class="n">sprites</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">always</span> <span class="n">necessary</span><span class="p">,</span> <span class="n">but</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">situation</span> <span class="n">they</span> <span class="n">can</span> <span class="n">bring</span> <span class="n">significant</span> <span class="n">advantages</span> <span class="ow">and</span> <span class="n">improvements</span> <span class="o">-</span> <span class="n">particularly</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">reduce</span> <span class="n">your</span> <span class="n">server</span> <span class="n">load</span><span class="o">.</span> <span class="n">And</span> <span class="k">if</span> <span class="n">you</span> <span class="n">haven</span><span class="s1">&#39;t heard of CSS sprites before, now is probably a good time to learn what they are, how they work and what tools can help you create and use the technique in your projects.</span>
 </pre></div>
 </div>
@@ -61,9 +61,8 @@
 <p>どうしても少しファイルが大きくなりますが、それと引き換えにサーバへのアクセス数が大幅に減るので、レスポンスがかなり向上します。CSS Spritesのデメリットは画像ファイルを大きくし過ぎると、Webサイトのレスポンスが落ちることでしょう。大きな画像には通常の方法で表示し、パーツ部分だけCSS Spritesを使用するとWebサイトのパフォーマンス向上に貢献できるでしょう。</p>
 <p>CSS Sprites用ジェネレーターには以下のものがあります。細かい調整をする時は自分で調整した方が納得できると思います。</p>
 <blockquote>
-<div><p><a class="reference external" href="http://duris.ru/">Data URI[CSS] Sprites</a>
-<a class="reference external" href="http://drupal.org/project/sprites">CSS Sprite Generator</a></p>
-</div></blockquote>
+<div><a class="reference external" href="http://duris.ru/">Data URI[CSS] Sprites</a>
+<a class="reference external" href="http://drupal.org/project/sprites">CSS Sprite Generator</a></div></blockquote>
 <p>◇CSS Spritesのデメリット:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>・画像の容量が大きすぎると、読み込みに時間がかかる
 ・CSSで背景の繰り返しを行う場合は全ての画像を繰り返してしまうので使えない
@@ -71,7 +70,7 @@
 </div>
 </div>
 <div class="section" id="cssoverflow">
-<h2><span class="section-number">2.2. </span>CSSのoverflowを使った大量の情報を整理する方法<a class="headerlink" href="#cssoverflow" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. CSSのoverflowを使った大量の情報を整理する方法<a class="headerlink" href="#cssoverflow" title="Permalink to this headline">¶</a></h2>
 <p>Ｗｅｂサイトを作ると、載せたい情報が大量になり、リンクを作ってそのページに誘導します。しかし、Googleなどの検索エンジンにクロール時にサイ トの情報を見つけてもらうには出来るだけ元の文章のまま載せておくのが一番いいのです。そこで、枠からはみ出す情報をCSSのoverflowの scrollを使って、フレーム風にしてあげるといいでしょう。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">div</span><span class="p">{</span>
           <span class="n">overflow</span> <span class="p">:</span> <span class="n">scroll</span><span class="p">;</span>
@@ -81,7 +80,7 @@
 <p>これでフレーム風の表示が出来、大量の情報を綺麗に見せることが出来ます。</p>
 </div>
 <div class="section" id="csscss">
-<h2><span class="section-number">2.3. </span>ブラウザ別にCSSを適用するCSSハック<a class="headerlink" href="#csscss" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. ブラウザ別にCSSを適用するCSSハック<a class="headerlink" href="#csscss" title="Permalink to this headline">¶</a></h2>
 <p>◇スターハック:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">html</span>
      <span class="c1">#hack {</span>
@@ -234,7 +233,7 @@ p{
 <p>プロパティを設定した後に、「!important」を追加すると「!important」のプロパティが最優先されます。IE6以下では未対応なので、モダンブラウザとIE6以下との場合分けに有効です。</p>
 </div>
 <div class="section" id="id11">
-<h2><span class="section-number">2.4. </span>解像度が変わっても常に中央にコンテンツが表示される方法<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. 解像度が変わっても常に中央にコンテンツが表示される方法<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <p>CSSを使って、テーブルを使ったときのようなサイズ可変可能なページレイアウトを実現する。あるいは、コンテンツを中央に表示することができる。</p>
 <p>marginの値がポイント。左右のmarginの値をautoにすると自動でページの両側の余白を調整してくれる。また、positionは指定しないようにしたい。サイズが可変しなくなる。</p>
 <p>１．コンテンツを中央に表示させたい場合:</p>
@@ -255,21 +254,21 @@ p{
 </div>
 </div>
 <div class="section" id="cssfloat">
-<h2><span class="section-number">2.5. </span>CSSのfloatを使った段組レイアウト<a class="headerlink" href="#cssfloat" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. CSSのfloatを使った段組レイアウト<a class="headerlink" href="#cssfloat" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><dl class="simple">
-<dt>.baselayer{</dt><dd><p>width:600px;
+<div><dl class="docutils">
+<dt>.baselayer{</dt>
+<dd>width:600px;
 float:right;
 margin:0;
-padding:0;</p>
-</dd>
+padding:0;</dd>
 </dl>
 <p>}</p>
 </div></blockquote>
 <p>floatの値がポイント。回り込ませたいボックス要素を右に回り込ませたいなら「right」を、左に回りこませたいならば「left」を指定する。２段組だけでな く、&lt;br&gt;３段組など数を多くしても簡単に実現できるが、各ボッ&lt;br&gt;クス要素のwidthの値には注意が必要。リキッドレイアウトを使うときに、入れ子状態（ボックス要素の中にボックス 要素を入れる）にしている 場合、widthを十分にとっておかないとレイアウト崩れの原因になる。HTML側では、回り込ませたいボックス要素を先に記述しておくとよい。</p>
 </div>
 <div class="section" id="id12">
-<h2><span class="section-number">2.6. </span>リストの文頭のマークに画像を入れる<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. リストの文頭のマークに画像を入れる<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <p>CSSのリストの設定を次のようにすると、文頭のマークに好きな画像を入れることができる。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">li</span><span class="p">{</span>
           <span class="nb">list</span><span class="o">-</span><span class="n">style</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;入れたい画像名&quot;</span><span class="p">);</span>
@@ -278,7 +277,7 @@ padding:0;</p>
 </div>
 </div>
 <div class="section" id="id13">
-<h2><span class="section-number">2.7. </span>リストの文頭のマークを指定する<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. リストの文頭のマークを指定する<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <p>CSSのリストの設定を次のようにすると、文頭のマークを指定することができる。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>li{list-style-type:マークタイプ;}
 マークタイプには次のようなものがある。
@@ -305,7 +304,7 @@ none　なし
 </div>
 </div>
 <div class="section" id="id14">
-<h2><span class="section-number">2.8. </span>マウスオーバーすると文字が大きく表示される<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. マウスオーバーすると文字が大きく表示される<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <p>CSSで文字サイズを大きく設定すると、スクリプトなしでインパクトの大きい演出ができる。文字のかわりに画像を使ってもよい。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">.</span><span class="n">layer11</span><span class="p">{</span>
     <span class="nb">float</span><span class="p">:</span><span class="n">left</span><span class="p">;</span>
@@ -328,7 +327,6 @@ none　なし
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -351,10 +349,10 @@ none　なし
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="tech001.html"
-                        title="previous chapter"><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック</a></p>
+                        title="previous chapter">1. Ubuntu系ディストリビューション向けテクニック</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tech003.html"
-                        title="next chapter"><span class="section-number">3. </span>Java Hacks</a></p>
+                        title="next chapter">3. Java Hacks</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -363,15 +361,17 @@ none　なし
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -388,13 +388,12 @@ none　なし
         <li class="right" >
           <a href="tech001.html" title="1. Ubuntu系ディストリビューション向けテクニック"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2. </span>CSS Hacks</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2016, takamitu hamada.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>
