@@ -4,51 +4,35 @@
    contain the root `toctree` directive.
 
 Valkyrie Linux
-=========================
+===============
 
-Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS版」をベースに開発した64bit OSです。
+Valkyrie Linuxは、Linuxディストリビューションである「Ubuntu LTS版」をベースに開発した64bit OSです。デスクトップ環境はLXQtを導入しています。Valkyrie Linuxは、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「ゲーミング環境の構築」を実施しています。
 
-デスクトップ環境は、LXQtを採用しています。
+このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを収録しています。カスタムカーネルは、グラフィックドライバ「Mesa 21」と組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
+デフォルトのカーネルは、低遅延版Ubuntuカーネル5.11.0です。カスタムカーネルを導入したい場合は、デスクトップ上で右クリックしてメニューを出し、「Install Custom Kernel」の項目からインストールが行えます。インストール後は、システムの再起動を行う事でカスタムカーネルが使えるようになります。
 
-このOSは、最新のLinuxカーネルをベースにしたカスタムカーネルを搭載しています。カスタムカーネルは、グラフィックドライバ「Mesa 21」と最新のLinux Firmwareを組み合わせる事で、高レスポンス性とハイパフォーマンスを実現しています。
-Valkyrie Linuxは、「人工知能プログラムの開発環境・実行環境の提供」、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を実施しています。
+「Firefox」「GIMP」「Audacious」「SMPlayer」「Emacs」「OBS Studio」「Shotcut」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
+Google Chromeを使いたい場合は、デスクトップ上で右クリックメニューを出して、「Install Google Chrome」の項目からインストールが行えます。
 
-「Chromium Browser」「GIMP」「SM Player」「Audacious」「Emacs」「OBS Studio」「Shotcut」「Avidemux」「Steam」などの人気アプリケーションを搭載しており、デスクトップコンピューティングで行う作業をほぼカバーしてます。SSB(Specific site Browser)によって、
-強力なオンラインサービスをデスクトップアプリケーションのように使う事が可能です。
-オリジナルアプリケーション「Viper Tools」でシステム起動音の変更、新しいアプリケーションの追加から人工知能による自動文章構築と読み上げまでを行えます。
+システムトレイには、アプリケーションメニューや音量ボリュームがあります。
 
-Valkyrie Linux is a 64bit OS which was developed based on the "Ubuntu LTS", which is a Linux distribution.
+http://www.vsrx.work/article/418075361.html
 
-The desktop environment of this OS has been adopted LXQt.
-
-This OS is equipped with a custom kernel based on the latest Linux kernel.The custom kernel realize high response and high performance by combining it with the graphic driver "Mesa 21" and the latest Linux Firmware.
-Valkyrie Linux is carried out the "providing development environment and execution environment for artificial intelligence programs",
-"providing execution environment for Linux/Windows applications", "providing software development and web development environment",
-"providing multimedia contents creation environment , "Providing cutting-edge science and technology/data science environment","building a gaming environment".
-
-It is equipped with popular application such as "Chromium Browser","GIMP","Shotcut","SM Player","Audacious","Emacs","OBS Studio","Shotcut","Avidemux","Steam",etc.
-This os almost covers work to perform by desktop computing. By SSB(Specific site Browser), it can use the strong online service like desktop application.
-Valkyrie Linux can perform automatic sentence construction and reading aloud with the artificial intelligence from a change of the system startup sound,
-addition of new application in original application "Viper Tools".
-
-
-http://www.valkyrieviper.space/article/418075361.html
-
-Recommended system requirements
---------------------------------------------------
+推奨システム要件
+----------------
 
 Processor :
     Intel Core i,Pentium G/Celeron G,Atom SoC
 
     AMD Ryzen
 
-Memory: 2GB and over
+Memory: 4GB and over
 
 Storage: 128GB and over HDD/SSD/USB memory
 
 Network: FTTH・ADSL・LTE・WiMAX2+ etc.
 
-Tested Motherboard
+動作確認したマザーボード
 ---------------------------------
 
 B150-COMBO(ASRock)
@@ -57,34 +41,27 @@ H97I-PLUS(ASUS)
 
 C1007UN-D(GIGABYTE)
 
-[Tested Motherboard]
-
-B150M COMBO(ASRock)
-
-H97I-PLUS (ASUS)
-
-C1007UN-D (GIGABYTE)
-
-[Tested Stick PC(stable with wireless LAN toggle)]
+動作確認したスティックPC
+-------------------------
 
 STCK1A32WFC(Intel)
 
-Based Linux destribution
------------------------------------
+ベースにしたLinuxディストリビューション
+---------------------------------------
 
-Ubuntu 18.04.5 LTS
+Ubuntu 20.04.2 LTS
 
 Kernel
 ------------
 
-◎Noir linux Kernel 5.11.11
+◎Noir linux Kernel 5.13.4
 ::
   ◇based kernel
-    linux kernel 5.11
+    linux kernel 5.13
 
   ◇Applied patches
-  - CPU shceduler -> MuQSS
-  - Default I/O scheduler -> Kyber
+  - CPU shceduler -> BMQ
+  - Default I/O scheduler -> MQ-Deadline
   - Processer family -> Generic X86_64
   - Kernel Compression mode -> zstd
   - Preemption Model -> Preemptible Kernel(lowlatency desktop)
@@ -97,31 +74,14 @@ Kernel
   - Default CPUFreq Governor -> performance
   - HD-audio pre-allocated buffer size 4096
   - BBR2 TCP Congestion Control
-  - Built on the GCC 10.2.0
+  - Built on the GCC 11.1.0
   - CPU idle governor -> TEO
   - PCIe ACS Override support
   - futex for Wine/Proton support
   - ZSTD kernel and initram support
   - TSX -> auto
   - Aufs support
-  - Zen Interactive Tuning support
-    Mem dirty before bg writeback 10% -> 20%
-    Mem dirty before sync writeback 20% -> 50%
-    Background-reclaim hugepages no -> yes
-  [CFS CPU Scheduler]
-    Scheduling latency 6 -> 4ms
-    Minimal granularity 0.75 -> 0.4ms
-    Wakeup granularity 1 -> 0.5ms
-    CPU migration cost 0.5 -> 0.25ms
-    Bandwidth slice size 5 -> 3ms
-    Task rebalancing threshold 32 -> 256
-    Ondemand sampling down factor 1 -> 5
-  [MuQSS CPU Scheduler]
-    Scheduling interval 6-> 4 ms
-    ISO task max realtime use 70 % -> 25 %
-    Yield type 1 -> 0
   - Meltdown,spectre_v1,spectre_v2 : Mitigation
-  - Clear Linux support
   - rt_runtime 95000 -> 98000
   - rq_affinity 2
   -Aufs support
@@ -131,50 +91,48 @@ PPA
 
 ::
 
-    Ubuntu PPA
-    PPSSPP PPA
-    Avidemux PPA
+    Ubuntu Japanese Team PPA
+    Canonical kernel PPA
     Atom PPA
     BootRepair PPA
     Docker PPA
     Wine HQ PPA
-    GIMP PPA
     OBS Studio PPA
     Lutris  PPA
     LibreOffice PPA
-    Inkscape PPA
-    StepMania PPA
 
-OS SPEC
+OSスペック
 -------------
 
 ::
 
-    - Ubuntu 18.04.5 LTS based
-    - Custom kernel "Noir linux kernel 5.11.11" / Ubuntu kernel 5.8.0 lowlatency
+    - Ubuntu 20.04.2 LTSベース
+    - Custom kernel "Noir linux kernel 5.13.4" / Ubuntu kernel 5.11.0 lowlatency
     - original application "Viper Tools"
-    - linux firmware 1.190.4
-    - Mesa 21.0.1
+    - linux firmware 1.197.2
+    - Mesa 21.1.5
     - LXQt
     - Tint2
     - Openbox
     - gmrun,dunst
     - xfce4-terminal,xfce4-taskmanager,xfce4-screenshooter
     - Intel iHD Driver 21.1.0
+    - ClassicMenu Indicator
+    - pnmixer
 
-Applications
------------------
+収録しているアプリケーション
+------------------------------
 
 ::
 
-    - Chromium Browser 89,Firefox 87
+    - Firefox 90
     - emacs-nox 27.1,leafpad,glade
     - pulseaudio,jackd2
-    - GIMP 2.10.22
-    - GCC 10.2.0,Python 3.6.9/3.9.0/2.7.18,node.js,libllvm11/10,PHP 8.0,node.js
-    - Wine 6.0.0
-    - OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.92,mpv 0.33,ffmpeg 4.3.1,SMPlyer 20.6.0
-    - Steam,PCSX2,PPSSPP,mednafen,kega fusion,redream
+    - GIMP 2.10.18
+    - GCC 11.1.0,Python 3.8.10/2.7.18,node.js,libllvm12,PHP 8.0,node.js
+    - Wine 6.0.1
+    - OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.93,mpv 0.33,ffmpeg 4.3.1,SMPlyer 20.6.0
+    - Steam,PCSX2,mednafen,kega fusion\
     - gnumeric,abiword
     - keepassxc
     - unetbootin,gparted,boot-repair,gnome disks
@@ -185,14 +143,14 @@ Applications
     - Arronax
     - Thunderbird
 
-icons
+アイコン
 --------
 
 ::
 
     - Suru++
 
-Fonts
+フォント
 --------
 
 ::
@@ -212,13 +170,11 @@ Fonts
     Wifu2x
     Insecam
     IP hiroba
-    Youtube
     Google Maps
     Google translation
     BROARDBAND  Speedtest
     Animizer
     Wifu2x
-    MSI電源容量計算機
 
 ○オプション（未定）
 人工知能の開発環境「Brunhild」
@@ -256,8 +212,8 @@ Fonts
  ・Windowsキー+e - Emacs noxの起動
 
 インストール方法
-===============
-◇インストール方法
+================
+
 1.ISOをダウンロード（OneDriveのアカウントが無くてもダウンロードは出来ます。右クリックメニューで「ダウンロード」の項目を選択して下さい。）
 
 2.UNetbootinでUSBメモリーにインストールディスク(Live USB)を作成。
@@ -266,19 +222,22 @@ https://unetbootin.github.io/
 
 3.Live USBをパソコンのUSBポートに挿入して、UEFIからLive USBで起動出来るように、USBメモリーから起動出来るようにする。（メーカーロゴが出ている時にF11キーなどを押す。）
 
-4.Live USBでシステムを起動。余計な物をインストールしないようにし、高速にインストールする為にネットを切っておく。トラブルを防止出来ます。
+4.Live USBでシステムを起動。ネットに接続しておきます。
 
-5.右クリック→「Install PVL」→インストール
+5.デスクトップ上にある「Ubuntu20.04 LTSのインストール」というアイコンをダブルクリックすると、インストーラーが起動。これを使って、インストール作業を行います。もし、ブートローダー「Grub2」のインストールが失敗した場合は、LiveUSBのシステム再起動を行って、右クリックメニューからboot-repairを使ってインストールする事が出来ます。
 
 6.OSのインストールが終わった後に出てくるダイアログで「試用を続ける」を選択する。選択後に自動的にboot-repairが起動。
 
-7.「高度なオプション」→「GRUBのオプション」→「SecureBoot」のチェックを外して、適用ボタンを押す。
+Boot Repairの使い方
+===================
 
-8.GRUBをインストールしたら、システムの再起動（エラーが出ていてもGrub2はインストールされているので問題無く起動出来ます。）。
+1.「高度なオプション」→「GRUBのオプション」→「SecureBoot」のチェックを外して、適用ボタンを押す。
+
+2.GRUBをインストールしたら、システムの再起動（エラーが出ていてもGrub2はインストールされているので問題無く起動出来ます。）。
 homeディレクトリを別にした状態で、再インストールをしている時は、/etc/skelの下にあるファイルやフォルダを全てユーザーディレクトリにコピーしなければ反映されません。
 
 セキュアブートの無効化
-===================
+======================
 
 1.パソコンを起動させた時にメーカーのロゴが表示されるので、この時にF2キーかDeleteキーを押す。
 
@@ -295,7 +254,7 @@ homeディレクトリを別にした状態で、再インストールをして�
 4.保存して再起動させると、セキュアブートが無効化されてシステムを起動する事が出来ます。
 
 64bit OS「Valkyrie Linux」の特長
-=========================
+==================================
 
 * デスクトップ環境は、LXQtを採用しています。
 
@@ -305,7 +264,7 @@ homeディレクトリを別にした状態で、再インストールをして�
 
 * Linuxカーネルは、最新のLinuxカーネルベースの高レスポンス性が高いカスタムカーネルを搭載。
 
-* Mesa 20の導入により、WineやPCSX2などで3Dゲームを動作させた時のパフォーマンスが大幅に向上しています。
+* Mesa 21の導入により、WineやPCSX2などで3Dゲームを動作させた時のパフォーマンスが大幅に向上しています。
 
 * VDAPU及びVAAPI対応ドライバを採用している為、動画支援機能で低CPU負荷で動画を再生出来ます。
 
@@ -336,7 +295,7 @@ homeディレクトリを別にした状態で、再インストールをして�
 * 日本語入力環境にMoscとFcitxを採用
 
 Valkyrie Linuxの高速化と最適化
-========================
+==============================
 
 64bit OS「Valkyrie Linux」は、LTS版Ubuntuをベースに数多くの高速化・最適化策を講じています。
 
@@ -356,28 +315,18 @@ Linuxカーネルを更に最適化する
 
 5./etc/sysctl.confの最適化
 
-6.サウンドシステムは、サウンドサーバを通さずに、ALSAを直接使えるようにしています。
+6./etc/init.d/rcに「CONCURRENCY=shell」を設定して、システム起動時のモジュールの並列起動
 
-サウンドサーバが必要な場合には、「PulseAudio」「Jack Audio Connection Kit」をウィンドウマネージャー「Openbox」の右クリックメニューから手動で起動出来るようにしました。
+7.VAAPIとVDPAUの導入で動画支援機能の利用(mesa-va-drivers、mesa-vdpau-drivers)
 
-7./etc/init.d/rcに「CONCURRENCY=shell」を設定して、システム起動時のモジュールの並列起動
+8.ccacheでGCCによるコンパイルの高速化
 
-8.VAAPIとVDPAUの導入で動画支援機能の利用(mesa-va-drivers、mesa-vdpau-drivers)
-
-9.ccacheでGCCによるコンパイルの高速化
-
-10.Emacsをnox版で使う
-
-11.CPUスケジューラーにMuQSSを適用してカーネルをビルドした時、パフォーマンス向上させる設定として、以下を/etc/sysctl.confに追加。
-
-    kernel.yield_type = 2
-
-    kernel.interactive = 0
+9.Emacsをnox版で使う
 
 Valkyrie Linuxの高音質化
-====================
+========================
 
-PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openboxの起動スクリプトからこれらを起動させたり、PulseAudioのデーモンをRAMDISKに配置したりして高音質化を図っています。
+PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openboxの起動スクリプトからこれらを起動させたり、PulseAudioのデーモンをRAMDISKに配置したりして高音質化を図る事が出来ます。
 
 高音質化部分は以下の通りです。::
 
@@ -399,7 +348,7 @@ PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openbox�
    sleep 10;/tmp/pulseaudio --start &
 
 Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法
-======================================================================
+==============================================================================
 
 EFIパーティションの状況によって、システムインストール時にGRUBが正常にインストールされない事があります。
 その時には、Valkyrie Linuxに収録しているboot-repairを使ってGRUBをインストールする事が出来ます。::

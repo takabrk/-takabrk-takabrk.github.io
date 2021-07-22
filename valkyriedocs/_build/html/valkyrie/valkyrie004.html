@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>18. カスタムカーネルについて &#8212; Valkyrie SRX 1.0 documentation</title>
+    <title>19. カスタムカーネルについて &#8212; Valkyrie SRX 1.0 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
@@ -19,8 +19,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="19. 過去の履歴" href="valkyrie020.html" />
-    <link rel="prev" title="17. トラブルが起こった時の対処法" href="valkyrie003.html" /> 
+    <link rel="next" title="20. 過去の履歴" href="valkyrie020.html" />
+    <link rel="prev" title="18. トラブルが起こった時の対処法" href="valkyrie003.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -29,10 +29,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="valkyrie020.html" title="19. 過去の履歴"
+          <a href="valkyrie020.html" title="20. 過去の履歴"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="valkyrie003.html" title="17. トラブルが起こった時の対処法"
+          <a href="valkyrie003.html" title="18. トラブルが起こった時の対処法"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
@@ -44,11 +44,11 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>18. カスタムカーネルについて<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>19. カスタムカーネルについて<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="http://takabrk.seesaa.net/article/449185431.html">http://takabrk.seesaa.net/article/449185431.html</a></p>
 <p>This low latency kernel is for Ubuntu 16.04 LTS(64bit) and is aimed at processors after the Intel SandyBridge architecture by adding an aufs patch and CK2 patch,kernel_gcc patch to Linux Kernel.</p>
 <div class="section" id="id2">
-<h2>18.1. カスタムカーネルの作成<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>19.1. カスタムカーネルの作成<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>64bit OS「Phantom Valkyrie Linux」用のカスタムカーネルを作成しました。フルインストール環境とLiveDVD環境で動作しています。</p>
 <p>Linuxカーネル4.11ベースでリアルタイムカーネルを作りたいのですが、まだRT Preempt(<a class="reference external" href="https://www.kernel.org/pub/linux/kernel/projects/rt/">https://www.kernel.org/pub/linux/kernel/projects/rt/</a>)のパッチが公開されていないようですので、取り敢えず、カーネルオプションでISDNやIEEE1394など明らかに現在の一般的なコンピューティングで使わないドライバとモジュールを外して、カーネルのファイル容量を減らしました。</p>
 <p>カスタムカーネルの作成方法は、昔からあるmakeを使う方法で行っています。</p>
@@ -103,7 +103,7 @@ $sudo apt-get build-dep linux-image-$(uname -r)
 </ul>
 </div>
 <div class="section" id="linux">
-<h2>18.2. Linuxカーネルのソースコードとパッチ<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>19.2. Linuxカーネルのソースコードとパッチ<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>1.カーネルソースコード</p>
 <p><a class="reference external" href="https://www.kernel.org/">https://www.kernel.org/</a></p>
 <p>2.公式パッチ</p>
@@ -161,19 +161,19 @@ $git checkout origin/4.10/master
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">18. カスタムカーネルについて</a><ul>
-<li><a class="reference internal" href="#id2">18.1. カスタムカーネルの作成</a></li>
-<li><a class="reference internal" href="#linux">18.2. Linuxカーネルのソースコードとパッチ</a></li>
+<li><a class="reference internal" href="#">19. カスタムカーネルについて</a><ul>
+<li><a class="reference internal" href="#id2">19.1. カスタムカーネルの作成</a></li>
+<li><a class="reference internal" href="#linux">19.2. Linuxカーネルのソースコードとパッチ</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="valkyrie003.html"
-                        title="previous chapter">17. トラブルが起こった時の対処法</a></p>
+                        title="previous chapter">18. トラブルが起こった時の対処法</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="valkyrie020.html"
-                        title="next chapter">19. 過去の履歴</a></p>
+                        title="next chapter">20. 過去の履歴</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -204,10 +204,10 @@ $git checkout origin/4.10/master
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="valkyrie020.html" title="19. 過去の履歴"
+          <a href="valkyrie020.html" title="20. 過去の履歴"
              >next</a> |</li>
         <li class="right" >
-          <a href="valkyrie003.html" title="17. トラブルが起こった時の対処法"
+          <a href="valkyrie003.html" title="18. トラブルが起こった時の対処法"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
       </ul>
