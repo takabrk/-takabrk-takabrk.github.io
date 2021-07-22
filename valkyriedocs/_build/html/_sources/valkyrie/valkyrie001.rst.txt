@@ -131,14 +131,14 @@ OSスペック
     - GIMP 2.10.18
     - GCC 11.1.0,Python 3.8.10/2.7.18,node.js,libllvm12,PHP 8.0,node.js
     - Wine 6.0.1
-    - OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.93,mpv 0.33,ffmpeg 4.3.1,SMPlyer 20.6.0
+    - OBS Studio,Shotcut,Audacious,Audacity,soundconverter,Blender 2.93,mpv 0.33,ffmpeg 4.2.4,SMPlyer 20.6.0
     - Steam,PCSX2,mednafen,kega fusion\
     - gnumeric,abiword
     - keepassxc
     - unetbootin,gparted,boot-repair,gnome disks
-    - git 2.30
+    - git 2.32
     - X11VNC,remmina
-    - apache2.4.29
+    - apache2.4.41
     - OpenJtalk
     - Arronax
     - Thunderbird
