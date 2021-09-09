@@ -105,7 +105,12 @@
     <ul>
         <li><a href="http://www.takarakuji.mizuhobank.co.jp/" target="_blank">みずほ銀行 宝くじコーナー</a></li>
         <li><a href="http://www.takarakujinet.co.jp/" target="_blank">宝くじネット・ドットコム</a></li>
-        <li><a href="http://e.z-z.jp/?nsj" target="_blank">ダウンジングでナンバーズ大攻略</a></li>
+        <li><a href="https://numbers3.money-plan.net/" target="_blank">Numbers3通信</a></li>
+        <li><a href="https://numbers4.money-plan.net/" target="_blank">Numbers4通信</a></li>
+        <li><a href="https://loto6.money-plan.net/" target="_blank">LOTO6通信</a></li>
+        <li><a href="https://miniloto.money-plan.net/" target="_blank"></a>MINI LOTO通信</li>
+        <li><a href="https://bingo5.money-plan.net/" target="_blank">BINGO5通信</a></li>
+        <li><a href="https://qoochan.money-plan.net/" target="_blank">着せかえクーちゃん通信</a></li>
     </ul>
 <h2 id="gambling">競馬・競艇</h2>
     <ul>
