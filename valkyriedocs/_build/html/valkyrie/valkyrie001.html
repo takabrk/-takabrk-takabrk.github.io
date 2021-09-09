@@ -76,42 +76,47 @@ Google Chromeを使いたい場合は、デスクトップ上で右クリック�
 </div>
 <div class="section" id="linux">
 <h2>1.4. ベースにしたLinuxディストリビューション<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
-<p>Ubuntu 20.04.2 LTS</p>
+<p>Ubuntu 20.04.3 LTS</p>
 </div>
 <div class="section" id="kernel">
 <h2>1.5. Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h2>
-<p>◎Noir linux Kernel 5.13.4</p>
+<p>◎Noir linux Kernel 5.14.2</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>◇based kernel
-  linux kernel 5.13
+  linux kernel 5.14
 
 ◇Applied patches
-- CPU shceduler -&gt; BMQ
-- Default I/O scheduler -&gt; MQ-Deadline
-- Processer family -&gt; Generic X86_64
-- Kernel Compression mode -&gt; zstd
-- Preemption Model -&gt; Preemptible Kernel(lowlatency desktop)
-- CPU Timer frequency -&gt; 750Hz
-- RCU boost delay -&gt; 339
-- Compiler optimization level -&gt; Optimize for more performance(-O3)
-- Timer tick handling -&gt; Full dynticks system
-- Enable utillization clamping for RT/FAIR tasks
-- UKSM support
-- Default CPUFreq Governor -&gt; performance
-- HD-audio pre-allocated buffer size 4096
-- BBR2 TCP Congestion Control
-- Built on the GCC 11.1.0
-- CPU idle governor -&gt; TEO
-- PCIe ACS Override support
-- futex for Wine/Proton support
-- ZSTD kernel and initram support
-- TSX -&gt; auto
-- Aufs support
-- Meltdown,spectre_v1,spectre_v2 : Mitigation
-- rt_runtime 95000 -&gt; 98000
-- rq_affinity 2
--Aufs support
 </pre></div>
 </div>
+<ul class="simple">
+<li>Built on the GCC 11.1.0</li>
+<li>CPU shceduler -&gt; CacULE(RDB)</li>
+<li>Default I/O scheduler -&gt; Kyber</li>
+<li>Processer family -&gt; Generic X86_64</li>
+<li>Kernel Compression mode -&gt; zstd</li>
+<li>Preemption Model -&gt; Preemptible Kernel(lowlatency desktop)</li>
+<li>CPU Timer frequency -&gt; 2000Hz</li>
+<li>RCU boost delay -&gt; 339</li>
+<li>Compiler optimization level -&gt; Optimize for more performance(-O3)</li>
+<li>Timer tick handling -&gt; Full dynticks system</li>
+<li>Default CPUFreq Governor -&gt; schedutil</li>
+<li>CPU idle governor -&gt; TEO</li>
+<li>nr_migrate = 256</li>
+<li>rq_affinity = 2</li>
+<li>vm_swappiness = 33</li>
+<li>Core Scheduler for SMT on</li>
+<li>UKSM support</li>
+<li>BBR2 support</li>
+<li>futex/futex2 support</li>
+<li>ZSTD kernel and initram support</li>
+<li>Aufs support</li>
+<li>clear linux on</li>
+<li>winesync support</li>
+<li>PCIe ACS Override support</li>
+<li>OpenRGB support</li>
+<li>VHBA on</li>
+<li>spadfs support</li>
+<li>bcachefs support</li>
+</ul>
 </div>
 <div class="section" id="ppa">
 <h2>1.6. PPA<a class="headerlink" href="#ppa" title="Permalink to this headline">¶</a></h2>
@@ -129,8 +134,8 @@ Google Chromeを使いたい場合は、デスクトップ上で右クリック�
 </div>
 <div class="section" id="os">
 <h2>1.7. OSスペック<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Ubuntu</span> <span class="mf">20.04</span><span class="o">.</span><span class="mi">2</span> <span class="n">LTSベース</span>
-<span class="o">-</span> <span class="n">Custom</span> <span class="n">kernel</span> <span class="s2">&quot;Noir linux kernel 5.13.4&quot;</span> <span class="o">/</span> <span class="n">Ubuntu</span> <span class="n">kernel</span> <span class="mf">5.11</span><span class="o">.</span><span class="mi">0</span> <span class="n">lowlatency</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Ubuntu</span> <span class="mf">20.04</span><span class="o">.</span><span class="mi">3</span> <span class="n">LTSベース</span>
+<span class="o">-</span> <span class="n">Custom</span> <span class="n">kernel</span> <span class="s2">&quot;Noir linux kernel 5.14.2&quot;</span> <span class="o">/</span> <span class="n">Ubuntu</span> <span class="n">kernel</span> <span class="mf">5.11</span><span class="o">.</span><span class="mi">0</span> <span class="n">lowlatency</span>
 <span class="o">-</span> <span class="n">original</span> <span class="n">application</span> <span class="s2">&quot;Viper Tools&quot;</span>
 <span class="o">-</span> <span class="n">linux</span> <span class="n">firmware</span> <span class="mf">1.197</span><span class="o">.</span><span class="mi">2</span>
 <span class="o">-</span> <span class="n">Mesa</span> <span class="mf">21.1</span><span class="o">.</span><span class="mi">5</span>
@@ -147,7 +152,7 @@ Google Chromeを使いたい場合は、デスクトップ上で右クリック�
 </div>
 <div class="section" id="id3">
 <h2>1.8. 収録しているアプリケーション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Firefox</span> <span class="mi">90</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Firefox</span> <span class="mi">91</span>
 <span class="o">-</span> <span class="n">emacs</span><span class="o">-</span><span class="n">nox</span> <span class="mf">27.1</span><span class="p">,</span><span class="n">leafpad</span><span class="p">,</span><span class="n">glade</span>
 <span class="o">-</span> <span class="n">pulseaudio</span><span class="p">,</span><span class="n">jackd2</span>
 <span class="o">-</span> <span class="n">GIMP</span> <span class="mf">2.10</span><span class="o">.</span><span class="mi">18</span>
@@ -158,7 +163,7 @@ Google Chromeを使いたい場合は、デスクトップ上で右クリック�
 <span class="o">-</span> <span class="n">gnumeric</span><span class="p">,</span><span class="n">abiword</span>
 <span class="o">-</span> <span class="n">keepassxc</span>
 <span class="o">-</span> <span class="n">unetbootin</span><span class="p">,</span><span class="n">gparted</span><span class="p">,</span><span class="n">boot</span><span class="o">-</span><span class="n">repair</span><span class="p">,</span><span class="n">gnome</span> <span class="n">disks</span>
-<span class="o">-</span> <span class="n">git</span> <span class="mf">2.32</span>
+<span class="o">-</span> <span class="n">git</span> <span class="mf">2.33</span>
 <span class="o">-</span> <span class="n">X11VNC</span><span class="p">,</span><span class="n">remmina</span>
 <span class="o">-</span> <span class="n">apache2</span><span class="o">.</span><span class="mf">4.41</span>
 <span class="o">-</span> <span class="n">OpenJtalk</span>

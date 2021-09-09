@@ -49,43 +49,45 @@ STCK1A32WFC(Intel)
 ベースにしたLinuxディストリビューション
 ---------------------------------------
 
-Ubuntu 20.04.2 LTS
+Ubuntu 20.04.3 LTS
 
 Kernel
 ------------
 
-◎Noir linux Kernel 5.13.4
+◎Noir linux Kernel 5.14.2
 ::
   ◇based kernel
-    linux kernel 5.13
+    linux kernel 5.14
 
   ◇Applied patches
-  - CPU shceduler -> BMQ
-  - Default I/O scheduler -> MQ-Deadline
-  - Processer family -> Generic X86_64
-  - Kernel Compression mode -> zstd
-  - Preemption Model -> Preemptible Kernel(lowlatency desktop)
-  - CPU Timer frequency -> 750Hz
-  - RCU boost delay -> 339
-  - Compiler optimization level -> Optimize for more performance(-O3)
-  - Timer tick handling -> Full dynticks system
-  - Enable utillization clamping for RT/FAIR tasks
-  - UKSM support
-  - Default CPUFreq Governor -> performance
-  - HD-audio pre-allocated buffer size 4096
-  - BBR2 TCP Congestion Control
-  - Built on the GCC 11.1.0
-  - CPU idle governor -> TEO
-  - PCIe ACS Override support
-  - futex for Wine/Proton support
-  - ZSTD kernel and initram support
-  - TSX -> auto
-  - Aufs support
-  - Meltdown,spectre_v1,spectre_v2 : Mitigation
-  - rt_runtime 95000 -> 98000
-  - rq_affinity 2
-  -Aufs support
-
+- Built on the GCC 11.1.0
+- CPU shceduler -> CacULE(RDB)
+- Default I/O scheduler -> Kyber
+- Processer family -> Generic X86_64
+- Kernel Compression mode -> zstd
+- Preemption Model -> Preemptible Kernel(lowlatency desktop)
+- CPU Timer frequency -> 2000Hz
+- RCU boost delay -> 339
+- Compiler optimization level -> Optimize for more performance(-O3)
+- Timer tick handling -> Full dynticks system
+- Default CPUFreq Governor -> schedutil
+- CPU idle governor -> TEO
+- nr_migrate = 256
+- rq_affinity = 2
+- vm_swappiness = 33
+- Core Scheduler for SMT on
+- UKSM support
+- BBR2 support
+- futex/futex2 support
+- ZSTD kernel and initram support
+- Aufs support
+- clear linux on
+- winesync support
+- PCIe ACS Override support
+- OpenRGB support
+- VHBA on
+- spadfs support
+- bcachefs support
 PPA
 -----------
 
@@ -106,8 +108,8 @@ OSスペック
 
 ::
 
-    - Ubuntu 20.04.2 LTSベース
-    - Custom kernel "Noir linux kernel 5.13.4" / Ubuntu kernel 5.11.0 lowlatency
+    - Ubuntu 20.04.3 LTSベース
+    - Custom kernel "Noir linux kernel 5.14.2" / Ubuntu kernel 5.11.0 lowlatency
     - original application "Viper Tools"
     - linux firmware 1.197.2
     - Mesa 21.1.5
@@ -125,7 +127,7 @@ OSスペック
 
 ::
 
-    - Firefox 90
+    - Firefox 91
     - emacs-nox 27.1,leafpad,glade
     - pulseaudio,jackd2
     - GIMP 2.10.18
@@ -136,7 +138,7 @@ OSスペック
     - gnumeric,abiword
     - keepassxc
     - unetbootin,gparted,boot-repair,gnome disks
-    - git 2.32
+    - git 2.33
     - X11VNC,remmina
     - apache2.4.41
     - OpenJtalk
