@@ -154,7 +154,7 @@
         <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
         <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
         <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
-
+        <li><a href="https://github.com/hamadmarri/cacule-cpu-scheduler" target="_blank">CacULE</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 5.x source</a></li>
         <li><a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank">linux kernel for Ubuntu</a></li>
         <li><a href="https://git.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/" target="_blank">Ubuntu patch  git</a></li>
