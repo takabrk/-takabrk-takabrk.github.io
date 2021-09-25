@@ -108,7 +108,7 @@
         <li><a href="https://numbers3.money-plan.net/" target="_blank">Numbers3通信</a></li>
         <li><a href="https://numbers4.money-plan.net/" target="_blank">Numbers4通信</a></li>
         <li><a href="https://loto6.money-plan.net/" target="_blank">LOTO6通信</a></li>
-        <li><a href="https://miniloto.money-plan.net/" target="_blank"></a>MINI LOTO通信</li>
+        <li><a href="https://miniloto.money-plan.net/" target="_blank">MINI LOTO通信</a></li>
         <li><a href="https://bingo5.money-plan.net/" target="_blank">BINGO5通信</a></li>
         <li><a href="https://qoochan.money-plan.net/" target="_blank">着せかえクーちゃん通信</a></li>
     </ul>
