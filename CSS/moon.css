@@ -36,9 +36,10 @@ header{
 }
 @media screen and (min-width: 769px) {
 body{
-   background-image:url("../BRKpics/bg/alisa20210303.jpg");
+   background-image:url("../BRKpics/bg/alisa20211219.png");
    background-size:100% auto;
    background-repeat:no-repeat;
+   background-color:#ff6100;
  }
  .item-1 > .img_left{
    display:block;
