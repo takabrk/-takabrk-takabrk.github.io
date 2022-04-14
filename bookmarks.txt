@@ -135,7 +135,6 @@
         <li><a href="http://ascii.jp/" target="_blank">ASCII</a></li>
         <li><a href="http://pc.watch.impress.co.jp/index.htm" target="_blank">PC Watch</a></li>
         <li><a href="http://news.mynavi.jp/" target="_blank">マイナビ</a></li>
-        <li><a href="http://japanese.engadget.com/" target="_blank">Engadget</a></li>
         <li><a href="http://www.itmedia.co.jp/enterprise/" target="_blank">ITMedia</a></li>
         <li><a href="http://gigazine.net/" target="_blank">GIGAZINE</a></li>
         <li><a href="http://gihyo.jp/" target="_blank">技術評論社</a></li>
@@ -144,7 +143,8 @@
         <li><a href="http://www.gdm.or.jp/" target="_blank">「hermitage akihabara[エルミタージュ秋葉原] -アキバ最新情報サイト-」</a></li>
         <li><a href="http://www.gizmodo.jp" target="_blank">GIZMODE</a></li>
         <li><a href="http://codezine.jp/" target="_blank">CodeZine</a></li>
-        <li><a href="http://www.anandtech.com/bench/CPU/2" target="_blank">Anandtech CPU Bench</a></li>
+        <li><a href="http://japanese.engadget.com/" target="_blank">Engadget</a></li>
+        <li><a href="https://btopc-minikan.com/cpu-hikaku.html" target="_blank">CPUベンチマークと性能比較</a></li>
     </ul>
 <h2 id="linux">Linux</h2>
     <ul>
@@ -155,7 +155,6 @@
         <li><a href="https://xanmod.org/" target="_blank">XanMod Kernel</a></li>
         <li><a href="https://github.com/zen-kernel/zen-kernel/releases" target="_blank">Zen kernel</a></li>
         <li><a href="https://github.com/Frogging-Family/linux-tkg" target="_blank">linux-tkg</a></li>
-        <li><a href="https://pf.natalenko.name/" target="_blank">pf-kernel</a></li>
         <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
         <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
         <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
