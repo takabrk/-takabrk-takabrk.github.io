@@ -149,14 +149,14 @@
 <h2 id="linux">Linux</h2>
     <ul>
         <li><a href="http://www.kernel.org/" target="_blank">The Linux Kernel Archives</a></li>
-        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" target="_blank">カーネル Arch Wiki</a></li>
+        <li><a href="https://wiki.archlinux.jp/index.php/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" target="_blank">カーネル Arch Wiki</a></li>
        <li><a href="https://github.com/xanmod/linux-patches" target="_blank">Xanmod kernel patches</a></li>
         <li><a href="https://github.com/sirlucjan/kernel-patches" target="_blank">kernel-patches</a>
         <li><a href="https://xanmod.org/" target="_blank">XanMod Kernel</a></li>
         <li><a href="https://github.com/zen-kernel/zen-kernel/releases" target="_blank">Zen kernel</a></li>
         <li><a href="https://github.com/Frogging-Family/linux-tkg" target="_blank">linux-tkg</a></li>
         <li><a href="https://liquorix.net/" target="_blank">LIQUORIX KERNEL</a></li>
-        <li><a href="https://wiki.archlinuxjp.org/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
+        <li><a href="https://wiki.archlinux.jp/index.php/%E3%83%97%E3%83%AD%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" target="_blank">プロオーディオ</a></li>
         <li><a href="https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel" target="_blank">Linux Kernel News Archives</a></li>
         <li><a href="https://github.com/hamadmarri/cacule-cpu-scheduler" target="_blank">CacULE</a></li>
         <li><a href="https://www.kernel.org/pub/linux/kernel/v4.x/" target="_blank">linux 5.x source</a></li>
