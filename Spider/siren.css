@@ -264,7 +264,7 @@
     }
     .responsive nav{
        float:right;
-       width:800px;
+       width:1000px;
        height:80px;
        margin:0;
        padding:0;
@@ -283,7 +283,7 @@
     }
     .responsive nav ul li{
       float:left;
-      width:150px;
+      width:100px;
       height:80px;
       transition:0.5s;
       background-color:#444444;
