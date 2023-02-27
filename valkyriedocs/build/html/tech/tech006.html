@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>PHP Hack &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="php-hack">
+<h1>PHP Hack<a class="headerlink" href="#php-hack" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="smarty-3-1">
+<h2>Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PHPテンプレートエンジン「Smarty」では、プラグインの自作が出来ますが、従来の方法は <a class="reference external" href="http://www.smarty.net/docs/ja/variable.plugins.dir.tpl">http://www.smarty.net/docs/ja/variable.plugins.dir.tpl</a> のように、 SMARTY_DIR 直下の pluginsや新規に作成したフォルダに自作プラグインを放り込む事で以下のように、plugins_dir[]メソッドを使ってパスを指定すれば使えました。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
+ $smarty-&gt;plugins_dir[] = &#39;includes/my_smarty_plugins&#39;;
+?&gt;
+</pre></div>
+</div>
+<p>しかし、Smarty 3.1からは、自作プラグインの導入方法が変更されています。</p>
+<p>上記の方法で追加してプログラムを動作させると、以下のようなエラーが表示されます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Notice: Indirect modification of overloaded property Smarty::$plugins_dir has no effect
+</pre></div>
+</div>
+<p>Smarty 3.1でのプラグインの追加は、setPluginsDirメソッドやaddPluginsDirメソッドを使います。</p>
+<p>例えば、/var/www/xxxというディレクトリに自作プラグインを放り込みたい場合には、以下のようにパスを追加してあげれば、エラーメッセージが出なくなります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$smarty-&gt;addPluginsDir(array(&#39;/var/www/xxxx&#39;));
+</pre></div>
+</div>
+<p>以下のリファレンスページを参考にすれば良いです。</p>
+<p><a class="reference external" href="http://www.smarty.net/docs/en/api.add.plugins.dir.tpl">http://www.smarty.net/docs/en/api.add.plugins.dir.tpl</a></p>
+<p><a class="reference external" href="http://www.smarty.net/docs/en/api.set.plugins.dir.tpl">http://www.smarty.net/docs/en/api.set.plugins.dir.tpl</a></p>
+<p>これで、Smarty 3.1でも自作プラグインを他のディレクトリで管理出来るようになりますね。</p>
+</section>
+<section id="phphtml">
+<h2>PHPで出力したHTMLなどをファイルとして保存する<a class="headerlink" href="#phphtml" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PHPで生成したHTMLやテキストはecho文やprint文で出力が出来ます。</p>
+<p>この標準出力されたHTMLやテキストをファイルとして保存する為には、ob_get_contents関数でバッファを作って、これをfopen関数とfwrite関数を使ってファイルとして保存します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
+    ob_start();  //バッファリング開始
+    header(&quot;Content-type:text/html;charset=UTF-8&quot;) ;
+?&gt;
+
+//HTML文
+//途中PHPスクリプトを記述しても良い
+
+&lt;?php
+    $data = ob_get_contents();
+
+    ob_end_clean();   //バッファリング終了
+
+    $f=fopen(&quot;xxx.html&quot;,&quot;w&quot;); //書き込みモードで書き込むファイルxxx.htmlを開く
+
+    fwrite($f,$data); //バッファされた内容を書き込む
+
+    fclose($f);
+
+    echo $data;   //バッファ内容表示
+?&gt;
+</pre></div>
+</div>
+</section>
+<section id="cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in">
+<h2>【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in<a class="headerlink" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>/app/tmp/cache</p>
+<p>/app/tmp/logs</p>
+<p>/app/tmp/cache/persistent/</p>
+<p>/app/tmp/cache/models/</p>
+<p>のパーミッションを777に変更</p>
+<p>chmod -R 777 app/tmp</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tech/tech006.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

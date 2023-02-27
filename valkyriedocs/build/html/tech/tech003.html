@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Java Hacks &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="java-hacks">
+<h1>Java Hacks<a class="headerlink" href="#java-hacks" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="processing-3eclipse">
+<h2>Processing 3をEclipseで使う<a class="headerlink" href="#processing-3eclipse" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Eclipseの「Help」→「Install New Software」からhttp://proclipsing.googlecode.com/svn/tags/current_releases/proclipsingSite/を登録して、Proclipsingプラグインをインストール
+2.[Window]-&gt;[Preference] で [Preferences]ダイアログを開き、左側のリストから Proclipsing を選択する。
+3.[Processing Path] のテキストフィールドに Processing をインストールしたパスを設定して、Applyボタンを押し、[OK]ボタンをクリックする。
+4.パッケージエクスプローラ上で右クリックを行い、 [New]→[Other] で [New] ダイアログを開き、「Processing」フォルダを選択して、「Processing Project」を選んで、[Next]ボタンをクリックする。
+5.必要な項目を設定してプロジェクトを作成していく。
+6.dataフォルダは、srcディレクトリの中に入れて、パッケージエクスプローラ上で右クリックメニューを出して、更新させる。
+7.ビルドしたい場合には、メニュー→「Project」に「Processing Export」という項目が出来ているので、これを使ってビルドを行う。
+</pre></div>
+</div>
+</section>
+<section id="processing-with-eclipseopengl">
+<h2>Processing with EclipseでOpenGLを使う<a class="headerlink" href="#processing-with-eclipseopengl" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ProcessingをEclipseで使う場合に困ることはOpenGLの使い方が分かりにくいことです。Linux環境においてOpenGLをProcessing with Eclipseで使う方法を紹介します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Eclipseのworkspaceに任意のProcessing用フォルダを作成します。ここでは「processing」ディレクトリを作成したとします。
+2.processingフォルダにProcessingのサイトからLinux版のProcessingをダウンロードして解凍し、中身を全てprocessingフォルダに入れます。
+3.Eclipseのメニューバーの「Project」→「Properties」→「Java Build Path」をクリックし、「Libraries」タブをクリックして、core.jar、jogl.jar、opengl.jar、gluegen-rt.jarのパスを通します。
+4.追加したjogl.jarの項目を展開し、&quot;ネイティブ・ライブラリのロケーション”にlibgluegen-rt.so、libjogl_awt.so、libjogl_cg.so、libjogl.soが含まれるディレクトリを指定します。
+ネイティブライブラリは/workspace/processing/modes/java/libraries/openglにあります。
+</pre></div>
+</div>
+<p>これでProcesssing IDEのようにOpenGLを使ったProcessingアプリケーションを作成することが出来ます。</p>
+</section>
+<section id="swingguiprocessing">
+<h2>Swingで作成したGUIアプリケーションにProcessingアプリケーションを埋め込む方法<a class="headerlink" href="#swingguiprocessing" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Swingで作成したGUIアプリケーションとProcessingアプリケーションは別々に開発します。以下はSwingでGUIを作成する例です。JFrameを継承して作成します。ここではGUIアプリケーション「xxx」、Processingアプリケーション「yyy」とします。Processingアプリケーションを組み込むのは簡単で、まず、yyyの変数（ここではvd)を定義します。次にyyyのインスタンスを作成、「vd.init()」でProcessingアプリケーションを初期化します。あとはJPanelに込み込むために「add」関数を使ってパネルに組み込んでいます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import processing.core.PApplet;
+import java.awt.*;
+import java.awt.image.*;
+import java.awt.event.*;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.util.*;
+public class swing_gui extends JFrame{
+     yyy vd;
+//JPanel用の変数をここで設定しておくと、ActionListenerインターフェースを使ったイベント関数でエラーが出なくなる
+     JPanel p1;
+     JPanel p2;
+     JPanel p3;
+     public spider_gui(){
+             this.setTitle(&quot;Swing GUI&quot;);
+             this.setSize(new Dimension(1024,720));
+             this.setLocationRelativeTo(null);
+             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+             BoxLayout boxlayout = new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS);
+             this.setLayout(boxlayout);
+//Swingでメニューバーを作成するには以下のように書きます。
+             JMenuBar menubar = new JMenuBar();
+             JMenu menu1 = new JMenu(&quot;File&quot;);
+             JMenu menu2 = new JMenu(&quot;Edit&quot;);
+             menubar.add(menu1);
+             menubar.add(menu2);
+             JMenuItem menuitem1 = new JMenuItem(&quot;New&quot;);
+             JMenuItem menuitem2 = new JMenuItem(&quot;Open&quot;);
+             JMenuItem menuitem3 = new JMenuItem(&quot;Close&quot;);
+             menu1.add(menuitem1);
+             menu1.add(menuitem2);
+             menu1.add(menuitem3);
+             setJMenuBar(menubar);
+             JMenuItem menuitem21 = new JMenuItem(&quot;切り抜き&quot;);
+             JMenuItem menuitem22 = new JMenuItem(&quot;コピー&quot;);
+             JMenuItem menuitem23 = new JMenuItem(&quot;貼り付け&quot;);
+             menu2.add(menuitem21);
+             menu2.add(menuitem22);
+             menu2.add(menuitem23);
+//Swingでのパネルの設定の仕方は以下のように書きます。
+             p1 = new JPanel();
+             p1.setBackground(Color.RED);
+             p1.setPreferredSize(new Dimension(1024,25));
+             p1.setLayout(new GridLayout(1,3));
+             p2 = new JPanel();
+             p2.setBackground(Color.BLUE);
+             p2.setPreferredSize(new Dimension(512,150));
+             p3 = new JPanel();
+             p3.setBackground(Color.BLACK);
+             p3.setPreferredSize(new Dimension(512,620));
+             this.add(p1);
+             this.add(p2);
+             this.add(p3);
+//メニューバー以外でボタンを設定したい場合は以下のようにして書きます。
+             JButton btn = new JButton(&quot;application1 start&quot;);
+             btn.setPreferredSize(new Dimension(100,50));
+             btn.setForeground(Color.RED);
+             btn.setBackground(Color.BLACK);
+             btn.setFont(new Font(&quot;Serif&quot;,Font.PLAIN,18));
+             btn.addActionListener(new call_processing());
+             p1.add(btn);
+             JButton btn2 = new JButton(&quot;application2 start&quot;);
+             btn2.setPreferredSize(new Dimension(100,50));
+             btn2.setForeground(Color.RED);
+             btn2.setBackground(Color.BLACK);
+             btn2.setFont(new Font(&quot;Serif&quot;,Font.PLAIN,18));
+             btn2.addActionListener(new call_processing());
+             p1.add(btn2);
+//Swingで作成したテーブルを設置することも当然出来ます。
+             DefaultTableModel tableModel = new DefaultTableModel(columnNames,0);
+             JTable table = new JTable(tableModel);
+             for(int i=0;i&lt;4;i++){
+                     tableModel.addRow(tabledata[i]);
+             }
+             tableModel.addRow(tabledata2);
+             JScrollPane sp = new JScrollPane(table);
+             sp.setPreferredSize(new Dimension(500,100));
+             p2.add(sp);
+
+             JTextField text = new JTextField(&quot;&quot;,10);
+             text.setColumns(15);
+             text.setPreferredSize(new Dimension(100,50));
+             p1.add(text);
+     }
+//call_processingの設定。このクラスでProcessingで作成したアプリケーションを呼ぶことが出来ます。
+     class call_processing implements ActionListener{
+             public void actionPerformed(ActionEvent e){
+                     String cmd = e.getActionCommand();
+                     if(cmd.equals(&quot;application1 start&quot;)){
+                             vd = new application1();
+                             vd.init();
+                             p3.add(vd);
+                     }else if(cmd.equals(&quot;application2 start&quot;)){
+                             wm = new application2();
+                             wm.init();
+                             p3.add(wm);
+                     }
+             }
+     }
+//テーブルを作成します。
+     private String[][] tabledata = {
+                     {&quot;日本&quot;,&quot;3勝&quot;,&quot;0敗&quot;,&quot;1分&quot;},
+                     {&quot;クロアチア&quot;,&quot;3勝&quot;,&quot;1敗&quot;,&quot;0分&quot;},
+                     {&quot;ブラジル&quot;,&quot;1敗&quot;,&quot;2敗&quot;,&quot;1分&quot;},
+                     {&quot;オーストラリア&quot;,&quot;2勝&quot;,&quot;2敗&quot;,&quot;0分&quot;}
+     };
+     private String[] tabledata2 = {&quot;イギリス&quot;,&quot;2勝&quot;,&quot;0敗&quot;,&quot;2分&quot;};
+     private String[] columnNames = {&quot;COUTRY&quot;,&quot;Win&quot;,&quot;Lost&quot;,&quot;Even&quot;};
+//GUIを起動するメイン関数です。
+     public static void main(String args[]){
+             swing_gui frame = new swing_gui();
+             frame.setVisible(true);
+     }
+}
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tech/tech003.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

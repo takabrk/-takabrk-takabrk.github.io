@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Viper Tools &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="viper-tools">
+<h1>Viper Tools<a class="headerlink" href="#viper-tools" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>様々な機能を追加するためのPythonアプリです。</p>
+<ul class="simple">
+<li><p>カーネルビルド機能</p></li>
+<li><p>競艇予想や数字選択式宝くじ予想機能</p></li>
+<li><p>Ubuntu系LinuxディストリビューションをオリジナルのLinuxディストリビューションである「Valkyrie Linux」のデスクトップ環境に変換する機能</p></li>
+<li><p>OpenJtalkを使ってコンピューターを喋らせる機能</p></li>
+<li><p>tmpfsのRAMDISK量の調整機能</p></li>
+<li><p>アニメーションGIFのようなアニメーションSVG、APNGを作成する機能</p></li>
+<li><p>アプリケーションやライブラリのインストール</p></li>
+<li><p>OSのリマスター機能</p></li>
+<li><p>ChromiumにGoogle Chrome内蔵のWidevineを入れる事が出来る「install widevine」機能</p></li>
+<li><p>動画ダウンロード機能</p></li>
+<li><p>VAAPI対応ffmpegとiHD Driverを使ったQSVハードウェアエンコード機能</p></li>
+</ul>
+<section id="id1">
+<h2>Viper Tools動作環境<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Ubuntu 16.04 LTS以降のUbuntu系Linuxディストリビューション</p>
+<p>Python3.5,Python2.7,シェルスクリプト</p>
+<p>gtk+3,gtk+2</p>
+<p>libglade</p>
+</section>
+<section id="viper-toolsgui">
+<h2>Viper ToolsをGUIツールとして起動させる<a class="headerlink" href="#viper-toolsgui" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Viper Toolsは、Pythonで開発しており、Pythonやシェルスクリプトやgtk2+,gtk+3がインストールされている環境下で動作します。</p>
+<p>その為、Viper Toolsは、GUIツールとしても、Pythonモジュールとしても動作させられます。</p>
+<p>Viper ToolsをGUIで動作させるには、以下のように端末から起動させます。
+Ubuntu系Linuxディストリビューションでは、desktopファイルでアプリケーションを起動させるショートカットを作る事が出来ます。
+そのdesktopファイルのexecの箇所にコマンドを記述しても構いません。
+fbpanelなどのタスクバーアプリケーションの場合でも、コマンドを記述しておく事で起動させられます。</p>
+<p>viper.zipを解凍して、出来たフォルダ「viper」の直下にvipertools.pyというPythonファイルとvipertoolsというシェルスクリプトファイルがあります。シェルスクリプトファイルで起動させる場合は、xfce4-terminalをインストールしておいてください。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python vipertools.py
+</pre></div>
+</div>
+<p>あるいは、:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$./vipertools
+</pre></div>
+</div>
+</section>
+<section id="noir-linux-kernel">
+<h2>カスタムカーネル「Noir linux kernel」をビルドする<a class="headerlink" href="#noir-linux-kernel" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カスタムカーネル「Noir linux kernel」をビルドする機能です。カスタムカーネルは、レスポンス性能やパフォーマンス性能を向上させる様々なサードパーティー性のパッチを適用しています。</p>
+<p>カスタムカーネル機能は半自動でカーネルをビルドする事が出来ます。</p>
+</section>
+<section id="ubuntu">
+<h2>Ubuntu系ディストリビューションをリマスターする<a class="headerlink" href="#ubuntu" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>各種情報を入力し、解凍したいISOを指定後に「Settings」ボタンを押します。</p>
+<p>その後、「Extract」ボタンを押す事で解凍が始まり、リマスターを行えます。</p>
+<p>リマスター作業が終われば、「Build」ボタンでビルドをします。</p>
+</section>
+<section id="id2">
+<h2>システム起動音声を切り替える機能<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このシステム起動音を切り替えるのが『ログインサウンド「イオリ」に変更』『ログインサウンド「メイドイオリ」に変更』『ログインサウンド「SFイオリ」に変更』という項目です。</p>
+</section>
+<section id="tmpfs-ramdisk-slider">
+<h2>tmpfs RAMDisk Slider<a class="headerlink" href="#tmpfs-ramdisk-slider" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="_images/vipertools003.jpg" src="_images/vipertools003.jpg" />
+<p>tmpfsのRAMディスクの容量を変更出来ます。</p>
+</section>
+<section id="id3">
+<h2>コンピューターに喋らせる機能<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="_images/vipertools002.jpg" src="_images/vipertools002.jpg" />
+<p>テキストフォームに入力する事でコンピューターに喋らせる事が出来ます。また、テキストファイルの音読も可能です。</p>
+</section>
+<section id="id4">
+<h2>数字式宝くじ（ナンバーズ）予想機能<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ナンバーズ4・ナンバーズ3・ロト6に対応しています。
+予想した数字は、viperフォルダの直下にnumbers.txtというファイルが出来ていますので、これを見てください。</p>
+</section>
+<section id="id5">
+<h2>競艇予想機能<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>選手のデータはSQLiteで構築しており、viper/kyotei/kyotei.sqliteで保存されています。</p>
+<img alt="_images/vipertools004.jpg" src="_images/vipertools004.jpg" />
+<p>出力された結果は、そのままでは当たらない事が多いので、3連単で選ぶ例を示しておきます。
+順位はこのスクリプトで出した指数順位</p>
+<div class="line-block">
+<div class="line">・6位-2位-3位</div>
+<div class="line">・4位-3位-2位</div>
+<div class="line">・3位-2位-1位</div>
+<div class="line">・5位-2位-3位</div>
+<div class="line">・4位-2位-3位</div>
+<div class="line">・3位-2位-5位</div>
+<div class="line">・1位-5位-6位</div>
+<div class="line">・1位-3位−5位</div>
+</div>
+</section>
+<section id="image-tool">
+<h2>Image tool機能<a class="headerlink" href="#image-tool" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="_images/vipertools001.jpg" src="_images/vipertools001.jpg" />
+<section id="svg">
+<h3>アニメーションSVG機能<a class="headerlink" href="#svg" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>アニメーションGIFのような動画ファイルをSVGを使って再現した物がアニメーションSVGです。
+一般的に呼ばれているアニメーションSVGは、ここで作成する物とは違う物です。
+TumblrなどでアニメーションGIFを公開しているケースが多いですが、256色の色制限などがあります。
+ベクターグラフィックスのSVGには、パラパラアニメを実現する機能が搭載されています。
+これを使って、アニメーションSVGを作ることが可能です。
+このPythonスクリプトは、連番になっている画像ファイルを一つのフォルダにまとめておいて、コマンドでアニメーションSVGを生成するものです。</p>
+<p>filenameフォームでJPEG連番画像が入っているディレクトリを指定し、WidthとHeightで画像の幅と高さを指定します。</p>
+<p>Timeで速度を変更する事が可能です。</p>
+<p>ここでは画像フォルダを「test」とし、出力する画像サイズは640x480とします。</p>
+<p>速度を変更したい場合は、３つ目の引数でアニメーションの実行時間を変更します。</p>
+<p>ここでは5秒でアニメーションが終わるように設定しています。</p>
+<p>これで同じディレクトリに「test.svg」が生成されます。</p>
+</section>
+<section id="apng">
+<h3>APNGを作成する機能<a class="headerlink" href="#apng" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>アニメーションするPNG画像を作成する機能です。</p>
+</section>
+<section id="pngjpeg">
+<h3>PNG画像を一括でJPEGにする<a class="headerlink" href="#pngjpeg" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<img alt="_images/vipertools001.jpg" src="_images/vipertools001.jpg" />
+<p>複数のPNG画像を一括でJPEG画像に変換します。</p>
+<p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
+</section>
+<section id="pnggif">
+<h3>PNG画像を一括でGIFにする<a class="headerlink" href="#pnggif" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>複数のPNG画像を一括でGIF画像に変換します。</p>
+<p>ここでは、PNG画像をまとめたフォルダを「inputdir」、GIF画像をまとめたフォルダを「outputdir」とします。</p>
+</section>
+<section id="gifpng">
+<h3>GIF画像を一括でPNGにする<a class="headerlink" href="#gifpng" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>複数のGIF画像を一括でPNG画像に変換します。</p>
+<p>ここでは、GIF画像をまとめたフォルダを「inputdir」、PNG画像をまとめたフォルダを「outputdir」とします。</p>
+</section>
+<section id="jpeg">
+<h3>JPEG画像を一括で回転させて保存する<a class="headerlink" href="#jpeg" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>一括でJPEG画像を任意の角度に回転させます。</p>
+</section>
+<section id="id6">
+<h3>動画エンコード<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ffmpegを使って、動画エンコードを行えます。</p>
+<p>GUIでエンコードしたいソース、出力ファイル名、動画の解像度を入力します。</p>
+<p>動画コーデックをH.264/AVCとH.265/HEVC、音声コーデックをAACという構成の動画ファイルを作成する事を目的にしています。QSVなどのハードウェアエンコードにも対応しています。</p>
+</section>
+<section id="wifu2x-py">
+<h3>wifu2x.pyによる拡大機能<a class="headerlink" href="#wifu2x-py" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>深層畳み込みニューラルネットワークを活用して、二次元画像を超解像技術で画像を拡大します。</p>
+</section>
+<section id="chromiumgoogle-chromewidevine">
+<h3>ChromiumにGoogle Chrome内蔵のWidevineを入れる<a class="headerlink" href="#chromiumgoogle-chromewidevine" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>最近のGoogle Chromeには、Widevineプラグインと呼ばれるデジタル著作権管理されているコンテンツを見る為のプラグインを搭載しています。</p>
+<p>Chromiumには搭載していないので、これをGoogle Chromeから抜き出してChromiumでも使えるようにしようという機能を搭載しています。</p>
+<p>但し、これを使っても完全にオンデマンドサービスで公開されている映像コンテンツが視聴出来るわけではありませんので注意してください。</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/vipertools/vipertools001.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>コマンドランチャー「gmrun」の使い方 &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="gmrun">
+<h1>コマンドランチャー「gmrun」の使い方<a class="headerlink" href="#gmrun" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ctrl+spaceでgmrunを起動出来ます。</p>
+<p>アプリケーションの名前を打って、Enterを押すとアプリケーション起動。Tabキーでキーワード補完を行ってくれます。</p>
+</section>
+<section id="linuxi-o">
+<h1>一時的にLinuxカーネルのI/Oスケジューラーを変更する方法<a class="headerlink" href="#linuxi-o" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Linuxカーネルには、様々なI/Oスケジューラーが用意されています。カーネルをソースコードからビルドする時に、I/Oスケジューラーを設定しておくのが一般的ですが、現在利用しているカーネルで一時的にI/Oスケジューラーの変更をしたい時には、以下のコマンドを使うと良いでしょう。</p>
+<p>sudo -- sh -c 'echo cfq &gt; /sys/block/sda/queue/scheduler'</p>
+<p>「cfq」の部分を「deadline」「noop」「bfq」という風に変更するだけです。</p>
+<p>確認のコマンドは以下の通りです。</p>
+<p>cat /sys/block/sda/queue/scheduler</p>
+<p>一方で、永続的に設定変更をしたいのであれば、Grubの設定を変更します。Ubuntu系Linuxディストリビューションでは、/etc/default/gurbの「GRUB_CMDLINE_LINUX_DEFAULT=&quot;&quot;」に以下のコマンドを追加します。</p>
+<p>elevator=deadline</p>
+<p>deadlineの部分をcfqやbfq、deadlineに変更すれば、アルゴリズムを好きなように変更する事が出来ます。</p>
+<p>他のコマンドも記述する場合は、半角スペースで区切っていきます。</p>
+</section>
+<section id="id1">
+<h1>サウンドサーバの切り替え<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>Phantom Valkyrie Linuxでは、ALSAに直接アクセスしてサウンドを出しています。一方で、PulseAudioやJack Audio Connection Kitといったサウンドサーバも搭載しており、OpenBoxの右クリックメニューで起動・停止などが出来ます。</p>
+<p>また、PulseとJackは、pulseaudio-module-jackを通して連携が出来るようになっています。この連携機能を使うには、PulseAudioを起動させた後に、Jackを起動させます。</p>
+</div></blockquote>
+</section>
+<section id="virtualbox">
+<h1>VirtualBoxの音の出し方<a class="headerlink" href="#virtualbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>ALSAだけでサウンドを出していますが、VirtualBoxでホストをALSAに設定しても音が出ません。
+その為、VirtualBoxのホストで設定する際には「PulseAudio」のままにして、Openboxの右クリックメニューからPulseAudioを起動させてからVirtualboxを起動させてください。</p>
+</div></blockquote>
+</section>
+<section id="alsa">
+<h1>ALSAの音量設定の保存方法<a class="headerlink" href="#alsa" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>LinuxでのサウンドドライバはALSAですが、システム起動音などを調整して、その音量を永続的に保ちたい場合があります。alsactlというツールを使う事で音量設定の保存が可能です。</p>
+<p>1.alsamixerで音量を調整</p>
+<p>$alsamixer</p>
+<p>2.alsactlで音量設定を保存</p>
+<p>$sudo alsactl store</p>
+</div></blockquote>
+</section>
+<section id="pulseaudiojack-audio-connection-kit">
+<h1>PulseAudioとJack Audio Connection KItとの連携<a class="headerlink" href="#pulseaudiojack-audio-connection-kit" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>コマンドでJackとPulseの連携は出来るようになっていますが、ALSAを直接使うアプリケーションではまだ音が出ていません。
+Qjackctlで予めpulseaudio-module-jackの設定を行っておきます。</p>
+<p>$sudo apt-get install pulseaudio-module-jack</p>
+<p>Qjackctlの「Setup...」→「Options」→「Execute script after Startup」に以下のコマンドを記述する。</p>
+<p>pactl set-default-sink jack_out</p>
+<p>Ubuntu 16.04 LTS以降であれば、PulseAudioのdefault.daにモジュールを追加する記述は不要です。これを入れるとPulseAudioとJack共に起動後何秒かして落ちました。</p>
+<p>この状態でPulseAudio起動状態で、Qjackctlを起動すれば、PulseAudioとJackとALSAが併用出来るようになります。
+Qjackctlの代わりに、jack_cotrolを使えば、D-Bus経由でPulseAudioとの連携が出来ますが、ALSAを直接使うソフトウェアではALSAが使えなくなってしまいます。また、.asoundrcを使った場合、Ubuntu 16.04 LTS以降ではPulseAudioやALSAでの再生が出来ませんでした。
+jack_controlを使ったコマンド例は以下の通りです。ALSAを直接利用するアプリケーションを使わなければ、これでもJackとPulseAudioの連携は可能です。自動起動するようにしておくと良いでしょう。</p>
+<p>(sleep 5s &amp;&amp; jack_control start &amp;&amp; sudo schedtool -R -p 20 <a href="#id2"><span class="problematic" id="id3">`</span></a>pidof jackdbus`&amp;&amp; jack_control eps realtime true &amp;&amp; jack_control ds alsa &amp;&amp; jack_control dps device hw:0 &amp;&amp; jack_control dps rate 44100 &amp;&amp; jack_control dps nperiods 2 &amp;&amp; jack_control dps period 64 &amp;&amp; sleep 5s &amp;&amp; /usr/bin/a2jmidid -e &amp;&amp; sleep 5 &amp;&amp; pactl load-module module-jack-sink channels=2 &amp;&amp; pactl load-module module-jack-source channels=2 &amp;&amp; sleep 3s &amp;&amp; pacmd set-default-sink jack_out &amp;&amp; pacmd set-default-source jack_in &amp;&amp; sleep 3s &amp;&amp; jack_wait -w &amp;&amp; sleep 1s) &amp;</p>
+</div></blockquote>
+</section>
+<section id="amixer">
+<h1>amixerの設定コマンド<a class="headerlink" href="#amixer" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>ミュートの切り替え</p>
+<p>amixer sset Master on</p>
+<p>amixer sset Master off</p>
+<p>音量変更</p>
+<p>amixer sset Master 10%+</p>
+<p>amixer sset Master 10%-</p>
+<p>amixer sset Master 60%</p>
+<p>現在の音量の取得</p>
+<p>amixer sget Master | egrep '[.*%]</p>
+</div></blockquote>
+</section>
+<section id="smplayer-mpv-youtube-dl1080p60fpsgpu">
+<h1>SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる<a class="headerlink" href="#smplayer-mpv-youtube-dl1080p60fpsgpu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>Ubuntu環境でSMPlayerを使っている人は多いと思います。この環境を活用して、MPVやyoutube-dlと連携させて、Youtubeなどの動画共有サイトで公開されている1080p60fpsの動画をGPUの動画支援機能で動作させる事が可能です。Webブラウザで視聴するよりも消費電力が低くなるのが利点です。</p>
+<p>◇環境
+CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
+<p>Motherboard : ASROCK B150M-COMBO-G(Micro-ATX、DDR4/DDR3排他仕様)</p>
+<p>Memory : CFD DDR3-1600 4GBx2</p>
+<p>Case : Century CSI-1299GG(Black、ミニタワー)</p>
+<p>Power Supply : Silverstone ST30SF</p>
+<p>Strage : Sundisk SSD 240GB + Toshiba MQ01ABD050(2.5inch HDD 500GB)</p>
+<p>Graphicboard : MSI RADEON RX 460 2GB GDDR5</p>
+<p>OS : Valkyrie SRX 17.13（Ubuntu 16.04 LTSベースのオリジナルLinuxディストリビューション）</p>
+<p>◇ソフトウェアとインストール方法</p>
+<p>SMPlayer</p>
+<p>MPV</p>
+<p>youtube-dl</p>
+<p>$sudo apt-get install smplayer mpv youtube-dl</p>
+<p>◇設定</p>
+<p>・「全般」→「全般」→「MPlayer/mpvの実行ファイル」のパスを入力する</p>
+<p>・「全般」→「出力ドライバー」を「vdpau」にする。「直接描画」「ダブルバッファー」「スクリーンセーバーを無効にする」にチェックを入れる</p>
+<p>・「全般」→「オーディオ」をpulseかalsaを選択する。</p>
+<p>・「パフォーマンス」→「ハードウェアデコード」を「vdpau」に変更</p>
+<p>・「ネットワーク」→「Youtube（およびその他のサイト）」で「Youtubeの内部サポートを有効にする」のチェックを外す。「MPVのストリーミングサイトへの対応を有効にする」にチェックを入れる。</p>
+<p>SMPlayer 17.4以降は以下のように「mpv+youtube-dl」を選択するだけで良くなった。</p>
+<p>・「詳細設定」→「MPlayer/mpvのオプション」に「--ytdl-format=bestvideo+bestaudio」を追加。これでyoutubeの動画で1080p60fpsの物まで再生が可能になりますが、Dailymotionなどの動画も再生するのであれば、このオプションを付ける事で再生出来なくなってしまうので注意が必要です。</p>
+<p>その原因は、VP9でエンコードした動画を指定しているようですので、VP9でエンコードされた動画を指定しないように設定すれば、Youtube以外の動画サイトの動画も再生出来るようになります。以下の例では、1080p以上の動画を観ない設定も同時に行っています。</p>
+<p>コマンドは、「--ytdl-format=bestvideo[height&lt;=1080][vcodec!=VP9]+bestaudio/best」</p>
+</div></blockquote>
+</section>
+<section id="betachromiumwidevinegoogle-api">
+<h1>Beta版ChromiumでWidevineとGoogle APIを使えるようにする<a class="headerlink" href="#betachromiumwidevinegoogle-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><p>1.Phantom Valkyrie Linuxには、Chromium beta channel PPAを追加していますが、デフォルトではオフになっています。Synapticパッケージマネージャーの「設定」→「リポジトリ」→「他のソフトウェア」にある「<a class="reference external" href="http://ppa.launchpad.net/saiarcot895/chromium-beta/ubuntu">http://ppa.launchpad.net/saiarcot895/chromium-beta/ubuntu</a>」にチェックを入れて、再読み込みを行えば、Beta版Chromiumがインストール出来るようになります。</p>
+<p>Widevineは、有料オンデマンドサービスで公開されている映像をChromiumで視聴する場合に必要なプラグインです。</p>
+<p>2.https://www.google.co.jp/chrome/browser/desktop/</p>
+<p>Google Chromeのdebファイルをダウンロードします。</p>
+<p>3.ダウンロードしたdebファイルをアーカイブマネジャーで開きます。</p>
+<p>4.data.tar.xzを開きます。</p>
+<p>5.data.tar.xzを開きますと、このルートディレクトリの直下に/opt/google/chromeのディレクトリまで移動して、libwidevinecdm.soとlibwidevinecdmadapter.soを展開します。</p>
+<p>6.取り出したlibwidevinecdm.soとlibwidevinecdmadapter.soを現在使っているシステムの/usr/lib/chromium-browserに上書き保存します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo cp -a libwidevinecdm.so /usr/lib/chromium-browser
+
+$sudo cp -a libwidevinecdmadapter.so /usr/lib/chromium-browser
+</pre></div>
+</div>
+<p>これで、Google Chromeを使わずにChromium BrowserだけでWidevineが使えます。</p>
+<p>この作業をスクリプト化した物を以下のリンク先に置いておきます。</p>
+<p><a class="reference external" href="https://drive.google.com/open?id=0B1CllnoLXtxZTm5VbW1jbTgwbDg">https://drive.google.com/open?id=0B1CllnoLXtxZTm5VbW1jbTgwbDg</a></p>
+<p>beta版Chromiumで同期などをしたい時には、API keyが必要になります。手順は以下のリンクに記載されています。Chromium Devの参加とプロジェクトの作成が必要ですが、プロジェクト作成は適当な名前で作成すれば良いでしょう。</p>
+<p><a class="reference external" href="http://www.chromium.org/developers/how-tos/api-keys">http://www.chromium.org/developers/how-tos/api-keys</a></p>
+<p>.profileに取得した3つのAPIキーを追加します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">GOOGLE_API_KEY</span><span class="o">=</span><span class="s2">&quot;api_key&quot;</span>
+<span class="n">export</span> <span class="n">GOOGLE_DEFAULT_CLIENT_ID</span><span class="o">=</span><span class="s2">&quot;client_id&quot;</span>
+<span class="n">export</span> <span class="n">GOOGLE_DEFAULT_CLIENT_SECRET</span><span class="o">=</span><span class="s2">&quot;client_secret&quot;</span>
+</pre></div>
+</div>
+<p>システムに再ログインすれば、反映されてGoogleが提供するAPIが有効になります。</p>
+</div></blockquote>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/valkyrie/valkyrie002.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

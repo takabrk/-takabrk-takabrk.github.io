@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>カスタムカーネルについて &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>カスタムカーネルについて<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="http://takabrk.seesaa.net/article/449185431.html">http://takabrk.seesaa.net/article/449185431.html</a></p>
+<p>This low latency kernel is for Ubuntu 16.04 LTS(64bit) and is aimed at processors after the Intel SandyBridge architecture by adding an aufs patch and CK2 patch,kernel_gcc patch to Linux Kernel.</p>
+<section id="id2">
+<h2>カスタムカーネルの作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>64bit OS「Phantom Valkyrie Linux」用のカスタムカーネルを作成しました。フルインストール環境とLiveDVD環境で動作しています。</p>
+<p>Linuxカーネル4.11ベースでリアルタイムカーネルを作りたいのですが、まだRT Preempt(<a class="reference external" href="https://www.kernel.org/pub/linux/kernel/projects/rt/">https://www.kernel.org/pub/linux/kernel/projects/rt/</a>)のパッチが公開されていないようですので、取り敢えず、カーネルオプションでISDNやIEEE1394など明らかに現在の一般的なコンピューティングで使わないドライバとモジュールを外して、カーネルのファイル容量を減らしました。</p>
+<p>カスタムカーネルの作成方法は、昔からあるmakeを使う方法で行っています。</p>
+<p>1.Ubuntuパッチが適用されているカーネルソースをダウンロードする。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$apt-get source linux-image-$(uname -r)
+</pre></div>
+</div>
+<p>あるいは以下の方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$apt-get source linux-source-4.10.0
+
+$apt-get source linux-source-4.8.0
+</pre></div>
+</div>
+<p>2.カーネルソースに合ったビルド環境をインストールする。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo apt-get install build-essential kernel-package libqt4-dev pkg-config libncurses5-dev
+
+$sudo apt-get build-dep linux-image-$(uname -r)
+</pre></div>
+</div>
+<p>3.現在使っているカーネルからカーネルコンフィグをコピーする。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$make oldconfig
+</pre></div>
+</div>
+<p>4.コンフィグ設定ツールを起動させて、カーネルオプションを調整し、3で作成した「.config」ファイルに上書き保存する。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$make xconfig
+</pre></div>
+</div>
+<p>5.Makefileを任意のテキストエディタで開き、「EXTRAVERSION = 」の部分に適当な数字や文字列を入れておくとバージョン管理がしやすくなります。文字列は先頭に「-」を入れておくと見易くなります。</p>
+<p>6.ビルドを行う。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo make-kpkg -j3 --initrd kernel_image kernel_headers
+</pre></div>
+</div>
+<p>-jオプションの数字は、プロセッサのコア数＋1にしておくと効率的にビルドを行ってくれます。</p>
+<p>7.無事にビルドが終われば、カーネルソースフォルダの上位ディレクトリにdebファイルが出来ていますので、そのディレクトリに移動してカーネルとヘッダファイルをインストールします。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sudo dpkg -i *.deb
+</pre></div>
+</div>
+<p>◇削除したモジュール</p>
+<p>・Kernel Hacking関連全て</p>
+<p>◇最適化</p>
+<ul class="simple">
+<li><p>Processer family -&gt; Generic-x86-64</p></li>
+<li><p>Kernel Compression mode -&gt; LZ4</p></li>
+<li><p>Preemption Model -&gt; Preemptible Kernel(Low-Latency Desktop)</p></li>
+<li><p>Timer frequency -&gt; 1000MHz</p></li>
+<li><p>Default I/O scheduler -&gt; BFQ-SQ</p></li>
+<li><p>Compiler optimization level -&gt; Optimized harder</p></li>
+<li><p>MuQSS on</p></li>
+<li><p>UKSM on</p></li>
+<li><p>Zen Interactive Tune on</p></li>
+<li><p>CPUFreq Governor -&gt; ondemand</p></li>
+</ul>
+</section>
+<section id="linux">
+<h2>Linuxカーネルのソースコードとパッチ<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>1.カーネルソースコード</p>
+<p><a class="reference external" href="https://www.kernel.org/">https://www.kernel.org/</a></p>
+<p>2.公式パッチ</p>
+<p><a class="reference external" href="https://www.kernel.org/pub/linux/kernel/">https://www.kernel.org/pub/linux/kernel/</a></p>
+<p>3.UbuntuパッチとUbuntuカーネルバイナリ</p>
+<p><a class="reference external" href="http://kernel.ubuntu.com/~kernel-ppa/mainline/">http://kernel.ubuntu.com/~kernel-ppa/mainline/</a></p>
+<p>4.リアルタイムカーネルパッチ</p>
+<p><a class="reference external" href="https://www.kernel.org/pub/linux/kernel/projects/rt/">https://www.kernel.org/pub/linux/kernel/projects/rt/</a></p>
+<p>5.Processor Familyの種類を増やすパッチ</p>
+<p><a class="reference external" href="https://github.com/graysky2/kernel_gcc_patch">https://github.com/graysky2/kernel_gcc_patch</a></p>
+<p>6.BFQスケジューラやMuQSSなどを追加するCK1パッチ</p>
+<p><a class="reference external" href="http://ck-hack.blogspot.jp/">http://ck-hack.blogspot.jp/</a></p>
+<p>7.CK1パッチを個別にした物</p>
+<p><a class="reference external" href="http://ck.kolivas.org/patches/4.0/">http://ck.kolivas.org/patches/4.0/</a></p>
+<p>8.Aufs</p>
+<p><a class="reference external" href="http://aufs.sourceforge.net/">http://aufs.sourceforge.net/</a></p>
+<p>9.Zen kernel</p>
+<p><a class="reference external" href="https://github.com/zen-kernel/zen-kernel">https://github.com/zen-kernel/zen-kernel</a></p>
+<p>10.pf-kernel</p>
+<p><a class="reference external" href="https://pf.natalenko.name/">https://pf.natalenko.name/</a></p>
+<p>11.UKSM</p>
+<p><a class="reference external" href="https://github.com/dolohow/uksm">https://github.com/dolohow/uksm</a></p>
+<p>◇パッチ適用方法例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$patch -p1 &lt; xxx.patch
+</pre></div>
+</div>
+<p>◇xz圧縮されている場合:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$xzcat ../patch-xxx.patch.xz | patch -p1
+</pre></div>
+</div>
+<p>◇Aufsをgitから取得:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$git clone  git://github.com/sfjro/aufs4-standalone.git
+
+$cd aufs4-standalone
+
+$git checkout origin/aufs4.10
+</pre></div>
+</div>
+<p>◇Zen Kernel SourceをGitから取得:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$git clone https://github.com/zen-kernel/zen-kernel.git
+
+$cd zen-kernel
+
+$git checkout origin/4.10/master
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/valkyrie/valkyrie004.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

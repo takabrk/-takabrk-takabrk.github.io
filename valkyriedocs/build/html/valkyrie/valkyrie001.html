@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Valkyrie Linux &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="valkyrie-linux">
+<h1>Valkyrie Linux<a class="headerlink" href="#valkyrie-linux" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Valkyrie LinuxはUbuntu LTSをベースにした64bitオペレーティングシステムです。このOSのデスクトップ環境はOpenboxとTint2で構成しています。
+このOSに付属しているカスタムカーネル「Noir Linux Kernel」は、リアルタイム性能とレスポンス性能を向上させます。ウィンドウマネージャーのOpenboxには角丸パッチを適用しています。</p>
+<p><a class="reference external" href="http://www.vsrx.work/article/418075361.html">http://www.vsrx.work/article/418075361.html</a></p>
+<section id="id1">
+<h2>推奨システム要件<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl>
+<dt>Processor :</dt><dd><p>Intel Core i,Pentium G/Celeron G,Atom SoC</p>
+<p>AMD Ryzen</p>
+</dd>
+</dl>
+<p>Memory: 4GB and over</p>
+<p>Storage: 128GB and over HDD/SSD/USB memory</p>
+<p>Network: FTTH・ADSL・LTE・WiMAX2+ etc.</p>
+</section>
+<section id="id2">
+<h2>動作確認したマザーボード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>B150-COMBO(ASRock)</p>
+<p>H97I-PLUS(ASUS)</p>
+<p>C1007UN-D(GIGABYTE)</p>
+</section>
+<section id="pc">
+<h2>動作確認したスティックPC<a class="headerlink" href="#pc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>STCK1A32WFC(Intel)</p>
+</section>
+<section id="linux">
+<h2>ベースにしたLinuxディストリビューション<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Ubuntu 22.04.2 LTS</p>
+</section>
+<section id="kernel">
+<h2>Kernel<a class="headerlink" href="#kernel" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>◎Noir linux Kernel 6.1.8</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>◇based kernel
+  linux kernel 6.1
+
+◇Applied patches
+  - Built on the GCC 12.1.0
+  - CPU scheduler -&amp;gt; CFS
+  - Default I/O scheduler -&amp;gt; BFQ
+  - Processor family -&amp;gt; Generic X86_64
+  - Kernel Compression mode -&amp;gt; zstd
+  - Preemption Model -&amp;gt; Full Preemptible Kernel(Real Time)
+  - CPU Timer frequency -&amp;gt; 500Hz
+  - RCU boost delay -&amp;gt; 339
+  - Timer tick handling -&amp;gt; Full dynticks system
+  - Default CPUFreq Governor -&amp;gt; schedutil
+  - CPU idle governor -&amp;gt; TEO
+  - vm_swappiness = 30
+  - VM_READAHEAD_PAGES=8MB
+  - dcache-cache_pressure=50
+  - PCIe ACS support
+  - OpenRGB support
+  - Zen Interactive Tune support
+  - Core scheduling for SMT ON
+  - Clear Linux support
+  - BBR2 support
+  - AMD p-state support
+</pre></div>
+</div>
+</section>
+<section id="ppa">
+<h2>PPA<a class="headerlink" href="#ppa" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ubuntu</span> <span class="n">Japanese</span> <span class="n">Team</span> <span class="n">PPA</span>
+<span class="n">Canonical</span> <span class="n">kernel</span> <span class="n">PPA</span>
+<span class="n">Atom</span> <span class="n">PPA</span>
+<span class="n">BootRepair</span> <span class="n">PPA</span>
+<span class="n">Docker</span> <span class="n">PPA</span>
+<span class="n">Wine</span> <span class="n">HQ</span> <span class="n">PPA</span>
+<span class="n">OBS</span> <span class="n">Studio</span> <span class="n">PPA</span>
+<span class="n">Lutris</span>  <span class="n">PPA</span>
+<span class="n">LibreOffice</span> <span class="n">PPA</span>
+</pre></div>
+</div>
+</section>
+<section id="os">
+<h2>OSスペック<a class="headerlink" href="#os" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Ubuntu</span> <span class="mf">22.04.1</span> <span class="n">LTS</span> <span class="n">based</span>
+<span class="o">-</span> <span class="n">default</span> <span class="n">kernel</span> <span class="p">:</span> <span class="n">Ubuntu</span> <span class="n">kernel</span> <span class="mf">5.19.0</span> <span class="n">generic</span><span class="p">,</span><span class="n">optional</span> <span class="p">:</span> <span class="n">Custom</span> <span class="n">kernel</span> <span class="s2">&quot;Noir Linux kernel 6.1.8&quot;</span>
+<span class="o">-</span> <span class="n">Openbox</span> <span class="k">with</span> <span class="n">Rounded</span> <span class="n">Window</span> <span class="n">patch</span>
+<span class="o">-</span> <span class="n">Tint2</span>
+<span class="o">-</span> <span class="n">original</span> <span class="n">application</span> <span class="s2">&quot;Viper Tools&quot;</span>
+<span class="o">-</span> <span class="n">linux</span> <span class="n">firmware</span> <span class="mf">20220329.</span><span class="n">git68128</span>
+<span class="o">-</span> <span class="n">Mesa</span> <span class="mf">22.0.5</span>
+<span class="o">-</span> <span class="n">dunst</span>
+<span class="o">-</span> <span class="n">xfce4</span><span class="o">-</span><span class="n">terminal</span><span class="p">,</span><span class="n">xfce4</span><span class="o">-</span><span class="n">taskmanager</span><span class="p">,</span><span class="n">xfce4</span><span class="o">-</span><span class="n">screenshooter</span><span class="p">,</span><span class="n">xfce4</span><span class="o">-</span><span class="n">power</span><span class="o">-</span><span class="n">managemer</span>
+<span class="o">-</span> <span class="n">Intel</span> <span class="n">iHD</span> <span class="n">Driver</span> <span class="mf">21.1.0</span>
+<span class="o">-</span> <span class="n">jgmenu</span>
+<span class="o">-</span> <span class="n">pnmixer</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>収録しているアプリケーション<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Firefox</span> <span class="mi">109</span>
+<span class="o">-</span> <span class="n">emacs</span><span class="o">-</span><span class="n">nox</span> <span class="mf">27.1</span><span class="p">,</span><span class="n">leafpad</span><span class="p">,</span><span class="n">glade</span>
+<span class="o">-</span> <span class="n">PipeWire</span>
+<span class="o">-</span> <span class="n">GIMP</span> <span class="mf">2.10.30</span>
+<span class="o">-</span> <span class="n">GCC</span> <span class="mi">12</span><span class="o">/</span><span class="mf">11.2</span><span class="p">,</span><span class="n">Python</span> <span class="mf">3.10.6</span><span class="p">,</span><span class="n">node</span><span class="o">.</span><span class="n">js</span><span class="p">,</span><span class="n">libllvm15</span>
+<span class="o">-</span> <span class="n">Wine</span> <span class="mf">6.0.1</span>
+<span class="o">-</span> <span class="n">OBS</span> <span class="n">Studio</span><span class="p">,</span><span class="n">Shotcut</span><span class="p">,</span><span class="n">Audacious</span><span class="p">,</span><span class="n">Audacity</span><span class="p">,</span><span class="n">soundconverter</span><span class="p">,</span><span class="n">Blender</span> <span class="mf">3.4.1</span><span class="p">,</span><span class="n">ffmpeg</span><span class="p">,</span><span class="n">SMPlyer</span>
+<span class="o">-</span> <span class="n">Steam</span>
+<span class="o">-</span> <span class="n">gnumeric</span><span class="p">,</span><span class="n">abiword</span><span class="p">,</span><span class="n">KCalc</span>
+<span class="o">-</span> <span class="n">keepassxc</span>
+<span class="o">-</span> <span class="n">unetbootin</span><span class="p">,</span><span class="n">gparted</span><span class="p">,</span><span class="n">boot</span><span class="o">-</span><span class="n">repair</span><span class="p">,</span><span class="n">gnome</span> <span class="n">disks</span>
+<span class="o">-</span> <span class="n">git</span> <span class="mf">2.36.0</span>
+<span class="o">-</span> <span class="n">X11VNC</span><span class="p">,</span><span class="n">remmina</span>
+<span class="o">-</span> <span class="n">OpenJtalk</span>
+<span class="o">-</span> <span class="n">Arronax</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>アイコン<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Suru</span><span class="o">++</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>フォント<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Takao</span> <span class="n">font</span>
+<span class="o">-</span> <span class="n">font</span> <span class="n">noto</span><span class="o">-</span><span class="n">emoji</span>
+<span class="o">-</span> <span class="n">font</span> <span class="n">noto</span> <span class="n">cjk</span>
+<span class="o">-</span> <span class="n">font</span> <span class="n">noto</span> <span class="n">cjk</span> <span class="n">extra</span>
+<span class="o">-</span> <span class="n">Cica</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>○オリジナルアプリ::</dt><dd><p>Python製アプリケーション:Viper Tools</p>
+</dd>
+<dt>◯Webアプリ::</dt><dd><p>DP-IP
+BROARDBAND  Speedtest
+Wifu2x
+printer settings</p>
+</dd>
+</dl>
+<p>○キーボードショートカット:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Window</span> <span class="n">Close</span> <span class="n">Shortcut</span><span class="p">]</span>
+<span class="n">Shift</span><span class="o">+</span><span class="n">Windows</span><span class="o">+</span><span class="n">C</span> <span class="n">Close</span> <span class="n">Window</span>
+
+<span class="p">[</span><span class="n">Change</span> <span class="n">Window</span> <span class="n">Shortcut</span><span class="p">]</span>
+<span class="n">Windwos</span><span class="o">+</span><span class="n">j</span> <span class="n">prev</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">k</span> <span class="nb">next</span>
+<span class="n">Shift</span><span class="o">+</span><span class="n">Alt</span><span class="o">+</span><span class="n">Left</span> <span class="n">SendToDesktopLeft</span>
+<span class="n">Shift</span><span class="o">+</span><span class="n">Alt</span><span class="o">+</span><span class="n">Right</span> <span class="n">SendToDesktopRight</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">1</span> <span class="n">desktop1</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">2</span> <span class="n">desktop2</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">3</span> <span class="n">desktop3</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">4</span> <span class="n">desktop4</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">5</span> <span class="n">desktop5</span>
+<span class="n">Windows</span><span class="o">+</span><span class="mi">6</span> <span class="n">desktop6</span>
+
+<span class="p">[</span><span class="n">Window</span> <span class="n">Tilling</span><span class="p">]</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">Left</span> <span class="n">HalfLeftScreen</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">Right</span> <span class="n">HalfRightScreen</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">Up</span> <span class="n">HalfUpperScreen</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">Down</span> <span class="n">HalfLowerScreen</span>
+<span class="n">Window</span><span class="o">+</span><span class="n">z</span> <span class="n">ToggleMaximize</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">x</span> <span class="n">Iconify</span>
+
+<span class="p">[</span><span class="n">Volume</span> <span class="n">Shortcut</span><span class="p">]</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">u</span> <span class="n">volume</span> <span class="n">up</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">i</span> <span class="n">volume</span> <span class="n">down</span>
+
+<span class="p">[</span><span class="n">right</span> <span class="n">ckick</span> <span class="n">menu</span> <span class="n">of</span> <span class="n">Openbox</span><span class="p">]</span>
+<span class="n">Ctrl</span><span class="o">+</span><span class="n">m</span>
+
+<span class="p">[</span><span class="n">Apps</span><span class="p">]</span>
+<span class="n">Windows</span><span class="o">+</span><span class="n">Enter</span> <span class="n">Open</span> <span class="n">Terminal</span>
+<span class="n">WIndows</span><span class="o">+</span><span class="n">e</span> <span class="n">Open</span> <span class="n">Emacs</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h1>インストール方法<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>1.ISOをダウンロード（OneDriveのアカウントが無くてもダウンロードは出来ます。右クリックメニューで「ダウンロード」の項目を選択して下さい。）</p>
+<p>2.UNetbootinでUSBメモリーにインストールディスク(Live USB)を作成。</p>
+<p><a class="reference external" href="https://unetbootin.github.io/">https://unetbootin.github.io/</a></p>
+<p>3.Live USBをパソコンのUSBポートに挿入して、UEFIからLive USBで起動出来るように、USBメモリーから起動出来るようにする。（メーカーロゴが出ている時にF11キーなどを押す。）</p>
+<p>4.Live USBでシステムを起動。ネットに接続しておきます。</p>
+<p>5.右クリックメニューの「Install Valkyrie Linux」という項目をクリックすると、インストーラーが起動します。これを使って、インストール作業を行います。もし、ブートローダー「Grub2」のインストールが失敗した場合は、LiveUSBのシステム再起動を行って、右クリックメニューからboot-repairを使ってインストールする事が出来ます。</p>
+<p>6.OSのインストールが終わった後に出てくるダイアログで「試用を続ける」を選択する。選択後に自動的にboot-repairが起動。</p>
+</section>
+<section id="boot-repair">
+<h1>Boot Repairの使い方<a class="headerlink" href="#boot-repair" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>1.「高度なオプション」→「GRUBのオプション」→「SecureBoot」のチェックを外して、適用ボタンを押す。</p>
+<p>2.GRUBをインストールしたら、システムの再起動（エラーが出ていてもGrub2はインストールされているので問題無く起動出来ます。）。
+homeディレクトリを別にした状態で、再インストールをしている時は、/etc/skelの下にあるファイルやフォルダを全てユーザーディレクトリにコピーしなければ反映されません。</p>
+</section>
+<section id="id7">
+<h1>セキュアブートの無効化<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>1.パソコンを起動させた時にメーカーのロゴが表示されるので、この時にF2キーかDeleteキーを押す。</p>
+<img alt="_images/uefi001.jpg" src="_images/uefi001.jpg" />
+<p>2.UEFIに入るので、詳細モードに変更する。（使っているマザーボードによって異なります。）</p>
+<img alt="_images/uefi002.jpg" src="_images/uefi002.jpg" />
+<p>3.セキュリティ関連の項目にセキュアブートの設定項目があるので、これを選びます。</p>
+<img alt="_images/uefi003.jpg" src="_images/uefi003.jpg" />
+<p>4.保存して再起動させると、セキュアブートが無効化されてシステムを起動する事が出来ます。</p>
+</section>
+<section id="bit-osvalkyrie-linux">
+<h1>64bit OS「Valkyrie Linux」の特長<a class="headerlink" href="#bit-osvalkyrie-linux" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<ul>
+<li><p>デスクトップ環境は、LXQtを採用しています。</p>
+<p>デスクトップ環境がLXQtを採用していて、ウィンドウマネージャーはOpenboxです。デスクトップ環境のXfceなどから様々なアプリケーションを使っています。また、fbpanelやgmrunやnitrogenもデスクトップの構築に使っています。</p>
+<p>メモリー使用量を減らす事で、アプリケーションを使う時に必要なメモリーをより多く確保する事が出来ます。</p>
+</li>
+<li><p>Linuxカーネルは、最新のLinuxカーネルベースの高レスポンス性が高いカスタムカーネルを搭載。</p></li>
+<li><p>Mesa 21の導入により、WineやPCSX2などで3Dゲームを動作させた時のパフォーマンスが大幅に向上しています。</p></li>
+<li><p>VDAPU及びVAAPI対応ドライバを採用している為、動画支援機能で低CPU負荷で動画を再生出来ます。</p></li>
+<li><p>サウンドは、PulseAudioとJack Audio Connection Kitをプラグイン経由で出力する仕組みになっています。</p>
+<p>また、Openboxの右クリックメニューからPulseAudioやJack Audio Connection Kitを起動・停止させられ、両方のサウンドサーバの併用も可能です。</p>
+</li>
+<li><p>Pythonとシェルスクリプトで開発したオリジナルアプリケーション「Viper Tools」を搭載。</p>
+<p>リマスター機能やカスタムカーネルビルド機能、アプリケーションのインストール、人工知能プログラムによる文書作成と音読、宝くじなどの予想機能、画像・動画の変換機能などを有しています。</p>
+</li>
+<li><p>Ubuntuの長期サポート版（LTS）のリポジトリと共有していますので、Main,RestrictedのコンポーネントをUbuntuの公式サポートで最新の状態に維持しています。更にPPAから最新のバージョンのアプリケーションを導入しています。</p></li>
+<li><p>Specific Site Browser機能で人気のWebアプリケーションをデスクトップアプリケーションのように使えます。</p></li>
+<li><p>PSPやPS2やPSのゲームエミュレーション、PlayOnLinux+Wineによる古いWindowsアプリケーションの利用が可能です。</p></li>
+<li><p>GIMPやAvidemuxやHandbrakeなどWindowsやLinuxなどでお馴染みのアプリケーションをフル装備しています。最初からプログラミング・オフィス文書作成・イラストレーション・画像編集・動画エンコード・動画編集・音楽再生・3Dモデリング・オンラインサービスの利用する事が可能です。</p></li>
+<li><p>UEFIモードでLiveUSBやハードディスクへのフルインストールでの起動が出来るようになっていますので、ほとんどのマザーボードに対応</p></li>
+<li><p>WebブラウザにはChromium Browser、WebサーバのApacheなどを装備し、Web開発環境を整えています。</p></li>
+<li><p>Atom、EmacsやLeafpadなど複数のテキストエディタを搭載し、PythonやPHPやJavaなどのプログラミング言語でプログラミングを行える環境を整えています。</p></li>
+<li><p>メインサイトとの連携</p></li>
+<li><p>日本語入力環境にMoscとFcitxを採用</p></li>
+</ul>
+</section>
+<section id="id8">
+<h1>Valkyrie Linuxの高速化と最適化<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>64bit OS「Valkyrie Linux」は、LTS版Ubuntuをベースに数多くの高速化・最適化策を講じています。</p>
+<p>Ubuntu LTSをベースにして開発したオリジナル64bit OS「Valkyrie Linux」には、様々な高速化テクニックを導入しています。</p>
+<p>1.Ubuntuパッチが当たっているLinuxカーネルのソースコードを使って、最適化ビルドしたカスタムカーネルの導入</p>
+<p>Linuxカーネルを更に最適化する</p>
+<p>64bit OS「Valkyrie Linux」用のカスタムカーネルを作成</p>
+<p>2.デスクトップ環境をOpenbox+fbpanel+Xfce/LXDE/GNOME用アプリで構成</p>
+<p>3.prelink、preloadでアプリケーションのキャッシュデータを使って先読み</p>
+<p>4.tmpfsでRAMDiskをブラウザのキャッシュ場所として活用</p>
+<p>5./etc/sysctl.confの最適化</p>
+<p>6./etc/init.d/rcに「CONCURRENCY=shell」を設定して、システム起動時のモジュールの並列起動</p>
+<p>7.VAAPIとVDPAUの導入で動画支援機能の利用(mesa-va-drivers、mesa-vdpau-drivers)</p>
+<p>8.ccacheでGCCによるコンパイルの高速化</p>
+<p>9.Emacsをnox版で使う</p>
+</section>
+<section id="id9">
+<h1>Valkyrie Linuxの高音質化<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>PulseAudioとJACK Audio Connection Kitをモジュールで接続し、Openboxの起動スクリプトからこれらを起動させたり、PulseAudioのデーモンをRAMDISKに配置したりして高音質化を図る事が出来ます。</p>
+<p>高音質化部分は以下の通りです。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> #JACK+PulseAudio
+ sleep 5;jack_control start &amp;
+ sudo schedtool -R -p 49 `pidof jackdbus`
+ jack_control eps realtime true
+ jack_control ds alsa
+ jack_control dps device hw:0
+ jack_control dps rate 96000
+ jack_control dps nperiods 2
+ jack_control dps period 1024
+ sleep 5;pactl load-module module-jack-sink channels=2
+ pactl load-module module-jack-source channels=2
+ sleep 3;pacmd set-default-sink jack_out
+ pacmd set-default-source jack_in
+
+sleep 2;ln -s /usr/bin/pulseaudio /tmp &amp;
+sleep 10;/tmp/pulseaudio --start &amp;
+</pre></div>
+</div>
+</section>
+<section id="valkyrie-linuxgrub">
+<h1>Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法<a class="headerlink" href="#valkyrie-linuxgrub" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>EFIパーティションの状況によって、システムインストール時にGRUBが正常にインストールされない事があります。
+その時には、Valkyrie Linuxに収録しているboot-repairを使ってGRUBをインストールする事が出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.右クリックメニューでboot-repairを選択します。
+2.boot-repairが起動したら、「高度なオプション」を選択し、適用を押します。
+3.GRUBのインストールが行われます。最後に正常にインストール出来なかったという内容のメッセージが表示されますが、そのまま、システムを再起動させます。
+4.正常にシステムが起動出来るようになっています。
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Valkyrie Linux Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, takamitsu_h.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/valkyrie/valkyrie001.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
