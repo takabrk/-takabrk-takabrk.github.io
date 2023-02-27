@@ -13,7 +13,7 @@ Software Download
 
 `Valkyrie Linux Download <http://www.vsrx.work/article/451561416.html>`_
 
-`Noir linux kernel  Download <http://www.vsrx.work/article/449185431.html>`_
+`Noir linux kernel  Download <https://www.vsrx.work/article/482455972.html>`_
 
 `Viper Tools Download <http://www.vsrx.work/article/420558380.html>`_
 
