@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>コマンドランチャー「gmrun」の使い方 &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <title>9. コマンドランチャー「gmrun」の使い方 &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="18. トラブルが起こった時の対処法" href="valkyrie003.html" />
+    <link rel="prev" title="1. Valkyrie Linux" href="valkyrie001.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,12 +35,12 @@
           <div class="body" role="main">
             
   <section id="gmrun">
-<h1>コマンドランチャー「gmrun」の使い方<a class="headerlink" href="#gmrun" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">9. </span>コマンドランチャー「gmrun」の使い方<a class="headerlink" href="#gmrun" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ctrl+spaceでgmrunを起動出来ます。</p>
 <p>アプリケーションの名前を打って、Enterを押すとアプリケーション起動。Tabキーでキーワード補完を行ってくれます。</p>
 </section>
 <section id="linuxi-o">
-<h1>一時的にLinuxカーネルのI/Oスケジューラーを変更する方法<a class="headerlink" href="#linuxi-o" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">10. </span>一時的にLinuxカーネルのI/Oスケジューラーを変更する方法<a class="headerlink" href="#linuxi-o" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Linuxカーネルには、様々なI/Oスケジューラーが用意されています。カーネルをソースコードからビルドする時に、I/Oスケジューラーを設定しておくのが一般的ですが、現在利用しているカーネルで一時的にI/Oスケジューラーの変更をしたい時には、以下のコマンドを使うと良いでしょう。</p>
 <p>sudo -- sh -c 'echo cfq &gt; /sys/block/sda/queue/scheduler'</p>
 <p>「cfq」の部分を「deadline」「noop」「bfq」という風に変更するだけです。</p>
@@ -50,21 +52,21 @@
 <p>他のコマンドも記述する場合は、半角スペースで区切っていきます。</p>
 </section>
 <section id="id1">
-<h1>サウンドサーバの切り替え<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">11. </span>サウンドサーバの切り替え<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>Phantom Valkyrie Linuxでは、ALSAに直接アクセスしてサウンドを出しています。一方で、PulseAudioやJack Audio Connection Kitといったサウンドサーバも搭載しており、OpenBoxの右クリックメニューで起動・停止などが出来ます。</p>
 <p>また、PulseとJackは、pulseaudio-module-jackを通して連携が出来るようになっています。この連携機能を使うには、PulseAudioを起動させた後に、Jackを起動させます。</p>
 </div></blockquote>
 </section>
 <section id="virtualbox">
-<h1>VirtualBoxの音の出し方<a class="headerlink" href="#virtualbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">12. </span>VirtualBoxの音の出し方<a class="headerlink" href="#virtualbox" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>ALSAだけでサウンドを出していますが、VirtualBoxでホストをALSAに設定しても音が出ません。
 その為、VirtualBoxのホストで設定する際には「PulseAudio」のままにして、Openboxの右クリックメニューからPulseAudioを起動させてからVirtualboxを起動させてください。</p>
 </div></blockquote>
 </section>
 <section id="alsa">
-<h1>ALSAの音量設定の保存方法<a class="headerlink" href="#alsa" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">13. </span>ALSAの音量設定の保存方法<a class="headerlink" href="#alsa" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>LinuxでのサウンドドライバはALSAですが、システム起動音などを調整して、その音量を永続的に保ちたい場合があります。alsactlというツールを使う事で音量設定の保存が可能です。</p>
 <p>1.alsamixerで音量を調整</p>
@@ -74,7 +76,7 @@
 </div></blockquote>
 </section>
 <section id="pulseaudiojack-audio-connection-kit">
-<h1>PulseAudioとJack Audio Connection KItとの連携<a class="headerlink" href="#pulseaudiojack-audio-connection-kit" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">14. </span>PulseAudioとJack Audio Connection KItとの連携<a class="headerlink" href="#pulseaudiojack-audio-connection-kit" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>コマンドでJackとPulseの連携は出来るようになっていますが、ALSAを直接使うアプリケーションではまだ音が出ていません。
 Qjackctlで予めpulseaudio-module-jackの設定を行っておきます。</p>
@@ -89,7 +91,7 @@ jack_controlを使ったコマンド例は以下の通りです。ALSAを直接�
 </div></blockquote>
 </section>
 <section id="amixer">
-<h1>amixerの設定コマンド<a class="headerlink" href="#amixer" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">15. </span>amixerの設定コマンド<a class="headerlink" href="#amixer" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>ミュートの切り替え</p>
 <p>amixer sset Master on</p>
@@ -103,7 +105,7 @@ jack_controlを使ったコマンド例は以下の通りです。ALSAを直接�
 </div></blockquote>
 </section>
 <section id="smplayer-mpv-youtube-dl1080p60fpsgpu">
-<h1>SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる<a class="headerlink" href="#smplayer-mpv-youtube-dl1080p60fpsgpu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">16. </span>SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる<a class="headerlink" href="#smplayer-mpv-youtube-dl1080p60fpsgpu" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>Ubuntu環境でSMPlayerを使っている人は多いと思います。この環境を活用して、MPVやyoutube-dlと連携させて、Youtubeなどの動画共有サイトで公開されている1080p60fpsの動画をGPUの動画支援機能で動作させる事が可能です。Webブラウザで視聴するよりも消費電力が低くなるのが利点です。</p>
 <p>◇環境
@@ -133,7 +135,7 @@ CPU : Celeron G 3900（2.8GHzデュアルコア、Skylake）</p>
 </div></blockquote>
 </section>
 <section id="betachromiumwidevinegoogle-api">
-<h1>Beta版ChromiumでWidevineとGoogle APIを使えるようにする<a class="headerlink" href="#betachromiumwidevinegoogle-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">17. </span>Beta版ChromiumでWidevineとGoogle APIを使えるようにする<a class="headerlink" href="#betachromiumwidevinegoogle-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <blockquote>
 <div><p>1.Phantom Valkyrie Linuxには、Chromium beta channel PPAを追加していますが、デフォルトではオフになっています。Synapticパッケージマネージャーの「設定」→「リポジトリ」→「他のソフトウェア」にある「<a class="reference external" href="http://ppa.launchpad.net/saiarcot895/chromium-beta/ubuntu">http://ppa.launchpad.net/saiarcot895/chromium-beta/ubuntu</a>」にチェックを入れて、再読み込みを行えば、Beta版Chromiumがインストール出来るようになります。</p>
 <p>Widevineは、有料オンデマンドサービスで公開されている映像をChromiumで視聴する場合に必要なプラグインです。</p>
@@ -180,11 +182,62 @@ $sudo cp -a libwidevinecdmadapter.so /usr/lib/chromium-browser
 
 
 <h3>ナビゲーション</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html">1. Valkyrie Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#id6">2. インストール方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#boot-repair">3. Boot Repairの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#id7">4. セキュアブートの無効化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#bit-osvalkyrie-linux">5. 64bit OS「Valkyrie Linux」の特長</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#id8">6. Valkyrie Linuxの高速化と最適化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#id9">7. Valkyrie Linuxの高音質化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie001.html#valkyrie-linuxgrub">8. Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. コマンドランチャー「gmrun」の使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#linuxi-o">10. 一時的にLinuxカーネルのI/Oスケジューラーを変更する方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id1">11. サウンドサーバの切り替え</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#virtualbox">12. VirtualBoxの音の出し方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#alsa">13. ALSAの音量設定の保存方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#pulseaudiojack-audio-connection-kit">14. PulseAudioとJack Audio Connection KItとの連携</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#amixer">15. amixerの設定コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#smplayer-mpv-youtube-dl1080p60fpsgpu">16. SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#betachromiumwidevinegoogle-api">17. Beta版ChromiumでWidevineとGoogle APIを使えるようにする</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie003.html">18. トラブルが起こった時の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie004.html">19. カスタムカーネルについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valkyrie020.html">20. 過去の履歴</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools001.html">1. Viper Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools002.html">2. viper.pyに引数を付け加えて機能を使う</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#viper">4. viperモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#id1">5. viperモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html">6. kyotei.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html#kyotei">7. kyoteiモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html">8. ナンバーズ予想用モジュール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data-py">9. download_data.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data">10. download_dataモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#load-numbers-py">11. load_numbers.pyモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#numbers-py">12. numbers.pyモジュールのクラス生成</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html">1. spider.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html#id4">2. メソッド</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech001.html">1. Ubuntu系ディストリビューション向けテクニック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech002.html">2. CSS Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech003.html">3. Java Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech004.html">4. JavaScript Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech005.html">5. Python Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech006.html">6. PHP Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech007.html">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="valkyrie001.html" title="前の章へ"><span class="section-number">1. </span>Valkyrie Linux</a></li>
+      <li>Next: <a href="valkyrie003.html" title="次の章へ"><span class="section-number">18. </span>トラブルが起こった時の対処法</a></li>
   </ul></li>
 </ul>
 </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PHP Hack &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <title>6. PHP Hack &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="7. PlayOnLinux(Wine)で動作するソフトウェアまとめ" href="tech007.html" />
+    <link rel="prev" title="5. Python Hacks" href="tech005.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,9 +35,9 @@
           <div class="body" role="main">
             
   <section id="php-hack">
-<h1>PHP Hack<a class="headerlink" href="#php-hack" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">6. </span>PHP Hack<a class="headerlink" href="#php-hack" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <section id="smarty-3-1">
-<h2>Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Smarty 3.1ではプラグインの追加方法が変更されているので注意<a class="headerlink" href="#smarty-3-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PHPテンプレートエンジン「Smarty」では、プラグインの自作が出来ますが、従来の方法は <a class="reference external" href="http://www.smarty.net/docs/ja/variable.plugins.dir.tpl">http://www.smarty.net/docs/ja/variable.plugins.dir.tpl</a> のように、 SMARTY_DIR 直下の pluginsや新規に作成したフォルダに自作プラグインを放り込む事で以下のように、plugins_dir[]メソッドを使ってパスを指定すれば使えました。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
  $smarty-&gt;plugins_dir[] = &#39;includes/my_smarty_plugins&#39;;
@@ -58,7 +60,7 @@
 <p>これで、Smarty 3.1でも自作プラグインを他のディレクトリで管理出来るようになりますね。</p>
 </section>
 <section id="phphtml">
-<h2>PHPで出力したHTMLなどをファイルとして保存する<a class="headerlink" href="#phphtml" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.2. </span>PHPで出力したHTMLなどをファイルとして保存する<a class="headerlink" href="#phphtml" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PHPで生成したHTMLやテキストはecho文やprint文で出力が出来ます。</p>
 <p>この標準出力されたHTMLやテキストをファイルとして保存する為には、ob_get_contents関数でバッファを作って、これをfopen関数とfwrite関数を使ってファイルとして保存します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?php
@@ -86,7 +88,7 @@
 </div>
 </section>
 <section id="cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in">
-<h2>【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in<a class="headerlink" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.3. </span>【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in<a class="headerlink" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>/app/tmp/cache</p>
 <p>/app/tmp/logs</p>
 <p>/app/tmp/cache/persistent/</p>
@@ -113,11 +115,67 @@
 
 
 <h3>ナビゲーション</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html">1. Valkyrie Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id6">2. インストール方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#boot-repair">3. Boot Repairの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id7">4. セキュアブートの無効化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#bit-osvalkyrie-linux">5. 64bit OS「Valkyrie Linux」の特長</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id8">6. Valkyrie Linuxの高速化と最適化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id9">7. Valkyrie Linuxの高音質化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#valkyrie-linuxgrub">8. Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html">9. コマンドランチャー「gmrun」の使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#linuxi-o">10. 一時的にLinuxカーネルのI/Oスケジューラーを変更する方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#id1">11. サウンドサーバの切り替え</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#virtualbox">12. VirtualBoxの音の出し方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#alsa">13. ALSAの音量設定の保存方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#pulseaudiojack-audio-connection-kit">14. PulseAudioとJack Audio Connection KItとの連携</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#amixer">15. amixerの設定コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#smplayer-mpv-youtube-dl1080p60fpsgpu">16. SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#betachromiumwidevinegoogle-api">17. Beta版ChromiumでWidevineとGoogle APIを使えるようにする</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie003.html">18. トラブルが起こった時の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie004.html">19. カスタムカーネルについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie020.html">20. 過去の履歴</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools001.html">1. Viper Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools002.html">2. viper.pyに引数を付け加えて機能を使う</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#viper">4. viperモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#id1">5. viperモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html">6. kyotei.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html#kyotei">7. kyoteiモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html">8. ナンバーズ予想用モジュール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data-py">9. download_data.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data">10. download_dataモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#load-numbers-py">11. load_numbers.pyモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#numbers-py">12. numbers.pyモジュールのクラス生成</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html">1. spider.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html#id4">2. メソッド</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tech001.html">1. Ubuntu系ディストリビューション向けテクニック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech002.html">2. CSS Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech003.html">3. Java Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech004.html">4. JavaScript Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech005.html">5. Python Hacks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. PHP Hack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#smarty-3-1">6.1. Smarty 3.1ではプラグインの追加方法が変更されているので注意</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phphtml">6.2. PHPで出力したHTMLなどをファイルとして保存する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cakephpwarning-cake-core-cache-was-unable-to-write-cake-dev-ja-to-file-cache-in">6.3. 【CakePHP】Warning: _cake_core_ cache was unable to write ‘cake_dev_ja’ to File cache in</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tech007.html">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="tech005.html" title="前の章へ"><span class="section-number">5. </span>Python Hacks</a></li>
+      <li>Next: <a href="tech007.html" title="次の章へ"><span class="section-number">7. </span>PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li>
   </ul></li>
 </ul>
 </div>

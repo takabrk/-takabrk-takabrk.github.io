@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>viper.pyに引数を付け加えて機能を使う &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <title>2. viper.pyに引数を付け加えて機能を使う &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3. viper.pyをPythonファイルにモジュールとして読み込ませる" href="vipertools003.html" />
+    <link rel="prev" title="1. Viper Tools" href="vipertools001.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,23 +35,23 @@
           <div class="body" role="main">
             
   <section id="viper-py">
-<h1>viper.pyに引数を付け加えて機能を使う<a class="headerlink" href="#viper-py" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">2. </span>viper.pyに引数を付け加えて機能を使う<a class="headerlink" href="#viper-py" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <section id="id1">
-<h2>必要なライブラリのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.1. </span>必要なライブラリのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>必要なライブラリのインストールは、端末で以下のようにして実行します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py import
 </pre></div>
 </div>
 </section>
 <section id="input-txt">
-<h2>input.txtに記載されている内容をコンピューターに喋らせる<a class="headerlink" href="#input-txt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.2. </span>input.txtに記載されている内容をコンピューターに喋らせる<a class="headerlink" href="#input-txt" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>input.txtに記載されている文字列をコンピューターに喋らせる事が可能です。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py input
 </pre></div>
 </div>
 </section>
 <section id="id2">
-<h2>viper.pyに引数を付け加えてコンピューターに喋らせる<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.3. </span>viper.pyに引数を付け加えてコンピューターに喋らせる<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>viper.pyに文字列を引数として挿入する事で、コンピューターに喋らせる事が出来ます。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py jsay こんにちは
 </pre></div>
@@ -60,14 +62,14 @@
 </div>
 </section>
 <section id="pngjpeg">
-<h2>PNG画像の入っているディレクトリをJPEG画像に変換する<a class="headerlink" href="#pngjpeg" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.4. </span>PNG画像の入っているディレクトリをJPEG画像に変換する<a class="headerlink" href="#pngjpeg" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PNF画像の入っているディレクトリをJPEGに変換します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py
 </pre></div>
 </div>
 </section>
 <section id="id3">
-<h2>競艇予想機能<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.5. </span>競艇予想機能<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>選手のデータはSQLiteで構築しており、viper/kyotei/kyotei.sqliteで保存されています。</p>
 <p>・コマンド入力で選手の登録番号を入力する事で予想を行います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python kyotei.py 1111 2222 3333 4444 5555 6666
@@ -75,7 +77,7 @@
 </div>
 </section>
 <section id="svg">
-<h2>アニメーションSVG機能<a class="headerlink" href="#svg" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.6. </span>アニメーションSVG機能<a class="headerlink" href="#svg" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ここでは画像フォルダを「test」とし、出力する画像サイズは640x480とします。</p>
 <p>速度を変更したい場合は、３つ目の引数でアニメーションの実行時間を変更します。</p>
 <p>ここでは5秒でアニメーションが終わるように設定しています。</p>
@@ -86,7 +88,7 @@
 <p>これで同じディレクトリに「test.svg」が生成されます。</p>
 </section>
 <section id="javascripthtml">
-<h2>パラパラアニメのJavaScript付きのHTMLを生成する<a class="headerlink" href="#javascripthtml" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7. </span>パラパラアニメのJavaScript付きのHTMLを生成する<a class="headerlink" href="#javascripthtml" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>パラパラアニメを行なうJavaScript付きのHTMLを生成します。</p>
 <p>一つのHTMLと画像フォルダの組み合わせでパラパラアニメを実現することができ、アニメーションSVGよりも負荷が低くなっています。</p>
 <p>３つ目の引数は、setIntervalの時間を設定します。これを変更することでアニメーション速度を変更出来ます。</p>
@@ -98,7 +100,7 @@
 <p>ディレクトリに「test.html」が生成されます。</p>
 </section>
 <section id="id4">
-<h2>PNG画像を一括でJPEGにする<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.8. </span>PNG画像を一括でJPEGにする<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>複数のPNG画像を一括でJPEG画像に変換します。</p>
 <p>ターミナルエミュレーターで以下のコマンドを使います。</p>
 <p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
@@ -109,7 +111,7 @@
 <p>このコマンドの意味は、「inputdirに入っているPNG画像を一括で640x480の解像度・80%の圧縮率のJPEGに変換する」というものです。</p>
 </section>
 <section id="pnggif">
-<h2>PNG画像を一括でGIFにする<a class="headerlink" href="#pnggif" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.9. </span>PNG画像を一括でGIFにする<a class="headerlink" href="#pnggif" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>複数のPNG画像を一括でGIF画像に変換します。</p>
 <p>ターミナルエミュレーターで以下のコマンドを使います。</p>
 <p>ここでは、PNG画像をまとめたフォルダを「inputdir」、JPEG画像をまとめたフォルダを「outputdir」とします。</p>
@@ -120,7 +122,7 @@
 <p>このコマンドの意味は、「inputdirに入っているPNG画像を一括で640x480の解像度・80%の圧縮率のGIFに変換する」というものです。</p>
 </section>
 <section id="gifpng">
-<h2>GIF画像を一括でPNGにする<a class="headerlink" href="#gifpng" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.10. </span>GIF画像を一括でPNGにする<a class="headerlink" href="#gifpng" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>複数のGIF画像を一括でPNG画像に変換します。</p>
 <p>ターミナルエミュレーターで以下のコマンドを使います。</p>
 <p>ここでは、GIF画像をまとめたフォルダを「inputdir」、PNG画像をまとめたフォルダを「outputdir」とします。</p>
@@ -131,7 +133,7 @@
 <p>このコマンドの意味は、「inputdirに入っているGIF画像を一括で640x480の解像度・80%の圧縮率のPNGに変換する」というものです。</p>
 </section>
 <section id="jpeg">
-<h2>JPEG画像を一括で回転させて保存する<a class="headerlink" href="#jpeg" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.11. </span>JPEG画像を一括で回転させて保存する<a class="headerlink" href="#jpeg" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>一括でJPEG画像を任意の角度に回転させます。</p>
 <p>ターミナルエミュレーターで以下のコマンドを使います。</p>
 <p>ここでは、JPEG画像をまとめたフォルダを「inputdir」とします。
@@ -142,7 +144,7 @@
 <p>このコマンドの意味は、「inputdirに入っているJPEG画像を一括で-90度回転させて上書き保存する」というものです。</p>
 </section>
 <section id="id5">
-<h2>音声ファイルエンコード機能<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.12. </span>音声ファイルエンコード機能<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この機能には、「MP3→AAC,Ogg Vorbis(mp3aac,mp3ogg)」、「AAC→MP3,Ogg Vorbis(aacmp3,aacogg)」、「Ogg Vorbis→MP3(oggmp3)」の５方式の音声ファイルのフォーマットやコンテナをエンコードする事が出来ます。</p>
 <p>以下のコマンドを入力して使います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py mp3ogg xxx 128
@@ -161,21 +163,21 @@ $python viper.py aacmp3 xxx 128
 </div>
 </section>
 <section id="tmpfs-ramdisk-slider">
-<h2>tmpfs RAMDISK Slider<a class="headerlink" href="#tmpfs-ramdisk-slider" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.13. </span>tmpfs RAMDISK Slider<a class="headerlink" href="#tmpfs-ramdisk-slider" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>tmpfsを使ってtmpディレクトリにRAMDISKを作成します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py tmpfs
 </pre></div>
 </div>
 </section>
 <section id="imageinfo">
-<h2>imageinfo<a class="headerlink" href="#imageinfo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.14. </span>imageinfo<a class="headerlink" href="#imageinfo" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>画像の情報を取得します。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py imageinfo 画像ソース名
 </pre></div>
 </div>
 </section>
 <section id="imageflip">
-<h2>imageflip<a class="headerlink" href="#imageflip" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.15. </span>imageflip<a class="headerlink" href="#imageflip" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>画像を反転させる:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py imageflip 画像ソース名 left_right
 $python viper.py imageflip 画像ソース名 top_bottom
@@ -183,14 +185,14 @@ $python viper.py imageflip 画像ソース名 top_bottom
 </div>
 </section>
 <section id="valkyrie">
-<h2>valkyrie<a class="headerlink" href="#valkyrie" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.16. </span>valkyrie<a class="headerlink" href="#valkyrie" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Valkyrieデスクトップのインストールを行います。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py valkyrie
 </pre></div>
 </div>
 </section>
 <section id="id6">
-<h2>ブラウザ機能<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.17. </span>ブラウザ機能<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>端末で以下のようにして起動:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$cd browser
 $browser.py
@@ -198,7 +200,7 @@ $browser.py
 </div>
 </section>
 <section id="waifu2x-py">
-<h2>waifu2x.pyによる画像拡大<a class="headerlink" href="#waifu2x-py" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.18. </span>waifu2x.pyによる画像拡大<a class="headerlink" href="#waifu2x-py" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>端末では以下のようにして起動:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$python viper.py waifu
 </pre></div>
@@ -223,11 +225,82 @@ $browser.py
 
 
 <h3>ナビゲーション</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html">1. Valkyrie Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id6">2. インストール方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#boot-repair">3. Boot Repairの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id7">4. セキュアブートの無効化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#bit-osvalkyrie-linux">5. 64bit OS「Valkyrie Linux」の特長</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id8">6. Valkyrie Linuxの高速化と最適化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id9">7. Valkyrie Linuxの高音質化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#valkyrie-linuxgrub">8. Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html">9. コマンドランチャー「gmrun」の使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#linuxi-o">10. 一時的にLinuxカーネルのI/Oスケジューラーを変更する方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#id1">11. サウンドサーバの切り替え</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#virtualbox">12. VirtualBoxの音の出し方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#alsa">13. ALSAの音量設定の保存方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#pulseaudiojack-audio-connection-kit">14. PulseAudioとJack Audio Connection KItとの連携</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#amixer">15. amixerの設定コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#smplayer-mpv-youtube-dl1080p60fpsgpu">16. SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#betachromiumwidevinegoogle-api">17. Beta版ChromiumでWidevineとGoogle APIを使えるようにする</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie003.html">18. トラブルが起こった時の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie004.html">19. カスタムカーネルについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie020.html">20. 過去の履歴</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="vipertools001.html">1. Viper Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. viper.pyに引数を付け加えて機能を使う</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 必要なライブラリのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-txt">2.2. input.txtに記載されている内容をコンピューターに喋らせる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.3. viper.pyに引数を付け加えてコンピューターに喋らせる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pngjpeg">2.4. PNG画像の入っているディレクトリをJPEG画像に変換する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.5. 競艇予想機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#svg">2.6. アニメーションSVG機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascripthtml">2.7. パラパラアニメのJavaScript付きのHTMLを生成する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">2.8. PNG画像を一括でJPEGにする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pnggif">2.9. PNG画像を一括でGIFにする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gifpng">2.10. GIF画像を一括でPNGにする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jpeg">2.11. JPEG画像を一括で回転させて保存する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.12. 音声ファイルエンコード機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tmpfs-ramdisk-slider">2.13. tmpfs RAMDISK Slider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imageinfo">2.14. imageinfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imageflip">2.15. imageflip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valkyrie">2.16. valkyrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2.17. ブラウザ機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waifu2x-py">2.18. waifu2x.pyによる画像拡大</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools003.html">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools003.html#viper">4. viperモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools003.html#id1">5. viperモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools004.html">6. kyotei.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools004.html#kyotei">7. kyoteiモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools005.html">8. ナンバーズ予想用モジュール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools005.html#download-data-py">9. download_data.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools005.html#download-data">10. download_dataモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools005.html#load-numbers-py">11. load_numbers.pyモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vipertools005.html#numbers-py">12. numbers.pyモジュールのクラス生成</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html">1. spider.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html#id4">2. メソッド</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech001.html">1. Ubuntu系ディストリビューション向けテクニック</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech002.html">2. CSS Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech003.html">3. Java Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech004.html">4. JavaScript Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech005.html">5. Python Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech006.html">6. PHP Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/tech007.html">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="vipertools001.html" title="前の章へ"><span class="section-number">1. </span>Viper Tools</a></li>
+      <li>Next: <a href="vipertools003.html" title="次の章へ"><span class="section-number">3. </span>viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
   </ul></li>
 </ul>
 </div>

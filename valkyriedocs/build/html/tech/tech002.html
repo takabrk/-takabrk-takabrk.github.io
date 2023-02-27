@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>CSS Hacks &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
+    <title>2. CSS Hacks &#8212; Valkyrie Linux Documentation 1.0.0 ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3. Java Hacks" href="tech003.html" />
+    <link rel="prev" title="1. Ubuntu系ディストリビューション向けテクニック" href="tech001.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,9 +35,9 @@
           <div class="body" role="main">
             
   <section id="css-hacks">
-<h1>CSS Hacks<a class="headerlink" href="#css-hacks" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">2. </span>CSS Hacks<a class="headerlink" href="#css-hacks" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <section id="css-spritesweb">
-<h2>CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる<a class="headerlink" href="#css-spritesweb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.1. </span>CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる<a class="headerlink" href="#css-spritesweb" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><p><a class="reference external" href="http://www.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/">The Mystery Of CSS Sprites: Techniques, Tools And Tutorials</a></p>
 </div></blockquote>
@@ -61,7 +63,7 @@
 </div>
 </section>
 <section id="cssoverflow">
-<h2>CSSのoverflowを使った大量の情報を整理する方法<a class="headerlink" href="#cssoverflow" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.2. </span>CSSのoverflowを使った大量の情報を整理する方法<a class="headerlink" href="#cssoverflow" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Ｗｅｂサイトを作ると、載せたい情報が大量になり、リンクを作ってそのページに誘導します。しかし、Googleなどの検索エンジンにクロール時にサイ トの情報を見つけてもらうには出来るだけ元の文章のまま載せておくのが一番いいのです。そこで、枠からはみ出す情報をCSSのoverflowの scrollを使って、フレーム風にしてあげるといいでしょう。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">div</span><span class="p">{</span>
           <span class="n">overflow</span> <span class="p">:</span> <span class="n">scroll</span><span class="p">;</span>
@@ -71,7 +73,7 @@
 <p>これでフレーム風の表示が出来、大量の情報を綺麗に見せることが出来ます。</p>
 </section>
 <section id="csscss">
-<h2>ブラウザ別にCSSを適用するCSSハック<a class="headerlink" href="#csscss" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.3. </span>ブラウザ別にCSSを適用するCSSハック<a class="headerlink" href="#csscss" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>◇スターハック:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">html</span>
      <span class="c1">#hack {</span>
@@ -224,7 +226,7 @@ p{
 <p>プロパティを設定した後に、「!important」を追加すると「!important」のプロパティが最優先されます。IE6以下では未対応なので、モダンブラウザとIE6以下との場合分けに有効です。</p>
 </section>
 <section id="id11">
-<h2>解像度が変わっても常に中央にコンテンツが表示される方法<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.4. </span>解像度が変わっても常に中央にコンテンツが表示される方法<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>CSSを使って、テーブルを使ったときのようなサイズ可変可能なページレイアウトを実現する。あるいは、コンテンツを中央に表示することができる。</p>
 <p>marginの値がポイント。左右のmarginの値をautoにすると自動でページの両側の余白を調整してくれる。また、positionは指定しないようにしたい。サイズが可変しなくなる。</p>
 <p>１．コンテンツを中央に表示させたい場合:</p>
@@ -245,7 +247,7 @@ p{
 </div>
 </section>
 <section id="cssfloat">
-<h2>CSSのfloatを使った段組レイアウト<a class="headerlink" href="#cssfloat" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.5. </span>CSSのfloatを使った段組レイアウト<a class="headerlink" href="#cssfloat" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>.baselayer{</dt><dd><p>width:600px;
@@ -259,7 +261,7 @@ padding:0;</p>
 <p>floatの値がポイント。回り込ませたいボックス要素を右に回り込ませたいなら「right」を、左に回りこませたいならば「left」を指定する。２段組だけでな く、&lt;br&gt;３段組など数を多くしても簡単に実現できるが、各ボッ&lt;br&gt;クス要素のwidthの値には注意が必要。リキッドレイアウトを使うときに、入れ子状態（ボックス要素の中にボックス 要素を入れる）にしている 場合、widthを十分にとっておかないとレイアウト崩れの原因になる。HTML側では、回り込ませたいボックス要素を先に記述しておくとよい。</p>
 </section>
 <section id="id12">
-<h2>リストの文頭のマークに画像を入れる<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.6. </span>リストの文頭のマークに画像を入れる<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>CSSのリストの設定を次のようにすると、文頭のマークに好きな画像を入れることができる。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">li</span><span class="p">{</span>
           <span class="nb">list</span><span class="o">-</span><span class="n">style</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;入れたい画像名&quot;</span><span class="p">);</span>
@@ -268,7 +270,7 @@ padding:0;</p>
 </div>
 </section>
 <section id="id13">
-<h2>リストの文頭のマークを指定する<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7. </span>リストの文頭のマークを指定する<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>CSSのリストの設定を次のようにすると、文頭のマークを指定することができる。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>li{list-style-type:マークタイプ;}
 マークタイプには次のようなものがある。
@@ -295,7 +297,7 @@ none　なし
 </div>
 </section>
 <section id="id14">
-<h2>マウスオーバーすると文字が大きく表示される<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.8. </span>マウスオーバーすると文字が大きく表示される<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>CSSで文字サイズを大きく設定すると、スクリプトなしでインパクトの大きい演出ができる。文字のかわりに画像を使ってもよい。:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">.</span><span class="n">layer11</span><span class="p">{</span>
     <span class="nb">float</span><span class="p">:</span><span class="n">left</span><span class="p">;</span>
@@ -334,11 +336,72 @@ none　なし
 
 
 <h3>ナビゲーション</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html">1. Valkyrie Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id6">2. インストール方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#boot-repair">3. Boot Repairの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id7">4. セキュアブートの無効化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#bit-osvalkyrie-linux">5. 64bit OS「Valkyrie Linux」の特長</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id8">6. Valkyrie Linuxの高速化と最適化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#id9">7. Valkyrie Linuxの高音質化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie001.html#valkyrie-linuxgrub">8. Valkyrie Linuxのインストールの時にGRUBをインストールするのに失敗した場合の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html">9. コマンドランチャー「gmrun」の使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#linuxi-o">10. 一時的にLinuxカーネルのI/Oスケジューラーを変更する方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#id1">11. サウンドサーバの切り替え</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#virtualbox">12. VirtualBoxの音の出し方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#alsa">13. ALSAの音量設定の保存方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#pulseaudiojack-audio-connection-kit">14. PulseAudioとJack Audio Connection KItとの連携</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#amixer">15. amixerの設定コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#smplayer-mpv-youtube-dl1080p60fpsgpu">16. SMPlayer+MPV+youtube-dlで動画共有サイトの1080p60fps動画をGPUの動画支援機能で動作させる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie002.html#betachromiumwidevinegoogle-api">17. Beta版ChromiumでWidevineとGoogle APIを使えるようにする</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie003.html">18. トラブルが起こった時の対処法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie004.html">19. カスタムカーネルについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../valkyrie/valkyrie020.html">20. 過去の履歴</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools001.html">1. Viper Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools002.html">2. viper.pyに引数を付け加えて機能を使う</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html">3. viper.pyをPythonファイルにモジュールとして読み込ませる</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#viper">4. viperモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools003.html#id1">5. viperモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html">6. kyotei.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools004.html#kyotei">7. kyoteiモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html">8. ナンバーズ予想用モジュール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data-py">9. download_data.pyのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#download-data">10. download_dataモジュールのメソッド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#load-numbers-py">11. load_numbers.pyモジュールのクラス生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vipertools/vipertools005.html#numbers-py">12. numbers.pyモジュールのクラス生成</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html">1. spider.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiderjs/spiderjs001.html#id4">2. メソッド</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tech001.html">1. Ubuntu系ディストリビューション向けテクニック</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. CSS Hacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#css-spritesweb">2.1. CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cssoverflow">2.2. CSSのoverflowを使った大量の情報を整理する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csscss">2.3. ブラウザ別にCSSを適用するCSSハック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">2.4. 解像度が変わっても常に中央にコンテンツが表示される方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cssfloat">2.5. CSSのfloatを使った段組レイアウト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">2.6. リストの文頭のマークに画像を入れる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">2.7. リストの文頭のマークを指定する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">2.8. マウスオーバーすると文字が大きく表示される</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tech003.html">3. Java Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech004.html">4. JavaScript Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech005.html">5. Python Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech006.html">6. PHP Hack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech007.html">7. PlayOnLinux(Wine)で動作するソフトウェアまとめ</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="tech001.html" title="前の章へ"><span class="section-number">1. </span>Ubuntu系ディストリビューション向けテクニック</a></li>
+      <li>Next: <a href="tech003.html" title="次の章へ"><span class="section-number">3. </span>Java Hacks</a></li>
   </ul></li>
 </ul>
 </div>

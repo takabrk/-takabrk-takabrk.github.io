@@ -1,0 +1,611 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4. JavaScript Hack &#8212; Valkyrie SRX 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Python Hacks" href="tech005.html" />
+    <link rel="prev" title="3. Java Hacks" href="tech003.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tech005.html" title="5. Python Hacks"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tech003.html" title="3. Java Hacks"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="javascript-hack">
+<h1>4. JavaScript Hack<a class="headerlink" href="#javascript-hack" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="processing-jspde">
+<h2>4.1. Processing.jsで複数のpdeファイルを取り込むには<a class="headerlink" href="#processing-jspde" title="Permalink to this headline">¶</a></h2>
+<p>Processingは、Javaベースのデジタルアート向けのプログラミング環境であり、標準のエディタでは複数のpdeファイルを並行して使う事が出来る為、よく使う処理はクラスやメソッドにして、本体とは別のpdeファイルにするのが一般的であり、効率的です。JavaScript実装のprocessing.js( href=”<a class="reference external" href="http://processingjs.org/">http://processingjs.org/</a> )でも同じように本体pdeファイルとクラスpdeファイルを分けておく事が出来ます。
+クラスpdeファイルである「cx2.pde」と本体pdeファイルである「worp_man.pde」があるとします。以下はHTMLソースコードの一部です。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;processing.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="n">function</span> <span class="n">getProcessingSketchId</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;vivid&#39;</span><span class="p">;</span> <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">canvas</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sketch3dstg&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">processing</span><span class="o">-</span><span class="n">sources</span><span class="o">=</span><span class="s2">&quot;cx2.pde worp_man.pde&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;1280&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;720&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Your</span> <span class="n">browser</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">the</span> <span class="n">canvas</span> <span class="n">tag</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">canvas</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">noscript</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">JavaScript</span> <span class="ow">is</span> <span class="n">required</span> <span class="n">to</span> <span class="n">view</span> <span class="n">the</span> <span class="n">contents</span> <span class="n">of</span> <span class="n">this</span> <span class="n">page</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">noscript</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>canvas要素のdata-processing-sources属性を「data-processing-sources=”cx2.pde worp_man.pde”」とする事で、纏めてpdeファイルの導入が可能です。</p>
+</div>
+<div class="section" id="webjavascriptcss">
+<h2>4.2. WebサイトのJavaScriptやCSSのキャッシュのせいで、これらのファイルが更新されない時の対処法<a class="headerlink" href="#webjavascriptcss" title="Permalink to this headline">¶</a></h2>
+<p>WebサイトやWebアプリケーションを開発していますと、ブラウザのキャッシュ機能によって、JavaScriptやCSSがキャッシュされている方を使われます。</p>
+<p>その為、Ctrl+更新ボタンやF5キーを押す事によって、強制キャッシュクリアをしなければいけません。</p>
+<p>このような現象が起こらないようにする為には、JavaScriptやCSSを呼び出す際に、クエリを付加させておきます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;xxx.js?date=20170106&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;yyy.css?date=20170106&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>しかし、毎回「?」の後の文字列を手動で変更するのは手間が掛かります。</p>
+<p>そこで、HTMLファイルをPHPファイルに変換して、PHPが動作するWebサーバ上でPHPを使った自動的なタイムスタンプを実行させます。</p>
+<p>PHPファイルには以下の簡単なPHPスクリプトを埋め込みます。</p>
+<p>これだけで自動的にクエリを生成してくれます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;xxx.js?date=&lt;?php echo time(); ?&gt;&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;yyy.css?date=&lt;?php echo time(); ?&gt;&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript">
+<h2>4.3. JavaScriptのショートコードテクニックとトリッキーなテクニック<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
+<p>JavaScriptは、そのままプログラムを書きますと、比較的冗長的なソースコードになりがちですので、適度にショートコード化していくと良いでしょう。</p>
+<p>1.オブジェクトとメソッドをエイリアスで短くする</p>
+<p>オブジェクトやメソッドは、長い名前の物が多々あります。</p>
+<p>これを解消するには、エイリアスを上手に使うのが効果的です。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document</span><span class="o">.</span><span class="n">getElementsTagName</span><span class="p">(</span><span class="s2">&quot;script&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>script要素を取得する為のDOMを使ったお馴染みの文です。</p>
+<p>getElementsByTagNameの部分は、以下のようにする事が出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document</span><span class="p">[</span><span class="s2">&quot;getElementsByTagName&quot;</span><span class="p">](</span><span class="s2">&quot;script&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>ドットシンタックス無しで表現したい時に有効な書き方です。</p>
+<p>エイリアスを使ってショートコード化を図ります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $d = document,
+$gtag = &quot;getElementsByTagName&quot;;
+
+$d[$gtag](&quot;script&quot;);
+</pre></div>
+</div>
+<p>2.三項演算子</p>
+<p>三項演算子は、if文をショートコード化させる時によく使われます。</p>
+<p>以下のようなif文があるとします。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">条件</span><span class="p">){</span>
+    <span class="n">処理A</span><span class="p">;</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">処理B</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>これを三項演算子で表現しますと、以下のようになります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(条件) ? 処理A : 処理B;
+</pre></div>
+</div>
+<p>元の処理がセミコロンで区切られて、数行で構成されている処理の場合は、以下のようにすれば良いでしょう。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(条件) ? (処理A1,処理A2,処理A3) : (処理B1,処理B2,処理B3);
+</pre></div>
+</div>
+<p>3.引数「div1」などという文字列から、div要素をDOMで収集した要素群の2番目の要素を指定する方法</p>
+<p>getElementsByTagNameを使いますと、HTML文書内の全ての特定の要素を収集して配列化する事が出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>このdiv要素群の2番目の要素にアクセスしたい場合には、以下のようにアクセスが可能です。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>「klj」という任意の関数があり、これの引数をidと設定します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">klj</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="nb">id</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">id</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="o">/^</span><span class="p">(</span><span class="n">div</span><span class="p">)</span><span class="o">/</span><span class="n">g</span><span class="p">)){</span>
+        <span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">)[</span><span class="n">parseInt</span><span class="p">(</span><span class="nb">id</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">id</span><span class="o">.</span><span class="n">length</span><span class="p">))];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>idに「div1」の文字列を入れます。</p>
+<p>これは、div要素群の2番目の要素を取り出すという意味で名づけています。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">klj</span><span class="p">(</span><span class="s2">&quot;div1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>この関数は、div要素群の2番目の要素にアクセス出来ます。</p>
+<p>id名から取り出したい要素を判別し、更にそのid名から数字を取り出して、div要素群の配列のインデックスとして利用しています。</p>
+<p>id名にslice関数を使って、前から4つ目の文字を取り出しています。</p>
+<p>この場合は、「1」が該当し、配列のインデックスに使う為にparseIntで文字列を整数に変換しています。</p>
+<p>4.オリジナルのライブラリを作った時に、newを使わずにインスタンスを生成したい</p>
+<p>JavaScriptでは、インスタンスの生成にはnewを使って行うのが一般的です。</p>
+<p>Imageコンストラクタの場合は以下のようになります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">img</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Image</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>オリジナルライブラリを作成して使う場合、このnewを使うのが手間に感じる事でしょう。</p>
+<p>newを使わずにインスタンスを作るようにするには以下のようにします。</p>
+<p>spiderクラスを作るとします。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var spider = (function(){
+    var constructor = function(id){
+        if(!(this instanceof spider))return new spider(id);
+    }
+})();
+</pre></div>
+</div>
+<p>「if(!(this instanceof spider))return new spider(id);」の部分がnew無しでインスタンス生成を可能にする肝になります。</p>
+<p>5.オリジナルライブラリでチェーンメソッドを実現したい</p>
+<p>オリジナルライブラリを作成して、一つのインスタンス生成後に数珠繋ぎで次々とメソッドの処理を追加したいでしょう。</p>
+<p>例えば、以下のようなイメージです。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spider</span><span class="p">(</span><span class="s2">&quot;browser_info&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;font&quot;</span><span class="p">,{</span><span class="n">size</span><span class="p">:</span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span><span class="n">fontcolor</span><span class="p">:</span><span class="s2">&quot;#ffffff&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;browser&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;screen&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">matrixEffect</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>このような数珠繋ぎで次々と処理を行えるメソッドの事をチェーンメソッドと呼びます。</p>
+<p>jQueryなどのライブラリでは、当たり前のように使われています。</p>
+<p>これを実現するには、非常に簡単であり、各メソッドの最後の部分に「return this;」を追加すれば良いのです。</p>
+<p>僕が開発しているSpider Code Libraryからコードを抜粋した物が以下です。</p>
+<p>最後に「return this;」が付加されているのが分かります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>require : function(src){
+    var $head = $d[$gtag](&quot;head&quot;)[0];
+    (src.match(/\.(js)/i) || src.match(/\.(txt)/i) || src.match(/(https)\:\/\/(maps.googleapis.com)\/(maps)\/(api)\//i)) ?
+    (aec=this.addElement(&#39;script&#39;,$head),aec.type = &quot;text/javascript&quot;,aec.src = src) :
+    (src.match(/\.(css)/i)) ?
+    (aec=this.addElement(&quot;link&quot;,$head),aec.rel = &quot;stylesheet&quot;,aec.href = src,aec.type = &quot;text/css&quot;) :
+    (src.match(/\.(cgi)/i) || src.match(/\.(php)/i) || src.match(/\.(rb)/i) || src.match(/\.(pl)/i) || src.match(/\.(py)/i)) ?
+    this.httpRequest(src,&quot;GET&quot;,function(){}) : 0;
+    return this;
+},
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>4.4. JavaScriptにおける動的スクリプトインポートの注意点<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>外部スクリプトを動的には、document.createElementを使うのがポピュラーな方法ですが、この時に気をつけておくべき事があります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.HTML内でinnerHTMLを使って外部スクリプトを呼び出すと、scriptタグが被ってしまって、HTMLの文法エラーの原因になってしまって、結果的に外部スクリプトを呼び出せない。
+2.createElementを使って呼び出す場合には、document.writeを使って外部スクリプトの呼び出しを行なっているスクリプトを処理出来ないという仕様上の制約があります。
+</pre></div>
+</div>
+</div>
+<div class="section" id="tumblrwordpress">
+<h2>4.5. Tumblrの記事データをWordPress経由でバックアップ<a class="headerlink" href="#tumblrwordpress" title="Permalink to this headline">¶</a></h2>
+<p>Tumblrには、記事のインポート機能やエクスポート機能がありません。そこで、WordPressのインポート機能。エクスポート機能を活用して、Tumblrの記事データをバックアップしていきます。</p>
+<p>WordPressは、自分でサーバを用意してインストールしても構いませんし、WordPress.comを使っても構いませんので、取り敢えず、適当にブログを一つ作成します。</p>
+<p>「WordPressの管理」（ダッシュボード）→「ツール」→インポートでTumblrと連携させてインポートを行います。</p>
+<p>インポートが完了したら、エクスポートを選択すれば、記事データをXMLで出力する事が出来ます。</p>
+<p>インポートした記事は、このインポート画面で「アカウント情報を消去」という項目を選択すれば、WordPressにインポートした記事を消す事ができ、再度Tumblrで作成したサイトを選択すれば、記事が被らずに再度インポートを行えます。</p>
+</div>
+<div class="section" id="id2">
+<h2>4.6. 関数やメソッド名を短くしてJavaScriptのライブラリの容量を減らす方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ライブラリを出来るだけ減らすにはサードパーティー製の圧縮する他にも関数名やメソッド名を短くする方法があります。</p>
+<p>例えば、以下のようにするとスクリプトが大きければ大きいほど効果が大きいことがわかると思います。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $d = document,
+$gei = &quot;getElementById&quot;;
+var s = $d[$gei](&quot;id&quot;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript-cgi-php-css">
+<h2>4.7. JavaScript,CGI,PHP,CSSを読み込む関数<a class="headerlink" href="#javascript-cgi-php-css" title="Permalink to this headline">¶</a></h2>
+<p>JavaScript、CGI、PHP、CSSを読み込むための関数は以下のようにすると出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> var require = function(src){
+          var addElement = function(tag,ele){
+                    aec = document.createElement(tag);
+                    ele.appendChild(aec);
+                    return aec;
+          }
+          var XMLObject = function(){
+                        return (typeof XMLHttpRequest != &quot;undefined&quot;) ? new XMLHttpRequest() : (new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;) || new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;));
+           }
+           var httpRequest = function(url,method,func,query){
+                        var hObj = XMLObject();
+                 (!hObj) ? eval(&quot;alert(&#39;Error : Not Found XML&#39;);return false;&quot;) : 0;
+                 var hR = function(){
+                         return (hObj.readyState == 4) ?
+                                 (hObj.status == 200) ? func(hObj) :
+                                 func(hObj) : 0;
+                 }
+                 hObj.onreadystatechange = hR;
+                 if(method == &quot;GET&quot;){
+                           hObj.open(method,url.match(/\?/g) ? url : url + &quot;?&quot; + (new Date).getTime(),true);
+                           hObj.send(&quot;&quot;);
+                 }
+                 if(method == &quot;POST&quot;){
+                         hObj.open(method,url.match(/\?/g) ? url : url + &quot;?&quot; + (new Date).getTime(),true);
+                         hObj.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-urlencoded,charset=UTF-8&quot;);
+                         hObj.send(query);
+                 }
+                 return this;
+         }
+         var $head = document.getElementsByTagName(&quot;head&quot;)[0];
+         (src.match(/\.(js)/i) || src.match(/\.(txt)/i)) ?
+                 (addElement(&#39;script&#39;,$head),aec.type = &quot;text/javascript&quot;,aec.src = src) :
+         (src.match(/\.(css)/i)) ?
+                 (spider(&quot;&quot;).addElement(&quot;link&quot;,$head),aec.rel = &quot;stylesheet&quot;,aec.href = src,aec.type = &quot;text/css&quot;) :
+         (src.match(/\.(cgi)/i)||src.match(/\.(php)/i)||src.match(/\.(rb)/i)||src.match(/\.(pl)/i) || src.match(/\.(py)/i)) ?
+                 httpRequest(src,&quot;GET&quot;,function(){}) : 0;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>4.8. キーボードのカーソルキーを使って、写真をスライドさせる<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>キーボードのカーソルキー操作で写真を切り替えるには以下のようにします。「var ek = e.keyCode - 38;」の部分でカーソルキーのキーコードを取得しています。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var imgChange = function(id,wi,h,dir,array){
+          var i = 0;
+          var ic = document.getElementById(id);
+          ic.width = wi + &quot;px&quot;;
+          ic.height = h + &quot;px&quot;;
+          ic.innerHTML = &#39;&lt;img src=&quot;&#39; + dir + &#39;/&#39; + array[i] + &#39;&quot; id = &quot;io&quot;/&gt;&#39;;
+          keyDown(function(e){
+                    var ek = e.keyCode - 38;
+                    var io = document.getElementById(&quot;io&quot;);
+                    var da = dir + &quot;/&quot; + array[i];
+                    var al = array.length;
+                    i += ek;
+                   (ek &gt; 0) ?
+                              (i &gt; al) ? i = 0 : io.src =  da :
+                              (i &lt; 0) ? i = parseInt(al) : io.src = da;
+          });
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascriptdynamichtml">
+<h2>4.9. JavaScriptによるDynamicHTMLアニメーション<a class="headerlink" href="#javascriptdynamichtml" title="Permalink to this headline">¶</a></h2>
+<p>JavaScriptでDHTMLアニメーションをさせるには、setIntervalメソッドで処理をループさせて、CSSの値を調整するのが基本になります。
++x方向へ移動させたい場合は以下のように書きます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var move_x = function(id,spd,end){
+          var did = documetn.getElementById(id);
+          var fps = 0;
+          var aid = setInterval(
+                    function(){
+                              var ds = did.style;
+                              ds.left = parseInt(ds.left) + fps + &quot;px&quot;;
+                              fps += spd;
+                              (spd &gt; 0) ?
+                                        ($int(ds.left) &gt; end) ? clearInterval(aid) : 0 :
+                                        ($int(ds.left) &lt; end) ? clearInterval(aid) : 0;
+              },50);
+}
+</pre></div>
+</div>
+<p>上記の例は0.05秒毎にgetElementByIdで指名した要素を+x方向へspd[px]動かし、end[px]に到着すると止まる関数です。 つまり、0.05秒毎にCSSの値を書き換えてアニメーションをしているように見せているわけです。
+フェードインさせたい場合は以下のようにします。今度はCSSのopacityメソッドの値を変更することで実現しています。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var fadein = function(id,spd){
+          var dobj = document.getElementById(id);
+          var opc = 0;
+          var fii = setInterval(function(){
+                    dobj.opacity(opc);
+                    opc += spd;
+          },100);
+          (opc &gt; 100) ? clearInterval(fii) : 0;
+}
+</pre></div>
+</div>
+<p>拡大処理をしたい場合は以下のようにします。今度はCSSのwidth,heightメソッドの値を変更しています。ここでは元のwidth,heightの値を整数に直して処理を行っています。これを行わないとアニメーションが出来ません。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> var spread_xy = function(id,spd,end){
+           var did = document.getElementById(id);
+           var fps = 0;
+           var ds = did.style;
+           ds.width = &quot;0&quot;;
+           ds.height = &quot;0&quot;;
+           var aid = setInterval(function(){
+                     ds.width = parseInt(ds.width) + fps + &quot;px&quot;;
+                     ds.height = parseInt(ds.height) + fps + &quot;px&quot;;
+                     fps += spd;
+                     (parseInt(ds.height) &gt; end) ? clearInterval(aid) : 0;
+           },100);
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="innerhtmlhtml">
+<h2>4.10. innerHTML以外でHTMLを読み込む方法<a class="headerlink" href="#innerhtmlhtml" title="Permalink to this headline">¶</a></h2>
+<p>innerHTML以外でHTMLを読み込むにはobjectやiframeを使います。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">cobj</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">);</span>
+<span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">cobj</span><span class="p">);</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">&quot;text/html&quot;</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;読み込みたいHTMLのURL&quot;</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">cid</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">wi</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">hi</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">margin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">cobj</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">padding</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>この他にはAjaxを使う方法もあります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var XMLObject = function(){
+          return (typeof XMLHttpRequest != &quot;undefined&quot;) ? new XMLHttpRequest() : (new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;) || new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;));
+}
+var httpRequest = function(url,method,func,query){
+          var hObj = XMLObject();
+          (!hObj) ? eval(&quot;alert(&#39;Error : Not Found XML&#39;);return false;&quot;) : 0;
+          var hR = function(){
+                    return (hObj.readyState == 4) ?
+                          (hObj.status == 200) ? func(hObj) :
+                                    func(hObj) : 0;
+          }
+          hObj.onreadystatechange = hR;
+          if(method == &quot;GET&quot;){
+                    hObj.open(method,url.match(/\?/g) ? url : url + &quot;?&quot; + (new Date).getTime(),true);
+                    hObj.send(&quot;&quot;);
+          }
+          if(method == &quot;POST&quot;){
+                    hObj.open(method,url.match(/\?/g) ? url : url + &quot;?&quot; + (new Date).getTime(),true);
+                    hObj.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-urlencoded,charset=UTF-8&quot;);
+                    hObj.send(query);
+          }
+}
+var rtb = document.getElementById(&quot;rtb&quot;); //id名rtbにHTMLを挿入
+httpRequest(&quot;取得したいHTMLのURL&quot;,&quot;GET&quot;,
+          function(xml){
+                    rtb.innerHTML = xml.responseText;
+          }
+);
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4.11. ループの高速化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>ループにキャッシュ用の変数を加えるだけでループを高速化することが出来ます。ここではdivという変数にdivエレメントの配列をキャッシュしています。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="p">,</span><span class="n">div</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span><span class="n">i</span><span class="o">&lt;</span><span class="n">div</span><span class="o">.</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascriptphpperl">
+<h2>4.12. JavaScriptからPHP、Perlなどで書かれたサーバープログラムを呼び出す<a class="headerlink" href="#javascriptphpperl" title="Permalink to this headline">¶</a></h2>
+<p>JavaScriptでPHP、Perlで書かれたサーバーサイドプログラムを呼び出すには以下の方法があります。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>JavaScriptでscriptエレメントを生成して呼び出す。
+var sc = document.createElement(&quot;script&quot;);
+sc.src = &quot;サーバープログラム名&quot;;
+document.body.appendChild(sc);
+</pre></div>
+</div>
+<p>サーバープログラムのURLの後ろに「?param=xxx&amp;pram2=ccc」などを追記すると、サーバにクエリとして入力したい値を渡すことが出来ます。</p>
+</div>
+<div class="section" id="xmlhttprequest">
+<h2>4.13. クロスブラウザXMLHttpRequestオブジェクト<a class="headerlink" href="#xmlhttprequest" title="Permalink to this headline">¶</a></h2>
+<p>汎用性のあるXMLHttpRequestオブジェクトです。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var XMLObject = function(){
+          return (typeof XMLHttpRequest != &quot;undefined&quot;) ? new XMLHttpRequest() : (new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;) || new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;));
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="id">
+<h2>4.14. 「エレメント名+数字」のid名で特定のエレメントを指定する方法<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
+<p>「エレメント+数字」のid名で特定のエレメントを指定するには以下のように書きます。</p>
+<p>例えば、「var t = new spider(“div2”);」とすると、3番目のdivを取ることが出来ます。JavaScriptのメソッドを使いたい場合は「t.id.メソッド();」とすれば、使うことが出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $int = parseInt;
+var spider = function(id)[
+          this.id = (id.match(/^(div)/g)) ? $d.getElementsByTagName(&quot;div&quot;)[$int(id.slice(3,id.length))] :
+                          (id.match(/^p/g)) ? $d.getElmenetsByTagName(&quot;p&quot;)[$int(id.slice(1,id.length))] :
+                          (id.match(/^a/g)) ? $d.getElementsByTag(&quot;a&quot;)[$int(id.slice(1,id.length))] :
+                          (id.match(/^(ul)/i)) ? $d.getElementsByTagName(&quot;ul&quot;)[$int(id.slice(2,id.length))] :
+                          (id.match(/^(li)/i)) ? $d.getElementsByTagName(&quot;li&quot;)[$int(id.slice(2,id.length))] :
+                          (id.match(/^(input)/i)) ? $d.getElementsByTagName(&quot;input&quot;)[$int(id.slice(5,id.length))] :
+                          (id.match(/^(button)/i)) ? $d.getElementsByTagName(&quot;button&quot;)[$int(id.slice(6,id.length))] :
+                          (id.match(/^(span)/i)) ? $d.getElementsByTagName(&quot;span&quot;)[$int(id.slice(4,id.length))] :
+                          (id.match(/^(script)/g)) ? $d.getElementsByTagName(&quot;script&quot;)[$int(id.slice(6,id.length))] :
+                          (id.match(/^(head)/g)) ? $d.getElementsByTagName(&quot;head&quot;)[$int(id.slice(4,id.length))] :
+                          (id.match(/^(iframe)/g)) ? $d.getElementsByTagName(&quot;iframe&quot;)[$int(id.slice(6,id.length))] :
+                          (id.match(/^(title)/g)) ? $d.getElementsByTagName(&quot;title&quot;)[$int(id.slice(5,id.length))] :
+                          (id == &quot;body&quot;) ? $d.body :
+                              (id == &quot;document&quot;) ? $d :
+                              $d.getElementById(id);
+          return this;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascripteval">
+<h2>4.15. JavaScriptのevalの代用<a class="headerlink" href="#javascripteval" title="Permalink to this headline">¶</a></h2>
+<p>(0)[“constructor”][“constructor”](“JavaScriptのコード”)()は、Functionコンストラクタの機能を持っているそうです。この性質を利用して、文字コードだけでJavaScriptを書いたり、日本語で書いたりすることも出来るようです。</p>
+</div>
+<div class="section" id="id5">
+<h2>4.16. JavaScriptにおける独自関数の正式名称と省略形を併せて設定する方法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>JavaScrptは無名関数を使うことで、開発者独自の関数を作り出すことが出来ますが、その正式名称と省略形をまとめて記述すると、スクリプトファイル容量の削減をすることが出来ます。</p>
+<p>例えば、createLayerという関数を作ったとすると、以下のように書くことが出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var $cly = createLayer = function(){}
+</pre></div>
+</div>
+<p>こういう風に書くと、createLayer()というフルネームで書くことが出来ますし、省略形に$cly()と書くことも出来ます。</p>
+</div>
+<div class="section" id="css-spritesjavascript">
+<h2>4.17. CSS SpritesとJavaScriptを使ってパラパラアニメをつくる<a class="headerlink" href="#css-spritesjavascript" title="Permalink to this headline">¶</a></h2>
+<p>setIntervalで配列の中にある画像を次々と表示してアニメーションを作るものですが、これをCSS Spritesに応用すれば、より簡単にアニメーションを作ることが出来ます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.まず、動画にしたい複数の画像をリサイズします。ここでは400x300にしました。
+2.PhotoshopやGIMPで縦に長い新規画像を作成し、この中に先ほどの画像を映写機のフィルムのように順番に縦に並べていきます。これをPNGなどで出力します。ここでは画像「oj.png」とします。先ほどの画像を10枚並べるので画像サイズは300x4000です。
+3.HTMLファイルを作り、「&lt;div id = &quot;fg&quot;&gt;&lt;/div&gt;」という風にid付のdivエレメントを作ります。ここが表示領域になります。
+4.スクリプトは以下のようなものです。解像度が300x4000で、表示部分が10個あるので初期値に戻す条件を「ix &gt; 4000」にしました。
+
+window.onload = function(){
+    var fg = document.getElementById(&quot;fg&quot;);
+    with(fg){
+              style.width = &quot;300px&quot;;
+              style.height = &quot;400px&quot;;
+              style.backgroundImage = &quot;url(&#39;oj.png&#39;)&quot;;
+              style.backgroundRepeat = &quot;no-repeat&quot;;
+    }
+    var ix = 0;
+    setInterval(
+        function(){
+            fg.style.backgroundPosition = &quot;0 -&quot; + ix + &quot;px&quot;;
+            ix += 400;
+            if(ix&gt;4000)ix=0;
+        },100);
+    }
+</pre></div>
+</div>
+<p>これを応用すると、スライドショーやサムネイル表示なども作ることができ、「配列無し」であらゆるコンテンツを作ることが可能になります。</p>
+</div>
+<div class="section" id="id6">
+<h2>4.18. JavaScriptで日本語の変数を使う<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>ECMA262-3以降のECMAScriptでは日本語をオブジェクトやメソッドの名前に使えます。下のスクリプトはブラウザ上に「直江兼続」「リン・ミンメイ」と表示します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">html</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">xlink</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+            <span class="n">var</span> <span class="n">愛</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="n">天地人</span> <span class="p">:</span> <span class="n">function</span><span class="p">(){</span>
+                            <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">+=</span> <span class="s2">&quot;直江兼続&quot;</span><span class="p">;</span>
+                    <span class="p">},</span>
+                    <span class="n">おぼえていますか</span> <span class="p">:</span> <span class="n">function</span><span class="p">(){</span>
+                            <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">+=</span> <span class="s2">&quot;リン・ミンメイ&quot;</span><span class="p">;</span>
+                    <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">window</span><span class="o">.</span><span class="n">onload</span> <span class="o">=</span> <span class="n">function</span><span class="p">(){</span>
+                    <span class="n">愛</span><span class="o">.</span><span class="n">天地人</span><span class="p">();</span>
+                    <span class="n">愛</span><span class="o">.</span><span class="n">おぼえていますか</span><span class="p">();</span>
+            <span class="p">}</span>
+      <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>4.19. 同一ドメインでJavaScript対応ブラウザ用ページと非対応ブラウザ用ページを振り分ける簡単な方法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>日本でもノキアのスマートフォンやウィルコムのW-ZERO3シリーズなどのようにJavaScriptに対応するブラウザを持つ携帯電話は増えてきていますが、まだまだFOMAなどの携帯サイトのように非対応のブラウザを搭載しているものもま
+だまだ多いのが実情です。PC用のWebサイトをすでに持っていて、携帯サイトを用意したいとき、新たに構築するのは面倒と考える方もいるでしょう。そんなとき、同一ドメインでJava Script対応ブラウザと非対応ブラウザ、それぞれに対してJavaScriptの処理を振り分ける簡易な方法を紹介しましょう。それは非常に簡単なことで、まずXHTMLをキッチリと書きます。これは携帯電話ブラウザで
+もJava Script対応・非対応ブラウザでも見ることが出来るように書く必要があります。そして、対応ブラウザにはJavaScriptのinnerHTMLで書き換えます。bodyタグ直下にbody内容を一くくりにするdivタグを埋め込みid名を設定します。Java
+Scriptのdocument.getElementById(id).innerHTMLで書き換える内容を記述してやり、ページがロードしたときにこのスクリプトが起動するように設定するだけです。Java Scriptを外部化しておけば、メンテナンスも楽です。もちろん、innerHTMLにはJavaScript/CSSを含むことも可能です。ただ、それでは煩雑になるので、XHTMLへJava Scriptで直接DOMコントロールする方が自然でしょう。つまり、非対応ブラウザにはXHTMLで対応し、対応ブラウザにはJavaScriptで対応するという最もシンプルかつ確実な場合分けがあるということです。</p>
+</div>
+<div class="section" id="id8">
+<h2>4.20. JavaScriptがニャルラトホテプ言語に((」・ω・)」うー!(/・ω・)/にゃー!)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://gigazine.net/news/20120528-unyaencode/">http://gigazine.net/news/20120528-unyaencode/</a></p>
+<p>◇名状しがたいプログラミング言語のようなもの Nyaruko　いつもニコニコ あなたの隣に 這いよる混沌 ニャルラトホテプ言語 です</p>
+<p><a class="reference external" href="https://github.com/masarakki/nyaruko_lang">https://github.com/masarakki/nyaruko_lang</a></p>
+<p>◇JavaScript→(」・ω・)」うー!(/・ω・)/にゃー!エンコーダ</p>
+<p><a class="reference external" href="http://sanya.sweetduet.info/unyaencode/">http://sanya.sweetduet.info/unyaencode/</a></p>
+<p>○JavaScript</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alert</span><span class="p">(</span><span class="s2">&quot;(」・ω・)」うー!(/・ω・)/にゃー!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>○ニャルラトホテプ言語:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿CHAOS☆CHAOS!(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!Let&#39;s＼(・ω・)／にゃー﻿(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!(」・ω・)」うー!!!(／・ω・)／にゃー!!!Let&#39;s＼(・ω・)／にゃー﻿CHAOS☆CHAOS!(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!CHAOS☆CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー(／・ω・)／にゃー(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!!(／・ω・)／にゃー!!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿CHAOS☆CHAOS!(」・ω・)」うー!!!(／・ω・)／にゃー!!!I WANNA CHAOS!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!(」・ω・)」うー!(／・ω・)／にゃー!Let&#39;s＼(・ω・)／にゃー﻿
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. JavaScript Hack</a><ul>
+<li><a class="reference internal" href="#processing-jspde">4.1. Processing.jsで複数のpdeファイルを取り込むには</a></li>
+<li><a class="reference internal" href="#webjavascriptcss">4.2. WebサイトのJavaScriptやCSSのキャッシュのせいで、これらのファイルが更新されない時の対処法</a></li>
+<li><a class="reference internal" href="#javascript">4.3. JavaScriptのショートコードテクニックとトリッキーなテクニック</a></li>
+<li><a class="reference internal" href="#id1">4.4. JavaScriptにおける動的スクリプトインポートの注意点</a></li>
+<li><a class="reference internal" href="#tumblrwordpress">4.5. Tumblrの記事データをWordPress経由でバックアップ</a></li>
+<li><a class="reference internal" href="#id2">4.6. 関数やメソッド名を短くしてJavaScriptのライブラリの容量を減らす方法</a></li>
+<li><a class="reference internal" href="#javascript-cgi-php-css">4.7. JavaScript,CGI,PHP,CSSを読み込む関数</a></li>
+<li><a class="reference internal" href="#id3">4.8. キーボードのカーソルキーを使って、写真をスライドさせる</a></li>
+<li><a class="reference internal" href="#javascriptdynamichtml">4.9. JavaScriptによるDynamicHTMLアニメーション</a></li>
+<li><a class="reference internal" href="#innerhtmlhtml">4.10. innerHTML以外でHTMLを読み込む方法</a></li>
+<li><a class="reference internal" href="#id4">4.11. ループの高速化</a></li>
+<li><a class="reference internal" href="#javascriptphpperl">4.12. JavaScriptからPHP、Perlなどで書かれたサーバープログラムを呼び出す</a></li>
+<li><a class="reference internal" href="#xmlhttprequest">4.13. クロスブラウザXMLHttpRequestオブジェクト</a></li>
+<li><a class="reference internal" href="#id">4.14. 「エレメント名+数字」のid名で特定のエレメントを指定する方法</a></li>
+<li><a class="reference internal" href="#javascripteval">4.15. JavaScriptのevalの代用</a></li>
+<li><a class="reference internal" href="#id5">4.16. JavaScriptにおける独自関数の正式名称と省略形を併せて設定する方法</a></li>
+<li><a class="reference internal" href="#css-spritesjavascript">4.17. CSS SpritesとJavaScriptを使ってパラパラアニメをつくる</a></li>
+<li><a class="reference internal" href="#id6">4.18. JavaScriptで日本語の変数を使う</a></li>
+<li><a class="reference internal" href="#id7">4.19. 同一ドメインでJavaScript対応ブラウザ用ページと非対応ブラウザ用ページを振り分ける簡単な方法</a></li>
+<li><a class="reference internal" href="#id8">4.20. JavaScriptがニャルラトホテプ言語に((」・ω・)」うー!(/・ω・)/にゃー!)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tech003.html"
+                        title="previous chapter">3. Java Hacks</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tech005.html"
+                        title="next chapter">5. Python Hacks</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tech/tech004.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tech005.html" title="5. Python Hacks"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tech003.html" title="3. Java Hacks"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, takamitu hamada.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

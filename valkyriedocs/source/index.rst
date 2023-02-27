@@ -36,11 +36,12 @@ http://www.vsrx.work/article/418075361.html
 
 Valkyrie Linuxは、「Linux・Windowsのアプリケーションの実行環境の提供」、「ソフトウェア開発・Web開発環境の提供」、「マルチメディアコンテンツ作成環境の提供」、「先端的な科学技術・データサイエンス環境の提供」、「ゲーミング環境の構築」を行っています。
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+ .. toctree::
+        :maxdepth: 2
+        :numbered:
+        :glob:
 
-   valkyrie/*
+        valkyrie/*
 
 Viper Tools
 -----------------
@@ -51,11 +52,12 @@ Ubuntu系Linuxディストリビューション上で最新のアプリケーシ
 
 http://www.vsrx.work/article/420558380.html
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+ .. toctree::
+        :maxdepth: 2
+        :numbered:
+        :glob:
 
-   vipertools/*
+        vipertools/*
 
 spider.js
 ------------
@@ -71,22 +73,24 @@ CSSフレームワーク「siren.css」は、レスポンシブデザインとCS
 
 http://www.vsrx.work/article/449909302.html
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+ .. toctree::
+        :maxdepth: 2
+        :numbered:
+        :glob:
 
-   spiderjs/*
+        spiderjs/*
 
 Hacks
 ----------
 
 プログラミング言語のテクニックを探っていきます。
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+ .. toctree::
+         :maxdepth: 2
+         :numbered:
+         :glob:
 
-   tech/*
+         tech/*
 
 Indices and tables
 ==================

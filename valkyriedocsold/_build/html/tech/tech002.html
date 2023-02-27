@@ -1,0 +1,399 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. CSS Hacks &#8212; Valkyrie SRX 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/analytics.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Java Hacks" href="tech003.html" />
+    <link rel="prev" title="1. Ubuntu系ディストリビューション向けテクニック" href="tech001.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tech003.html" title="3. Java Hacks"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tech001.html" title="1. Ubuntu系ディストリビューション向けテクニック"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="css-hacks">
+<h1>2. CSS Hacks<a class="headerlink" href="#css-hacks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="css-spritesweb">
+<h2>2.1. CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる<a class="headerlink" href="#css-spritesweb" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><a class="reference external" href="http://www.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/">The Mystery Of CSS Sprites: Techniques, Tools And Tutorials</a></div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CSS</span> <span class="n">Sprites</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">new</span><span class="o">.</span> <span class="n">In</span> <span class="n">fact</span><span class="p">,</span> <span class="n">they</span> <span class="n">are</span> <span class="n">a</span> <span class="n">rather</span> <span class="n">well</span><span class="o">-</span><span class="n">established</span> <span class="n">technique</span> <span class="ow">and</span> <span class="n">have</span> <span class="n">managed</span> <span class="n">to</span> <span class="n">become</span> <span class="n">common</span> <span class="n">practice</span> <span class="ow">in</span> <span class="n">Web</span> <span class="n">development</span><span class="o">.</span> <span class="n">Of</span> <span class="n">course</span><span class="p">,</span> <span class="n">CSS</span> <span class="n">sprites</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">always</span> <span class="n">necessary</span><span class="p">,</span> <span class="n">but</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">situation</span> <span class="n">they</span> <span class="n">can</span> <span class="n">bring</span> <span class="n">significant</span> <span class="n">advantages</span> <span class="ow">and</span> <span class="n">improvements</span> <span class="o">-</span> <span class="n">particularly</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">reduce</span> <span class="n">your</span> <span class="n">server</span> <span class="n">load</span><span class="o">.</span> <span class="n">And</span> <span class="k">if</span> <span class="n">you</span> <span class="n">haven</span><span class="s1">&#39;t heard of CSS sprites before, now is probably a good time to learn what they are, how they work and what tools can help you create and use the technique in your projects.</span>
+</pre></div>
+</div>
+<p>上記サイトはCSS Spritesの成り立ちや使用方法、CSS Sprites用の画像の作り方などが書かれています。</p>
+<p>CSS SpritesはWebサイトやBlogで使う複数の画像を一つの画像にして、CSSのbackground-positionを使って表示する方法です。画像生成にはPhotoShopやGIMPなどで作ります。その際にはグリッドを表示して作業するとやりやすいです。最近ではネットサービスでもCSS Sprites用の画像を生成することが出来ます。CSS Spritesは以下のようにします。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.PhotoShopやGIMPなどのレタッチソフトで複数の画像を一つの画像ファイルにします。透過させたい場合はPNGやGIFで出力します。
+2.CSSのbackground-imageでCSS Sprites用の画像を読み込み、background-repeatをno-repeatにし、background-positionで表示したい部分を指定します。「background-image : x y」という風に書き、x、yに座標を書きます。+方向にあるので画像を-方向へ動かす必要があります。よって、x、yの値は負になります。
+</pre></div>
+</div>
+<p>どうしても少しファイルが大きくなりますが、それと引き換えにサーバへのアクセス数が大幅に減るので、レスポンスがかなり向上します。CSS Spritesのデメリットは画像ファイルを大きくし過ぎると、Webサイトのレスポンスが落ちることでしょう。大きな画像には通常の方法で表示し、パーツ部分だけCSS Spritesを使用するとWebサイトのパフォーマンス向上に貢献できるでしょう。</p>
+<p>CSS Sprites用ジェネレーターには以下のものがあります。細かい調整をする時は自分で調整した方が納得できると思います。</p>
+<blockquote>
+<div><a class="reference external" href="http://duris.ru/">Data URI[CSS] Sprites</a>
+<a class="reference external" href="http://drupal.org/project/sprites">CSS Sprite Generator</a></div></blockquote>
+<p>◇CSS Spritesのデメリット:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>・画像の容量が大きすぎると、読み込みに時間がかかる
+・CSSで背景の繰り返しを行う場合は全ての画像を繰り返してしまうので使えない
+</pre></div>
+</div>
+</div>
+<div class="section" id="cssoverflow">
+<h2>2.2. CSSのoverflowを使った大量の情報を整理する方法<a class="headerlink" href="#cssoverflow" title="Permalink to this headline">¶</a></h2>
+<p>Ｗｅｂサイトを作ると、載せたい情報が大量になり、リンクを作ってそのページに誘導します。しかし、Googleなどの検索エンジンにクロール時にサイ トの情報を見つけてもらうには出来るだけ元の文章のまま載せておくのが一番いいのです。そこで、枠からはみ出す情報をCSSのoverflowの scrollを使って、フレーム風にしてあげるといいでしょう。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">div</span><span class="p">{</span>
+          <span class="n">overflow</span> <span class="p">:</span> <span class="n">scroll</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>これでフレーム風の表示が出来、大量の情報を綺麗に見せることが出来ます。</p>
+</div>
+<div class="section" id="csscss">
+<h2>2.3. ブラウザ別にCSSを適用するCSSハック<a class="headerlink" href="#csscss" title="Permalink to this headline">¶</a></h2>
+<p>◇スターハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">html</span>
+     <span class="c1">#hack {</span>
+           <span class="n">color</span><span class="p">:</span><span class="c1">#000000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>セレクタの前に「* html」(<a href="#id1"><span class="problematic" id="id2">*</span></a>とhtmlの間に半角スペースが必要)をつけます。IE4～6、 Mac版4～5に対応。Validatorを通る。マッチする要素はHTML上に出現しない</p>
+<p>◇スター7ハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="o">*</span>
+      <span class="n">p</span> <span class="p">{</span>
+                <span class="n">color</span><span class="p">:</span><span class="c1">#FF0000;</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Windows IE 5.5?6、Mac IE 5、Safariのみにスタイルを適用する。セレクタの前に「html*」 (htmlと*の間は詰める)を記述する。Validatorを通らない。</p>
+<p>◇アンダースコアハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#hack{</span>
+           <span class="n">color</span><span class="p">:</span><span class="c1">#000000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>IE4～6にだけ対応させたい場合はプロパティの前にア ンダースコアをつけます。Validatorを通らない。</p>
+<p>◇Hollyハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">/*</span><span class="n">コメント文</span> \<span class="o">*//*/</span>
+ <span class="n">p</span><span class="p">{</span><span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;}</span>
+<span class="o">/*</span><span class="n">コメント文</span><span class="o">*/</span>
+</pre></div>
+</div>
+<p>コメント文に「*//」を付けるとMac版IE5のみに適用、「」を追加するとMac版IE5のみ除外することが出来ます。 Hollyハックから抜けるためには、再度コメント文を記述します。Validatorを通らない。</p>
+<p>◇ ハッシュハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="p">{</span>
+          <span class="c1">#color:#FF0000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>IE4～6,Mac IE5,Firefox,Opera7のみに適応させたいときに使う。プロパティの前に「#」を記述する。Validatorを通らない。</p>
+<p>◇IE6のみ除外:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#hack{</span>
+          <span class="n">color</span><span class="o">/**/</span><span class="p">:</span><span class="c1">#000000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>IE6のみ除外したい場合は、プロパティの後に「空白+　/<a href="#id3"><span class="problematic" id="id4">**</span></a>/」を記述する。Validatorを通る。</p>
+<p>◇IE7のみに適応させる:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="p">:</span><span class="n">first</span><span class="o">-</span><span class="n">child</span><span class="o">+</span><span class="n">html</span>
+    <span class="c1">#hack{</span>
+              <span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>IE7のみに適応させる場合はセレクタの前に「<a href="#id5"><span class="problematic" id="id6">*</span></a>:first-child+html」を記述する。Validatorを通る。</p>
+<p>◇IE7とモダンブラウザのみに適応させる:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="o">&gt;</span><span class="n">body</span> <span class="c1">#hack{</span>
+          <span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>IE7とモダンブラウザ(Firefox,Opera,Safariなど)に適応させたい場合は、セレクタの前に 「html&gt;body」を記述する。Validatorを通る。</p>
+<p>◇IE7を除くモダンブラウザに適応させる:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="o">&gt;/**/</span><span class="n">body</span><span class="c1">#hack{</span>
+          <span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>IE7以外のモダンブラウザに適応させる時は、セレクタの前に「html&gt;/<a href="#id7"><span class="problematic" id="id8">**</span></a>/body」を記述する。Validatorを通らない。</p>
+<p>◇Safariのみ適応させる:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="p">:</span>\<span class="mi">66</span><span class="n">irst</span><span class="o">-</span><span class="n">child</span>
+    <span class="c1">#hack{</span>
+               <span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>セレクタの前に「html:66irst-child」を記述する。Validatorを通らない。</p>
+<p>◇XHTMLでのIEへの適応:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--[if It IE7]&gt;
+          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/test.css&quot; media=&quot;screen&quot; /&gt;
+&lt;![endif]--&gt;
+</pre></div>
+</div>
+<p>ＩＥの特定バージョンにのみ適応させることが出来ます。上記の場合は「IE7未満のバージョンに適応させる」ことを意味します。</p>
+<p>◇clearfix:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> /*IE7以外のモダンブラウザ向け*/
+ .clearfix:after{
+           content:&quot;.&quot;;
+           display:block;
+           height:0;
+           clear:both;
+           visibility:hidden;
+ }
+ /*IE7およびMacIE5向け*/
+ .clearfix{
+            display:inline-block;
+ }
+ /*Hides from IE-mac\*/
+ * html .clearfix{
+            height:1%;
+ }
+/*End hide from IE-mac*/
+/*IE6以前向け*/&gt;
+.clearfix{
+          display:block;
+}
+◇Caioハック
+ /*コメント文 /*/
+p{
+          color:#ff0000;
+}
+/*コメント文*/
+</pre></div>
+</div>
+<p>コメント文に「/」を追加すると、Netscape　4用を除外することが出来ます。Validatorを通ります。</p>
+<p>◇Fabriceインバーション:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">/*</span> <span class="n">コメント文</span><span class="o">/*//*/</span>
+ <span class="n">p</span><span class="p">{</span>
+           <span class="n">color</span><span class="p">:</span><span class="c1">#FF0000;</span>
+ <span class="p">}</span>
+<span class="o">/*</span> <span class="n">コメント文</span><span class="o">*/</span>
+</pre></div>
+</div>
+<p>コメント文に「/<a href="#id9"><span class="problematic" id="id10">*</span></a>//」を追加すると、NetScape 4,Opera4～5に適用される。Validatorを通る。</p>
+<p>◇xmlns属性ハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="p">[</span><span class="n">xmlns</span><span class="p">]</span> <span class="n">p</span><span class="p">{</span>
+          <span class="n">color</span><span class="p">:</span><span class="c1">#FF0000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>属性セレクタをサポートするFirefox,Opera,Safariで適用出来る様にする。Validatorを通る。</p>
+<p>◇:root属性ハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">root</span> <span class="n">p</span><span class="p">{</span>
+           <span class="n">color</span><span class="p">:</span><span class="c1">#FF0000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Firefox,Opera,Safari,Mac IE5に適用される。Validatorを通る。</p>
+<p>◇&#64;importハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@import</span> <span class="s2">&quot;wie4.css&quot;</span><span class="p">;</span>
+<span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s2">&quot;mie4.css&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>上がIE4を除外、下がMac IE4.5を除外します。</p>
+<p>◇!importantハック:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.hoge{
+          color: red!important;
+          color: blue;
+}
+</pre></div>
+</div>
+<p>プロパティを設定した後に、「!important」を追加すると「!important」のプロパティが最優先されます。IE6以下では未対応なので、モダンブラウザとIE6以下との場合分けに有効です。</p>
+</div>
+<div class="section" id="id11">
+<h2>2.4. 解像度が変わっても常に中央にコンテンツが表示される方法<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>CSSを使って、テーブルを使ったときのようなサイズ可変可能なページレイアウトを実現する。あるいは、コンテンツを中央に表示することができる。</p>
+<p>marginの値がポイント。左右のmarginの値をautoにすると自動でページの両側の余白を調整してくれる。また、positionは指定しないようにしたい。サイズが可変しなくなる。</p>
+<p>１．コンテンツを中央に表示させたい場合:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">baselayer</span><span class="p">{</span>
+          <span class="n">width</span><span class="p">:</span><span class="mi">600</span><span class="n">px</span><span class="p">;</span>
+          <span class="n">margin</span><span class="p">:</span><span class="mi">10</span><span class="n">px</span> <span class="n">auto</span><span class="p">;</span>
+          <span class="n">padding</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>２．コンテンツの幅を変更したい場合:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">baselayer</span><span class="p">{</span>
+          <span class="n">width</span><span class="p">:</span><span class="mi">50</span><span class="o">%</span><span class="p">;</span>
+          <span class="n">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+          <span class="n">padding</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cssfloat">
+<h2>2.5. CSSのfloatを使った段組レイアウト<a class="headerlink" href="#cssfloat" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><dl class="docutils">
+<dt>.baselayer{</dt>
+<dd>width:600px;
+float:right;
+margin:0;
+padding:0;</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>floatの値がポイント。回り込ませたいボックス要素を右に回り込ませたいなら「right」を、左に回りこませたいならば「left」を指定する。２段組だけでな く、&lt;br&gt;３段組など数を多くしても簡単に実現できるが、各ボッ&lt;br&gt;クス要素のwidthの値には注意が必要。リキッドレイアウトを使うときに、入れ子状態（ボックス要素の中にボックス 要素を入れる）にしている 場合、widthを十分にとっておかないとレイアウト崩れの原因になる。HTML側では、回り込ませたいボックス要素を先に記述しておくとよい。</p>
+</div>
+<div class="section" id="id12">
+<h2>2.6. リストの文頭のマークに画像を入れる<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>CSSのリストの設定を次のようにすると、文頭のマークに好きな画像を入れることができる。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">li</span><span class="p">{</span>
+          <span class="nb">list</span><span class="o">-</span><span class="n">style</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;入れたい画像名&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>2.7. リストの文頭のマークを指定する<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>CSSのリストの設定を次のようにすると、文頭のマークを指定することができる。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>li{list-style-type:マークタイプ;}
+マークタイプには次のようなものがある。
+disc 小さい黒丸
+circle 小さい白丸
+square　小さい四角
+decimal 算用数字
+decimal-leading-zero　十進数で１桁の場合、上位の桁にゼロを付加する
+lower-roman　ローマ数字（小フォント
+upper-roman　ローマ数字（大フォント)
+lower-latin/lower-alpha　英小フォント
+upper-latin/upper-alpha　英大フォント
+hebrew　ヘブライ数字
+georgian　グルジア数字
+armenian　アルメニア数字
+lower-roman　小フォントの古代ギリシャフォント
+cjk-ideogrophic　漢数字
+hiragana　平仮名
+katakana　カタカナ
+hiragana-iroha　平仮名のいろは
+katakana-iroha　カタカナのいろは
+none　なし
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>2.8. マウスオーバーすると文字が大きく表示される<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>CSSで文字サイズを大きく設定すると、スクリプトなしでインパクトの大きい演出ができる。文字のかわりに画像を使ってもよい。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">.</span><span class="n">layer11</span><span class="p">{</span>
+    <span class="nb">float</span><span class="p">:</span><span class="n">left</span><span class="p">;</span>
+    <span class="n">width</span><span class="p">:</span><span class="mi">780</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">height</span><span class="p">:</span><span class="mi">100</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">padding</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="o">.</span><span class="n">layer11</span> <span class="n">a</span><span class="p">{</span>
+    <span class="n">color</span><span class="p">:</span><span class="c1">#ffffff;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span><span class="mi">10</span><span class="n">pt</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="o">.</span><span class="n">layer11</span> <span class="n">a</span><span class="p">:</span><span class="n">hover</span><span class="p">{</span>
+     <span class="n">color</span><span class="p">:</span><span class="c1">#ff0000;</span>
+     <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span><span class="mi">20</span><span class="n">pt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. CSS Hacks</a><ul>
+<li><a class="reference internal" href="#css-spritesweb">2.1. CSS Spritesでサーバへのアクセス数を減らしてWebサイトのレスポンスを上げる</a></li>
+<li><a class="reference internal" href="#cssoverflow">2.2. CSSのoverflowを使った大量の情報を整理する方法</a></li>
+<li><a class="reference internal" href="#csscss">2.3. ブラウザ別にCSSを適用するCSSハック</a></li>
+<li><a class="reference internal" href="#id11">2.4. 解像度が変わっても常に中央にコンテンツが表示される方法</a></li>
+<li><a class="reference internal" href="#cssfloat">2.5. CSSのfloatを使った段組レイアウト</a></li>
+<li><a class="reference internal" href="#id12">2.6. リストの文頭のマークに画像を入れる</a></li>
+<li><a class="reference internal" href="#id13">2.7. リストの文頭のマークを指定する</a></li>
+<li><a class="reference internal" href="#id14">2.8. マウスオーバーすると文字が大きく表示される</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tech001.html"
+                        title="previous chapter">1. Ubuntu系ディストリビューション向けテクニック</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tech003.html"
+                        title="next chapter">3. Java Hacks</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tech/tech002.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tech003.html" title="3. Java Hacks"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tech001.html" title="1. Ubuntu系ディストリビューション向けテクニック"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Valkyrie SRX 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, takamitu hamada.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
