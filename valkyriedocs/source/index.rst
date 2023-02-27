@@ -26,7 +26,7 @@ Valkyrie Linux
 
 Valkyrieは、Linuxディストリビューション「Ubuntu LTS版」をベースに開発したOSです。
 
-.. image:: _images/bg20180116.png
+.. image:: _images/vsrx2023.png
 
 http://www.vsrx.work/article/418075361.html
 
